@@ -1,6 +1,6 @@
 # Build output
-bin/
-obj/
+**/bin/
+**/obj/
 out/
 
 # Visual Studio / Rider
@@ -8,26 +8,6 @@ out/
 .idea/
 *.user
 *.suo
-*.userosscache
-*.sln.docstates
-
-# dotnet
-*.dll
-*.exe
-*.pdb
-*.cache
-project.nuget.cache
-*.nupkg
-
-# Logs
-*.log
-logs/
-
-# Environment / secrets
-.env
-appsettings.*.json
-!appsettings.json
-!appsettings.Development.json
 
 # OS
 .DS_Store
