@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-Notification.Api-44fd5e24-0a19-4c7a-8fed-341e6c83dc6c</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MassTransit.RabbitMQ" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\FitTech.AppHost\FitTech.ServiceDefaults\FitTech.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\..\..\Shared\Shared.csproj" />
+  </ItemGroup>
+</Project>

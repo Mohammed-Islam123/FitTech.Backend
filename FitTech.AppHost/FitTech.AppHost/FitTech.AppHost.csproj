@@ -8,5 +8,14 @@
         <UserSecretsId>b4fe6824-578a-4158-aee7-357e176c52aa</UserSecretsId>
         <RootNamespace>FitTech.AppHost.AppHost</RootNamespace>
     </PropertyGroup>
-
+    <ItemGroup>
+        <ProjectReference Include="../../Services/Identity/Identity.Api/Identity.Api.csproj" />
+        <ProjectReference Include="..\..\Services\Notification\Notification.Api\Notification.Api.csproj" />
+        <ProjectReference Include="..\..\Services\Gateway\Gateway.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="Aspire.Hosting.AppHost" />
+      <PackageReference Include="Aspire.Hosting.PostgreSQL" />
+      <PackageReference Include="Aspire.Hosting.RabbitMQ" />
+    </ItemGroup>
 </Project>
