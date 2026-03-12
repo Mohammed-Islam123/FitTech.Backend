@@ -1,0 +1,33 @@
+### Register Admin User
+POST https://localhost:7259/api/user/register
+Content-Type: multipart/form-data; boundary=----FormBoundary
+
+------FormBoundary
+Content-Disposition: form-data; name="UserName"
+
+admin_test
+------FormBoundary
+Content-Disposition: form-data; name="Email"
+
+test@fitteck.com
+------FormBoundary
+Content-Disposition: form-data; name="Password"
+
+Test@12345
+------FormBoundary
+Content-Disposition: form-data; name="FullName"
+
+Test User
+------FormBoundary
+Content-Disposition: form-data; name="PhoneNumber"
+
++213555123456
+------FormBoundary
+Content-Disposition: form-data; name="Gender"
+
+Male
+------FormBoundary
+Content-Disposition: form-data; name="DateOfBirth"
+
+1995-06-15
+------FormBoundary--

@@ -1,0 +1,19 @@
+ReverseProxy:
+  Routes:
+    identity-route:
+      ClusterId: identity-cluster
+      Match:
+        Path: /api/user/{**catch-all}
+
+    identity-openapi-route:
+      ClusterId: identity-cluster
+      Match:
+        Path: /docs/identity/{**catch-all}
+      Transforms:
+        - PathRemovePrefix: "/docs/identity"
+
+  Clusters:
+    identity-cluster:
+      Destinations:
+        identity-api:
+          Address: http+https://identity-api

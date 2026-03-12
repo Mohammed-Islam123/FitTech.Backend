@@ -1,4 +1,19 @@
 <Solution>
   <Project Path="FitTech.AppHost/FitTech.AppHost/FitTech.AppHost.csproj" />
   <Project Path="FitTech.AppHost/FitTech.ServiceDefaults/FitTech.ServiceDefaults.csproj" />
+
+  <!-- Gateway -->
+  <Project Path="Services/Gateway/Gateway.csproj" />
+
+  <!-- Identity Service -->
+  <Project Path="Services/Identity/Identity.Api/Identity.Api.csproj" />
+  <Project Path="Services/Identity/Identity.Application/Identity.Application.csproj" />
+  <Project Path="Services/Identity/Identity.Domain/Identity.Domain.csproj" />
+  <Project Path="Services/Identity/Identity.Infrastructure/Identity.Infrastructure.csproj" />
+
+  <!-- Notification Service -->
+  <Project Path="Services/Notification/Notification.Api/Notification.Api/Notification.Api.csproj" />
+
+  <!-- Shared -->
+  <Project Path="Shared/Shared.csproj" />
 </Solution>
