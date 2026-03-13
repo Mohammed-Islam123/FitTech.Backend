@@ -1,63 +1,63 @@
-# # Build output
-# **/bin/
-# **/obj/
-# **/publish/
-# bin/
-# obj/
-# out/
+# Build output
+**/bin/
+**/obj/
+**/publish/
+bin/
+obj/
+out/
 
-# # Windows-style bin paths (backslash)
-# bin\
-# obj\
+# Windows-style bin paths (backslash)
+bin\
+obj\
 
-# # Compiled files
-# *.dll
-# *.exe
-# *.pdb
-# *.cache
-# *.nupkg
-# *.json.bak
+# Compiled files
+*.dll
+*.exe
+*.pdb
+*.cache
+*.nupkg
+*.json.bak
 
-# # Visual Studio / Rider
-# .vs/
-# .idea/
-# *.user
-# *.suo
-# *.userosscache
-# *.sln.docstates
-# .vscode/
+# Visual Studio / Rider
+.vs/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vscode/
 
-# # dotnet
-# project.nuget.cache
-# *.nuget.props
-# *.nuget.targets
+# dotnet
+project.nuget.cache
+*.nuget.props
+*.nuget.targets
 
-# # Logs
-# *.log
-# nohup.out
-# logs/
+# Logs
+*.log
+nohup.out
+logs/
 
-# # OS
-# .DS_Store
-# Thumbs.db
-# desktop.ini
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
 
 # Aspire
 .aspire/
 
-# # Secrets / Environment
-# appsettings.Production.json
-# .env
-# .env.*
-# secrets.json
+# Secrets / Environment
+appsettings.Production.json
+.env
+.env.*
+secrets.json
 
-# # Test results
-# TestResults/
-# coverage/
-# *.trx
-# *.coveragexml
+# Test results
+TestResults/
+coverage/
+*.trx
+*.coveragexml
 
-# # Azure / deployment artifacts
-# azure.yaml
-# next-steps.md
-# infra/
+# Azure / deployment artifacts
+azure.yaml
+next-steps.md
+infra/
