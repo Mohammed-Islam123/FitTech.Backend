@@ -12,7 +12,7 @@
   <Project Path="Services/Identity/Identity.Infrastructure/Identity.Infrastructure.csproj" />
 
   <!-- Notification Service -->
-  <Project Path="Services/Notification/Notification.Api/Notification.Api/Notification.Api.csproj" />
+  <Project Path="Services/Notification/Notification.Api/Notification.Api.csproj" />
 
   <!-- Shared -->
   <Project Path="Shared/Shared.csproj" />
