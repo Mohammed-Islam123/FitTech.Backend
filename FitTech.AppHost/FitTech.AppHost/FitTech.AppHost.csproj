@@ -9,8 +9,15 @@
         <RootNamespace>FitTech.AppHost.AppHost</RootNamespace>
     </PropertyGroup>
     <ItemGroup>
-        <ProjectReference Include="../../Services/Identity/Identity.Api/Identity.Api.csproj" />
-        <ProjectReference Include="..\..\Services\Notification\Notification.Api\Notification.Api.csproj" />
+        <ProjectReference
+            Include="../../Services/Identity/Identity.Api/Identity.Api.csproj"
+        />
+        <ProjectReference
+            Include="..\..\Services\Membership\Membership.csproj"
+        />
+        <ProjectReference
+            Include="..\..\Services\Notification\Notification.Api\Notification.Api.csproj"
+        />
         <ProjectReference Include="..\..\Services\Gateway\Gateway.csproj" />
     </ItemGroup>
     <ItemGroup>

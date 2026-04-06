@@ -71,7 +71,9 @@ public static class Extensions
                     )
                     // Uncomment the following line to enable gRPC instrumentation (requires the OpenTelemetry.Instrumentation.GrpcNetClient package)
                     //.AddGrpcClientInstrumentation()
-                    .AddHttpClientInstrumentation();
+                    .AddHttpClientInstrumentation()
+                    .AddSource("Wolverine")
+                    .AddSource("RabbitMQ.Client*");
             });
 
         builder.AddOpenTelemetryExporters();

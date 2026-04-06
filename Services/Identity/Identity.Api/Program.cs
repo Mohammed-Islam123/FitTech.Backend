@@ -71,13 +71,15 @@ builder.Services.AddScoped<ITokenService, JwtTokenService>();
 
 builder.Services.AddMassTransit(x =>
 {
+
     x.SetKebabCaseEndpointNameFormatter();
     x.UsingRabbitMq((ctx, cfg) =>
     {
+        
         cfg.Host(builder.Configuration.GetConnectionString("rabbitmq"));
         cfg.ConfigureEndpoints(ctx);
     });
-});
+}) ;
 
 var medicalFilesPath = Path.Combine(builder.Environment.WebRootPath ?? "wwwroot", "medical-files");
 Directory.CreateDirectory(medicalFilesPath);
