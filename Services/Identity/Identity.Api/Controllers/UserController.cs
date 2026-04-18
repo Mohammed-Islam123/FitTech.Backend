@@ -234,12 +234,13 @@ public class UserController(IUserService _userService) : ControllerBase
         }
     }
 
-    /// <summary> Updates the user profile.</summary>
+    /// <summary> Updates the user profile. Send as multipart/form-data to include an optional profile picture.</summary>
     
     [HttpPut("profile")]
+    [Consumes("multipart/form-data")]
     [ProducesResponseType(typeof(Response<string>), (int)HttpStatusCode.OK)]
     [ProducesResponseType(typeof(Response<string>), (int)HttpStatusCode.BadRequest)]
-    public async Task<IActionResult> UpdateProfile([FromBody] UpdateProfileDTO dto)
+    public async Task<IActionResult> UpdateProfile([FromForm] UpdateProfileDTO dto)
     {
         try
         {

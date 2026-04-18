@@ -1,4 +1,7 @@
 using System.ComponentModel.DataAnnotations;
+using Identity.Domain.Enums;
+using Microsoft.AspNetCore.Http;
+
 namespace Identity.Application.DTOs ;
 public class UpdateProfileDTO
 {
@@ -17,6 +20,9 @@ public class UpdateProfileDTO
     [Phone(ErrorMessage = "Invalid phone number format.")]
     public string PhoneNumber { get; set; } = null!;
 
-    [Url(ErrorMessage = "Profile photo URL must be a valid URL.")]
-    public string? ProfilePhotoUrl { get; set; }
+    public Gender? Gender { get; set; }
+
+    public DateOnly? DateOfBirth { get; set; }
+
+    public IFormFile? ProfilePicture { get; set; }
 }

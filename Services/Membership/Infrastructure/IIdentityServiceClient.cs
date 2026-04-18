@@ -19,4 +19,18 @@ public interface IIdentityServiceClient
         [AliasAs("Gender")] Gender gender,
         [AliasAs("MedicalFile")] StreamPart? medicalFile,
         [AliasAs("ProfilePicture")] StreamPart? profilePicture);
+
+    [Multipart]
+    [Put("/api/User/profile")]
+    Task<ApiResponse<Response<string>>> UpdateProfileAsync(
+        [AliasAs("UserId")] Guid userId,
+        [AliasAs("FirstName")] string firstName,
+        [AliasAs("LastName")] string lastName,
+        [AliasAs("PhoneNumber")] string phoneNumber,
+        [AliasAs("Gender")] Gender? gender,
+        [AliasAs("DateOfBirth")] DateOnly? dateOfBirth,
+        [AliasAs("ProfilePicture")] StreamPart? profilePicture);
+
+    [Post("/api/User/change-password")]
+    Task<ApiResponse<Response<string>>> ChangePasswordAsync([Body] ChangePasswordRequest dto);
 }

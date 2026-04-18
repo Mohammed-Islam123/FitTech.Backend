@@ -310,7 +310,23 @@ public class UserService(IUserRepository _userRepository, ITokenService _tokenSe
         user.FirstName = dto.FirstName;
         user.LastName = dto.LastName;
         user.PhoneNumber = dto.PhoneNumber;
-        user.ProfilePhotoUrl = dto.ProfilePhotoUrl;
+        user.Gender = dto.Gender;
+        user.DateOfBirth = dto.DateOfBirth;
+
+        if (dto.ProfilePicture != null && dto.ProfilePicture.Length > 0)
+        {
+            // Delete old photo if exists
+            if (!string.IsNullOrEmpty(user.ProfilePhotoUrl))
+            {
+                var oldPhysicalPath = Path.Combine("wwwroot", user.ProfilePhotoUrl.TrimStart('/'));
+                if (System.IO.File.Exists(oldPhysicalPath))
+                {
+                    System.IO.File.Delete(oldPhysicalPath);
+                }
+            }
+
+            user.ProfilePhotoUrl = await UploadProfilePhotoInternalAsync(user.Id, dto.ProfilePicture);
+        }
 
         return await _userRepository.UpdateUserAsync(user);
     }

@@ -9,6 +9,7 @@ public interface IUserAccessor
     bool IsAdmin { get; }
     bool IsCoach { get; }
     bool IsMember { get; }
+    bool IsInRole(string role);
 }
 
 public class UserAccessor(IHttpContextAccessor httpContextAccessor) : IUserAccessor
@@ -29,7 +30,9 @@ public class UserAccessor(IHttpContextAccessor httpContextAccessor) : IUserAcces
     public IEnumerable<string> Roles => 
         User?.FindAll(ClaimTypes.Role).Select(c => c.Value) ?? [];
 
-    public bool IsAdmin => Roles.Contains("Admin");
-    public bool IsCoach => Roles.Contains("Coach");
-    public bool IsMember => Roles.Contains("Member");
+    public bool IsAdmin => IsInRole("Admin");
+    public bool IsCoach => IsInRole("Coach");
+    public bool IsMember => IsInRole("Member");
+
+    public bool IsInRole(string role) => Roles.Contains(role);
 }
