@@ -1,11 +1,11 @@
 using FluentValidation;
-using Membership.Domain;
+using Membership.Domain.Enums;
 
 namespace Membership.Features.Members.CreateMember;
 
-internal class CreateMemberValidator : AbstractValidator<CreateMemberRequest>
+public class CreateMemberValidator : AbstractValidator<CreateMemberRequest>
 {
-    internal CreateMemberValidator(MembershipDbContext context)
+    public CreateMemberValidator()
     {
         RuleFor(x => x.FirstName)
             .NotEmpty()
@@ -36,10 +36,5 @@ internal class CreateMemberValidator : AbstractValidator<CreateMemberRequest>
         RuleFor(x => x.CardUid)
             .NotEmpty()
             .When(x => x.CardUid != null);
-
-        RuleFor(x => x.CardUid)
-            .Must(uid => !context.NfcCards.Any(c => c.CardUid == uid))
-            .When(x => !string.IsNullOrEmpty(x.CardUid))
-            .WithMessage("The provided NFC card is already assigned to another member.");
     }
 }

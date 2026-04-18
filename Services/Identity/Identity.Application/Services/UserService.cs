@@ -4,21 +4,23 @@ using Identity.Application.Repositories;
 using Identity.Application.Interfaces;
 using MassTransit;
 using Shared.Events;
+using Microsoft.AspNetCore.Http;
 
 namespace Identity.Application.Services;
 
-public class UserService (IUserRepository _userRepository, ITokenService _tokenService , IPublishEndpoint _publishEndpoint) : IUserService
+public class UserService(IUserRepository _userRepository, ITokenService _tokenService, IPublishEndpoint _publishEndpoint) : IUserService
 {
     private const string MEDICAL_FILE_FOLDER = "medical-files";
+    private const string PROFILE_PHOTO_FOLDER = "profile-photos";
 
 
-    public async Task<bool> RegisterAsync(RegisterDTO dto)
+    public async Task<Guid?> RegisterAsync(RegisterDTO dto)
     {
         if (await _userRepository.FindByEmailAsync(dto.Email) != null)
-            return false;
+            return null;
 
         if (await _userRepository.FindByUserNameAsync(dto.UserName) != null)
-            return false;
+            return null;
 
         var user = new User
         {
@@ -26,7 +28,8 @@ public class UserService (IUserRepository _userRepository, ITokenService _tokenS
             UserName = dto.UserName,
             Email = dto.Email,
             PhoneNumber = dto.PhoneNumber,
-            FullName = dto.FullName,
+            FirstName = dto.FirstName,
+            LastName = dto.LastName,
             CreatedAt = DateTime.UtcNow,
             IsActive = true,
             IsEmailConfirmed = false,
@@ -36,9 +39,16 @@ public class UserService (IUserRepository _userRepository, ITokenService _tokenS
 
         var created = await _userRepository.CreateUserAsync(user, dto.Password);
         if (!created)
-            return false;
+            return null;
 
         await _userRepository.AddUserToRoleAsync(user, "Member");
+
+        // Save profile photo if provided
+        if (dto.ProfilePicture != null && dto.ProfilePicture.Length > 0)
+        {
+            user.ProfilePhotoUrl = await UploadProfilePhotoInternalAsync(user.Id, dto.ProfilePicture);
+            await _userRepository.UpdateUserAsync(user);
+        }
 
         // Save medical file if provided
         if (dto.MedicalFile != null && dto.MedicalFile.Length > 0)
@@ -51,14 +61,32 @@ public class UserService (IUserRepository _userRepository, ITokenService _tokenS
         }
         await _publishEndpoint.Publish(new UserRegisteredEvent
         {
-            UserId       = user.Id,
-            Email        = user.Email!,
-            FullName     = user.FullName ?? "",
+            UserId = user.Id,
+            Email = user.Email!,
+            FirstName = user.FirstName ?? "",
+            LastName = user.LastName ?? "",
             RegisteredAt = DateTime.UtcNow
         });
 
 
-        return true;
+        return user.Id;
+    }
+
+    private async Task<string?> UploadProfilePhotoInternalAsync(Guid userId, IFormFile file)
+    {
+        var userFolder = Path.Combine("wwwroot", PROFILE_PHOTO_FOLDER, userId.ToString());
+        Directory.CreateDirectory(userFolder);
+
+        var extension = Path.GetExtension(file.FileName);
+        var safeFileName = $"{Guid.NewGuid()}{extension}";
+        var physicalPath = Path.Combine(userFolder, safeFileName);
+
+        await using (var stream = new FileStream(physicalPath, FileMode.Create))
+        {
+            await file.CopyToAsync(stream);
+        }
+
+        return $"/{PROFILE_PHOTO_FOLDER}/{userId}/{safeFileName}";
     }
 
     public async Task<LoginResponseDTO> LoginAsync(LoginDTO dto, string ipAddress, string userAgent)
@@ -71,7 +99,7 @@ public class UserService (IUserRepository _userRepository, ITokenService _tokenS
             return response;
         }
 
-        var user = dto.EmailOrUserName.Contains("@")
+        var user = dto.EmailOrUserName.Contains('@')
             ? await _userRepository.FindByEmailAsync(dto.EmailOrUserName)
             : await _userRepository.FindByUserNameAsync(dto.EmailOrUserName);
 
@@ -263,7 +291,8 @@ public class UserService (IUserRepository _userRepository, ITokenService _tokenS
         return new ProfileDTO
         {
             UserId = user.Id,
-            FullName = user.FullName,
+            FirstName = user.FirstName,
+            LastName = user.LastName,
             PhoneNumber = user.PhoneNumber,
             ProfilePhotoUrl = user.ProfilePhotoUrl,
             Email = user.Email,
@@ -278,7 +307,8 @@ public class UserService (IUserRepository _userRepository, ITokenService _tokenS
         if (user == null)
             return false;
 
-        user.FullName = dto.FullName;
+        user.FirstName = dto.FirstName;
+        user.LastName = dto.LastName;
         user.PhoneNumber = dto.PhoneNumber;
         user.ProfilePhotoUrl = dto.ProfilePhotoUrl;
 

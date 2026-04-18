@@ -5,7 +5,7 @@
 bin/
 obj/
 out/
-
+.ai/*
 # Windows-style bin paths (backslash)
 bin\
 obj\

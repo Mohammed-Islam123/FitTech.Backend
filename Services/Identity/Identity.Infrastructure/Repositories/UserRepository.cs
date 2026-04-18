@@ -28,7 +28,8 @@ public class UserRepository : IUserRepository
         Id              = appUser.Id,
         UserName        = appUser.UserName,
         Email           = appUser.Email,
-        FullName        = appUser.FullName,
+        FirstName       = appUser.FirstName,
+        LastName        = appUser.LastName,
         PhoneNumber     = appUser.PhoneNumber,
         ProfilePhotoUrl = appUser.ProfilePhotoUrl,
         IsActive        = appUser.IsActive,
@@ -45,7 +46,8 @@ public class UserRepository : IUserRepository
         Id              = user.Id,
         UserName        = user.UserName,
         Email           = user.Email,
-        FullName        = user.FullName,
+        FirstName       = user.FirstName,
+        LastName        = user.LastName,
         PhoneNumber     = user.PhoneNumber,
         ProfilePhotoUrl = user.ProfilePhotoUrl,
         IsActive        = user.IsActive,
@@ -90,7 +92,8 @@ public class UserRepository : IUserRepository
 
         appUser.UserName        = user.UserName;
         appUser.Email           = user.Email;
-        appUser.FullName        = user.FullName;
+        appUser.FirstName       = user.FirstName;
+        appUser.LastName        = user.LastName;
         appUser.PhoneNumber     = user.PhoneNumber;
         appUser.ProfilePhotoUrl = user.ProfilePhotoUrl;
         appUser.MedicalFileUrl  = user.MedicalFileUrl;

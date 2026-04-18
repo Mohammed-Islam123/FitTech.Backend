@@ -86,6 +86,13 @@ Directory.CreateDirectory(medicalFilesPath);
 
 var app = builder.Build();
 
+if (app.Environment.IsDevelopment())
+{
+    using var scope = app.Services.CreateScope();
+    var context = scope.ServiceProvider.GetRequiredService<UserDbContext>();
+    await context.Database.MigrateAsync();
+}
+
 using (var scope = app.Services.CreateScope())
 {
     var services    = scope.ServiceProvider;

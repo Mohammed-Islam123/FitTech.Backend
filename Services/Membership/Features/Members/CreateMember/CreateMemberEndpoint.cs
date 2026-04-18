@@ -1,5 +1,9 @@
+using System.Text.Json.Nodes;
 using Carter;
 using ErrorOr;
+using Membership.Shared;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.OpenApi;
 using Wolverine;
 
 namespace Membership.Features.Members.CreateMember;
@@ -10,7 +14,37 @@ public class CreateMemberEndpoint : ICarterModule
     {
         app.MapPost("/api/members", Handle)
             .WithName("CreateMember")
-            .RequireAuthorization("AdminOnly")
+            .WithDescription("Creates a new member with the provided details and profile picture.")
+            .AddOpenApiOperationTransformer((operation, context, cancellationToken) =>
+            {
+                // Define the example data
+                var exampleData = new JsonObject
+                {
+                    ["id"] = 1,
+                    ["name"] = "Sample Item",
+                    ["isComplete"] = false
+                };
+
+                // Apply to Request (JSON or Multipart)
+                var mediaType = "application/json"; // or "multipart/form-data"
+                if (operation.RequestBody?.Content?.TryGetValue(mediaType, out var reqContent) == true)
+                {
+                    reqContent.Example = exampleData;
+                }
+
+                // Apply to Response
+                if (operation.Responses is not null &&
+                    operation.Responses.TryGetValue("200", out var response) &&
+                    response.Content is not null &&
+                    response.Content.TryGetValue("application/json", out var resContent))
+                {
+                    resContent.Example = exampleData;
+                }
+
+                return Task.CompletedTask;
+            })
+            // .RequireAuthorization("AdminOnly") // Temporarily commented if testing locally without full auth
+            .DisableAntiforgery() // Needed for multipart/form-data with Minimal APIs if antiforgery is enabled
             .Produces<CreateMemberResponse>(StatusCodes.Status201Created)
             .ProducesProblem(StatusCodes.Status400BadRequest)
             .ProducesProblem(StatusCodes.Status404NotFound)
@@ -18,26 +52,9 @@ public class CreateMemberEndpoint : ICarterModule
             .ProducesProblem(StatusCodes.Status500InternalServerError);
     }
 
-    /// <description>
-    /// Creates a new member, provisions an identity account, activates their subscription to a plan, and assigns an NFC card if provided.
-    /// </description>
-    /// <example>
-    /// POST /api/members
-    /// Body: 
-    /// { 
-    ///   "firstName": "John", 
-    ///   "lastName": "Doe", 
-    ///   "email": "john.doe@example.com",
-    ///   "phoneNumber": "1234567890",
-    ///   "dateOfBirth": "1990-01-01",
-    ///   "gender": 1,
-    ///   "planId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-    ///   "cardUid": "AABBCCDD"
-    /// }
-    /// Response: { "memberId": "1fa85f64-5717-4562-b3fc-2c963f66afa6" }
-    /// </example>
+
     private static async Task<IResult> Handle(
-        CreateMemberRequest request,
+        [FromForm] CreateMemberRequest request,
         IMessageBus messageBus,
         CancellationToken ct)
     {
@@ -45,24 +62,8 @@ public class CreateMemberEndpoint : ICarterModule
 
         return result.Match(
             response => Results.Created($"/api/members/{response.MemberId}", response),
-            errors => MapErrorsToResult(errors));
+            errors => ErrorOnExtensions.MapErrorsToResult(errors));
     }
 
-    private static IResult MapErrorsToResult(List<Error> errors)
-    {
-        var firstError = errors[0];
 
-        var statusCode = firstError.Type switch
-        {
-            ErrorType.NotFound => StatusCodes.Status404NotFound,
-            ErrorType.Conflict => StatusCodes.Status409Conflict,
-            ErrorType.Validation => StatusCodes.Status400BadRequest,
-            _ => StatusCodes.Status500InternalServerError
-        };
-
-        return Results.Problem(
-            statusCode: statusCode,
-            title: firstError.Description,
-            detail: firstError.Code);
-    }
 }

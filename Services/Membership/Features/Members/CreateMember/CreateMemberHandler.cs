@@ -4,7 +4,8 @@ using Membership.Domain;
 using Membership.Domain.Entities;
 using Membership.Domain.Enums;
 using Membership.Infrastructure;
-using Membership.Infrastructure.Messaging.Events;
+using Shared.Events;
+using Refit;
 using Wolverine;
 
 namespace Membership.Features.Members.CreateMember;
@@ -14,8 +15,6 @@ public class CreateMemberHandler(
     IIdentityServiceClient identityClient,
     IMessageBus messageBus)
 {
-
-
     public async Task<ErrorOr<CreateMemberResponse>> Handle(
         CreateMemberCommand command,
         CancellationToken ct)
@@ -39,87 +38,122 @@ public class CreateMemberHandler(
 
         var generatedPassword = GenerateSecurePassword(16);
 
-        var createUserReq = new CreateUserRequest(
-            Email: req.Email,
-            Password: generatedPassword,
-            Role: "Member",
-            FirstName: req.FirstName,
-            LastName: req.LastName,
-            PhoneNumber: req.PhoneNumber,
-            DateOfBirth: req.DateOfBirth,
-            Gender: req.Gender
-        );
+        // Prepare file streams for Refit
+        StreamPart? medicalStreamPart = null;
+        StreamPart? profileStreamPart = null;
 
-        var identityResponse = await identityClient.CreateUserAsync(createUserReq);
-        if (!identityResponse.IsSuccessStatusCode || identityResponse.Content is null)
+        try
         {
-            return Error.Failure("Identity.CreateFailed", "Failed to create user account in Identity Service.");
-        }
+            if (req.MedicalCertificate != null)
+            {
+                medicalStreamPart = new StreamPart(
+                    req.MedicalCertificate.OpenReadStream(),
+                    req.MedicalCertificate.FileName,
+                    req.MedicalCertificate.ContentType);
+            }
 
+            if (req.ProfilePicture != null)
+            {
+                profileStreamPart = new StreamPart(
+                    req.ProfilePicture.OpenReadStream(),
+                    req.ProfilePicture.FileName,
+                    req.ProfilePicture.ContentType);
+            }
 
-        var member = new Member
-        {
-            UserId = identityResponse.Content.UserId,
-            FirstName = req.FirstName,
-            LastName = req.LastName,
-            JoinDate = DateTime.UtcNow,
-            Status = MemberStatus.Active,
-            NoShowWarningCount = 0
-        };
+            var identityResponse = await identityClient.CreateUserAsync(
+                userName: req.Email, // Using email as username
+                email: req.Email,
+                password: generatedPassword,
+                firstName: req.FirstName,
+                lastName: req.LastName,
+                phoneNumber: req.PhoneNumber,
+                dateOfBirth: req.DateOfBirth,
+                gender: req.Gender,
+                medicalFile: medicalStreamPart,
+                profilePicture: profileStreamPart
+            );
 
-        var startOnUtc = DateTime.UtcNow;
-        DateTime? endOnUtc = null;
+            if (!identityResponse.IsSuccessStatusCode || identityResponse.Content is null || !identityResponse.Content.Success)
+            {
+                return Error.Failure("Identity.CreateFailed",
+                    identityResponse.Error?.Content ?? "Failed to create user account in Identity Service.");
+            }
 
-        if (plan.DurationUnit == DurationUnit.Months && plan.DurationValue.HasValue)
-        {
-            endOnUtc = startOnUtc.AddMonths(plan.DurationValue.Value);
-        }
-        else if (plan.DurationUnit == DurationUnit.Days && plan.DurationValue.HasValue)
-        {
-            endOnUtc = startOnUtc.AddDays(plan.DurationValue.Value);
-        }
+            if (!Guid.TryParse(identityResponse.Content.Data, out var userId))
+            {
+                return Error.Failure("Identity.InvalidUserId", "Identity service returned an invalid user ID.");
+            }
 
-        var subscription = new Subscription
-        {
-            Id = Guid.NewGuid(),
-            MemberId = member.Id,
-            PlanId = plan.Id,
-            StartOnUTC = startOnUtc,
-            EndOnUTC = endOnUtc,
-            RemainingSessions = plan.SessionCount,
-            Status = SubscriptionStatus.Active
-        };
+            var member = new Member
+            {
+                UserId = userId,
+                FirstName = req.FirstName,
+                LastName = req.LastName,
+                JoinDate = DateTime.UtcNow,
+                Status = MemberStatus.Active,
+                NoShowWarningCount = 0
+            };
 
-        context.Members.Add(member);
-        context.Subscriptions.Add(subscription);
+            var startOnUtc = DateTime.UtcNow;
+            DateTime? endOnUtc = null;
 
-        if (!string.IsNullOrEmpty(req.CardUid))
-        {
-            var nfcCard = new NfcCard
+            if (plan.DurationUnit == DurationUnit.Months && plan.DurationValue.HasValue)
+            {
+                endOnUtc = startOnUtc.AddMonths(plan.DurationValue.Value);
+            }
+            else if (plan.DurationUnit == DurationUnit.Days && plan.DurationValue.HasValue)
+            {
+                endOnUtc = startOnUtc.AddDays(plan.DurationValue.Value);
+            }
+
+            var subscription = new Subscription
             {
                 Id = Guid.NewGuid(),
                 MemberId = member.Id,
-                CardUid = req.CardUid,
-                IsActive = true,
-                AssignedAt = DateTime.UtcNow
+                PlanId = plan.Id,
+                StartOnUTC = startOnUtc,
+                EndOnUTC = endOnUtc,
+                RemainingSessions = plan.SessionCount,
+                Status = SubscriptionStatus.Active
             };
-            context.NfcCards.Add(nfcCard);
+
+            context.Members.Add(member);
+            context.Subscriptions.Add(subscription);
+
+            if (!string.IsNullOrEmpty(req.CardUid))
+            {
+                var nfcCard = new NfcCard
+                {
+                    Id = Guid.NewGuid(),
+                    MemberId = member.Id,
+                    CardUid = req.CardUid,
+                    IsActive = true,
+                    AssignedAt = DateTime.UtcNow
+                };
+                context.NfcCards.Add(nfcCard);
+            }
+
+            await context.SaveChangesAsync(ct);
+
+            var memberCreatedEvent = new MemberCreatedEvent(
+                MemberId: member.Id,
+                UserId: userId,
+                FullName: $"{req.FirstName} {req.LastName}",
+                Email: req.Email,
+                GeneratedPassword: generatedPassword,
+                AssignedPlanName: plan.Name
+            );
+
+            await messageBus.PublishAsync(memberCreatedEvent);
+
+            return new CreateMemberResponse(member.Id);
         }
-
-        await context.SaveChangesAsync(ct);
-
-        var memberCreatedEvent = new MemberCreatedEvent(
-            MemberId: member.Id,
-            UserId: identityResponse.Content.UserId,
-            FullName: $"{req.FirstName} {req.LastName}",
-            Email: req.Email,
-            GeneratedPassword: generatedPassword,
-            AssignedPlanName: plan.Name
-        );
-
-        await messageBus.PublishAsync(memberCreatedEvent);
-
-        return new CreateMemberResponse(member.Id);
+        finally
+        {
+            // Ensure streams are disposed
+            medicalStreamPart?.Value?.Dispose();
+            profileStreamPart?.Value?.Dispose();
+        }
     }
 
     private static string GenerateSecurePassword(int length)
@@ -146,3 +180,5 @@ public class CreateMemberHandler(
         return new string(result);
     }
 }
+
+

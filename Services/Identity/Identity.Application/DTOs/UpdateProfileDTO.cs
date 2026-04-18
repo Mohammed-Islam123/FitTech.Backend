@@ -5,9 +5,13 @@ public class UpdateProfileDTO
     [Required(ErrorMessage = "User ID is required.")]
     public Guid UserId { get; set; }
 
-    [Required(ErrorMessage = "Full name is required.")]
-    [StringLength(50, ErrorMessage = "Full name cannot exceed 50 characters.")]
-    public string FullName { get; set; } = null!;
+    [Required(ErrorMessage = "First name is required.")]
+    [StringLength(50, ErrorMessage = "First name cannot exceed 50 characters.")]
+    public string FirstName { get; set; } = null!;
+
+    [Required(ErrorMessage = "Last name is required.")]
+    [StringLength(50, ErrorMessage = "Last name cannot exceed 50 characters.")]
+    public string LastName { get; set; } = null!;
 
     [Required(ErrorMessage = "Phone number is required.")]
     [Phone(ErrorMessage = "Invalid phone number format.")]

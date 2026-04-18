@@ -28,6 +28,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\FitTech.AppHost\FitTech.ServiceDefaults\FitTech.ServiceDefaults.csproj" />
+      <ProjectReference Include="..\..\Shared\Shared.csproj" />
     </ItemGroup>
 
    

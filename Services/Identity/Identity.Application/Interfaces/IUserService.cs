@@ -4,7 +4,7 @@ namespace Identity.Application.Interfaces;
 
 public interface IUserService
 {
-    Task<bool> RegisterAsync(RegisterDTO dto);
+    Task<Guid?> RegisterAsync(RegisterDTO dto);
     Task<LoginResponseDTO> LoginAsync(LoginDTO dto, string ipAddress, string userAgent);
     Task<EmailConfirmationTokenResponseDTO?> SendConfirmationEmailAsync(string email);
     Task<bool> VerifyConfirmationEmailAsync(ConfirmEmailDTO dto);

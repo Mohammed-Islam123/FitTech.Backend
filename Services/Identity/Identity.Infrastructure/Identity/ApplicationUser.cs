@@ -8,7 +8,8 @@ public class ApplicationUser : IdentityUser<Guid>
 {
     public DateTime CreatedAt { get; set; }
     public bool IsActive { get; set; } = true;
-    public string? FullName { get; set; }
+    public string? FirstName { get; set; }
+    public string? LastName { get; set; }
     public string? ProfilePhotoUrl { get; set; }
     public bool IsEmailConfirmed { get; set; }
     public DateTime? LastLoginAt { get; set; }

@@ -26,11 +26,11 @@ public class UserController(IUserService _userService) : ControllerBase
     {
         try
         {
-            var result = await _userService.RegisterAsync(dto);
-            if (!result)
+            var userId = await _userService.RegisterAsync(dto);
+            if (userId == null)
                 return BadRequest(Response<string>.FailResponse("Registration failed. Email or username might already exist."));
 
-            return Ok(Response<string>.SuccessResponse("User registered successfully."));
+            return Ok(Response<string>.SuccessResponse(userId.Value.ToString(), "User registered successfully."));
         }
         catch (Exception ex)
         {

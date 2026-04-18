@@ -1,4 +1,4 @@
-namespace Membership.Infrastructure.Messaging.Events;
+namespace Shared.Events;
 
 public record MemberCreatedEvent(
     Guid MemberId,

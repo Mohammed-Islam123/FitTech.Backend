@@ -1,2 +1,1 @@
 you MUST read and internalize the project-wide rules in: 👉 [./.ai/MASTER_INSTRUCTIONS.md]
-and confirm once you have done so.

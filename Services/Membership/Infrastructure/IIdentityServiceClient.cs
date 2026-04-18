@@ -1,22 +1,22 @@
-﻿using Membership.Domain.Enums;
+using Membership.Domain.Enums;
 using Refit;
+using Shared.Wrappers;
 
 namespace Membership.Infrastructure;
 
 public interface IIdentityServiceClient
 {
-    [Post("/identity/users")]
-    Task<ApiResponse<CreateUserResponse>> CreateUserAsync(CreateUserRequest request);
+    [Multipart]
+    [Post("/api/User/register")]
+    Task<ApiResponse<Response<string>>> CreateUserAsync(
+        [AliasAs("UserName")] string userName,
+        [AliasAs("Email")] string email,
+        [AliasAs("Password")] string password,
+        [AliasAs("FirstName")] string firstName,
+        [AliasAs("LastName")] string lastName,
+        [AliasAs("PhoneNumber")] string phoneNumber,
+        [AliasAs("DateOfBirth")] DateOnly dateOfBirth,
+        [AliasAs("Gender")] Gender gender,
+        [AliasAs("MedicalFile")] StreamPart? medicalFile,
+        [AliasAs("ProfilePicture")] StreamPart? profilePicture);
 }
-
-public record CreateUserRequest(
-    string Email,
-    string Password,
-    string Role,
-    string FirstName,
-    string LastName,
-    string PhoneNumber,
-    DateOnly DateOfBirth,
-    Gender Gender);
-
-public record CreateUserResponse(Guid UserId);

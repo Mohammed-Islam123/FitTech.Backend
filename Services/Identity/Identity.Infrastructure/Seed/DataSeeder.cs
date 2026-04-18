@@ -78,7 +78,8 @@ public static class DataSeeder
                 {
                     UserName        = "admin",
                     Email           = "Admin@fitteck.com",
-                    FullName        = "FitTeck Admin",
+                    FirstName       = "FitTeck",
+                    LastName        = "Admin",
                     IsActive        = true,
                     EmailConfirmed  = true,
                     IsEmailConfirmed = true,
@@ -94,7 +95,8 @@ public static class DataSeeder
                 {
                     UserName        = "member",
                     Email           = "Member@fitteck.com",
-                    FullName        = "FitTeck Member",
+                    FirstName       = "FitTeck",
+                    LastName        = "Member",
                     IsActive        = true,
                     EmailConfirmed  = true,
                     IsEmailConfirmed = true,
@@ -110,7 +112,8 @@ public static class DataSeeder
                 {
                     UserName        = "coach",
                     Email           = "Coach@fitteck.com",
-                    FullName        = "FitTeck Coach",
+                    FirstName       = "FitTeck",
+                    LastName        = "Coach",
                     IsActive        = true,
                     EmailConfirmed  = true,
                     IsEmailConfirmed = true,

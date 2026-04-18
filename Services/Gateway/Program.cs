@@ -19,9 +19,10 @@ app.MapReverseProxy();
 
 app.MapScalarApiReference(options =>
 {
-    options.Title = "FitTech API";
-    options.Theme = ScalarTheme.DeepSpace;
+    options.Title = "FitTech API Gateway";
+    options.Theme = ScalarTheme.Mars;
     options.AddDocument("Identity API", "/docs/identity/openapi/v1.json");
+    options.AddDocument("Membership API", "/docs/membership/openapi/v1.json");
 });
 
 app.Run();

@@ -3,17 +3,46 @@ ReverseProxy:
     identity-route:
       ClusterId: identity-cluster
       Match:
-        Path: /api/user/{**catch-all}
+        Path: /api/User/{**catch-all}
+      Metadata:
+        cors: default
 
+    membership-route:
+      ClusterId: membership-cluster
+      Match:
+        Path: /api/members/{**catch-all}
+      Metadata:
+        cors: default
+
+    membership-plans-route:
+      ClusterId: membership-cluster
+      Match:
+        Path: /api/plans/{**catch-all}
+      Metadata:
+        cors: default
+
+    # Scalar/OpenAPI Routes for Service Discovery Documentation
     identity-openapi-route:
       ClusterId: identity-cluster
       Match:
         Path: /docs/identity/{**catch-all}
       Transforms:
-        - PathRemovePrefix: "/docs/identity"
+        - PathPattern: "/openapi/v1.json"
+
+    membership-openapi-route:
+      ClusterId: membership-cluster
+      Match:
+        Path: /docs/membership/{**catch-all}
+      Transforms:
+        - PathPattern: "/openapi/v1.json"
 
   Clusters:
     identity-cluster:
       Destinations:
         identity-api:
           Address: http+https://identity-api
+
+    membership-cluster:
+      Destinations:
+        membership-api:
+          Address: http+https://membership-api
