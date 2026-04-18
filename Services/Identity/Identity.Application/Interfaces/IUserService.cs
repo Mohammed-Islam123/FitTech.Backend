@@ -18,4 +18,5 @@ public interface IUserService
     Task<bool> IsUserExistsAsync(Guid userId);
     Task<MedicalFileDTO?> UploadMedicalFileAsync(UploadMedicalFileDTO dto);
     Task<MedicalFileDTO?> GetMedicalFileAsync(Guid userId);
+    Task<bool> DeactivateUserAsync(Guid userId);
 }

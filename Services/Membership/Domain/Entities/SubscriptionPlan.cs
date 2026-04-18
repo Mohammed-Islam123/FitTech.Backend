@@ -1,4 +1,4 @@
-﻿using Membership.Domain.Enums;
+using Membership.Domain.Enums;
 
 namespace Membership.Domain.Entities;
 
@@ -11,7 +11,7 @@ public class SubscriptionPlan
     public int? DurationValue { get; set; }
     public DurationUnit? DurationUnit { get; set; }
     public int? SessionCount { get; set; }
-    public string? AccessRules { get; set; }
+    public string[]? AccessRules { get; set; }
     public bool IsActive { get; set; } = true;
 
     public ICollection<Subscription> Subscriptions { get; set; } = [];

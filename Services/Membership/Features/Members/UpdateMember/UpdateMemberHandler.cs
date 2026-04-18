@@ -18,16 +18,16 @@ public class UpdateMemberHandler(
     {
         var req = command.Request;
         var currentUserId = userAccessor.UserId;
-        var isAdminOrCoach = userAccessor.IsAdmin || userAccessor.IsCoach;
+        var isAdmin = userAccessor.IsAdmin;
 
         Member? member;
 
         if (command.Id.HasValue)
         {
-            // Admin/Coach updating a specific member
-            if (!isAdminOrCoach)
+            // Admin updating a specific member
+            if (!isAdmin)
             {
-                return Error.Unauthorized("Member.Unauthorized", "Only Admins or Coaches can update other members.");
+                return Error.Unauthorized("Member.Unauthorized", "Only Admins can update other members.");
             }
 
             member = await context.Members
@@ -105,27 +105,30 @@ public class UpdateMemberHandler(
         member.FirstName = req.FirstName;
         member.LastName = req.LastName;
 
-        if (isAdminOrCoach && req.Status.HasValue)
+        if (isAdmin && req.Status.HasValue)
         {
             member.Status = req.Status.Value;
         }
 
-        // 4. Update Health Profile
-        if (member.HealthProfile == null)
+        // 4. Update Health Profile - ONLY if self-update
+        if (member.UserId == currentUserId)
         {
-            member.HealthProfile = new MemberHealthProfile
+            if (member.HealthProfile == null)
             {
-                MemberId = member.Id,
-                Objectives = req.Objectives,
-                MedicalRestrictions = req.MedicalRestrictions,
-                LastUpdatedAt = DateTime.UtcNow
-            };
-        }
-        else
-        {
-            member.HealthProfile.Objectives = req.Objectives;
-            member.HealthProfile.MedicalRestrictions = req.MedicalRestrictions;
-            member.HealthProfile.LastUpdatedAt = DateTime.UtcNow;
+                member.HealthProfile = new MemberHealthProfile
+                {
+                    MemberId = member.Id,
+                    Objectives = req.Objectives,
+                    MedicalRestrictions = req.MedicalRestrictions,
+                    LastUpdatedAt = DateTime.UtcNow
+                };
+            }
+            else
+            {
+                member.HealthProfile.Objectives = req.Objectives;
+                member.HealthProfile.MedicalRestrictions = req.MedicalRestrictions;
+                member.HealthProfile.LastUpdatedAt = DateTime.UtcNow;
+            }
         }
 
         await context.SaveChangesAsync(ct);

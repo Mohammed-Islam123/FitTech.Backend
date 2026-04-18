@@ -336,6 +336,16 @@ public class UserService(IUserRepository _userRepository, ITokenService _tokenSe
         return await _userRepository.IsUserExistsAsync(userId);
     }
 
+    public async Task<bool> DeactivateUserAsync(Guid userId)
+    {
+        var user = await _userRepository.FindByIdAsync(userId);
+        if (user == null)
+            return false;
+
+        user.IsActive = false;
+        return await _userRepository.UpdateUserAsync(user);
+    }
+
 
     public async Task<MedicalFileDTO?> UploadMedicalFileAsync(UploadMedicalFileDTO dto)
     {

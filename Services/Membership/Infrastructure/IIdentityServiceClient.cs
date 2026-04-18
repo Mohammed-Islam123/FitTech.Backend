@@ -1,3 +1,4 @@
+using Identity.Application.DTOs;
 using Membership.Domain.Enums;
 using Refit;
 using Shared.Wrappers;
@@ -33,4 +34,7 @@ public interface IIdentityServiceClient
 
     [Post("/api/User/change-password")]
     Task<ApiResponse<Response<string>>> ChangePasswordAsync([Body] ChangePasswordRequest dto);
+
+    [Put("/api/User/{userId}/deactivate")]
+    Task<ApiResponse<Response<string>>> DeactivateUserAsync(Guid userId);
 }

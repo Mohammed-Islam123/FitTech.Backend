@@ -270,6 +270,27 @@ public class UserController(IUserService _userService) : ControllerBase
         });
     }
 
+    /// <summary> Deactivates a user account. </summary>
+
+    [HttpPut("{userId}/deactivate")]
+    [ProducesResponseType(typeof(Response<string>), (int)HttpStatusCode.OK)]
+    [ProducesResponseType(typeof(Response<string>), (int)HttpStatusCode.BadRequest)]
+    public async Task<IActionResult> DeactivateUser(Guid userId)
+    {
+        try
+        {
+            var success = await _userService.DeactivateUserAsync(userId);
+            if (!success)
+                return BadRequest(Response<string>.FailResponse("Failed to deactivate user."));
+
+            return Ok(Response<string>.SuccessResponse("User deactivated successfully."));
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, Response<string>.FailResponse("Error deactivating user.", new List<string> { ex.Message }));
+        }
+    }
+
 
     /// <summary>
     /// Uploads or replaces the medical file for a user.
