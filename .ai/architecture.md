@@ -1,0 +1,7 @@
+- **Backend**: Microservices (.NET 10 primary, some Spring Boot)
+- **Orchestration**: .NET Aspire
+- **API Gateway**: YARP
+- **Microservices**: Each bounded context (Members, Subscriptions, Bookings, Access, etc.) is a separate service.
+- **Database**: Each microservice has its own database ( PostgreSQL, MongoDB).
+- **Messaging**: RabbitMQ for asynchronous communication between services.
+- **Authentication/Authorization**: Identity Service with JWT tokens, Role-based access control.
