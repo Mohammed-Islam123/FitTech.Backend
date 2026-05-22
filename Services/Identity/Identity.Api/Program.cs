@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Identity.Infrastructure.Services;
 using Identity.Infrastructure.Seed;
 using MassTransit;
+using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -102,7 +103,12 @@ using (var scope = app.Services.CreateScope())
     await DataSeeder.SeedAsync(context, userManager, roleManager);
 }
 
-app.MapOpenApi();  
+app.MapOpenApi();
+app.MapScalarApiReference(opt =>
+{
+    opt.WithTitle("Identity API")
+       .WithTheme(ScalarTheme.Mars);
+});
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
