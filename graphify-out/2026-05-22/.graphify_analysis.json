@@ -1,0 +1,1751 @@
+{
+  "communities": {
+    "0": [
+      "admin-role",
+      "api-versioning",
+      "coach-role",
+      "create-member",
+      "delete-member",
+      "ef-core-projections",
+      "endpoint-active-subscription",
+      "endpoint-admin-update-member",
+      "endpoint-create-plan",
+      "endpoint-delete-plan",
+      "endpoint-get-plan",
+      "endpoint-list-members",
+      "endpoint-list-plans",
+      "endpoint-member-detail",
+      "endpoint-self-update",
+      "endpoint-subscription-history",
+      "endpoint-update-plan",
+      "entity-framework-core",
+      "error-or",
+      "error-or-result-pattern",
+      "feature-get-active-subscription-doc",
+      "feature-get-member-detail-doc",
+      "feature-get-subscription-history-doc",
+      "feature-list-members-doc",
+      "feature-manage-plans-doc",
+      "feature-update-member-doc",
+      "fluent-validation",
+      "get-active-subscription",
+      "get-member-detail",
+      "get-subscription-history",
+      "health-profile",
+      "identity-service-integration",
+      "iidentity-service-client",
+      "list-members",
+      "manage-subscription-plans",
+      "member",
+      "member-role",
+      "membership-db-context",
+      "membership-service-instructions-doc",
+      "nfc-card",
+      "openapi-documentation",
+      "pagination-pattern",
+      "resource-based-authorization",
+      "role-based-access-control",
+      "serilog-logging",
+      "soft-delete-pattern",
+      "subscription",
+      "subscription-plan",
+      "update-member",
+      "user-accessor-pattern",
+      "validation-behavior",
+      "vertical-slice-architecture",
+      "yarp"
+    ],
+    "1": [
+      "ab-testing-sessions",
+      "async-programming",
+      "auth-state-reuse",
+      "browser-attachment",
+      "browser-permissions",
+      "browser-session-management",
+      "cdp-attachment",
+      "clipboard-operations",
+      "concurrent-scraping",
+      "conditional-response-mocking",
+      "cookie-management",
+      "custom-code-execution",
+      "delayed-response-mocking",
+      "element-references",
+      "file-download-handling",
+      "frame-iframe-handling",
+      "geolocation-emulation",
+      "graphify-tool",
+      "indexeddb-management",
+      "javascript-execution",
+      "localstorage-management",
+      "media-emulation",
+      "named-sessions",
+      "network-failure-simulation",
+      "persistent-browser-profiles",
+      "playwright-assertions",
+      "remote-browser-debugging",
+      "request-mocking",
+      "response-modification",
+      "seed-test",
+      "selector-drift",
+      "semantic-locators",
+      "sessionstorage-management",
+      "spec-driven-testing",
+      "spec-file",
+      "storage-state-management",
+      "test-fixture",
+      "test-generation",
+      "test-healing",
+      "url-patterns",
+      "wait-strategies"
+    ],
+    "2": [
+      "interfaces_iuserservice_iuserservice",
+      "interfaces_iuserservice_iuserservice_changepasswordasync",
+      "interfaces_iuserservice_iuserservice_deactivateuserasync",
+      "interfaces_iuserservice_iuserservice_forgotpasswordasync",
+      "interfaces_iuserservice_iuserservice_getmedicalfileasync",
+      "interfaces_iuserservice_iuserservice_getprofileasync",
+      "interfaces_iuserservice_iuserservice_isuserexistsasync",
+      "interfaces_iuserservice_iuserservice_loginasync",
+      "interfaces_iuserservice_iuserservice_refreshtokenasync",
+      "interfaces_iuserservice_iuserservice_registerasync",
+      "interfaces_iuserservice_iuserservice_resetpasswordasync",
+      "interfaces_iuserservice_iuserservice_revokerefreshtokenasync",
+      "interfaces_iuserservice_iuserservice_sendconfirmationemailasync",
+      "interfaces_iuserservice_iuserservice_updateprofileasync",
+      "interfaces_iuserservice_iuserservice_uploadmedicalfileasync",
+      "interfaces_iuserservice_iuserservice_verifyconfirmationemailasync",
+      "services_identity_identity_application_interfaces_iuserservice_cs",
+      "services_identity_identity_application_services_userservice_cs",
+      "services_identity_identity_application_services_userservice_cs_string",
+      "services_userservice_userservice",
+      "services_userservice_userservice_changepasswordasync",
+      "services_userservice_userservice_deactivateuserasync",
+      "services_userservice_userservice_forgotpasswordasync",
+      "services_userservice_userservice_getmedicalfileasync",
+      "services_userservice_userservice_getprofileasync",
+      "services_userservice_userservice_isuserexistsasync",
+      "services_userservice_userservice_loginasync",
+      "services_userservice_userservice_maptodto",
+      "services_userservice_userservice_refreshtokenasync",
+      "services_userservice_userservice_registerasync",
+      "services_userservice_userservice_resetpasswordasync",
+      "services_userservice_userservice_revokerefreshtokenasync",
+      "services_userservice_userservice_sendconfirmationemailasync",
+      "services_userservice_userservice_updateprofileasync",
+      "services_userservice_userservice_uploadmedicalfileasync",
+      "services_userservice_userservice_uploadprofilephotointernalasync",
+      "services_userservice_userservice_verifyconfirmationemailasync"
+    ],
+    "3": [
+      "opencode-playwright-browser-config",
+      "opencode-playwright-cli",
+      "opencode-playwright-core-commands",
+      "opencode-playwright-debug-mode",
+      "opencode-playwright-devtools",
+      "opencode-playwright-element-attributes",
+      "opencode-playwright-element-refs",
+      "opencode-playwright-heal-workflow",
+      "opencode-playwright-installation",
+      "opencode-playwright-keyboard-mouse",
+      "opencode-playwright-navigation",
+      "opencode-playwright-raw-output",
+      "opencode-playwright-request-mocking",
+      "opencode-playwright-request-mocking-reference",
+      "opencode-playwright-run-code",
+      "opencode-playwright-running-code-reference",
+      "opencode-playwright-save-as",
+      "opencode-playwright-seed-test",
+      "opencode-playwright-session-management-reference",
+      "opencode-playwright-sessions",
+      "opencode-playwright-snapshot",
+      "opencode-playwright-spec-driven-testing",
+      "opencode-playwright-spec-driven-testing-reference",
+      "opencode-playwright-spec-file",
+      "opencode-playwright-storage-state",
+      "opencode-playwright-storage-state-reference",
+      "opencode-playwright-tab-management",
+      "opencode-playwright-test-generation",
+      "opencode-playwright-test-generation-reference",
+      "opencode-playwright-test-runner",
+      "opencode-playwright-tests-reference",
+      "opencode-playwright-tracing",
+      "opencode-playwright-tracing-reference",
+      "opencode-playwright-video-recording",
+      "opencode-skill-playwright-cli"
+    ],
+    "4": [
+      "repositories_userrepository_userrepository",
+      "repositories_userrepository_userrepository_addorupdatemedicalfileasync",
+      "repositories_userrepository_userrepository_addusertoroleasync",
+      "repositories_userrepository_userrepository_changepasswordasync",
+      "repositories_userrepository_userrepository_checkpasswordasync",
+      "repositories_userrepository_userrepository_createuserasync",
+      "repositories_userrepository_userrepository_findbyemailasync",
+      "repositories_userrepository_userrepository_findbyidasync",
+      "repositories_userrepository_userrepository_findbyusernameasync",
+      "repositories_userrepository_userrepository_generateandstorerefreshtokenasync",
+      "repositories_userrepository_userrepository_generateemailconfirmationtokenasync",
+      "repositories_userrepository_userrepository_generatepasswordresettokenasync",
+      "repositories_userrepository_userrepository_getaccessfailedcountasync",
+      "repositories_userrepository_userrepository_getlockoutenddateasync",
+      "repositories_userrepository_userrepository_getmaxfailedaccessattemptsasync",
+      "repositories_userrepository_userrepository_getmedicalfilebyuseridasync",
+      "repositories_userrepository_userrepository_getrefreshtokenasync",
+      "repositories_userrepository_userrepository_getuserrolesasync",
+      "repositories_userrepository_userrepository_incrementaccessfailedcountasync",
+      "repositories_userrepository_userrepository_islockedoutasync",
+      "repositories_userrepository_userrepository_istwofactorenabledasync",
+      "repositories_userrepository_userrepository_isuserexistsasync",
+      "repositories_userrepository_userrepository_isvalidclientasync",
+      "repositories_userrepository_userrepository_maptoapplicationuser",
+      "repositories_userrepository_userrepository_maptodomain",
+      "repositories_userrepository_userrepository_resetaccessfailedcountasync",
+      "repositories_userrepository_userrepository_resetpasswordasync",
+      "repositories_userrepository_userrepository_revokeallrefreshtokensasync",
+      "repositories_userrepository_userrepository_revokerefreshtokenasync",
+      "repositories_userrepository_userrepository_updatelastloginasync",
+      "repositories_userrepository_userrepository_updateuserasync",
+      "repositories_userrepository_userrepository_verifyconfirmaionemailasync",
+      "services_identity_identity_infrastructure_repositories_userrepository_cs",
+      "userdbcontext",
+      "usermanager"
+    ],
+    "5": [
+      "repositories_iuserrepository_iuserrepository",
+      "repositories_iuserrepository_iuserrepository_addorupdatemedicalfileasync",
+      "repositories_iuserrepository_iuserrepository_addusertoroleasync",
+      "repositories_iuserrepository_iuserrepository_changepasswordasync",
+      "repositories_iuserrepository_iuserrepository_checkpasswordasync",
+      "repositories_iuserrepository_iuserrepository_createuserasync",
+      "repositories_iuserrepository_iuserrepository_findbyemailasync",
+      "repositories_iuserrepository_iuserrepository_findbyidasync",
+      "repositories_iuserrepository_iuserrepository_findbyusernameasync",
+      "repositories_iuserrepository_iuserrepository_generateandstorerefreshtokenasync",
+      "repositories_iuserrepository_iuserrepository_generateemailconfirmationtokenasync",
+      "repositories_iuserrepository_iuserrepository_generatepasswordresettokenasync",
+      "repositories_iuserrepository_iuserrepository_getaccessfailedcountasync",
+      "repositories_iuserrepository_iuserrepository_getlockoutenddateasync",
+      "repositories_iuserrepository_iuserrepository_getmaxfailedaccessattemptsasync",
+      "repositories_iuserrepository_iuserrepository_getmedicalfilebyuseridasync",
+      "repositories_iuserrepository_iuserrepository_getrefreshtokenasync",
+      "repositories_iuserrepository_iuserrepository_getuserrolesasync",
+      "repositories_iuserrepository_iuserrepository_incrementaccessfailedcountasync",
+      "repositories_iuserrepository_iuserrepository_islockedoutasync",
+      "repositories_iuserrepository_iuserrepository_istwofactorenabledasync",
+      "repositories_iuserrepository_iuserrepository_isuserexistsasync",
+      "repositories_iuserrepository_iuserrepository_isvalidclientasync",
+      "repositories_iuserrepository_iuserrepository_resetaccessfailedcountasync",
+      "repositories_iuserrepository_iuserrepository_resetpasswordasync",
+      "repositories_iuserrepository_iuserrepository_revokerefreshtokenasync",
+      "repositories_iuserrepository_iuserrepository_updatelastloginasync",
+      "repositories_iuserrepository_iuserrepository_updateuserasync",
+      "repositories_iuserrepository_iuserrepository_verifyconfirmaionemailasync",
+      "services_identity_identity_application_repositories_iuserrepository_cs"
+    ],
+    "6": [
+      "github-playwright-cli-browser-automation",
+      "github-playwright-cli-command-check",
+      "github-playwright-cli-command-click",
+      "github-playwright-cli-command-console",
+      "github-playwright-cli-command-dialog",
+      "github-playwright-cli-command-drag",
+      "github-playwright-cli-command-drop",
+      "github-playwright-cli-command-fill",
+      "github-playwright-cli-command-generate-locator",
+      "github-playwright-cli-command-goto",
+      "github-playwright-cli-command-highlight",
+      "github-playwright-cli-command-hover",
+      "github-playwright-cli-command-keyboard",
+      "github-playwright-cli-command-mouse",
+      "github-playwright-cli-command-open",
+      "github-playwright-cli-command-pdf",
+      "github-playwright-cli-command-requests",
+      "github-playwright-cli-command-resize",
+      "github-playwright-cli-command-screenshot",
+      "github-playwright-cli-command-select",
+      "github-playwright-cli-command-show-annotate",
+      "github-playwright-cli-command-snapshot",
+      "github-playwright-cli-command-tabs",
+      "github-playwright-cli-command-upload",
+      "github-playwright-cli-navigation-commands",
+      "github-playwright-cli-raw-output",
+      "github-playwright-cli-skill"
+    ],
+    "7": [
+      "abstractvalidator",
+      "behaviours_validationbehavior_validationbehavior",
+      "behaviours_validationbehavior_validationbehavior_beforeasync",
+      "confirmcashpayment_confirmcashpaymentvalidator_confirmcashpaymentvalidator",
+      "createmember_createmembervalidator_createmembervalidator",
+      "createpayment_createpaymentvalidator_createpaymentvalidator",
+      "createplan_createplanvalidator_createplanvalidator",
+      "createsubscription_createsubscriptionvalidator_createsubscriptionvalidator",
+      "fluentvalidation",
+      "membershipdbcontext",
+      "problem-details",
+      "services_membership_coommon_behaviours_validationbehavior_cs",
+      "services_membership_coommon_behaviours_validationbehavior_cs_ilogger",
+      "services_membership_features_members_createmember_createmembervalidator_cs",
+      "services_membership_features_members_updatemember_updatemembervalidator_cs",
+      "services_membership_features_plans_createplan_createplanvalidator_cs",
+      "services_membership_features_subscriptions_confirmcashpayment_confirmcashpaymentvalidator_cs",
+      "services_membership_features_subscriptions_createsubscription_createsubscriptionvalidator_cs",
+      "services_payment_features_payments_createpayment_createpaymentvalidator_cs",
+      "services_payment_program_cs",
+      "updatemember_updatemembervalidator_updatemembervalidator"
+    ],
+    "8": [
+      "fittech_apphost_fittech_apphost_properties_launchsettings_json",
+      "fittech_apphost_fittech_apphost_properties_launchsettings_json_properties_launchsettings_environmentvariables_aspnetcore_environment",
+      "fittech_apphost_fittech_apphost_properties_launchsettings_json_properties_launchsettings_environmentvariables_dotnet_environment",
+      "fittech_apphost_fittech_apphost_properties_launchsettings_json_properties_launchsettings_http_applicationurl",
+      "fittech_apphost_fittech_apphost_properties_launchsettings_json_properties_launchsettings_http_commandname",
+      "fittech_apphost_fittech_apphost_properties_launchsettings_json_properties_launchsettings_http_dotnetrunmessages",
+      "fittech_apphost_fittech_apphost_properties_launchsettings_json_properties_launchsettings_http_environmentvariables",
+      "fittech_apphost_fittech_apphost_properties_launchsettings_json_properties_launchsettings_http_launchbrowser",
+      "fittech_apphost_fittech_apphost_properties_launchsettings_json_properties_launchsettings_https_applicationurl",
+      "fittech_apphost_fittech_apphost_properties_launchsettings_json_properties_launchsettings_https_commandname",
+      "fittech_apphost_fittech_apphost_properties_launchsettings_json_properties_launchsettings_https_dotnetrunmessages",
+      "fittech_apphost_fittech_apphost_properties_launchsettings_json_properties_launchsettings_https_environmentvariables",
+      "fittech_apphost_fittech_apphost_properties_launchsettings_json_properties_launchsettings_https_launchbrowser",
+      "fittech_apphost_fittech_apphost_properties_launchsettings_json_properties_launchsettings_profiles",
+      "fittech_apphost_fittech_apphost_properties_launchsettings_json_properties_launchsettings_profiles_http",
+      "fittech_apphost_fittech_apphost_properties_launchsettings_json_properties_launchsettings_profiles_https",
+      "fittech_apphost_fittech_apphost_properties_launchsettings_json_properties_launchsettings_schema",
+      "properties_launchsettings_environmentvariables_aspire_dashboard_mcp_endpoint_url",
+      "properties_launchsettings_environmentvariables_aspire_dashboard_otlp_endpoint_url",
+      "properties_launchsettings_environmentvariables_aspire_resource_service_endpoint_url"
+    ],
+    "9": [
+      "AGENTS_Aspire",
+      "AGENTS_DotNET10",
+      "AGENTS_EFCoreMigrations",
+      "AGENTS_FitTechBackend",
+      "AGENTS_Gateway",
+      "AGENTS_KnownGaps",
+      "AGENTS_MapErrorsToResult",
+      "AGENTS_RegisteredAgents",
+      "AGENTS_ResultPattern",
+      "AGENTS_RouteMapping",
+      "AGENTS_SeedUsers",
+      "AGENTS_SharedEvents",
+      "AGENTS_YARP",
+      "AGENTS_graphifyKnowledgeGraph",
+      "GEMINI_PostgreSQL",
+      "architecture_BackendArchitecture",
+      "architecture_JWT",
+      "architecture_MongoDB",
+      "architecture_RoleBasedAccessControl",
+      "architecture_SpringBoot"
+    ],
+    "10": [
+      "controllerbase",
+      "controllers_usercontroller_usercontroller",
+      "controllers_usercontroller_usercontroller_changepassword",
+      "controllers_usercontroller_usercontroller_deactivateuser",
+      "controllers_usercontroller_usercontroller_forgotpassword",
+      "controllers_usercontroller_usercontroller_getmedicalfile",
+      "controllers_usercontroller_usercontroller_getnormalizeduseragent",
+      "controllers_usercontroller_usercontroller_getprofile",
+      "controllers_usercontroller_usercontroller_login",
+      "controllers_usercontroller_usercontroller_refreshtoken",
+      "controllers_usercontroller_usercontroller_register",
+      "controllers_usercontroller_usercontroller_resetpassword",
+      "controllers_usercontroller_usercontroller_revoketoken",
+      "controllers_usercontroller_usercontroller_sendconfirmationemail",
+      "controllers_usercontroller_usercontroller_updateprofile",
+      "controllers_usercontroller_usercontroller_uploadmedicalfile",
+      "controllers_usercontroller_usercontroller_userexists",
+      "controllers_usercontroller_usercontroller_verifyconfirmationemailasync",
+      "services_identity_identity_api_controllers_usercontroller_cs"
+    ],
+    "11": [
+      "opencode-apphost",
+      "opencode-aspire-add",
+      "opencode-aspire-cli",
+      "opencode-aspire-code-change-workflow",
+      "opencode-aspire-debug-workflow",
+      "opencode-aspire-describe",
+      "opencode-aspire-integration",
+      "opencode-aspire-isolated-mode",
+      "opencode-aspire-logs",
+      "opencode-aspire-mcp",
+      "opencode-aspire-observability",
+      "opencode-aspire-otel",
+      "opencode-aspire-resource",
+      "opencode-aspire-resource-command",
+      "opencode-aspire-start",
+      "opencode-aspire-stop",
+      "opencode-aspire-wait",
+      "opencode-resource-mcp-tools",
+      "opencode-skill-aspire"
+    ],
+    "12": [
+      "caching-strategies",
+      "chapter-markers",
+      "overlay-annotations",
+      "overlay-api",
+      "performance-analysis",
+      "playwright-cli-run-code",
+      "playwright-cli-video-chapter",
+      "playwright-cli-video-start",
+      "playwright-cli-video-stop",
+      "playwright-video-recording",
+      "screencast-api",
+      "trace-files",
+      "trace-vs-video-comparison",
+      "tracing",
+      "tracing-comparison",
+      "video-chapter-markers",
+      "video-recording",
+      "webm-format"
+    ],
+    "13": [
+      "aspire",
+      "aspire-apphost",
+      "aspire-cli-commands",
+      "aspire-distributed-tracing",
+      "aspire-integrations",
+      "aspire-mcp-tools",
+      "aspire-resource-management",
+      "aspire-skill-doc",
+      "cicd-pipelines",
+      "container-publishing",
+      "fittech_apphost_fittech_apphost_apphost_cs",
+      "jwt-authentication",
+      "oauth-oidc",
+      "playwright-cli",
+      "playwright-cli-commands",
+      "playwright-cli-skill-doc",
+      "playwright-element-attributes-doc",
+      "playwright-tests-reference-doc"
+    ],
+    "14": [
+      "gateway_appsettings_clusters_identity_cluster",
+      "gateway_appsettings_destinations_identity_api",
+      "gateway_appsettings_identity_api_address",
+      "gateway_appsettings_identity_cluster_destinations",
+      "gateway_appsettings_identity_route_clusterid",
+      "gateway_appsettings_identity_route_match",
+      "gateway_appsettings_logging",
+      "gateway_appsettings_logging_loglevel",
+      "gateway_appsettings_loglevel_default",
+      "gateway_appsettings_loglevel_microsoft_aspnetcore",
+      "gateway_appsettings_loglevel_yarp",
+      "gateway_appsettings_match_path",
+      "gateway_appsettings_reverseproxy",
+      "gateway_appsettings_reverseproxy_clusters",
+      "gateway_appsettings_reverseproxy_routes",
+      "gateway_appsettings_routes_identity_route",
+      "services_gateway_appsettings_json"
+    ],
+    "15": [
+      "services_gateway_properties_launchsettings_json",
+      "services_gateway_properties_launchsettings_json_properties_launchsettings_environmentvariables_aspnetcore_environment",
+      "services_gateway_properties_launchsettings_json_properties_launchsettings_http_applicationurl",
+      "services_gateway_properties_launchsettings_json_properties_launchsettings_http_commandname",
+      "services_gateway_properties_launchsettings_json_properties_launchsettings_http_dotnetrunmessages",
+      "services_gateway_properties_launchsettings_json_properties_launchsettings_http_environmentvariables",
+      "services_gateway_properties_launchsettings_json_properties_launchsettings_http_launchbrowser",
+      "services_gateway_properties_launchsettings_json_properties_launchsettings_https_applicationurl",
+      "services_gateway_properties_launchsettings_json_properties_launchsettings_https_commandname",
+      "services_gateway_properties_launchsettings_json_properties_launchsettings_https_dotnetrunmessages",
+      "services_gateway_properties_launchsettings_json_properties_launchsettings_https_environmentvariables",
+      "services_gateway_properties_launchsettings_json_properties_launchsettings_https_launchbrowser",
+      "services_gateway_properties_launchsettings_json_properties_launchsettings_profiles",
+      "services_gateway_properties_launchsettings_json_properties_launchsettings_profiles_http",
+      "services_gateway_properties_launchsettings_json_properties_launchsettings_profiles_https",
+      "services_gateway_properties_launchsettings_json_properties_launchsettings_schema"
+    ],
+    "16": [
+      "services_identity_identity_api_properties_launchsettings_json",
+      "services_identity_identity_api_properties_launchsettings_json_properties_launchsettings_environmentvariables_aspnetcore_environment",
+      "services_identity_identity_api_properties_launchsettings_json_properties_launchsettings_http_applicationurl",
+      "services_identity_identity_api_properties_launchsettings_json_properties_launchsettings_http_commandname",
+      "services_identity_identity_api_properties_launchsettings_json_properties_launchsettings_http_dotnetrunmessages",
+      "services_identity_identity_api_properties_launchsettings_json_properties_launchsettings_http_environmentvariables",
+      "services_identity_identity_api_properties_launchsettings_json_properties_launchsettings_http_launchbrowser",
+      "services_identity_identity_api_properties_launchsettings_json_properties_launchsettings_https_applicationurl",
+      "services_identity_identity_api_properties_launchsettings_json_properties_launchsettings_https_commandname",
+      "services_identity_identity_api_properties_launchsettings_json_properties_launchsettings_https_dotnetrunmessages",
+      "services_identity_identity_api_properties_launchsettings_json_properties_launchsettings_https_environmentvariables",
+      "services_identity_identity_api_properties_launchsettings_json_properties_launchsettings_https_launchbrowser",
+      "services_identity_identity_api_properties_launchsettings_json_properties_launchsettings_profiles",
+      "services_identity_identity_api_properties_launchsettings_json_properties_launchsettings_profiles_http",
+      "services_identity_identity_api_properties_launchsettings_json_properties_launchsettings_profiles_https",
+      "services_identity_identity_api_properties_launchsettings_json_properties_launchsettings_schema"
+    ],
+    "17": [
+      "services_membership_properties_launchsettings_json",
+      "services_membership_properties_launchsettings_json_properties_launchsettings_environmentvariables_aspnetcore_environment",
+      "services_membership_properties_launchsettings_json_properties_launchsettings_http_applicationurl",
+      "services_membership_properties_launchsettings_json_properties_launchsettings_http_commandname",
+      "services_membership_properties_launchsettings_json_properties_launchsettings_http_dotnetrunmessages",
+      "services_membership_properties_launchsettings_json_properties_launchsettings_http_environmentvariables",
+      "services_membership_properties_launchsettings_json_properties_launchsettings_http_launchbrowser",
+      "services_membership_properties_launchsettings_json_properties_launchsettings_https_applicationurl",
+      "services_membership_properties_launchsettings_json_properties_launchsettings_https_commandname",
+      "services_membership_properties_launchsettings_json_properties_launchsettings_https_dotnetrunmessages",
+      "services_membership_properties_launchsettings_json_properties_launchsettings_https_environmentvariables",
+      "services_membership_properties_launchsettings_json_properties_launchsettings_https_launchbrowser",
+      "services_membership_properties_launchsettings_json_properties_launchsettings_profiles",
+      "services_membership_properties_launchsettings_json_properties_launchsettings_profiles_http",
+      "services_membership_properties_launchsettings_json_properties_launchsettings_profiles_https",
+      "services_membership_properties_launchsettings_json_properties_launchsettings_schema"
+    ],
+    "18": [
+      "services_payment_properties_launchsettings_json",
+      "services_payment_properties_launchsettings_json_properties_launchsettings_environmentvariables_aspnetcore_environment",
+      "services_payment_properties_launchsettings_json_properties_launchsettings_http_applicationurl",
+      "services_payment_properties_launchsettings_json_properties_launchsettings_http_commandname",
+      "services_payment_properties_launchsettings_json_properties_launchsettings_http_dotnetrunmessages",
+      "services_payment_properties_launchsettings_json_properties_launchsettings_http_environmentvariables",
+      "services_payment_properties_launchsettings_json_properties_launchsettings_http_launchbrowser",
+      "services_payment_properties_launchsettings_json_properties_launchsettings_https_applicationurl",
+      "services_payment_properties_launchsettings_json_properties_launchsettings_https_commandname",
+      "services_payment_properties_launchsettings_json_properties_launchsettings_https_dotnetrunmessages",
+      "services_payment_properties_launchsettings_json_properties_launchsettings_https_environmentvariables",
+      "services_payment_properties_launchsettings_json_properties_launchsettings_https_launchbrowser",
+      "services_payment_properties_launchsettings_json_properties_launchsettings_profiles",
+      "services_payment_properties_launchsettings_json_properties_launchsettings_profiles_http",
+      "services_payment_properties_launchsettings_json_properties_launchsettings_profiles_https",
+      "services_payment_properties_launchsettings_json_properties_launchsettings_schema"
+    ],
+    "19": [
+      "AGENTS_Carter",
+      "AGENTS_ErrorOr",
+      "AGENTS_IMessageBusInvokeAsync",
+      "AGENTS_PaymentService",
+      "AGENTS_Wolverine",
+      "progress_ActiveFeatureGetActiveSubscription",
+      "progress_CreateMember",
+      "progress_GetMemberDetail",
+      "progress_GetSubscriptionHistory",
+      "progress_HealthProfilePrivacy",
+      "progress_IIdentityServiceClient",
+      "progress_ListMembers",
+      "progress_ProgressStatus",
+      "progress_UpdateMember",
+      "progress_UserAccessor"
+    ],
+    "20": [
+      "github-playwright-cli-ab-testing",
+      "github-playwright-cli-cdp-browser",
+      "github-playwright-cli-command-attach",
+      "github-playwright-cli-command-session",
+      "github-playwright-cli-concurrent-scraping",
+      "github-playwright-cli-fixtures",
+      "github-playwright-cli-persistent-profile",
+      "github-playwright-cli-playwright-tests",
+      "github-playwright-cli-seed-test",
+      "github-playwright-cli-session-management",
+      "github-playwright-cli-spec-driven-testing",
+      "github-playwright-cli-spec-generation",
+      "github-playwright-cli-spec-healing",
+      "github-playwright-cli-spec-planning"
+    ],
+    "21": [
+      "AGENTS_CleanArchitecture",
+      "AGENTS_FluentValidation",
+      "AGENTS_IdentityService",
+      "AGENTS_MassTransit",
+      "AGENTS_NotificationService",
+      "AGENTS_RabbitMQ",
+      "AGENTS_Refit",
+      "GEMINI_AppHost",
+      "GEMINI_DirectoryPackagesProps",
+      "GEMINI_EntityFrameworkCore",
+      "GEMINI_FitTechPlatform",
+      "GEMINI_HealthChecks",
+      "GEMINI_OpenTelemetry",
+      "GEMINI_ServiceDefaults"
+    ],
+    "22": [
+      "GEMINI_Scalar",
+      "paymentService_ClientCredentialsHandler",
+      "paymentService_ConfirmCashPaymentFeature",
+      "paymentService_CreatePaymentFeature",
+      "paymentService_CreateSubscriptionFeature",
+      "paymentService_IPaymentServiceClient",
+      "paymentService_InternalServiceOnlyPolicy",
+      "paymentService_PaymentConfirmedEvent",
+      "paymentService_PaymentDbContext",
+      "paymentService_PaymentEntity",
+      "paymentService_PaymentMethodEnum",
+      "paymentService_PaymentServiceInstructions",
+      "paymentService_PaymentStatusEnum",
+      "paymentService_PaymentTypeEnum"
+    ],
+    "23": [
+      "createmember_creatememberhandler_creatememberhandler",
+      "createmember_creatememberhandler_creatememberhandler_generatesecurepassword",
+      "createmember_creatememberhandler_creatememberhandler_handle",
+      "infrastructure_ipaymentserviceclient_ipaymentserviceclient",
+      "infrastructure_ipaymentserviceclient_ipaymentserviceclient_createpaymentasync",
+      "refit",
+      "services_membership_features_members_createmember_creatememberhandler_cs",
+      "services_membership_features_members_updatemember_updatememberhandler_cs",
+      "services_membership_infrastructure_iidentityserviceclient_cs",
+      "services_membership_infrastructure_ipaymentserviceclient_cs",
+      "services_membership_program_cs",
+      "updatemember_updatememberhandler_updatememberhandler",
+      "updatemember_updatememberhandler_updatememberhandler_handle"
+    ],
+    "24": [
+      "AGENTS_CSharp14",
+      "GEMINI_VerticalSlice",
+      "MASTER_INSTRUCTIONS_APIDocumentation",
+      "MASTER_INSTRUCTIONS_ConfidenceGate",
+      "MASTER_INSTRUCTIONS_FeatureWorkflow",
+      "MASTER_INSTRUCTIONS_OpenApiOperationTransformer",
+      "MASTER_INSTRUCTIONS_OperationalRules",
+      "MASTER_INSTRUCTIONS_PlanningMode",
+      "MASTER_INSTRUCTIONS_SessionHandover",
+      "MASTER_INSTRUCTIONS_SystemTextJsonNodes",
+      "MASTER_MASTER",
+      "opencode_opencode"
+    ],
+    "25": [
+      "cors-metadata",
+      "gateway-configuration",
+      "identity-cluster",
+      "identity-openapi-route",
+      "identity-route",
+      "membership-cluster",
+      "membership-openapi-route",
+      "membership-plans-route",
+      "membership-route",
+      "path-transforms",
+      "yarp-reverse-proxy"
+    ],
+    "26": [
+      "migration",
+      "migrations_20260413104607_initialmembershipschema_initialmembershipschema",
+      "migrations_20260413104607_initialmembershipschema_initialmembershipschema_down",
+      "migrations_20260413104607_initialmembershipschema_initialmembershipschema_up",
+      "migrations_20260413104607_initialmembershipschema_membership_migrations",
+      "migrations_20260414095017_initialcreate_identity_infrastructure_migrations",
+      "migrations_20260414095017_initialcreate_initialcreate",
+      "migrations_20260414095017_initialcreate_initialcreate_down",
+      "migrations_20260414095017_initialcreate_initialcreate_up",
+      "services_identity_identity_infrastructure_migrations_20260414095017_initialcreate_cs",
+      "services_membership_migrations_20260413104607_initialmembershipschema_cs"
+    ],
+    "27": [
+      "configurations_paymentconfiguration_paymentconfiguration",
+      "configurations_paymentconfiguration_paymentconfiguration_configure",
+      "configurations_subscriptionconfiguration_subscriptionconfiguration",
+      "configurations_subscriptionconfiguration_subscriptionconfiguration_configure",
+      "configurations_subscriptionplanconfiguration_subscriptionplanconfiguration",
+      "configurations_subscriptionplanconfiguration_subscriptionplanconfiguration_configure",
+      "ientitytypeconfiguration",
+      "services_membership_domain_configurations_subscriptionconfiguration_cs",
+      "services_membership_domain_configurations_subscriptionplanconfiguration_cs",
+      "services_payment_infrastructure_persistence_configurations_paymentconfiguration_cs"
+    ],
+    "28": [
+      "github-playwright-cli-clipboard",
+      "github-playwright-cli-error-handling",
+      "github-playwright-cli-file-downloads",
+      "github-playwright-cli-frames-iframes",
+      "github-playwright-cli-geolocation-permissions",
+      "github-playwright-cli-js-execution",
+      "github-playwright-cli-media-emulation",
+      "github-playwright-cli-page-information",
+      "github-playwright-cli-running-code",
+      "github-playwright-cli-wait-strategies"
+    ],
+    "29": [
+      "github-playwright-cli-auth-state-reuse",
+      "github-playwright-cli-command-cookies",
+      "github-playwright-cli-command-localstorage",
+      "github-playwright-cli-command-run-code",
+      "github-playwright-cli-command-sessionstorage",
+      "github-playwright-cli-command-state-save",
+      "github-playwright-cli-complex-workflows",
+      "github-playwright-cli-indexeddb",
+      "github-playwright-cli-storage-state",
+      "github-playwright-cli-storage-state-format"
+    ],
+    "30": [
+      "identity_api_appsettings_allowedhosts",
+      "identity_api_appsettings_jwtsettings",
+      "identity_api_appsettings_jwtsettings_accesstokenexpirationminutes",
+      "identity_api_appsettings_jwtsettings_issuer",
+      "identity_api_appsettings_jwtsettings_secretkey",
+      "identity_api_appsettings_logging",
+      "identity_api_appsettings_logging_loglevel",
+      "identity_api_appsettings_loglevel_default",
+      "identity_api_appsettings_loglevel_microsoft_aspnetcore",
+      "services_identity_identity_api_appsettings_json"
+    ],
+    "31": [
+      "project_brief_AccessTracking",
+      "project_brief_ConnectedMachines",
+      "project_brief_CourseBooking",
+      "project_brief_EquipmentMaintenance",
+      "project_brief_HealthProfile",
+      "project_brief_NFC",
+      "project_brief_Notifications",
+      "project_brief_OnlineShop",
+      "project_brief_ProjectBrief",
+      "project_brief_SubscriptionManagement"
+    ],
+    "32": [
+      "fittech_apphost_appsettings_logging",
+      "fittech_apphost_appsettings_logging_loglevel",
+      "fittech_apphost_appsettings_loglevel_aspire_hosting",
+      "fittech_apphost_appsettings_loglevel_aspire_hosting_dcp",
+      "fittech_apphost_appsettings_loglevel_default",
+      "fittech_apphost_appsettings_parameters",
+      "fittech_apphost_appsettings_parameters_rabbitmq_password",
+      "fittech_apphost_appsettings_parameters_rabbitmq_username",
+      "fittech_apphost_fittech_apphost_appsettings_json"
+    ],
+    "33": [
+      "migrations_membershipdbcontextmodelsnapshot_membership_migrations",
+      "migrations_membershipdbcontextmodelsnapshot_membershipdbcontextmodelsnapshot",
+      "migrations_membershipdbcontextmodelsnapshot_membershipdbcontextmodelsnapshot_buildmodel",
+      "migrations_userdbcontextmodelsnapshot_identity_infrastructure_migrations",
+      "migrations_userdbcontextmodelsnapshot_userdbcontextmodelsnapshot",
+      "migrations_userdbcontextmodelsnapshot_userdbcontextmodelsnapshot_buildmodel",
+      "modelsnapshot",
+      "services_identity_identity_infrastructure_migrations_userdbcontextmodelsnapshot_cs",
+      "services_membership_migrations_membershipdbcontextmodelsnapshot_cs"
+    ],
+    "34": [
+      "AGENTS_MembershipService",
+      "feature_DeleteMember_AdminRoleRestriction",
+      "feature_DeleteMember_DeactivateUser",
+      "feature_DeleteMember_FeatureSpec",
+      "feature_DeleteMember_IUserService",
+      "feature_DeleteMember_SoftDelete",
+      "feature_DeleteMember_UserController",
+      "feature_DeleteMember_UserService",
+      "progress_DeleteMember"
+    ],
+    "35": [
+      "confirmcashpayment_confirmcashpaymentendpoint_confirmcashpaymentendpoint",
+      "confirmcashpayment_confirmcashpaymentendpoint_confirmcashpaymentendpoint_addroutes",
+      "confirmcashpayment_confirmcashpaymentendpoint_confirmcashpaymentendpoint_handle",
+      "createmember_creatememberendpoint_creatememberendpoint",
+      "createmember_creatememberendpoint_creatememberendpoint_addroutes",
+      "createmember_creatememberendpoint_creatememberendpoint_handle",
+      "icartermodule",
+      "services_membership_features_subscriptions_confirmcashpayment_confirmcashpaymentendpoint_cs"
+    ],
+    "36": [
+      "createpayment_createpaymenthandler_createpaymenthandler",
+      "createpayment_createpaymenthandler_createpaymenthandler_handle",
+      "cross-service-events",
+      "mass-transit",
+      "rabbit-mq",
+      "services_payment_features_payments_createpayment_createpaymenthandler_cs",
+      "shared-events-namespace",
+      "wolverine"
+    ],
+    "37": [
+      "fittech_apphost_fittech_servicedefaults_extensions_cs",
+      "fittech_apphost_fittech_servicedefaults_extensions_cs_string",
+      "fittech_servicedefaults_extensions_extensions",
+      "fittech_servicedefaults_extensions_extensions_adddefaulthealthchecks",
+      "fittech_servicedefaults_extensions_extensions_addopentelemetryexporters",
+      "fittech_servicedefaults_extensions_extensions_addservicedefaults",
+      "fittech_servicedefaults_extensions_extensions_configureopentelemetry",
+      "fittech_servicedefaults_extensions_extensions_mapdefaultendpoints"
+    ],
+    "38": [
+      "properties_launchsettings_notification_api_commandname",
+      "properties_launchsettings_notification_api_dotnetrunmessages",
+      "properties_launchsettings_notification_api_environmentvariables",
+      "properties_launchsettings_profiles_notification_api",
+      "services_notification_notification_api_properties_launchsettings_json",
+      "services_notification_notification_api_properties_launchsettings_json_properties_launchsettings_environmentvariables_dotnet_environment",
+      "services_notification_notification_api_properties_launchsettings_json_properties_launchsettings_profiles",
+      "services_notification_notification_api_properties_launchsettings_json_properties_launchsettings_schema"
+    ],
+    "39": [
+      "asp-net-core",
+      "carter",
+      "deletemember_deletememberendpoint_deletememberendpoint",
+      "deletemember_deletememberendpoint_deletememberendpoint_addroutes",
+      "deletemember_deletememberendpoint_deletememberendpoint_handle",
+      "services_membership_features_members_createmember_creatememberendpoint_cs",
+      "services_membership_features_members_deletemember_deletememberendpoint_cs"
+    ],
+    "40": [
+      "csharp-14",
+      "csharp-naming-conventions",
+      "file-scoped-namespaces",
+      "nullable-reference-types",
+      "pattern-matching",
+      "primary-constructors",
+      "record-types"
+    ],
+    "41": [
+      "github-playwright-cli-command-tracing",
+      "github-playwright-cli-command-video",
+      "github-playwright-cli-trace-format",
+      "github-playwright-cli-tracing",
+      "github-playwright-cli-video-overlay-api",
+      "github-playwright-cli-video-recording",
+      "github-playwright-cli-vs-trace-video-comparison"
+    ],
+    "42": [
+      "identity_api_appsettings_development_connectionstrings",
+      "identity_api_appsettings_development_connectionstrings_identity_db",
+      "identity_api_appsettings_development_logging",
+      "identity_api_appsettings_development_logging_loglevel",
+      "identity_api_appsettings_development_loglevel_default",
+      "identity_api_appsettings_development_loglevel_microsoft_aspnetcore",
+      "services_identity_identity_api_appsettings_development_json"
+    ],
+    "43": [
+      "domain_membershipcontextfactory_membershipcontextfactory",
+      "domain_membershipcontextfactory_membershipcontextfactory_createdbcontext",
+      "identity_infrastructure_identitydbfactory_identitydbfactory",
+      "identity_infrastructure_identitydbfactory_identitydbfactory_createdbcontext",
+      "idesigntimedbcontextfactory",
+      "services_identity_identity_infrastructure_identitydbfactory_cs",
+      "services_membership_domain_membershipcontextfactory_cs"
+    ],
+    "44": [
+      "iconfiguration",
+      "interfaces_itokenservice_itokenservice",
+      "interfaces_itokenservice_itokenservice_generateaccesstoken",
+      "services_identity_identity_application_interfaces_itokenservice_cs",
+      "services_identity_identity_infrastructure_services_jwttokenservice_cs",
+      "services_jwttokenservice_jwttokenservice",
+      "services_jwttokenservice_jwttokenservice_generateaccesstoken"
+    ],
+    "45": [
+      "dbcontext",
+      "domain_membershipdbcontext_membershipdbcontext",
+      "domain_membershipdbcontext_membershipdbcontext_onmodelcreating",
+      "persistence_paymentdbcontext_paymentdbcontext",
+      "persistence_paymentdbcontext_paymentdbcontext_onmodelcreating",
+      "services_membership_domain_membershipdbcontext_cs",
+      "services_payment_infrastructure_persistence_paymentdbcontext_cs"
+    ],
+    "46": [
+      "github-playwright-cli-command-eval",
+      "github-playwright-cli-element-attributes",
+      "github-playwright-cli-semantic-locators",
+      "github-playwright-cli-targeting",
+      "github-playwright-cli-test-assertions",
+      "github-playwright-cli-test-generation"
+    ],
+    "47": [
+      "payment_appsettings_allowedhosts",
+      "payment_appsettings_logging",
+      "payment_appsettings_logging_loglevel",
+      "payment_appsettings_loglevel_default",
+      "payment_appsettings_loglevel_microsoft_aspnetcore",
+      "services_payment_appsettings_json"
+    ],
+    "48": [
+      "seed_dataseeder_dataseeder",
+      "seed_dataseeder_dataseeder_seedasync",
+      "seed_dataseeder_dataseeder_seedclientsasync",
+      "seed_dataseeder_dataseeder_seedrolesasync",
+      "seed_dataseeder_dataseeder_seedusersasync",
+      "services_identity_identity_infrastructure_seed_dataseeder_cs"
+    ],
+    "49": [
+      "membership_appsettings_allowedhosts",
+      "membership_appsettings_logging",
+      "membership_appsettings_logging_loglevel",
+      "membership_appsettings_loglevel_default",
+      "membership_appsettings_loglevel_microsoft_aspnetcore",
+      "services_membership_appsettings_json"
+    ],
+    "50": [
+      "getactivesubscription_getactivesubscriptionendpoint_getactivesubscriptionendpoint",
+      "getactivesubscription_getactivesubscriptionendpoint_getactivesubscriptionendpoint_addroutes",
+      "getactivesubscription_getactivesubscriptionendpoint_getactivesubscriptionendpoint_handle",
+      "getactivesubscription_getactivesubscriptionendpoint_getactivesubscriptionendpoint_maperrorstoresult",
+      "services_membership_features_members_getactivesubscription_getactivesubscriptionendpoint_cs"
+    ],
+    "51": [
+      "getmember_getmemberendpoint_getmemberendpoint",
+      "getmember_getmemberendpoint_getmemberendpoint_addroutes",
+      "getmember_getmemberendpoint_getmemberendpoint_handle",
+      "jsonnode",
+      "services_membership_features_members_getmember_getmemberendpoint_cs"
+    ],
+    "52": [
+      "getsubscriptionhistory_getsubscriptionhistoryendpoint_getsubscriptionhistoryendpoint",
+      "getsubscriptionhistory_getsubscriptionhistoryendpoint_getsubscriptionhistoryendpoint_addroutes",
+      "getsubscriptionhistory_getsubscriptionhistoryendpoint_getsubscriptionhistoryendpoint_handle",
+      "getsubscriptionhistory_getsubscriptionhistoryendpoint_getsubscriptionhistoryendpoint_maperrorstoresult",
+      "services_membership_features_members_getsubscriptionhistory_getsubscriptionhistoryendpoint_cs"
+    ],
+    "53": [
+      "infrastructure_iidentityserviceclient_iidentityserviceclient",
+      "infrastructure_iidentityserviceclient_iidentityserviceclient_changepasswordasync",
+      "infrastructure_iidentityserviceclient_iidentityserviceclient_createuserasync",
+      "infrastructure_iidentityserviceclient_iidentityserviceclient_deactivateuserasync",
+      "infrastructure_iidentityserviceclient_iidentityserviceclient_updateprofileasync"
+    ],
+    "54": [
+      "listmembers_listmembersendpoint_listmembersendpoint",
+      "listmembers_listmembersendpoint_listmembersendpoint_addroutes",
+      "listmembers_listmembersendpoint_listmembersendpoint_handle",
+      "listmembers_listmembersendpoint_listmembersendpoint_maperrorstoresult",
+      "services_membership_features_members_listmembers_listmembersendpoint_cs"
+    ],
+    "55": [
+      "services_membership_features_members_updatemember_updatememberendpoint_cs",
+      "updatemember_updatememberendpoint_updatememberendpoint",
+      "updatemember_updatememberendpoint_updatememberendpoint_addroutes",
+      "updatemember_updatememberendpoint_updatememberendpoint_updatebyid",
+      "updatemember_updatememberendpoint_updatememberendpoint_updateself"
+    ],
+    "56": [
+      "consumers_userregisteredconsumer_userregisteredconsumer",
+      "consumers_userregisteredconsumer_userregisteredconsumer_consume",
+      "iconsumer",
+      "services_notification_notification_api_consumers_userregisteredconsumer_cs",
+      "services_notification_notification_api_consumers_userregisteredconsumer_cs_ilogger"
+    ],
+    "57": [
+      "fittech_apphost_appsettings_development_logging",
+      "fittech_apphost_appsettings_development_logging_loglevel",
+      "fittech_apphost_appsettings_development_loglevel_default",
+      "fittech_apphost_appsettings_development_loglevel_microsoft_aspnetcore",
+      "fittech_apphost_fittech_apphost_appsettings_development_json"
+    ],
+    "58": [
+      "fittech_backend_mcp_aspire_args",
+      "fittech_backend_mcp_aspire_command",
+      "fittech_backend_mcp_mcpservers",
+      "fittech_backend_mcp_mcpservers_aspire",
+      "mcp_json"
+    ],
+    "59": [
+      "notification_api_appsettings_development_logging",
+      "notification_api_appsettings_development_logging_loglevel",
+      "notification_api_appsettings_development_loglevel_default",
+      "notification_api_appsettings_development_loglevel_microsoft_hosting_lifetime",
+      "services_notification_notification_api_appsettings_development_json"
+    ],
+    "60": [
+      "notification_api_appsettings_logging",
+      "notification_api_appsettings_logging_loglevel",
+      "notification_api_appsettings_loglevel_default",
+      "notification_api_appsettings_loglevel_microsoft_hosting_lifetime",
+      "services_notification_notification_api_appsettings_json"
+    ],
+    "61": [
+      "playwright_cli_config_browser",
+      "playwright_cli_config_browser_browsername",
+      "playwright_cli_config_browser_launchoptions",
+      "playwright_cli_config_json",
+      "playwright_cli_config_launchoptions_channel"
+    ],
+    "62": [
+      "README_AdminFeatures",
+      "README_CoachFeatures",
+      "README_FitTech",
+      "README_MemberFeatures",
+      "README_MultiRoleSystem"
+    ],
+    "63": [
+      "security_useraccessor_iuseraccessor",
+      "security_useraccessor_iuseraccessor_isinrole",
+      "security_useraccessor_useraccessor",
+      "security_useraccessor_useraccessor_isinrole",
+      "services_membership_common_security_useraccessor_cs"
+    ],
+    "64": [
+      "gateway_appsettings_development_logging",
+      "gateway_appsettings_development_logging_loglevel",
+      "gateway_appsettings_development_loglevel_default",
+      "gateway_appsettings_development_loglevel_microsoft_aspnetcore",
+      "services_gateway_appsettings_development_json"
+    ],
+    "65": [
+      "membership_appsettings_development_logging",
+      "membership_appsettings_development_logging_loglevel",
+      "membership_appsettings_development_loglevel_default",
+      "membership_appsettings_development_loglevel_microsoft_aspnetcore",
+      "services_membership_appsettings_development_json"
+    ],
+    "66": [
+      "payment_appsettings_development_logging",
+      "payment_appsettings_development_logging_loglevel",
+      "payment_appsettings_development_loglevel_default",
+      "payment_appsettings_development_loglevel_microsoft_aspnetcore",
+      "services_payment_appsettings_development_json"
+    ],
+    "67": [
+      "backgroundservice",
+      "notification_api_worker_worker",
+      "notification_api_worker_worker_executeasync",
+      "services_notification_notification_api_worker_cs"
+    ],
+    "68": [
+      "createpayment_createpaymentendpoint_createpaymentendpoint",
+      "createpayment_createpaymentendpoint_createpaymentendpoint_addroutes",
+      "createpayment_createpaymentendpoint_createpaymentendpoint_handle",
+      "services_payment_features_payments_createpayment_createpaymentendpoint_cs"
+    ],
+    "69": [
+      "createplan_createplanendpoint_createplanendpoint",
+      "createplan_createplanendpoint_createplanendpoint_addroutes",
+      "createplan_createplanendpoint_createplanendpoint_handle",
+      "services_membership_features_plans_createplan_createplanendpoint_cs"
+    ],
+    "70": [
+      "createsubscription_createsubscriptionendpoint_createsubscriptionendpoint",
+      "createsubscription_createsubscriptionendpoint_createsubscriptionendpoint_addroutes",
+      "createsubscription_createsubscriptionendpoint_createsubscriptionendpoint_handle",
+      "services_membership_features_subscriptions_createsubscription_createsubscriptionendpoint_cs"
+    ],
+    "71": [
+      "deleteplan_deleteplanendpoint_deleteplanendpoint",
+      "deleteplan_deleteplanendpoint_deleteplanendpoint_addroutes",
+      "deleteplan_deleteplanendpoint_deleteplanendpoint_handle",
+      "services_membership_features_plans_deleteplan_deleteplanendpoint_cs"
+    ],
+    "72": [
+      "listplans_listplansendpoint_listplansendpoint",
+      "listplans_listplansendpoint_listplansendpoint_addroutes",
+      "listplans_listplansendpoint_listplansendpoint_handle",
+      "services_membership_features_plans_listplans_listplansendpoint_cs"
+    ],
+    "73": [
+      "services_membership_features_plans_updateplan_updateplanendpoint_cs",
+      "updateplan_updateplanendpoint_updateplanendpoint",
+      "updateplan_updateplanendpoint_updateplanendpoint_addroutes",
+      "updateplan_updateplanendpoint_updateplanendpoint_handle"
+    ],
+    "74": [
+      "identity_infrastructure_userdbcontext_userdbcontext",
+      "identity_infrastructure_userdbcontext_userdbcontext_onmodelcreating",
+      "identitydbcontext",
+      "services_identity_identity_infrastructure_userdbcontext_cs"
+    ],
+    "75": [
+      "migrations_20260413104607_initialmembershipschema_designer_initialmembershipschema",
+      "migrations_20260413104607_initialmembershipschema_designer_initialmembershipschema_buildtargetmodel",
+      "migrations_20260413104607_initialmembershipschema_designer_membership_migrations",
+      "services_membership_migrations_20260413104607_initialmembershipschema_designer_cs"
+    ],
+    "76": [
+      "migrations_20260414095017_initialcreate_designer_identity_infrastructure_migrations",
+      "migrations_20260414095017_initialcreate_designer_initialcreate",
+      "migrations_20260414095017_initialcreate_designer_initialcreate_buildtargetmodel",
+      "services_identity_identity_infrastructure_migrations_20260414095017_initialcreate_designer_cs"
+    ],
+    "77": [
+      "shared_wrappers_response_cs",
+      "wrappers_response_response",
+      "wrappers_response_response_failresponse",
+      "wrappers_response_response_successresponse"
+    ],
+    "78": [
+      "aspire_config_json",
+      "fittech_backend_aspire_config_apphost",
+      "fittech_backend_aspire_config_apphost_path"
+    ],
+    "79": [
+      "confirmcashpayment_confirmcashpaymenthandler_confirmcashpaymenthandler",
+      "confirmcashpayment_confirmcashpaymenthandler_confirmcashpaymenthandler_handle",
+      "services_membership_features_subscriptions_confirmcashpayment_confirmcashpaymenthandler_cs"
+    ],
+    "80": [
+      "createplan_createplanhandler_createplanhandler",
+      "createplan_createplanhandler_createplanhandler_handle",
+      "services_membership_features_plans_createplan_createplanhandler_cs"
+    ],
+    "81": [
+      "createsubscription_createsubscriptionhandler_createsubscriptionhandler",
+      "createsubscription_createsubscriptionhandler_createsubscriptionhandler_handle",
+      "services_membership_features_subscriptions_createsubscription_createsubscriptionhandler_cs"
+    ],
+    "82": [
+      "deletemember_deletememberhandler_deletememberhandler",
+      "deletemember_deletememberhandler_deletememberhandler_handle",
+      "services_membership_features_members_deletemember_deletememberhandler_cs"
+    ],
+    "83": [
+      "deleteplan_deleteplanhandler_deleteplanhandler",
+      "deleteplan_deleteplanhandler_deleteplanhandler_handle",
+      "services_membership_features_plans_deleteplan_deleteplanhandler_cs"
+    ],
+    "84": [
+      "entities_payment_payment",
+      "entities_payment_payment_create",
+      "services_payment_domain_entities_payment_cs"
+    ],
+    "85": [
+      "errors_paymenterrors_paymenterrors",
+      "services_payment_domain_errors_paymenterrors_cs",
+      "services_payment_domain_errors_paymenterrors_cs_string"
+    ],
+    "86": [
+      "getactivesubscription_getactivesubscriptionhandler_getactivesubscriptionhandler",
+      "getactivesubscription_getactivesubscriptionhandler_getactivesubscriptionhandler_handle",
+      "services_membership_features_members_getactivesubscription_getactivesubscriptionhandler_cs"
+    ],
+    "87": [
+      "getmember_getmemberhandler_getmemberhandler",
+      "getmember_getmemberhandler_getmemberhandler_handle",
+      "services_membership_features_members_getmember_getmemberhandler_cs"
+    ],
+    "88": [
+      "getsubscriptionhistory_getsubscriptionhistoryhandler_getsubscriptionhistoryhandler",
+      "getsubscriptionhistory_getsubscriptionhistoryhandler_getsubscriptionhistoryhandler_handle",
+      "services_membership_features_members_getsubscriptionhistory_getsubscriptionhistoryhandler_cs"
+    ],
+    "89": [
+      "github-playwright-cli-advanced-mocking",
+      "github-playwright-cli-command-route",
+      "github-playwright-cli-request-mocking"
+    ],
+    "90": [
+      "identity_applicationrole_applicationrole",
+      "identityrole",
+      "services_identity_identity_infrastructure_identity_applicationrole_cs"
+    ],
+    "91": [
+      "identity_applicationuser_applicationuser",
+      "identityuser",
+      "services_identity_identity_infrastructure_identity_applicationuser_cs"
+    ],
+    "92": [
+      "listmembers_listmembershandler_listmembershandler",
+      "listmembers_listmembershandler_listmembershandler_handle",
+      "services_membership_features_members_listmembers_listmembershandler_cs"
+    ],
+    "93": [
+      "listplans_listplanshandler_listplanshandler",
+      "listplans_listplanshandler_listplanshandler_handle",
+      "services_membership_features_plans_listplans_listplanshandler_cs"
+    ],
+    "94": [
+      "opencode_opencode_json",
+      "opencode_opencode_plugin",
+      "opencode_opencode_schema"
+    ],
+    "95": [
+      "opencode_package_dependencies",
+      "opencode_package_dependencies_opencode_ai_plugin",
+      "opencode_package_json"
+    ],
+    "96": [
+      "services_membership_shared_erroronextensions_cs",
+      "services_membership_shared_erroronextensions_cs_shared_erroronextensions_erroronextensions",
+      "services_membership_shared_erroronextensions_cs_shared_erroronextensions_erroronextensions_maperrorstoresult"
+    ],
+    "97": [
+      "services_payment_shared_erroronextensions_cs",
+      "services_payment_shared_erroronextensions_cs_shared_erroronextensions_erroronextensions",
+      "services_payment_shared_erroronextensions_cs_shared_erroronextensions_erroronextensions_maperrorstoresult"
+    ],
+    "98": [
+      "services_membership_features_plans_updateplan_updateplanhandler_cs",
+      "updateplan_updateplanhandler_updateplanhandler",
+      "updateplan_updateplanhandler_updateplanhandler_handle"
+    ],
+    "99": [
+      "aspire-isolated-mode",
+      "git-worktree"
+    ],
+    "100": [
+      "dtos_changepassworddto_changepassworddto",
+      "services_identity_identity_application_dtos_changepassworddto_cs"
+    ],
+    "101": [
+      "dtos_confirmemaildto_confirmemaildto",
+      "services_identity_identity_application_dtos_confirmemaildto_cs"
+    ],
+    "102": [
+      "dtos_emaildto_emaildto",
+      "services_identity_identity_application_dtos_emaildto_cs"
+    ],
+    "103": [
+      "dtos_medicalfiledto_medicalfiledto",
+      "services_identity_identity_application_dtos_medicalfiledto_cs"
+    ],
+    "104": [
+      "dtos_refreshtokenrequestdto_refreshtokenrequestdto",
+      "services_identity_identity_application_dtos_refreshtokenrequestdto_cs"
+    ],
+    "105": [
+      "dtos_uploadmedicalfiledto_uploadmedicalfiledto",
+      "services_identity_identity_application_dtos_uploadmedicalfiledto_cs"
+    ],
+    "106": [
+      "entities_client_client",
+      "services_identity_identity_domain_entities_client_cs"
+    ],
+    "107": [
+      "entities_member_member",
+      "services_membership_domain_entities_member_cs"
+    ],
+    "108": [
+      "entities_memberhealthprofile_memberhealthprofile",
+      "services_membership_domain_entities_memberhealthprofile_cs"
+    ],
+    "109": [
+      "entities_nfccard_nfccard",
+      "services_membership_domain_entities_nfccard_cs"
+    ],
+    "110": [
+      "entities_subscription_subscription",
+      "services_membership_domain_entities_subscription_cs"
+    ],
+    "111": [
+      "opencode-aspire-dev-docs",
+      "opencode-aspire-docs"
+    ],
+    "112": [
+      "opencode_plugins_graphify_js",
+      "plugins_graphify_graphifyplugin"
+    ],
+    "113": [
+      "dtos_emailconfirmationtokenresponsedto_emailconfirmationtokenresponsedto",
+      "services_identity_identity_application_dtos_emailconfirmationtokenresponsedto_cs"
+    ],
+    "114": [
+      "dtos_forgotpasswordresponsedto_forgotpasswordresponsedto",
+      "services_identity_identity_application_dtos_forgotpasswordresponsedto_cs"
+    ],
+    "115": [
+      "dtos_logindto_logindto",
+      "services_identity_identity_application_dtos_logindto_cs"
+    ],
+    "116": [
+      "dtos_loginresponsedto_loginresponsedto",
+      "services_identity_identity_application_dtos_loginresponsedto_cs"
+    ],
+    "117": [
+      "dtos_profiledto_profiledto",
+      "services_identity_identity_application_dtos_profiledto_cs"
+    ],
+    "118": [
+      "dtos_refreshtokenresponsedto_refreshtokenresponsedto",
+      "services_identity_identity_application_dtos_refreshtokenresponsedto_cs"
+    ],
+    "119": [
+      "dtos_registerdto_registerdto",
+      "services_identity_identity_application_dtos_registerdto_cs"
+    ],
+    "120": [
+      "dtos_resetpassworddto_resetpassworddto",
+      "services_identity_identity_application_dtos_resetpassworddto_cs"
+    ],
+    "121": [
+      "dtos_updateprofiledto_updateprofiledto",
+      "services_identity_identity_application_dtos_updateprofiledto_cs"
+    ],
+    "122": [
+      "entities_address_address",
+      "services_identity_identity_domain_entities_address_cs"
+    ],
+    "123": [
+      "entities_medicalfile_medicalfile",
+      "services_identity_identity_domain_entities_medicalfile_cs"
+    ],
+    "124": [
+      "entities_refreshtoken_refreshtoken",
+      "services_identity_identity_domain_entities_refreshtoken_cs"
+    ],
+    "125": [
+      "entities_user_user",
+      "services_identity_identity_domain_entities_user_cs"
+    ],
+    "126": [
+      "entities_subscriptionplan_subscriptionplan",
+      "services_membership_domain_entities_subscriptionplan_cs"
+    ],
+    "127": [
+      "createmember_creatememberrequest_creatememberrequest",
+      "services_membership_features_members_createmember_creatememberrequest_cs"
+    ],
+    "128": [
+      "listmembers_listmembersrequest_listmembersrequest",
+      "services_membership_features_members_listmembers_listmembersrequest_cs"
+    ],
+    "129": [
+      "services_gateway_program_cs"
+    ],
+    "130": [
+      "services_identity_identity_api_program_cs"
+    ],
+    "131": [
+      "services_identity_identity_domain_enums_gender_cs"
+    ],
+    "132": [
+      "services_membership_domain_enums_durationunit_cs"
+    ],
+    "133": [
+      "services_membership_domain_enums_gender_cs"
+    ],
+    "134": [
+      "services_membership_domain_enums_memberstatus_cs"
+    ],
+    "135": [
+      "services_membership_domain_enums_subscriptionstatus_cs"
+    ],
+    "136": [
+      "services_membership_features_members_createmember_createmembercommand_cs"
+    ],
+    "137": [
+      "services_membership_features_members_createmember_creatememberresponse_cs"
+    ],
+    "138": [
+      "services_membership_features_members_deletemember_deletemembercommand_cs"
+    ],
+    "139": [
+      "services_membership_features_members_getactivesubscription_getactivesubscriptionquery_cs"
+    ],
+    "140": [
+      "services_membership_features_members_getactivesubscription_getactivesubscriptionresponse_cs"
+    ],
+    "141": [
+      "services_membership_features_members_getmember_getmemberquery_cs"
+    ],
+    "142": [
+      "services_membership_features_members_getmember_getmemberresponse_cs"
+    ],
+    "143": [
+      "services_membership_features_members_getsubscriptionhistory_getsubscriptionhistoryquery_cs"
+    ],
+    "144": [
+      "services_membership_features_members_getsubscriptionhistory_getsubscriptionhistoryresponse_cs"
+    ],
+    "145": [
+      "services_membership_features_members_listmembers_listmembersquery_cs"
+    ],
+    "146": [
+      "services_membership_features_members_listmembers_listmembersresponse_cs"
+    ],
+    "147": [
+      "services_membership_features_members_updatemember_updatemembercommand_cs"
+    ],
+    "148": [
+      "services_membership_features_members_updatemember_updatememberrequest_cs"
+    ],
+    "149": [
+      "services_membership_features_members_updatemember_updatememberresponse_cs"
+    ],
+    "150": [
+      "services_membership_features_plans_createplan_createplancommand_cs"
+    ],
+    "151": [
+      "services_membership_features_plans_createplan_createplanrequest_cs"
+    ],
+    "152": [
+      "services_membership_features_plans_createplan_createplanresponse_cs"
+    ],
+    "153": [
+      "services_membership_features_plans_deleteplan_deleteplancommand_cs"
+    ],
+    "154": [
+      "services_membership_features_plans_listplans_listplansquery_cs"
+    ],
+    "155": [
+      "services_membership_features_plans_listplans_listplansresponse_cs"
+    ],
+    "156": [
+      "services_membership_features_plans_updateplan_updateplancommand_cs"
+    ],
+    "157": [
+      "services_membership_features_plans_updateplan_updateplanrequest_cs"
+    ],
+    "158": [
+      "services_membership_features_subscriptions_confirmcashpayment_confirmcashpaymentcommand_cs"
+    ],
+    "159": [
+      "services_membership_features_subscriptions_confirmcashpayment_confirmcashpaymentrequest_cs"
+    ],
+    "160": [
+      "services_membership_features_subscriptions_confirmcashpayment_confirmcashpaymentresponse_cs"
+    ],
+    "161": [
+      "services_membership_features_subscriptions_createsubscription_createsubscriptioncommand_cs"
+    ],
+    "162": [
+      "services_membership_features_subscriptions_createsubscription_createsubscriptionrequest_cs"
+    ],
+    "163": [
+      "services_membership_features_subscriptions_createsubscription_createsubscriptionresponse_cs"
+    ],
+    "164": [
+      "services_membership_infrastructure_identityrequests_cs"
+    ],
+    "165": [
+      "services_notification_notification_api_program_cs"
+    ],
+    "166": [
+      "services_payment_features_payments_createpayment_createpaymentcommand_cs"
+    ],
+    "167": [
+      "services_payment_features_payments_createpayment_createpaymentrequest_cs"
+    ],
+    "168": [
+      "services_payment_features_payments_createpayment_createpaymentresponse_cs"
+    ],
+    "169": [
+      "shared_enums_currency_cs"
+    ],
+    "170": [
+      "shared_enums_paymentmethod_cs"
+    ],
+    "171": [
+      "shared_enums_paymentstatus_cs"
+    ],
+    "172": [
+      "shared_enums_paymenttype_cs"
+    ],
+    "173": [
+      "shared_events_membercreatedevent_cs"
+    ],
+    "174": [
+      "shared_events_paymentconfirmedevent_cs"
+    ],
+    "175": [
+      "shared_events_usercreatedevent_cs"
+    ],
+    "176": [
+      "health-profile-management"
+    ],
+    "177": [
+      "nfc-card-management"
+    ],
+    "178": [
+      "opencode-aspire-doctor"
+    ]
+  },
+  "cohesion": {
+    "0": 0.05805515239477504,
+    "1": 0.0524390243902439,
+    "2": 0.06156156156156156,
+    "3": 0.12941176470588237,
+    "4": 0.09243697478991597,
+    "5": 0.06666666666666667,
+    "6": 0.07407407407407407,
+    "7": 0.11904761904761904,
+    "8": 0.12631578947368421,
+    "9": 0.11052631578947368,
+    "10": 0.11695906432748537,
+    "11": 0.14035087719298245,
+    "12": 0.1111111111111111,
+    "13": 0.1503267973856209,
+    "14": 0.11764705882352941,
+    "15": 0.13333333333333333,
+    "16": 0.13333333333333333,
+    "17": 0.13333333333333333,
+    "18": 0.13333333333333333,
+    "19": 0.14285714285714285,
+    "20": 0.15384615384615385,
+    "21": 0.18681318681318682,
+    "22": 0.2087912087912088,
+    "23": 0.16666666666666666,
+    "24": 0.16666666666666666,
+    "25": 0.2909090909090909,
+    "26": 0.18181818181818182,
+    "27": 0.2,
+    "28": 0.2,
+    "29": 0.24444444444444444,
+    "30": 0.2,
+    "31": 0.2222222222222222,
+    "32": 0.2222222222222222,
+    "33": 0.2222222222222222,
+    "34": 0.3333333333333333,
+    "35": 0.25,
+    "36": 0.2857142857142857,
+    "37": 0.35714285714285715,
+    "38": 0.25,
+    "39": 0.2857142857142857,
+    "40": 0.2857142857142857,
+    "41": 0.3333333333333333,
+    "42": 0.2857142857142857,
+    "43": 0.2857142857142857,
+    "44": 0.2857142857142857,
+    "45": 0.2857142857142857,
+    "46": 0.3333333333333333,
+    "47": 0.3333333333333333,
+    "48": 0.5333333333333333,
+    "49": 0.3333333333333333,
+    "50": 0.5,
+    "51": 0.4,
+    "52": 0.5,
+    "53": 0.4,
+    "54": 0.5,
+    "55": 0.4,
+    "56": 0.4,
+    "57": 0.4,
+    "58": 0.4,
+    "59": 0.4,
+    "60": 0.4,
+    "61": 0.4,
+    "62": 0.4,
+    "63": 0.5,
+    "64": 0.4,
+    "65": 0.4,
+    "66": 0.4,
+    "67": 0.5,
+    "68": 0.5,
+    "69": 0.5,
+    "70": 0.5,
+    "71": 0.5,
+    "72": 0.5,
+    "73": 0.5,
+    "74": 0.5,
+    "75": 0.5,
+    "76": 0.5,
+    "77": 0.5,
+    "78": 0.6666666666666666,
+    "79": 0.6666666666666666,
+    "80": 0.6666666666666666,
+    "81": 0.6666666666666666,
+    "82": 0.6666666666666666,
+    "83": 0.6666666666666666,
+    "84": 0.6666666666666666,
+    "85": 0.6666666666666666,
+    "86": 0.6666666666666666,
+    "87": 0.6666666666666666,
+    "88": 0.6666666666666666,
+    "89": 0.6666666666666666,
+    "90": 0.6666666666666666,
+    "91": 0.6666666666666666,
+    "92": 0.6666666666666666,
+    "93": 0.6666666666666666,
+    "94": 0.6666666666666666,
+    "95": 0.6666666666666666,
+    "96": 0.6666666666666666,
+    "97": 0.6666666666666666,
+    "98": 0.6666666666666666,
+    "99": 1.0,
+    "100": 1.0,
+    "101": 1.0,
+    "102": 1.0,
+    "103": 1.0,
+    "104": 1.0,
+    "105": 1.0,
+    "106": 1.0,
+    "107": 1.0,
+    "108": 1.0,
+    "109": 1.0,
+    "110": 1.0,
+    "111": 1.0,
+    "112": 1.0,
+    "113": 1.0,
+    "114": 1.0,
+    "115": 1.0,
+    "116": 1.0,
+    "117": 1.0,
+    "118": 1.0,
+    "119": 1.0,
+    "120": 1.0,
+    "121": 1.0,
+    "122": 1.0,
+    "123": 1.0,
+    "124": 1.0,
+    "125": 1.0,
+    "126": 1.0,
+    "127": 1.0,
+    "128": 1.0,
+    "129": 1.0,
+    "130": 1.0,
+    "131": 1.0,
+    "132": 1.0,
+    "133": 1.0,
+    "134": 1.0,
+    "135": 1.0,
+    "136": 1.0,
+    "137": 1.0,
+    "138": 1.0,
+    "139": 1.0,
+    "140": 1.0,
+    "141": 1.0,
+    "142": 1.0,
+    "143": 1.0,
+    "144": 1.0,
+    "145": 1.0,
+    "146": 1.0,
+    "147": 1.0,
+    "148": 1.0,
+    "149": 1.0,
+    "150": 1.0,
+    "151": 1.0,
+    "152": 1.0,
+    "153": 1.0,
+    "154": 1.0,
+    "155": 1.0,
+    "156": 1.0,
+    "157": 1.0,
+    "158": 1.0,
+    "159": 1.0,
+    "160": 1.0,
+    "161": 1.0,
+    "162": 1.0,
+    "163": 1.0,
+    "164": 1.0,
+    "165": 1.0,
+    "166": 1.0,
+    "167": 1.0,
+    "168": 1.0,
+    "169": 1.0,
+    "170": 1.0,
+    "171": 1.0,
+    "172": 1.0,
+    "173": 1.0,
+    "174": 1.0,
+    "175": 1.0,
+    "176": 1.0,
+    "177": 1.0,
+    "178": 1.0
+  },
+  "gods": [
+    {
+      "id": "repositories_userrepository_userrepository",
+      "label": "UserRepository",
+      "degree": 35
+    },
+    {
+      "id": "repositories_iuserrepository_iuserrepository",
+      "label": "IUserRepository",
+      "degree": 30
+    },
+    {
+      "id": "paymentService_PaymentServiceInstructions",
+      "label": "Payment Service Instructions",
+      "degree": 24
+    },
+    {
+      "id": "GEMINI_FitTechPlatform",
+      "label": "FitTech Platform",
+      "degree": 22
+    },
+    {
+      "id": "AGENTS_FitTechBackend",
+      "label": "FitTech Backend",
+      "degree": 21
+    },
+    {
+      "id": "services_userservice_userservice",
+      "label": "UserService",
+      "degree": 20
+    },
+    {
+      "id": "controllers_usercontroller_usercontroller",
+      "label": "UserController",
+      "degree": 18
+    },
+    {
+      "id": "progress_ProgressStatus",
+      "label": "Progress Status",
+      "degree": 18
+    },
+    {
+      "id": "interfaces_iuserservice_iuserservice",
+      "label": "IUserService",
+      "degree": 17
+    },
+    {
+      "id": "feature_DeleteMember_FeatureSpec",
+      "label": "Delete Member Feature Spec",
+      "degree": 12
+    }
+  ],
+  "surprises": [
+    {
+      "source": "FitTech Platform",
+      "target": "FitTech Smart Gym",
+      "source_files": [
+        "GEMINI.md",
+        "README.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "semantically_similar_to",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities; semantically similar concepts with no structural link"
+    },
+    {
+      "source": "Project Brief",
+      "target": "FitTech Platform",
+      "source_files": [
+        ".ai/project_brief.md",
+        "GEMINI.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "semantically_similar_to",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities; semantically similar concepts with no structural link"
+    },
+    {
+      "source": "NFC Card System",
+      "target": "Membership Service",
+      "source_files": [
+        ".ai/project_brief.md",
+        "AGENTS.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "conceptually_related_to",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities; peripheral node `NFC Card System` unexpectedly reaches hub `Membership Service`"
+    },
+    {
+      "source": "Delete Member Feature Spec",
+      "target": "Identity Service",
+      "source_files": [
+        ".ai/features/feature_DeleteMember.md",
+        "AGENTS.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "conceptually_related_to",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "Soft Delete Pattern",
+      "target": "Membership Service",
+      "source_files": [
+        ".ai/features/feature_DeleteMember.md",
+        "AGENTS.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "rationale_for",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; peripheral node `Soft Delete Pattern` unexpectedly reaches hub `Membership Service`"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `IUserRepository` connect `Community 5` to `Community 4`?",
+      "why": "High betweenness centrality (0.004) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `UserRepository` connect `Community 4` to `Community 5`?",
+      "why": "High betweenness centrality (0.004) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `Progress Status` connect `Community 19` to `Community 24`, `Community 9`, `Community 34`, `Community 21`?",
+      "why": "High betweenness centrality (0.003) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `command`, `args`, `path` to the rest of the system?",
+      "why": "188 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 0` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.05805515239477504 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 1` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.0524390243902439 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 2` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.06156156156156156 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

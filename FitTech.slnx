@@ -15,6 +15,9 @@
   <!-- Notification Service -->
   <Project Path="Services/Notification/Notification.Api/Notification.Api.csproj" />
 
+  <!-- Payment Service -->
+  <Project Path="Services/Payment/Payment.csproj" />
+
   <!-- Shared -->
   <Project Path="Shared/Shared.csproj" />
 </Solution>

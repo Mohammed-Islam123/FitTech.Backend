@@ -1,0 +1,27 @@
+{
+  "name": "fittech.backend",
+  "version": "1.0.0",
+  "description": "FitTech is a modern digital platform designed to simplify the management of gym operations while improving the experience for members and coaches.  \r The system provides dedicated applications for **Admins, Coaches, and Members**, allowing each role to efficiently manage their tasks within the gym ecosystem.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mohammed-Islam123/FitTech.Backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Mohammed-Islam123/FitTech.Backend/issues"
+  },
+  "homepage": "https://github.com/Mohammed-Islam123/FitTech.Backend#readme",
+  "dependencies": {
+    "@playwright/test": "^1.60.0"
+  }
+}

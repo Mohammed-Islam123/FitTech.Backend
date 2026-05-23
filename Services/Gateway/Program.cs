@@ -23,6 +23,7 @@ app.MapScalarApiReference(options =>
     options.Theme = ScalarTheme.Mars;
     options.AddDocument("Identity API", "/docs/identity/openapi/v1.json");
     options.AddDocument("Membership API", "/docs/membership/openapi/v1.json");
+    options.AddDocument("Payment API", "/docs/payment/openapi/v1.json");
 });
 
 app.Run();

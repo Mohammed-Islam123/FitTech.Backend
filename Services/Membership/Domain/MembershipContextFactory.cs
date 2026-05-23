@@ -10,7 +10,7 @@ public class MembershipContextFactory : IDesignTimeDbContextFactory<MembershipDb
         var optionsBuilder = new DbContextOptionsBuilder<MembershipDbContext>();
         // Hardcode a dummy string. The tool just needs to know
         // it's Npgsql so it can generate the right SQL syntax.
-        optionsBuilder.UseNpgsql("Host=localhost;Database=membershipDb");
+        optionsBuilder.UseNpgsql("Host=localhost;Database=membership-db");
 
         return new MembershipDbContext(optionsBuilder.Options);
     }

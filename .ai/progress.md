@@ -25,14 +25,15 @@ Implementation of the **Membership Service** is ongoing. The core `CreateMember`
 
 ## In Progress
 - Membership Service: Core lifecycle features.
-- Active Feature: [Delete Member](features/feature_DeleteMember.md)
+- Active Feature: [Get Active Subscription](features/feature_GetActiveSubscription.md)
 
 ## Next Steps
-1. Implement **Get Active Subscription** for members.
+1. Finish **Get Active Subscription** for members.
 2. Begin **Health Profiles** management (Get/Update details).
-3. Develop **Subscription Plan** CRUD management.
+3. Develop **Subscription Plan** CRUD management. (In Progress - Audit)
 4. Implement Subscription assignment and pause logic.
 5. Develop NFC Card hardware UID assignment.
+
 
 ## Notes for Next Agent
 - Ensure all new features follow the Vertical Slice Architecture with Carter and Wolverine as documented in `.ai/features/membershipService.instructions.md`.

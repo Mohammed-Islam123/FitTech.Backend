@@ -1,0 +1,11 @@
+D:\projects\GYM\FitTech.Backend\.claude\skills\playwright-cli\references\request-mocking.md
+D:\projects\GYM\FitTech.Backend\.claude\skills\playwright-cli\references\running-code.md
+D:\projects\GYM\FitTech.Backend\.claude\skills\playwright-cli\references\session-management.md
+D:\projects\GYM\FitTech.Backend\.claude\skills\playwright-cli\references\spec-driven-testing.md
+D:\projects\GYM\FitTech.Backend\.claude\skills\playwright-cli\references\storage-state.md
+D:\projects\GYM\FitTech.Backend\.claude\skills\playwright-cli\references\test-generation.md
+D:\projects\GYM\FitTech.Backend\.claude\skills\playwright-cli\references\tracing.md
+D:\projects\GYM\FitTech.Backend\.claude\skills\playwright-cli\references\video-recording.md
+D:\projects\GYM\FitTech.Backend\.github\copilot-instructions.md
+D:\projects\GYM\FitTech.Backend\.github\csharp.instructions.md
+D:\projects\GYM\FitTech.Backend\.github\skills\aspire\SKILL.md

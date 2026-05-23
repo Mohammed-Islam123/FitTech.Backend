@@ -1,0 +1,3 @@
+namespace Membership.Features.Subscriptions.CreateSubscription;
+
+public record CreateSubscriptionCommand(CreateSubscriptionRequest Request);

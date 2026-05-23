@@ -1,0 +1,3 @@
+namespace Membership.Features.Subscriptions.ConfirmCashPayment;
+
+public record ConfirmCashPaymentCommand(ConfirmCashPaymentRequest Request);

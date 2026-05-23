@@ -3,15 +3,19 @@ using Scalar.Aspire;
 var builder = DistributedApplication.CreateBuilder(args);
 
 
+var mainDb = builder.AddPostgres("mainDbServer")
+                     .WithLifetime(ContainerLifetime.Persistent)
+                     .WithPgAdmin();
 
-var identityDb = builder.AddPostgres("postgres")
-                     .WithLifetime(ContainerLifetime.Persistent)
-                        .AddDatabase("identity-db")
-                     ;
-var membershipDb = builder.AddPostgres("membershipDbServer")
-                     .WithLifetime(ContainerLifetime.Persistent)
-                    .WithPgAdmin()
-                    .AddDatabase("membershipDb");
+
+
+
+var identityDb = mainDb.AddDatabase("identity-db");
+
+var membershipDb = mainDb.AddDatabase("membershipDb");
+
+var paymentDb = mainDb.AddDatabase("paymentDb");
+
 
 var rabbitUser = builder.AddParameter("rabbitmq-username");
 var rabbitPass = builder.AddParameter("rabbitmq-password", secret: true);
@@ -33,17 +37,35 @@ var membershipApi = builder.AddProject<Projects.Membership>("membership-api")
                           .WaitFor(membershipDb)
                           .WaitFor(rabbit);
 
+
+var paymentApi = builder.AddProject<Projects.Payment>("payment-api")
+    .WithReference(paymentDb)
+    .WithReference(rabbit)
+    .WaitFor(paymentDb)
+    .WaitFor(rabbit);
+
 var notificationApi = builder.AddProject<Projects.Notification_Api>("notification-api")
        .WithReference(rabbit)
        .WaitFor(rabbit);
 
-builder.AddScalarApiReference()
-.WithReferenceRelationship(identityApi)
-.WithReferenceRelationship(notificationApi)
-.WithReferenceRelationship(membershipApi);
+var scalar = builder.AddScalarApiReference(options =>
+{
+    // Match this to what your APIs actually expose (default is openapi/v1.json)
+    options.OpenApiRoutePattern = "openapi/{documentName}.json";
+});
 
+// Use WithApiReference to register the services
+scalar.WithApiReference(identityApi)
+      .WithApiReference(membershipApi)
+      .WithApiReference(paymentApi);
+
+// Ensure the APIs are running before Scalar tries to scan them
+scalar.WaitFor(identityApi)
+      .WaitFor(membershipApi)
+      .WaitFor(paymentApi);
 builder.AddProject<Projects.Gateway>("gateway")
        .WithReference(identityApi)
+       .WithReference(paymentApi)
        .WaitFor(identityApi)
        .WaitFor(membershipApi);
 

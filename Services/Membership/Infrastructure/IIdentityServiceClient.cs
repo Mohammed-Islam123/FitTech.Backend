@@ -1,9 +1,11 @@
-using Identity.Application.DTOs;
 using Membership.Domain.Enums;
 using Refit;
 using Shared.Wrappers;
 
 namespace Membership.Infrastructure;
+
+public record CreateUserResponse(bool Success, string Data, CreateUserError? Error);
+public record CreateUserError(string Content);
 
 public interface IIdentityServiceClient
 {

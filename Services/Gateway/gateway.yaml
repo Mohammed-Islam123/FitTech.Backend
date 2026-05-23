@@ -36,6 +36,20 @@ ReverseProxy:
       Transforms:
         - PathPattern: "/openapi/v1.json"
 
+    payment-route:
+      ClusterId: payment-cluster
+      Match:
+        Path: /api/payments/{**catch-all}
+      Metadata:
+        cors: default
+
+    payment-openapi-route:
+      ClusterId: payment-cluster
+      Match:
+        Path: /docs/payment/{**catch-all}
+      Transforms:
+        - PathPattern: "/openapi/v1.json"
+
   Clusters:
     identity-cluster:
       Destinations:
@@ -46,3 +60,8 @@ ReverseProxy:
       Destinations:
         membership-api:
           Address: http+https://membership-api
+
+    payment-cluster:
+      Destinations:
+        payment-api:
+          Address: http+https://payment-api

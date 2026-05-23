@@ -1,0 +1,11 @@
+D:\projects\GYM\FitTech.Backend\.ai\features\feature_GetActiveSubscription.md
+D:\projects\GYM\FitTech.Backend\.ai\features\feature_GetMemberDetail.md
+D:\projects\GYM\FitTech.Backend\.ai\features\feature_GetSubscriptionHistory.md
+D:\projects\GYM\FitTech.Backend\.ai\features\feature_ListMembers.md
+D:\projects\GYM\FitTech.Backend\.ai\features\feature_ManageSubscriptionPlans.md
+D:\projects\GYM\FitTech.Backend\.ai\features\feature_UpdateMember.md
+D:\projects\GYM\FitTech.Backend\.ai\features\membershipService.instructions.md
+D:\projects\GYM\FitTech.Backend\.claude\skills\aspire\SKILL.md
+D:\projects\GYM\FitTech.Backend\.claude\skills\playwright-cli\SKILL.md
+D:\projects\GYM\FitTech.Backend\.claude\skills\playwright-cli\references\element-attributes.md
+D:\projects\GYM\FitTech.Backend\.claude\skills\playwright-cli\references\playwright-tests.md

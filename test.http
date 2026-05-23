@@ -1,33 +1,15 @@
-### Register Admin User
-POST https://localhost:7259/api/user/register
-Content-Type: multipart/form-data; boundary=----FormBoundary
+### Get Active Subscription (as Member)
+GET https://localhost:7259/api/members/active-subscription
+Authorization: Bearer {{member_token}}
 
-------FormBoundary
-Content-Disposition: form-data; name="UserName"
+### Get Active Subscription (as Admin for self)
+GET https://localhost:7259/api/members/active-subscription
+Authorization: Bearer {{admin_token}}
 
-admin_test
-------FormBoundary
-Content-Disposition: form-data; name="Email"
+### Get Active Subscription (as Admin for specific member)
+GET https://localhost:7259/api/members/active-subscription?memberId=01948372-5a3d-7b2e-a1c4-83920174be62
+Authorization: Bearer {{admin_token}}
 
-test@fitteck.com
-------FormBoundary
-Content-Disposition: form-data; name="Password"
-
-Test@12345
-------FormBoundary
-Content-Disposition: form-data; name="FullName"
-
-Test User
-------FormBoundary
-Content-Disposition: form-data; name="PhoneNumber"
-
-+213555123456
-------FormBoundary
-Content-Disposition: form-data; name="Gender"
-
-Male
-------FormBoundary
-Content-Disposition: form-data; name="DateOfBirth"
-
-1995-06-15
-------FormBoundary--
+### Get Active Subscription (Unauthorized - Member requesting for other)
+GET https://localhost:7259/api/members/active-subscription?memberId=01948372-5a3d-7b2e-a1c4-83920174be62
+Authorization: Bearer {{member_token}}

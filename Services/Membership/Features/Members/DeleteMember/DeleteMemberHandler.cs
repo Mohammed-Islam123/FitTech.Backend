@@ -38,7 +38,7 @@ public class DeleteMemberHandler(
         }
 
         // 4. Soft Delete in Membership Service
-        member.Status = MemberStatus.Inactive;
+        member.Status = MemberStatus.Cancelled;
         
         // TODO: Cancel future bookings and active subscriptions here in the future
 

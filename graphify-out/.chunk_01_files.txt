@@ -1,0 +1,11 @@
+D:\projects\GYM\FitTech.Backend\AGENTS.md
+D:\projects\GYM\FitTech.Backend\GEMINI.md
+D:\projects\GYM\FitTech.Backend\opencode.md
+D:\projects\GYM\FitTech.Backend\README.md
+D:\projects\GYM\FitTech.Backend\.agents\rules\MASTER.md
+D:\projects\GYM\FitTech.Backend\.ai\architecture.md
+D:\projects\GYM\FitTech.Backend\.ai\MASTER_INSTRUCTIONS.md
+D:\projects\GYM\FitTech.Backend\.ai\paymentService_instructions.md
+D:\projects\GYM\FitTech.Backend\.ai\progress.md
+D:\projects\GYM\FitTech.Backend\.ai\project_brief.md
+D:\projects\GYM\FitTech.Backend\.ai\features\feature_DeleteMember.md

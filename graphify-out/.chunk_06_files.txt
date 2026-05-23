@@ -1,0 +1,2 @@
+D:\projects\GYM\FitTech.Backend\.opencode\skill\playwright-cli\references\video-recording.md
+D:\projects\GYM\FitTech.Backend\Services\Gateway\gateway.yaml

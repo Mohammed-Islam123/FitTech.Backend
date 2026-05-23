@@ -42,10 +42,12 @@ builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
 .AddEntityFrameworkStores<UserDbContext>()
 .AddDefaultTokenProviders();
 
+
 builder.Services.Configure<DataProtectionTokenProviderOptions>(opt =>
 {
     opt.TokenLifespan = TimeSpan.FromHours(3);
 });
+
 
 builder.Services.AddAuthentication(options =>
 {
@@ -76,11 +78,12 @@ builder.Services.AddMassTransit(x =>
     x.SetKebabCaseEndpointNameFormatter();
     x.UsingRabbitMq((ctx, cfg) =>
     {
-        
+
         cfg.Host(builder.Configuration.GetConnectionString("rabbitmq"));
         cfg.ConfigureEndpoints(ctx);
     });
-}) ;
+});
+
 
 var medicalFilesPath = Path.Combine(builder.Environment.WebRootPath ?? "wwwroot", "medical-files");
 Directory.CreateDirectory(medicalFilesPath);
@@ -96,8 +99,8 @@ if (app.Environment.IsDevelopment())
 
 using (var scope = app.Services.CreateScope())
 {
-    var services    = scope.ServiceProvider;
-    var context     = services.GetRequiredService<UserDbContext>();
+    var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<UserDbContext>();
     var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
     var roleManager = services.GetRequiredService<RoleManager<ApplicationRole>>();
     await DataSeeder.SeedAsync(context, userManager, roleManager);

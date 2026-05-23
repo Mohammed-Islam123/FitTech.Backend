@@ -45,17 +45,29 @@ builder.Services.AddRefitClient<IIdentityServiceClient>()
         c.BaseAddress = new Uri(builder.Configuration.GetConnectionString("IdentityService")
             ?? throw new InvalidOperationException("IdentityService connection string is not configured.")));
 
-builder.Services.AddValidatorsFromAssemblyContaining<Program>();
+builder.Services.AddRefitClient<IPaymentServiceClient>()
+    .ConfigureHttpClient(c =>
+        c.BaseAddress = new Uri(builder.Configuration.GetConnectionString("PaymentService")
+            ?? throw new InvalidOperationException("PaymentService connection string is not configured.")));
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer();
 
-builder.Services.AddAuthorization();
-
-builder.Services.AddOpenApi(opt =>
+builder.Services.AddAuthorization(options =>
 {
-    opt.AddFluentValidationRules();
+    options.AddPolicy("AdminOnly", policy =>
+        policy.RequireAuthenticatedUser()
+            .RequireRole("Admin"));
+
+    options.AddPolicy("MemberOnly", policy =>
+        policy.RequireAuthenticatedUser()
+            .RequireRole("Member"));
 });
+
+builder.Services.AddFluentValidationRulesToOpenApi();
+
+builder.Services.AddOpenApi();
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())

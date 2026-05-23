@@ -1,4 +1,5 @@
 ﻿using Membership.Domain.Enums;
+using Shared.Enums;
 
 namespace Membership.Domain.Entities;
 
@@ -13,8 +14,10 @@ public class Subscription
     public SubscriptionStatus Status { get; set; } = SubscriptionStatus.Active;
     public DateTime? CancelledAt { get; set; }
     public DateTime? PausedUntil { get; set; }
+    public bool AutoRenew { get; set; }
+    public Guid? PaymentId { get; set; }
+    public PaymentStatus PaymentStatus { get; set; } = PaymentStatus.Pending;
 
     public Member Member { get; set; } = null!;
     public SubscriptionPlan Plan { get; set; } = null!;
 }
-

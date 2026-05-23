@@ -117,6 +117,9 @@ namespace Membership.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
+                    b.Property<bool>("AutoRenew")
+                        .HasColumnType("boolean");
+
                     b.Property<DateTime?>("CancelledAt")
                         .HasColumnType("timestamp with time zone");
 
@@ -128,6 +131,15 @@ namespace Membership.Migrations
 
                     b.Property<DateTime?>("PausedUntil")
                         .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid?>("PaymentId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("PaymentStatus")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("text")
+                        .HasDefaultValue("Pending");
 
                     b.Property<Guid>("PlanId")
                         .HasColumnType("uuid");
@@ -156,14 +168,14 @@ namespace Membership.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<string>("AccessRules")
-                        .HasColumnType("text");
+                    b.PrimitiveCollection<string[]>("AccessRules")
+                        .HasColumnType("text[]");
 
                     b.Property<string>("Description")
                         .HasColumnType("text");
 
-                    b.Property<int?>("DurationUnit")
-                        .HasColumnType("integer");
+                    b.Property<string>("DurationUnit")
+                        .HasColumnType("text");
 
                     b.Property<int?>("DurationValue")
                         .HasColumnType("integer");
@@ -173,10 +185,11 @@ namespace Membership.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("numeric");
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<int?>("SessionCount")
                         .HasColumnType("integer");

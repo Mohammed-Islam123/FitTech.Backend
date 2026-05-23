@@ -1,0 +1,326 @@
+{
+  "nodes": [
+    {
+      "id": "playwright-video-recording",
+      "type": "concept",
+      "label": "Playwright Video Recording",
+      "description": "Capture browser automation sessions as video for debugging, documentation, or verification",
+      "properties": {}
+    },
+    {
+      "id": "webm-format",
+      "type": "concept",
+      "label": "WebM Format",
+      "description": "Video output format using VP8/VP9 codec produced by Playwright screencast",
+      "properties": {}
+    },
+    {
+      "id": "screencast-api",
+      "type": "api",
+      "label": "page.screencast API",
+      "description": "Playwright screencast API for video recording with chapters, overlays, and annotations",
+      "properties": {}
+    },
+    {
+      "id": "chapter-markers",
+      "type": "concept",
+      "label": "Chapter Markers",
+      "description": "Section transition markers in screencast recordings with description and duration",
+      "properties": {}
+    },
+    {
+      "id": "overlay-api",
+      "type": "api",
+      "label": "Overlay API",
+      "description": "Custom HTML overlays for callouts, labels, highlights with pointer-events: none",
+      "properties": {}
+    },
+    {
+      "id": "tracing-comparison",
+      "type": "concept",
+      "label": "Tracing vs Video",
+      "description": "Comparison between video recording (WebM, demos) and tracing (DOM snapshots, debugging)",
+      "properties": {}
+    },
+    {
+      "id": "playwright-cli-video-start",
+      "type": "command",
+      "label": "playwright-cli video-start",
+      "description": "CLI command to start video recording with a specified output filename",
+      "properties": {}
+    },
+    {
+      "id": "playwright-cli-video-chapter",
+      "type": "command",
+      "label": "playwright-cli video-chapter",
+      "description": "CLI command to add a chapter marker during video recording",
+      "properties": {}
+    },
+    {
+      "id": "playwright-cli-video-stop",
+      "type": "command",
+      "label": "playwright-cli video-stop",
+      "description": "CLI command to stop and save video recording",
+      "properties": {}
+    },
+    {
+      "id": "playwright-cli-run-code",
+      "type": "command",
+      "label": "playwright-cli run-code",
+      "description": "CLI command to execute a JavaScript script for automated hero scenarios",
+      "properties": {}
+    },
+    {
+      "id": "yarp-reverse-proxy",
+      "type": "technology",
+      "label": "YARP Reverse Proxy",
+      "description": "Yet Another Reverse Proxy used as API gateway for routing to backend services",
+      "properties": {}
+    },
+    {
+      "id": "gateway-configuration",
+      "type": "document",
+      "label": "Gateway Configuration",
+      "description": "YARP gateway.yaml configuration defining routes, clusters, and destination mappings",
+      "properties": {}
+    },
+    {
+      "id": "identity-route",
+      "type": "endpoint",
+      "label": "Identity API Route",
+      "description": "Route /api/User/{**catch-all} -> identity-cluster",
+      "properties": {
+        "path": "/api/User/{**catch-all}",
+        "cluster": "identity-cluster"
+      }
+    },
+    {
+      "id": "membership-route",
+      "type": "endpoint",
+      "label": "Membership API Route",
+      "description": "Route /api/members/{**catch-all} -> membership-cluster",
+      "properties": {
+        "path": "/api/members/{**catch-all}",
+        "cluster": "membership-cluster"
+      }
+    },
+    {
+      "id": "membership-plans-route",
+      "type": "endpoint",
+      "label": "Membership Plans Route",
+      "description": "Route /api/plans/{**catch-all} -> membership-cluster",
+      "properties": {
+        "path": "/api/plans/{**catch-all}",
+        "cluster": "membership-cluster"
+      }
+    },
+    {
+      "id": "identity-openapi-route",
+      "type": "endpoint",
+      "label": "Identity OpenAPI Route",
+      "description": "Route /docs/identity/{**catch-all} -> identity-cluster with path transform to /openapi/v1.json",
+      "properties": {
+        "path": "/docs/identity/{**catch-all}",
+        "cluster": "identity-cluster",
+        "transform": "/openapi/v1.json"
+      }
+    },
+    {
+      "id": "membership-openapi-route",
+      "type": "endpoint",
+      "label": "Membership OpenAPI Route",
+      "description": "Route /docs/membership/{**catch-all} -> membership-cluster with path transform to /openapi/v1.json",
+      "properties": {
+        "path": "/docs/membership/{**catch-all}",
+        "cluster": "membership-cluster",
+        "transform": "/openapi/v1.json"
+      }
+    },
+    {
+      "id": "identity-cluster",
+      "type": "reference",
+      "label": "Identity Cluster",
+      "description": "YARP cluster pointing to identity-api destination at http+https://identity-api",
+      "properties": {
+        "destination": "identity-api",
+        "address": "http+https://identity-api"
+      }
+    },
+    {
+      "id": "membership-cluster",
+      "type": "reference",
+      "label": "Membership Cluster",
+      "description": "YARP cluster pointing to membership-api destination at http+https://membership-api",
+      "properties": {
+        "destination": "membership-api",
+        "address": "http+https://membership-api"
+      }
+    },
+    {
+      "id": "cors-metadata",
+      "type": "reference",
+      "label": "CORS Metadata",
+      "description": "CORS policy applied to routes via metadata key cors: default",
+      "properties": {}
+    },
+    {
+      "id": "path-transforms",
+      "type": "concept",
+      "label": "Path Transforms",
+      "description": "YARP transform that rewrites request paths for OpenAPI documentation routes",
+      "properties": {}
+    }
+  ],
+  "edges": [
+    {
+      "source": "playwright-video-recording",
+      "target": "webm-format",
+      "type": "uses",
+      "label": "produces WebM video output"
+    },
+    {
+      "source": "screencast-api",
+      "target": "playwright-video-recording",
+      "type": "implements",
+      "label": "implements video recording functionality"
+    },
+    {
+      "source": "screencast-api",
+      "target": "chapter-markers",
+      "type": "uses",
+      "label": "supports showChapter method"
+    },
+    {
+      "source": "screencast-api",
+      "target": "overlay-api",
+      "type": "uses",
+      "label": "supports showOverlay and hideOverlays methods"
+    },
+    {
+      "source": "tracing-comparison",
+      "target": "playwright-video-recording",
+      "type": "references",
+      "label": "compares tracing vs video recording"
+    },
+    {
+      "source": "playwright-cli-video-start",
+      "target": "playwright-video-recording",
+      "type": "uses",
+      "label": "starts video recording"
+    },
+    {
+      "source": "playwright-cli-video-chapter",
+      "target": "chapter-markers",
+      "type": "uses",
+      "label": "adds chapter markers via CLI"
+    },
+    {
+      "source": "playwright-cli-video-stop",
+      "target": "playwright-video-recording",
+      "type": "uses",
+      "label": "stops video recording"
+    },
+    {
+      "source": "playwright-cli-run-code",
+      "target": "playwright-video-recording",
+      "type": "references",
+      "label": "recommended approach for recording hero scripts"
+    },
+    {
+      "source": "gateway-configuration",
+      "target": "yarp-reverse-proxy",
+      "type": "configures",
+      "label": "configures YARP with routes and clusters"
+    },
+    {
+      "source": "identity-route",
+      "target": "gateway-configuration",
+      "type": "contains",
+      "label": "defined in gateway configuration"
+    },
+    {
+      "source": "membership-route",
+      "target": "gateway-configuration",
+      "type": "contains",
+      "label": "defined in gateway configuration"
+    },
+    {
+      "source": "membership-plans-route",
+      "target": "gateway-configuration",
+      "type": "contains",
+      "label": "defined in gateway configuration"
+    },
+    {
+      "source": "identity-openapi-route",
+      "target": "gateway-configuration",
+      "type": "contains",
+      "label": "defined in gateway configuration"
+    },
+    {
+      "source": "membership-openapi-route",
+      "target": "gateway-configuration",
+      "type": "contains",
+      "label": "defined in gateway configuration"
+    },
+    {
+      "source": "identity-route",
+      "target": "identity-cluster",
+      "type": "routes_to",
+      "label": "routes /api/User/** to identity-api"
+    },
+    {
+      "source": "identity-openapi-route",
+      "target": "identity-cluster",
+      "type": "routes_to",
+      "label": "routes /docs/identity/** to identity-api with path transform"
+    },
+    {
+      "source": "membership-route",
+      "target": "membership-cluster",
+      "type": "routes_to",
+      "label": "routes /api/members/** to membership-api"
+    },
+    {
+      "source": "membership-plans-route",
+      "target": "membership-cluster",
+      "type": "routes_to",
+      "label": "routes /api/plans/** to membership-api"
+    },
+    {
+      "source": "membership-openapi-route",
+      "target": "membership-cluster",
+      "type": "routes_to",
+      "label": "routes /docs/membership/** to membership-api with path transform"
+    },
+    {
+      "source": "identity-openapi-route",
+      "target": "path-transforms",
+      "type": "uses",
+      "label": "applies PathPattern transform for OpenAPI docs"
+    },
+    {
+      "source": "membership-openapi-route",
+      "target": "path-transforms",
+      "type": "uses",
+      "label": "applies PathPattern transform for OpenAPI docs"
+    },
+    {
+      "source": "cors-metadata",
+      "target": "identity-route",
+      "type": "references",
+      "label": "CORS policy applied to identity route"
+    },
+    {
+      "source": "cors-metadata",
+      "target": "membership-route",
+      "type": "references",
+      "label": "CORS policy applied to membership route"
+    },
+    {
+      "source": "cors-metadata",
+      "target": "membership-plans-route",
+      "type": "references",
+      "label": "CORS policy applied to plans route"
+    }
+  ]
+}

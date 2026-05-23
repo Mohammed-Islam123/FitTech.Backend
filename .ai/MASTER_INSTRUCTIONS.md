@@ -7,6 +7,21 @@
 
 ---
 
+# graphify
+
+This project has a knowledge graph at graphify-out/ with god nodes, community structure, and cross-file relationships.
+
+When the user types `/graphify`, invoke the `skill` tool with `skill: "graphify"` before doing anything else.
+
+Rules:
+- For codebase questions, first run `graphify query "<question>"` when graphify-out/graph.json exists. Use `graphify path "<A>" "<B>"` for relationships and `graphify explain "<concept>"` for focused concepts. These return a scoped subgraph, usually much smaller than GRAPH_REPORT.md or raw grep output.
+- Dirty graphify-out/ files are expected after hooks or incremental updates; dirty graph files are not a reason to skip graphify. Only skip graphify if the task is about stale or incorrect graph output, or the user explicitly says not to use it.
+- If graphify-out/wiki/index.md exists, use it for broad navigation instead of raw source browsing.
+- Read graphify-out/GRAPH_REPORT.md only for broad architecture review or when query/path/explain do not surface enough context.
+- After modifying code, run `graphify update .` to keep the graph current (AST-only, no API cost).
+
+
+
 # Project Implementation overall phases:
 
 ## 🏗️ PHASE 1: PROJECT KICKOFF
@@ -78,8 +93,9 @@ When a feature is completed or a session ends:
 
 - Use the latest C# features (C# 14) for new code.
 - Follow the coding standards outlined in the `.editorconfig` file.
-- for each endpoint and public API, provide XML documentation comments with descriptions and dont add the summary tag, instead use the description tag. When applicable, include `<example>` and `<code>` documentation in the comments.
-- always use menimal apis
+- **XML Documentation**: Only for service methods and business logic (domain entities, handlers, etc.), NOT for endpoints. Use description tag only (no summary tag).
+- **Endpoint Documentation**: Use extension methods like `.WithDescription()` for OpenAPI documentation. Use `.AddOpenApiOperationTransformer()` to inject request/response examples.
+- Always use minimal APIs with Carter.
 - Read the feature request and all linked context.
 - If any requirement is ambiguous, stop and request clarification; do not proceed.
 - Before any code change, state a **one-line intended change summary** + a **confidence percentage (0–100%)** with justification.
