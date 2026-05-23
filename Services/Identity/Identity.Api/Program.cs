@@ -1,17 +1,17 @@
+using Identity.Api.Endpoints;
+using Identity.Api.Services;
+using Identity.Application.Interfaces;
+using Identity.Application.Repositories;
+using Identity.Application.Services;
+using Identity.Infrastructure.Identity;
 using Identity.Infrastructure.Persistence;
+using Identity.Infrastructure.Repositories;
+using Identity.Infrastructure.Seed;
+using MassTransit;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using System.Text;
-using Identity.Application.Services;
-using Identity.Infrastructure.Identity;
-using Identity.Infrastructure.Repositories;
-using Identity.Application.Interfaces;
-using Identity.Application.Repositories;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Identity.Infrastructure.Services;
-using Identity.Infrastructure.Seed;
-using MassTransit;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -42,48 +42,41 @@ builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
 .AddEntityFrameworkStores<UserDbContext>()
 .AddDefaultTokenProviders();
 
-
 builder.Services.Configure<DataProtectionTokenProviderOptions>(opt =>
 {
     opt.TokenLifespan = TimeSpan.FromHours(3);
 });
 
+var issuer = builder.Configuration["JwtSettings:Issuer"]!;
+var keyManager = new RsaKeyManager();
+builder.Services.AddSingleton(keyManager);
 
-builder.Services.AddAuthentication(options =>
-{
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-})
-.AddJwtBearer(options =>
-{
-    options.TokenValidationParameters = new TokenValidationParameters
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
     {
-        ValidateIssuer = true,
-        ValidateAudience = false,
-        ValidateLifetime = true,
-        ValidateIssuerSigningKey = true,
-        ValidIssuer = builder.Configuration["JwtSettings:Issuer"],
-        IssuerSigningKey = new SymmetricSecurityKey(
-            Encoding.UTF8.GetBytes(builder.Configuration["JwtSettings:SecretKey"]!))
-    };
-});
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = false,
+            ValidateLifetime = true,
+            ValidIssuer = issuer,
+            IssuerSigningKey = keyManager.PrivateKey
+        };
+    });
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddScoped<ITokenService, JwtTokenService>();
+builder.Services.AddScoped<ITokenService, TokenService>();
 
 builder.Services.AddMassTransit(x =>
 {
-
     x.SetKebabCaseEndpointNameFormatter();
     x.UsingRabbitMq((ctx, cfg) =>
     {
-
         cfg.Host(builder.Configuration.GetConnectionString("rabbitmq"));
         cfg.ConfigureEndpoints(ctx);
     });
 });
-
 
 var medicalFilesPath = Path.Combine(builder.Environment.WebRootPath ?? "wwwroot", "medical-files");
 Directory.CreateDirectory(medicalFilesPath);
@@ -112,6 +105,8 @@ app.MapScalarApiReference(opt =>
     opt.WithTitle("Identity API")
        .WithTheme(ScalarTheme.Mars);
 });
+
+app.MapWellKnownEndpoints(app.Configuration);
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

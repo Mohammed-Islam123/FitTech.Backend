@@ -34,6 +34,7 @@ var identityApi = builder.AddProject<Projects.Identity_Api>("identity-api")
 var membershipApi = builder.AddProject<Projects.Membership>("membership-api")
                           .WithReference(membershipDb)
                           .WithReference(rabbit)
+                          .WithReference(identityApi)
                           .WaitFor(membershipDb)
                           .WaitFor(rabbit);
 
@@ -41,6 +42,7 @@ var membershipApi = builder.AddProject<Projects.Membership>("membership-api")
 var paymentApi = builder.AddProject<Projects.Payment>("payment-api")
     .WithReference(paymentDb)
     .WithReference(rabbit)
+    .WithReference(identityApi)
     .WaitFor(paymentDb)
     .WaitFor(rabbit);
 

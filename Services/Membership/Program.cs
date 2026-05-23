@@ -1,19 +1,16 @@
-using System.Diagnostics;
-using System.Security.AccessControl;
 using Carter;
 using FluentValidation;
 using Membership.Common.Security;
 using Membership.Coommon.Behaviours;
 using Membership.Domain;
-using Membership.Features.Members.CreateMember;
 using Membership.Infrastructure;
+using Membership.Infrastructure.Auth;
+using Membership.Features.Members.CreateMember;
 using MicroElements.AspNetCore.OpenApi.FluentValidation;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Components.RenderTree;
 using Microsoft.EntityFrameworkCore;
 using Refit;
 using Scalar.AspNetCore;
-using Serilog;
 using Wolverine;
 using Wolverine.RabbitMQ;
 
@@ -21,7 +18,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.AddServiceDefaults();
 
-// builder.Host.UseSerilog((ctx, config) => config.ReadFrom.Configuration(ctx.Configuration));
 builder.AddNpgsqlDbContext<MembershipDbContext>(connectionName: "membershipDb");
 builder.Services.AddCarter();
 
@@ -33,25 +29,21 @@ builder.Host.UseWolverine(opts =>
     opts.UseRabbitMqUsingNamedConnection("rabbitmq")
         .UseConventionalRouting()
         .AutoProvision();
-    // opts.PublishMessage<ExternalNotification>().ToRabbitExchange("custom-notifications");
     opts.Policies.DisableConventionalLocalRouting();
     opts.Policies.AddMiddleware<ValidationBehavior>();
-
 });
 
-
-builder.Services.AddRefitClient<IIdentityServiceClient>()
-    .ConfigureHttpClient(c =>
-        c.BaseAddress = new Uri(builder.Configuration.GetConnectionString("IdentityService")
-            ?? throw new InvalidOperationException("IdentityService connection string is not configured.")));
-
-builder.Services.AddRefitClient<IPaymentServiceClient>()
-    .ConfigureHttpClient(c =>
-        c.BaseAddress = new Uri(builder.Configuration.GetConnectionString("PaymentService")
-            ?? throw new InvalidOperationException("PaymentService connection string is not configured.")));
+var identityUrl = builder.Configuration["services:identity-api:http:0"]
+    ?? builder.Configuration["JwtSettings:Issuer"]
+    ?? "http://identity-api";
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-    .AddJwtBearer();
+    .AddJwtBearer(options =>
+    {
+        options.Authority = identityUrl;
+        options.RequireHttpsMetadata = false;
+        options.TokenValidationParameters.ValidateAudience = false;
+    });
 
 builder.Services.AddAuthorization(options =>
 {
@@ -63,6 +55,19 @@ builder.Services.AddAuthorization(options =>
         policy.RequireAuthenticatedUser()
             .RequireRole("Member"));
 });
+
+builder.Services.AddHttpClient("IdentityAuth", c =>
+    c.BaseAddress = new Uri("http://identity-api"));
+
+builder.Services.AddTransient<ServiceTokenHandler>();
+
+builder.Services.AddRefitClient<IIdentityServiceClient>()
+    .ConfigureHttpClient(c => c.BaseAddress = new Uri("http://identity-api"))
+    .AddHttpMessageHandler<ServiceTokenHandler>();
+
+builder.Services.AddRefitClient<IPaymentServiceClient>()
+    .ConfigureHttpClient(c => c.BaseAddress = new Uri("http://payment-api"))
+    .AddHttpMessageHandler<ServiceTokenHandler>();
 
 builder.Services.AddFluentValidationRulesToOpenApi();
 
@@ -87,8 +92,5 @@ app.MapScalarApiReference(opt =>
         .WithTheme(ScalarTheme.Mars);
 });
 app.MapCarter();
-
-
-
 
 app.Run();

@@ -23,8 +23,17 @@ builder.Host.UseWolverine(opts =>
     opts.Policies.DisableConventionalLocalRouting();
 });
 
+var identityUrl = builder.Configuration["services:identity-api:http:0"]
+    ?? builder.Configuration["JwtSettings:Issuer"]
+    ?? "http://identity-api";
+
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-    .AddJwtBearer();
+    .AddJwtBearer(options =>
+    {
+        options.Authority = identityUrl;
+        options.RequireHttpsMetadata = false;
+        options.TokenValidationParameters.ValidateAudience = false;
+    });
 
 builder.Services.AddAuthorization(options =>
 {

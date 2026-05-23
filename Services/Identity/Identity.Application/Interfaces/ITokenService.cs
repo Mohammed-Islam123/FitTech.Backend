@@ -1,8 +1,9 @@
 using Identity.Domain.Entities;
 
-namespace Identity.Application.Interfaces ;
+namespace Identity.Application.Interfaces;
 
 public interface ITokenService
 {
-    string GenerateAccessToken(User user, IList<string> roles, string clientId);
+    string GenerateUserToken(User user, IList<string> roles, string clientId);
+    string GenerateServiceToken(string clientId, IList<string>? scopes = null);
 }

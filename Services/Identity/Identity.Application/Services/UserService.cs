@@ -164,7 +164,7 @@ public class UserService(IUserRepository _userRepository, ITokenService _tokenSe
 
         var roles = await _userRepository.GetUserRolesAsync(user);
 
-        response.Token = _tokenService.GenerateAccessToken(user, roles, dto.ClientId);
+        response.Token = _tokenService.GenerateUserToken(user, roles, dto.ClientId);
         response.RefreshToken = await _userRepository.GenerateAndStoreRefreshTokenAsync(user.Id, dto.ClientId, userAgent, ipAddress);
 
         return response;
@@ -231,7 +231,7 @@ public class UserService(IUserRepository _userRepository, ITokenService _tokenSe
 
         var roles = await _userRepository.GetUserRolesAsync(user);
 
-        response.Token = _tokenService.GenerateAccessToken(user, roles, dto.ClientId);
+        response.Token = _tokenService.GenerateUserToken(user, roles, dto.ClientId);
         response.RefreshToken = newRefreshToken;
 
         return response;
