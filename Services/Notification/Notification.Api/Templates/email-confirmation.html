@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confirm your FitTech email</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #f5f5f8;
+        font-family:
+          "Plus Jakarta Sans",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .wrapper {
+        max-width: 520px;
+        margin: 40px auto;
+        padding: 0 16px 40px;
+      }
+
+      .logo-bar {
+        text-align: center;
+        padding: 32px 0 24px;
+      }
+      .logo-bar img {
+        height: 36px;
+      }
+      .logo-text {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 22px;
+        font-weight: 800;
+        color: #362084;
+        letter-spacing: -0.5px;
+        text-decoration: none;
+      }
+      .logo-icon {
+        width: 36px;
+        height: 36px;
+        background: linear-gradient(135deg, #8167ff 0%, #6942ff 100%);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .card {
+        background: #ffffff;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow:
+          0 2px 12px rgba(54, 32, 132, 0.08),
+          0 1px 3px rgba(54, 32, 132, 0.06);
+      }
+
+      .hero {
+        background-color:#cfc4ff ;
+        padding: 40px 40px 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero-inner {
+        position: relative;
+        display: inline-block;
+      }
+      .hero-bg-circle {
+        width: 160px;
+        height: 160px;
+        background: linear-gradient(135deg, #9b86ff 0%, #6942ff 100%);
+        border-radius: 50%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .hero-bg-circle::before {
+        content: "";
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: rgba(105, 66, 255, 0.12);
+        top: -20px;
+        left: -20px;
+      }
+      .hero-bg-circle::after {
+        content: "";
+        position: absolute;
+        width: 240px;
+        height: 240px;
+        border-radius: 50%;
+        background: rgba(105, 66, 255, 0.06);
+        top: -40px;
+        left: -40px;
+      }
+      .hero-icon {
+        width: 72px;
+        height: 72px;
+        position: relative;
+        z-index: 1;
+      }
+      .sparkle {
+        position: absolute;
+        border-radius: 50%;
+        background: #ffffff;
+        opacity: 0.8;
+      }
+      .sparkle-1 {
+        width: 8px;
+        height: 8px;
+        top: 20px;
+        right: 30px;
+      }
+      .sparkle-2 {
+        width: 5px;
+        height: 5px;
+        top: 50px;
+        left: 20px;
+        opacity: 0.5;
+      }
+      .sparkle-3 {
+        width: 10px;
+        height: 10px;
+        bottom: 30px;
+        right: 15px;
+        opacity: 0.4;
+      }
+      .hero-wave {
+        display: block;
+        margin-top: 24px;
+        width: calc(100% + 80px);
+        margin-left: -40px;
+      }
+
+      .body {
+        padding: 36px 40px 40px;
+      }
+      .greeting {
+        font-size: 26px;
+        font-weight: 800;
+        color: #121219;
+        line-height: 1.25;
+        text-align: center;
+        letter-spacing: -0.5px;
+        margin-bottom: 16px;
+      }
+      .greeting span {
+        color: #6942ff;
+      }
+      .description {
+        font-size: 15px;
+        color: #525264;
+        line-height: 1.7;
+        text-align: center;
+        margin-bottom: 32px;
+      }
+
+      .cta-wrap {
+        text-align: center;
+        margin-bottom: 32px;
+      }
+      .cta-button {
+        display: inline-block;
+        background: linear-gradient(135deg, #8167ff 0%, #6942ff 100%);
+        color: #ffffff !important;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 700;
+        padding: 16px 40px;
+        border-radius: 50px;
+        letter-spacing: 0.1px;
+        box-shadow: 0 4px 20px rgba(105, 66, 255, 0.35);
+      }
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8ee;
+        margin: 0 0 24px;
+      }
+
+      .help-note {
+        font-size: 13px;
+        color: #757587;
+        text-align: center;
+        line-height: 1.6;
+      }
+      .help-note a {
+        color: #6942ff;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .expiry-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: #f3f0ff;
+        color: #5837d6;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 6px 14px;
+        border-radius: 50px;
+        margin: 0 auto 28px;
+        display: table;
+      }
+
+      .footer {
+        padding: 28px 40px 0;
+        text-align: center;
+      }
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        margin-bottom: 20px;
+      }
+      .social-link {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: #f5f5f8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: #40404f;
+        font-size: 13px;
+        font-weight: 700;
+      }
+      .footer-links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 4px 16px;
+        margin-bottom: 20px;
+      }
+      .footer-links a {
+        font-size: 12px;
+        color: #757587;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .footer-links a:hover {
+        color: #6942ff;
+      }
+      .footer-legal {
+        font-size: 11px;
+        color: #a3a3b3;
+        line-height: 1.6;
+        padding-bottom: 32px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+   
+      <div class="card">
+        <div class="hero">
+          <div style="position: relative; display: inline-block ;">
+            <img
+              src="https://i.pinimg.com/1200x/d7/f0/a4/d7f0a402b55f167aca18a1b897381a0d.jpg"
+              alt="FitTech"
+              style="
+                width: 120px;
+                height: 120px;
+                object-fit: center;
+                position: relative;
+                z-index: 1;
+                margin: 20px;
+              "
+            />
+          </div>
+
+          <svg
+            class="hero-wave"
+            viewBox="0 0 600 40"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M0,20 C100,40 200,0 300,20 C400,40 500,0 600,20 L600,40 L0,40 Z"
+              fill="#ffffff"
+            />
+          </svg>
+        </div>
+
+        <div class="body">
+          <h1 class="greeting">
+            Welcome to FitTech,<br /><span>{{FirstName}}!</span>
+          </h1>
+
+          <p class="description">
+            You're one step away from starting your fitness journey.<br />
+            Click the button below to verify your email address.
+          </p>
+
+          <div class="expiry-badge">⏱ Link expires in 24 hours</div>
+
+          <div class="cta-wrap">
+            <a href="{{ConfirmUrl}}" class="cta-button">Verify my email</a>
+          </div>
+
+          <hr class="divider" />
+
+          <p class="help-note">
+            If you have any questions, visit our
+            <a href="#">Help Center</a> or<br />
+            email us at
+            <a href="mailto:support@fittech.com">support@fittech.com</a>.<br />
+            If you didn't create an account, you can safely ignore this email.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook">f</a>
+          <a href="#" class="social-link" aria-label="Instagram">in</a>
+          <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+          <a href="#" class="social-link" aria-label="YouTube">▶</a>
+        </div>
+        <div class="footer-links">
+          <a href="#">My FitTech</a>
+          <a href="#">How it works</a>
+          <a href="#">FAQs</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+        <p class="footer-legal">
+          You received this email because you registered on FitTech.<br />
+          © 2025 FitTech Inc. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
