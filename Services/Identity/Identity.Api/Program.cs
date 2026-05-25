@@ -99,7 +99,12 @@ using (var scope = app.Services.CreateScope())
     await DataSeeder.SeedAsync(context, userManager, roleManager);
 }
 
-app.MapOpenApi();
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.MapOpenApi().AllowAnonymous();
 app.MapScalarApiReference(opt =>
 {
     opt.WithTitle("Identity API")
@@ -107,10 +112,6 @@ app.MapScalarApiReference(opt =>
 });
 
 app.MapWellKnownEndpoints(app.Configuration);
-
-app.UseHttpsRedirection();
-app.UseStaticFiles();
-app.UseAuthentication();
-app.UseAuthorization();
 app.MapControllers();
+
 app.Run();

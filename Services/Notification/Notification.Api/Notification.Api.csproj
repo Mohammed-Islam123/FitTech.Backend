@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MailKit" />
     <PackageReference Include="MassTransit.RabbitMQ" />
     <PackageReference Include="Microsoft.Extensions.Hosting" />
   </ItemGroup>
@@ -15,5 +16,10 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\FitTech.AppHost\FitTech.ServiceDefaults\FitTech.ServiceDefaults.csproj" />
     <ProjectReference Include="..\..\..\Shared\Shared.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Templates\**\*.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 </Project>

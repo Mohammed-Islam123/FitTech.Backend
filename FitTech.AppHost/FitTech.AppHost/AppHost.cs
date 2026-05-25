@@ -16,6 +16,7 @@ var membershipDb = mainDb.AddDatabase("membershipDb");
 
 var paymentDb = mainDb.AddDatabase("paymentDb");
 
+var chatDb = mainDb.AddDatabase("chatDb");
 
 var rabbitUser = builder.AddParameter("rabbitmq-username");
 var rabbitPass = builder.AddParameter("rabbitmq-password", secret: true);
@@ -39,6 +40,7 @@ var membershipApi = builder.AddProject<Projects.Membership>("membership-api")
                           .WaitFor(rabbit);
 
 
+
 var paymentApi = builder.AddProject<Projects.Payment>("payment-api")
     .WithReference(paymentDb)
     .WithReference(rabbit)
@@ -50,6 +52,12 @@ var notificationApi = builder.AddProject<Projects.Notification_Api>("notificatio
        .WithReference(rabbit)
        .WaitFor(rabbit);
 
+
+var chatApi = builder.AddProject<Projects.Chat>("chat-api")
+                     .WithReference(chatDb)
+                     .WithReference(rabbit)
+                     .WaitFor(chatDb)
+                     .WaitFor(rabbit);
 var scalar = builder.AddScalarApiReference(options =>
 {
     // Match this to what your APIs actually expose (default is openapi/v1.json)
@@ -59,16 +67,22 @@ var scalar = builder.AddScalarApiReference(options =>
 // Use WithApiReference to register the services
 scalar.WithApiReference(identityApi)
       .WithApiReference(membershipApi)
-      .WithApiReference(paymentApi);
+      .WithApiReference(paymentApi)
+      .WithApiReference(chatApi);
 
 // Ensure the APIs are running before Scalar tries to scan them
 scalar.WaitFor(identityApi)
       .WaitFor(membershipApi)
-      .WaitFor(paymentApi);
+      .WaitFor(paymentApi)
+      .WaitFor(chatApi);
+
+
 builder.AddProject<Projects.Gateway>("gateway")
        .WithReference(identityApi)
        .WithReference(paymentApi)
+       .WithReference(chatApi) 
        .WaitFor(identityApi)
-       .WaitFor(membershipApi);
+       .WaitFor(membershipApi)
+       .WaitFor(chatApi);
 
 builder.Build().Run();

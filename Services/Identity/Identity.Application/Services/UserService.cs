@@ -41,7 +41,8 @@ public class UserService(IUserRepository _userRepository, ITokenService _tokenSe
         if (!created)
             return null;
 
-        await _userRepository.AddUserToRoleAsync(user, "Member");
+        var role = dto.IsCoach ? "Coach" : "Member";
+        await _userRepository.AddUserToRoleAsync(user, role);
 
         // Save profile photo if provided
         if (dto.ProfilePicture != null && dto.ProfilePicture.Length > 0)
@@ -59,14 +60,34 @@ public class UserService(IUserRepository _userRepository, ITokenService _tokenSe
                 File = dto.MedicalFile
             });
         }
-        await _publishEndpoint.Publish(new UserRegisteredEvent
+
+        var token = await _userRepository.GenerateEmailConfirmationTokenAsync(user);
+
+        await _publishEndpoint.Publish(new EmailConfirmationRequestedEvent
         {
             UserId = user.Id,
             Email = user.Email!,
             FirstName = user.FirstName ?? "",
-            LastName = user.LastName ?? "",
-            RegisteredAt = DateTime.UtcNow
+            Token = token!
         });
+
+
+        // var roles = await _userRepository.GetUserRolesAsync(user);
+        await _publishEndpoint.Publish(new UserCreatedEvent
+        {
+            UserId = user.Id,
+            UserName = user.UserName,
+            Email = user.Email!,
+            FirstName = user.FirstName ?? "",
+            LastName = user.LastName ?? "",
+            PhoneNumber = user.PhoneNumber ?? "",
+            ProfilePhotoUrl = user.ProfilePhotoUrl ?? "",
+            IsCoach = dto.IsCoach,
+            DateOfBirth = user.DateOfBirth,
+            RegisteredAt = user.CreatedAt
+        });
+
+
 
 
         return user.Id;
@@ -345,7 +366,6 @@ public class UserService(IUserRepository _userRepository, ITokenService _tokenSe
         user.IsActive = false;
         return await _userRepository.UpdateUserAsync(user);
     }
-
 
     public async Task<MedicalFileDTO?> UploadMedicalFileAsync(UploadMedicalFileDTO dto)
     {

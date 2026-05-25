@@ -21,7 +21,35 @@ ReverseProxy:
       Metadata:
         cors: default
 
-    # Scalar/OpenAPI Routes for Service Discovery Documentation
+    membership-subscriptions-route:
+      ClusterId: membership-cluster
+      Match:
+        Path: /api/subscriptions/{**catch-all}
+      Metadata:
+        cors: default
+
+    payment-route:
+      ClusterId: payment-cluster
+      Match:
+        Path: /api/payments/{**catch-all}
+      Metadata:
+        cors: default
+
+    chat-route:
+      ClusterId: chat-cluster
+      Match:
+        Path: /api/conversations/{**catch-all}
+      Metadata:
+        cors: default
+
+    chat-hub-route:
+      ClusterId: chat-cluster
+      Match:
+        Path: /hubs/chat/{**catch-all}
+      Metadata:
+        cors: default
+
+    # Scalar/OpenAPI Routes
     identity-openapi-route:
       ClusterId: identity-cluster
       Match:
@@ -36,17 +64,17 @@ ReverseProxy:
       Transforms:
         - PathPattern: "/openapi/v1.json"
 
-    payment-route:
-      ClusterId: payment-cluster
-      Match:
-        Path: /api/payments/{**catch-all}
-      Metadata:
-        cors: default
-
     payment-openapi-route:
       ClusterId: payment-cluster
       Match:
         Path: /docs/payment/{**catch-all}
+      Transforms:
+        - PathPattern: "/openapi/v1.json"
+
+    chat-openapi-route:
+      ClusterId: chat-cluster
+      Match:
+        Path: /docs/chat/{**catch-all}
       Transforms:
         - PathPattern: "/openapi/v1.json"
 
@@ -65,3 +93,8 @@ ReverseProxy:
       Destinations:
         payment-api:
           Address: http+https://payment-api
+
+    chat-cluster:
+      Destinations:
+        chat-api:
+          Address: http+https://chat-api

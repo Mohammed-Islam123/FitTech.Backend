@@ -28,6 +28,7 @@ public class RegisterDTO
 
     public Gender? Gender { get; set; }
     public DateOnly? DateOfBirth { get; set; }
+    public bool IsCoach { get; set; } = false;
 
     /// <summary>
     /// Optional profile photo uploaded at sign-up.

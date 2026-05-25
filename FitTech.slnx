@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/Services/">
+    <Project Path="Services/Chat/Chat.csproj" />
+  </Folder>
   <Project Path="FitTech.AppHost/FitTech.AppHost/FitTech.AppHost.csproj" />
   <Project Path="FitTech.AppHost/FitTech.ServiceDefaults/FitTech.ServiceDefaults.csproj" />
 
