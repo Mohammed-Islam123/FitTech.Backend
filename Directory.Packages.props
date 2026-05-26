@@ -109,6 +109,7 @@
             Version="7.1.4"
         />
     <PackageVersion Include="Scalar.Aspire" Version="0.9.20" />
+    <PackageVersion Include="ClosedXML" Version="0.104.2" />
      <PackageVersion Include="OpenIddict.AspNetCore" Version="7.5.0" />
     <PackageVersion Include="OpenIddict.EntityFrameworkCore" Version="7.5.0" />
     <PackageVersion

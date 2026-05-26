@@ -21,6 +21,72 @@ ReverseProxy:
       Metadata:
         cors: default
 
+    subscriptions-route:
+      ClusterId: membership-cluster
+      Match:
+        Path: /api/subscriptions/{**catch-all}
+      Metadata:
+        cors: default
+
+    me-route:
+      ClusterId: membership-cluster
+      Match:
+        Path: /api/me/{**catch-all}
+      Metadata:
+        cors: default
+
+    courses-route:
+      ClusterId: membership-cluster
+      Match:
+        Path: /api/courses/{**catch-all}
+      Metadata:
+        cors: default
+
+    # Courses Service Routes
+    coaches-route:
+      ClusterId: courses-cluster
+      Match:
+        Path: /api/coaches/{**catch-all}
+      Metadata:
+        cors: default
+
+    programs-route:
+      ClusterId: courses-cluster
+      Match:
+        Path: /api/programs/{**catch-all}
+      Metadata:
+        cors: default
+
+    sessions-route:
+      ClusterId: courses-cluster
+      Match:
+        Path: /api/sessions/{**catch-all}
+      Metadata:
+        cors: default
+
+    # Activity Service Routes
+    activity-route:
+      ClusterId: activity-cluster
+      Match:
+        Path: /api/activity/{**catch-all}
+      Metadata:
+        cors: default
+
+    # Aggregation Service Routes
+    dashboard-route:
+      ClusterId: aggregation-cluster
+      Match:
+        Path: /api/dashboard/{**catch-all}
+      Metadata:
+        cors: default
+
+    reports-route:
+      ClusterId: aggregation-cluster
+      Match:
+        Path: /api/reports/{**catch-all}
+      Metadata:
+        cors: default
+
     # Scalar/OpenAPI Routes for Service Discovery Documentation
     identity-openapi-route:
       ClusterId: identity-cluster
@@ -43,10 +109,38 @@ ReverseProxy:
       Metadata:
         cors: default
 
+    requests-route:
+      ClusterId: payment-cluster
+      Match:
+        Path: /api/requests/{**catch-all}
+      Metadata:
+        cors: default
+
     payment-openapi-route:
       ClusterId: payment-cluster
       Match:
         Path: /docs/payment/{**catch-all}
+      Transforms:
+        - PathPattern: "/openapi/v1.json"
+
+    courses-openapi-route:
+      ClusterId: courses-cluster
+      Match:
+        Path: /docs/courses/{**catch-all}
+      Transforms:
+        - PathPattern: "/openapi/v1.json"
+
+    activity-openapi-route:
+      ClusterId: activity-cluster
+      Match:
+        Path: /docs/activity/{**catch-all}
+      Transforms:
+        - PathPattern: "/openapi/v1.json"
+
+    aggregation-openapi-route:
+      ClusterId: aggregation-cluster
+      Match:
+        Path: /docs/aggregation/{**catch-all}
       Transforms:
         - PathPattern: "/openapi/v1.json"
 
@@ -65,3 +159,18 @@ ReverseProxy:
       Destinations:
         payment-api:
           Address: http+https://payment-api
+
+    courses-cluster:
+      Destinations:
+        courses-api:
+          Address: http+https://courses-api
+
+    activity-cluster:
+      Destinations:
+        activity-api:
+          Address: http+https://activity-api
+
+    aggregation-cluster:
+      Destinations:
+        aggregation-api:
+          Address: http+https://aggregation-api

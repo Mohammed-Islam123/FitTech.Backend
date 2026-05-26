@@ -14,6 +14,9 @@
         <ProjectReference Include="..\..\Services\Notification\Notification.Api\Notification.Api.csproj" />
         <ProjectReference Include="..\..\Services\Gateway\Gateway.csproj" />
         <ProjectReference Include="..\..\Services\Payment\Payment.csproj" />
+        <ProjectReference Include="..\..\Services\Courses\Courses.csproj" />
+        <ProjectReference Include="..\..\Services\Activity\Activity.csproj" />
+        <ProjectReference Include="..\..\Services\Aggregation\Aggregation.csproj" />
     </ItemGroup>
     <ItemGroup>
       <PackageReference Include="Aspire.Hosting.AppHost" />

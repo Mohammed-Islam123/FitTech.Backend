@@ -16,6 +16,12 @@ var membershipDb = mainDb.AddDatabase("membershipDb");
 
 var paymentDb = mainDb.AddDatabase("paymentDb");
 
+var coursesDb = mainDb.AddDatabase("coursesDb");
+
+var activityDb = mainDb.AddDatabase("activityDb");
+
+var aggregationDb = mainDb.AddDatabase("aggregationDb");
+
 
 var rabbitUser = builder.AddParameter("rabbitmq-username");
 var rabbitPass = builder.AddParameter("rabbitmq-password", secret: true);
@@ -46,6 +52,26 @@ var paymentApi = builder.AddProject<Projects.Payment>("payment-api")
     .WaitFor(paymentDb)
     .WaitFor(rabbit);
 
+var coursesApi = builder.AddProject<Projects.Courses>("courses-api")
+    .WithReference(coursesDb)
+    .WithReference(rabbit)
+    .WithReference(identityApi)
+    .WaitFor(coursesDb)
+    .WaitFor(rabbit);
+
+var activityApi = builder.AddProject<Projects.Activity>("activity-api")
+    .WithReference(activityDb)
+    .WithReference(rabbit)
+    .WithReference(identityApi)
+    .WaitFor(activityDb)
+    .WaitFor(rabbit);
+
+var aggregationApi = builder.AddProject<Projects.Aggregation>("aggregation-api")
+    .WithReference(aggregationDb)
+    .WithReference(rabbit)
+    .WaitFor(aggregationDb)
+    .WaitFor(rabbit);
+
 var notificationApi = builder.AddProject<Projects.Notification_Api>("notification-api")
        .WithReference(rabbit)
        .WaitFor(rabbit);
@@ -59,15 +85,23 @@ var scalar = builder.AddScalarApiReference(options =>
 // Use WithApiReference to register the services
 scalar.WithApiReference(identityApi)
       .WithApiReference(membershipApi)
-      .WithApiReference(paymentApi);
+      .WithApiReference(paymentApi)
+      .WithApiReference(coursesApi)
+      .WithApiReference(activityApi)
+      .WithApiReference(aggregationApi);
 
-// Ensure the APIs are running before Scalar tries to scan them
 scalar.WaitFor(identityApi)
       .WaitFor(membershipApi)
-      .WaitFor(paymentApi);
+      .WaitFor(paymentApi)
+      .WaitFor(coursesApi)
+      .WaitFor(activityApi)
+      .WaitFor(aggregationApi);
 builder.AddProject<Projects.Gateway>("gateway")
        .WithReference(identityApi)
        .WithReference(paymentApi)
+       .WithReference(coursesApi)
+       .WithReference(activityApi)
+       .WithReference(aggregationApi)
        .WaitFor(identityApi)
        .WaitFor(membershipApi);
 

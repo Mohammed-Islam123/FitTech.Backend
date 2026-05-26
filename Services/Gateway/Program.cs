@@ -42,6 +42,9 @@ app.MapScalarApiReference(options =>
     options.AddDocument("Identity API", "/docs/identity/openapi/v1.json");
     options.AddDocument("Membership API", "/docs/membership/openapi/v1.json");
     options.AddDocument("Payment API", "/docs/payment/openapi/v1.json");
+    options.AddDocument("Courses API", "/docs/courses/openapi/v1.json");
+    options.AddDocument("Activity API", "/docs/activity/openapi/v1.json");
+    options.AddDocument("Aggregation API", "/docs/aggregation/openapi/v1.json");
 });
 
 app.Run();

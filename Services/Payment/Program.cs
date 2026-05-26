@@ -2,7 +2,10 @@ using Carter;
 using FluentValidation;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Payment.Common.Security;
+using Payment.Infrastructure;
 using Payment.Infrastructure.Persistence;
+using Refit;
 using Scalar.AspNetCore;
 using Wolverine;
 using Wolverine.RabbitMQ;
@@ -13,6 +16,8 @@ builder.AddServiceDefaults();
 
 builder.AddNpgsqlDbContext<PaymentDbContext>(connectionName: "paymentDb");
 builder.Services.AddCarter();
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<IUserAccessor, UserAccessor>();
 builder.Services.AddValidatorsFromAssemblyContaining<Program>();
 
 builder.Host.UseWolverine(opts =>
@@ -49,6 +54,9 @@ builder.Services.AddAuthorization(options =>
         policy.RequireAuthenticatedUser()
             .RequireRole("Admin", "Member"));
 });
+
+builder.Services.AddRefitClient<IIdentityServiceClient>()
+    .ConfigureHttpClient(c => c.BaseAddress = new Uri("http://identity-api"));
 
 builder.Services.AddOpenApi();
 

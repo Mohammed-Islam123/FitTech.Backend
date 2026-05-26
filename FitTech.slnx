@@ -18,6 +18,15 @@
   <!-- Payment Service -->
   <Project Path="Services/Payment/Payment.csproj" />
 
+  <!-- Courses Service -->
+  <Project Path="Services/Courses/Courses.csproj" />
+
+  <!-- Activity Service -->
+  <Project Path="Services/Activity/Activity.csproj" />
+
+  <!-- Aggregation Service -->
+  <Project Path="Services/Aggregation/Aggregation.csproj" />
+
   <!-- Shared -->
   <Project Path="Shared/Shared.csproj" />
 </Solution>

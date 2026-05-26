@@ -7,11 +7,13 @@ apply_to: "Services/Membership"
 > [!IMPORTANT]
 > **Maintenance Rule:** Update this section whenever a feature is started, completed, or in progress.
 > 
-> **Current Status (Last Updated: April 18, 2026):**
-> - **Member Core:** `CreateMember` (Completed), `GetMember` (Completed), `GetSubscriptionHistory` (Completed), `ListMembers` (Completed), `UpdateMember` (Completed), `DeleteMember` (Completed).
-> - **Health Profiles:** Partial (Integrated in Member updates).
-> - **Subscription Plans:** CRUD Management (Completed).
-> - **Subscriptions:** Not started.
+> **Current Status (Last Updated: May 24, 2026 — Phase 1 Complete):**
+> - **Member Core:** `CreateMember`, `GetMember`, `GetSubscriptionHistory`, `ListMembers`, `UpdateMember`, `DeleteMember`, `SuspendMember`, `ActivateMember` (Complete).
+> - **Member Profile:** `GetMyProfile`, `UpdateMyProfile`, `GetMySubscription` (Complete).
+> - **Health Profiles:** Partial (goals update via UpdateMyProfile).
+> - **Subscription Plans:** CRUD Management, `ListSubscriptions` (Complete).
+> - **Courses (stubs):** `GetAvailableCourses`, `GetEnrolledCourses`, `GetCourseDetail` — return empty/404 until Phase 2.
+> - **Subscriptions:** `CreateSubscription`, `ConfirmCashPayment` (Complete).
 > - **NFC Cards:** Basic creation in `CreateMember` (Done), Lifecycle management (Not started).
 
 ## Feature Roadmap (Ordered)
@@ -19,22 +21,31 @@ apply_to: "Services/Membership"
 1.  **Member Management**
     - [x] **Create Member:** Integration with Identity Service (User creation, file uploads), Wolverine publishing `MemberCreatedEvent`.
     - [x] **Get Member Detail:** Fetch member info with active subscription and health profile summary.
-    - [ ] **Get Active Subscription:** Member-specific view of their current subscription.
+    - [x] **Get Active Subscription:** Member-specific view of their current subscription.
+    - [x] **Get My Subscription:** `/api/me/subscription` route alias for GetActiveSubscription.
     - [x] **Get Subscription History:** Retrieve a list of all past and current subscriptions for a member.
     - [x] **List Members:** Paginated search for admins/coaches.
     - [x] **Update Member:** Update personal details and contact info.
     - [x] **Delete/Deactivate Member:** Soft delete (Inactive) and Identity Service deactivation.
+    - [x] **Suspend Member:** Admin suspends member account. Publishes `MemberSuspendedEvent`.
+    - [x] **Activate Member:** Admin reactivates suspended member. Publishes `MemberActivatedEvent`.
+    - [x] **Get My Profile:** Authenticated member's full profile (Membership + Identity data).
+    - [x] **Update My Profile:** Member updates medical file, goals, profile picture.
 2.  **Health Profiles**
-    - [ ] **Get Health Profile:** Detailed view of goals and restrictions.
-    - [ ] **Update Health Profile:** Allow members or coaches to update health data.
+    - [x] **Get Health Profile:** Integrated in GetMember/GetMyProfile.
+    - [x] **Update Health Profile:** Goals update via UpdateMyProfile.
 3.  **Subscription Plans**
     - [x] **Manage Plans:** CRUD for plans (Monthly, Annual, Packs, Trials).
-    - [ ] **List Active Plans:** Public/Member view of available options.
-4.  **Subscriptions**
-    - [ ] **Assign Subscription:** Link a plan to a member, calculate expiration.
+    - [x] **List Subscriptions:** `/api/subscriptions` route alias for ListPlans.
+4.  **Courses (Member-Facing)**
+    - [x] **Get Available Courses:** Stub — returns empty until Phase 2 Courses service.
+    - [x] **Get Enrolled Courses:** Stub — returns empty until Phase 2 Courses service.
+    - [x] **Get Course Detail:** Stub — returns 404 until Phase 2 Courses service.
+5.  **Subscriptions**
+    - [x] **Assign Subscription:** Link a plan to a member, calculate expiration.
     - [ ] **Cancel/Pause Subscription:** Logic for the 2-month/year pause rule.
     - [ ] **Automated Expiration:** Background process to update statuses based on `EndOnUTC`.
-5.  **NFC Cards**
+6.  **NFC Cards**
     - [ ] **Assign/Replace Card:** Link hardware UID to member.
     - [ ] **Lifecycle Management:** Activate on subscription start, deactivate on expiration.
     - [ ] **NFC Entry/Exit Log:** Record and retrieve timestamped entry/exit events.

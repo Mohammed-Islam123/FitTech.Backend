@@ -1,0 +1,65 @@
+Endpoints List
+Aggregation Service
+
+GET /dashboard/admin — Returns aggregated data for the admin dashboard: total members, today's check-ins, monthly revenue, active subscriptions, membership growth over the last 6 months (number of memberships per month), and membership plans breakdown by percentage.
+GET /dashboard/finance — Returns aggregated data for the finance dashboard: total revenue for the current month, total payments, platform commission, net profits for the current month, and total revenue over the gym's lifetime.
+GET /reports/excel — Generates and downloads an Excel file containing: total revenue, total users, registrations, subscriptions, and a monthly breakdown of total revenue, new members, and total sessions per month.
+
+
+Members Service
+
+GET /members — Returns a paginated list of members. For each member: full name, email, phone number, member status, current subscription name, and subscription expiry date.
+PATCH /members/{memberId}/suspend — Suspends a member account.
+PATCH /members/{memberId}/activate — Activates a member account.
+GET /subscriptions — Returns a list of all subscription plans. For each: name, price, status (active or not), number of sessions, session duration, and other relevant fields.
+
+
+Activity Service
+
+GET /sessions/today — Returns all sessions scheduled or occurring today.
+GET /members/{memberId}/activity — Returns the activity history of a specific member: sessions attended, entry time, and exit time for each.
+POST /entry-exit/scan — Takes an RFID/NFC card ID. Verifies member eligibility to enter or exit. If only one active membership or course is found, logs automatically. If both an active membership and active course(s) are found, returns both in the response for the admin to select. Returns: verification result (success or failed), verification type (entering or exiting), member name, remaining sessions, active membership info, and active course(s) info if applicable.
+POST /entry-exit/manual/enter — Manually marks a member as entered. Takes member ID and optionally a course ID to log the entry against a specific course. Performs required verification.
+POST /entry-exit/manual/exit — Manually marks a member as exited. Takes member ID and optionally a course ID. Performs required verification.
+
+
+Member-Facing Endpoints
+
+GET /me — Returns the authenticated member's personal details: full name, gender, date of birth, phone number, email, email confirmation status, account creation date, membership duration in years, active status, profile picture, goals, and medical file ID.
+PATCH /me — Updates the authenticated member's profile: medical file, goals, and/or profile picture.
+GET /me/subscription — Returns the current subscription details for the authenticated member: name, price, days remaining, sessions remaining, access roles, and other relevant fields.
+GET /me/courses/available — Returns the list of courses the authenticated member is not enrolled in. For each: name, image, price, and coach name.
+GET /me/courses/enrolled — Returns the list of courses the authenticated member is enrolled in. For each: name, coach name, description, and other relevant details.
+GET /courses/{courseId} — Returns the full details of a specific course: name, price, description, spots left, capacity, sessions, and other relevant fields.
+
+
+Offline Payment Requests
+
+POST /requests/membership-renewal — Member submits a request to renew their membership via hand-to-hand payment.
+POST /requests/course-purchase — Member submits a request to purchase a course via hand-to-hand payment.
+GET /requests/membership-renewal — Returns the list of pending membership renewal requests. For each: member name, email, and membership details.
+GET /requests/course-purchase — Returns the list of pending course purchase requests. For each: member name, email, and course details.
+PATCH /requests/membership-renewal/{requestId}/accept — Admin accepts a membership renewal request.
+PATCH /requests/membership-renewal/{requestId}/reject — Admin rejects a membership renewal request.
+PATCH /requests/course-purchase/{requestId}/accept — Admin accepts a course purchase request.
+PATCH /requests/course-purchase/{requestId}/reject — Admin rejects a course purchase request.
+
+
+Payments
+
+GET /payments — Returns a list of all payments made by members. For each: member full name, email, amount, subscription, date and time, and payment type (online or hand-to-hand).
+
+
+Booking & Scheduling Service
+
+POST /coaches — Creates a new coach. Takes: full name, email, phone number, and bio. Uses a user ID from the identity service.
+POST /programs — Coach creates a new program. Takes: name, description, level, exercise type, duration, start date, end date, total price, max number of participants, program picture, and a list of time slots (each with day, start time, end time, and description). Submits the program for admin approval.
+GET /programs/requests — Returns all program creation requests submitted by coaches pending admin review. For each: program name, description, and coach name.
+GET /programs/requests/{programId} — Returns the full details of a specific program creation request for admin review.
+PATCH /programs/requests/{programId}/accept — Admin accepts a program creation request. Triggers session generation between the start and end dates.
+PATCH /programs/requests/{programId}/reject — Admin rejects a program creation request.
+GET /coaches/{coachId}/programs — Returns all programs for a specific coach, including inactive and pending ones. For each: program details and acceptance status (pending, accepted, or rejected).
+GET /coaches/{coachId}/clients — Returns all members subscribed to any of the coach's programs. For each: full name, email, phone number, registration date, and list of assigned courses (course ID and name).
+GET /programs/{programId}/members — Returns the list of members enrolled in a specific course, used to display the attendance table for a session.
+POST /sessions/{sessionId}/attendance — Coach marks attendance for a specific session. For each member: specifies present or absent.
+GET /coaches/{coachId}/clients/{memberId} — Returns the full profile of a specific member enrolled in the coach's program, including their medical file.
