@@ -8,91 +8,42 @@
     <PackageVersion Include="Aspire.Hosting.PostgreSQL" Version="13.2.1" />
     <PackageVersion Include="Aspire.Hosting.RabbitMQ" Version="13.2.1" />
     <!-- ServiceDefaults / OpenTelemetry -->
-    <PackageVersion
-            Include="Aspire.Npgsql.EntityFrameworkCore.PostgreSQL"
-            Version="13.2.1"
-        />
+    <PackageVersion Include="Aspire.Npgsql.EntityFrameworkCore.PostgreSQL" Version="13.2.1" />
     <PackageVersion Include="Carter" Version="10.0.0" />
-    <PackageVersion
-            Include="FluentValidation.DependencyInjectionExtensions"
-            Version="12.1.1"
-        />
+    <PackageVersion Include="FluentValidation.DependencyInjectionExtensions" Version="12.1.1" />
+    <PackageVersion Include="MailKit" Version="4.16.0" />
+    <PackageVersion Include="Microsoft.AspNetCore.SignalR" Version="1.2.10" />
     <PackageVersion Include="Microsoft.EntityFrameworkCore" Version="10.0.5" />
-    <PackageVersion
-            Include="Microsoft.Extensions.Http.Resilience"
-            Version="10.4.0"
-        />
-    <PackageVersion
-            Include="Microsoft.Extensions.ServiceDiscovery"
-            Version="10.4.0"
-        />
-    <PackageVersion
-            Include="Microsoft.Extensions.ServiceDiscovery.Yarp"
-            Version="10.4.0"
-        />
-    <PackageVersion
-            Include="OpenTelemetry.Exporter.OpenTelemetryProtocol"
-            Version="1.15.1"
-        />
-    <PackageVersion
-            Include="OpenTelemetry.Extensions.Hosting"
-            Version="1.15.1"
-        />
-    <PackageVersion
-            Include="OpenTelemetry.Instrumentation.AspNetCore"
-            Version="1.15.1"
-        />
-    <PackageVersion
-            Include="OpenTelemetry.Instrumentation.Http"
-            Version="1.15.0"
-        />
-    <PackageVersion
-            Include="OpenTelemetry.Instrumentation.Runtime"
-            Version="1.15.0"
-        />
+    <PackageVersion Include="Microsoft.Extensions.Http.Resilience" Version="10.4.0" />
+    <PackageVersion Include="Microsoft.Extensions.ServiceDiscovery" Version="10.4.0" />
+    <PackageVersion Include="Microsoft.Extensions.ServiceDiscovery.Yarp" Version="10.4.0" />
+    <PackageVersion Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.15.1" />
+    <PackageVersion Include="OpenTelemetry.Extensions.Hosting" Version="1.15.1" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.15.1" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.Http" Version="1.15.0" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.Runtime" Version="1.15.0" />
     <!-- ASP.NET Core / Auth -->
-    <PackageVersion
-            Include="Microsoft.AspNetCore.Authentication.JwtBearer"
-            Version="10.0.5"
-        />
-    <PackageVersion
-            Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore"
-            Version="10.0.5"
-        />
+    <PackageVersion Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.5" />
+    <PackageVersion Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="10.0.5" />
     <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="10.0.5" />
     <!-- EF Core / Postgres -->
-    <PackageVersion
-            Include="Microsoft.EntityFrameworkCore.Design"
-            Version="10.0.5"
-        />
-    <PackageVersion
-            Include="Microsoft.EntityFrameworkCore.Tools"
-            Version="10.0.5"
-        />
-    <PackageVersion
-            Include="Npgsql.EntityFrameworkCore.PostgreSQL"
-            Version="10.0.1"
-        />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.5" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.5" />
+    <PackageVersion Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.1" />
     <!-- JWT -->
     <PackageVersion Include="Microsoft.IdentityModel.Tokens" Version="8.16.0" />
     <PackageVersion Include="Refit.HttpClientFactory" Version="10.1.6" />
     <PackageVersion Include="Serilog.AspNetCore" Version="10.0.0" />
-    <PackageVersion
-            Include="System.IdentityModel.Tokens.Jwt"
-            Version="8.16.0"
-        />
+    <PackageVersion Include="System.IdentityModel.Tokens.Jwt" Version="8.16.0" />
     <!-- Swagger -->
-    <PackageVersion Include="Swashbuckle.AspNetCore" Version="10.1.5" />
+    <PackageVersion Include="Swashbuckle.AspNetCore" Version="10.1.7" />
     <!-- MassTransit -->
     <PackageVersion Include="MassTransit" Version="8.5.8" />
     <PackageVersion Include="MassTransit.RabbitMQ" Version="8.5.8" />
     <!-- Hosting -->
     <PackageVersion Include="Microsoft.Extensions.Hosting" Version="10.0.5" />
     <!-- Shared -->
-    <PackageVersion
-            Include="Microsoft.Extensions.DependencyInjection.Abstractions"
-            Version="10.0.5"
-        />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.5" />
     <PackageVersion Include="RabbitMQ.Client" Version="7.2.1" />
     <!-- Scalar -->
     <PackageVersion Include="Scalar.AspNetCore" Version="2.13.8" />
@@ -104,17 +55,12 @@
     <!-- Other -->
     <PackageVersion Include="UAParser" Version="3.1.47" />
     <PackageVersion Include="ErrorOr" Version="2.0.1" />
-    <PackageVersion
-            Include="MicroElements.AspNetCore.OpenApi.FluentValidation"
-            Version="7.1.4"
-        />
+    <PackageVersion Include="MicroElements.AspNetCore.OpenApi.FluentValidation" Version="7.1.4" />
     <PackageVersion Include="Scalar.Aspire" Version="0.9.20" />
     <PackageVersion Include="ClosedXML" Version="0.104.2" />
      <PackageVersion Include="OpenIddict.AspNetCore" Version="7.5.0" />
     <PackageVersion Include="OpenIddict.EntityFrameworkCore" Version="7.5.0" />
-    <PackageVersion
-            Include="OpenIddict.Validation.AspNetCore"
-            Version="7.5.0"
-        />
+    <PackageVersion Include="OpenIddict.Validation.AspNetCore" Version="7.5.0" />
+    <PackageVersion Include="Treyt.Yarp.ReverseProxy.Swagger" Version="4.0.1" />
   </ItemGroup>
 </Project>

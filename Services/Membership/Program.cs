@@ -85,7 +85,7 @@ if (app.Environment.IsDevelopment())
 app.MapDefaultEndpoints();
 app.UseAuthentication();
 app.UseAuthorization();
-app.MapOpenApi();
+app.MapOpenApi().AllowAnonymous();;
 app.MapScalarApiReference(opt =>
 {
     opt.WithTitle("Membership API")

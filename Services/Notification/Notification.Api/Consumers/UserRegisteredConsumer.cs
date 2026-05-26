@@ -1,28 +1,43 @@
-using MassTransit;
-using Shared.Events;
-using System;
-namespace Notification.Api.Consumers;
+// using MassTransit;
+// using Notification.Api.Infrastructure;
+// using Notification.Api.Services;
+// using Shared.Events;
 
-public class UserRegisteredConsumer : IConsumer<UserRegisteredEvent>
-{
-    private readonly ILogger<UserRegisteredConsumer> _logger;
+// namespace Notification.Api.Consumers;
 
-    public UserRegisteredConsumer(ILogger<UserRegisteredConsumer> logger)
-    {
-        _logger = logger;
-    }
+// public class UserRegisteredConsumer(
+//     IIdentityClient identityClient,
+//     IEmailService emailService,
+//     IConfiguration config) : IConsumer<UserCreatedEvent>
+// {
+//     public async Task Consume(ConsumeContext<UserCreatedEvent> context)
+//     {
+//         var @event = context.Message;
 
-    public Task Consume(ConsumeContext<UserRegisteredEvent> context)
-    {
-        var evt = context.Message;
-        Console.WriteLine($"New member registered — sending welcome email to {evt.Email} (UserId: {evt.UserId}, Name: {evt.FirstName} {evt.LastName})");
-        _logger.LogInformation(
-            "New member registered — sending welcome email to {Email} (UserId: {UserId}, Name: {FullName})",
-            evt.Email, evt.UserId, $"{evt.FirstName} {evt.LastName}");
+//         var result = await identityClient.GetConfirmationTokenAsync(@event.Email!);
+//         if (result is null) return;
 
+//         var (userId, token) = result.Value;
+//         var encodedToken = Uri.EscapeDataString(token);
+//         var frontendUrl = config["Frontend:BaseUrl"];
 
-        // NOTE : here is te andling : like sending an emai via mailgun or smtp
+//         // This link opens your frontend, which then calls Identity's verify-email
+//         var confirmUrl = $"{frontendUrl}/confirm-email?userId={userId}&token={encodedToken}";
+//         var html = $"""
+//             <h2>Welcome to FitTech, {@event.FirstName}!</h2>
+//             <p>Please confirm your email address by clicking the button below:</p>
+//             <a href="{confirmUrl}" 
+//                style="background:#4CAF50;color:white;padding:12px 24px;
+//                       text-decoration:none;border-radius:4px;display:inline-block">
+//                Confirm Email
+//             </a>
+//             <p>If you did not register, ignore this email.</p>
+//             """;
 
-        return Task.CompletedTask;
-    }
-}
+//         await emailService.SendEmailAsync(
+//             @event.Email!,
+//             $"{@event.FirstName} {@event.LastName}",
+//             "Confirm your FitTech email",
+//             html);
+//     }
+// }

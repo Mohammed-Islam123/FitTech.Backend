@@ -22,6 +22,7 @@ var activityDb = mainDb.AddDatabase("activityDb");
 
 var aggregationDb = mainDb.AddDatabase("aggregationDb");
 
+var chatDb = mainDb.AddDatabase("chatDb");
 
 var rabbitUser = builder.AddParameter("rabbitmq-username");
 var rabbitPass = builder.AddParameter("rabbitmq-password", secret: true);
@@ -43,6 +44,7 @@ var membershipApi = builder.AddProject<Projects.Membership>("membership-api")
                           .WithReference(identityApi)
                           .WaitFor(membershipDb)
                           .WaitFor(rabbit);
+
 
 
 var paymentApi = builder.AddProject<Projects.Payment>("payment-api")
@@ -76,16 +78,23 @@ var notificationApi = builder.AddProject<Projects.Notification_Api>("notificatio
        .WithReference(rabbit)
        .WaitFor(rabbit);
 
+
+var chatApi = builder.AddProject<Projects.Chat>("chat-api")
+                     .WithReference(chatDb)
+                     .WithReference(rabbit)
+                     .WaitFor(chatDb)
+                     .WaitFor(rabbit);
 var scalar = builder.AddScalarApiReference(options =>
 {
-    // Match this to what your APIs actually expose (default is openapi/v1.json)
-    options.OpenApiRoutePattern = "openapi/{documentName}.json";
+      // Match this to what your APIs actually expose (default is openapi/v1.json)
+      options.OpenApiRoutePattern = "openapi/{documentName}.json";
 });
 
 // Use WithApiReference to register the services
 scalar.WithApiReference(identityApi)
       .WithApiReference(membershipApi)
       .WithApiReference(paymentApi)
+      .WithApiReference(chatApi)
       .WithApiReference(coursesApi)
       .WithApiReference(activityApi)
       .WithApiReference(aggregationApi);
@@ -93,6 +102,7 @@ scalar.WithApiReference(identityApi)
 scalar.WaitFor(identityApi)
       .WaitFor(membershipApi)
       .WaitFor(paymentApi)
+      .WaitFor(chatApi)
       .WaitFor(coursesApi)
       .WaitFor(activityApi)
       .WaitFor(aggregationApi);
@@ -102,7 +112,9 @@ builder.AddProject<Projects.Gateway>("gateway")
        .WithReference(coursesApi)
        .WithReference(activityApi)
        .WithReference(aggregationApi)
+       .WithReference(chatApi) 
        .WaitFor(identityApi)
-       .WaitFor(membershipApi);
+       .WaitFor(membershipApi)
+       .WaitFor(chatApi);
 
 builder.Build().Run();

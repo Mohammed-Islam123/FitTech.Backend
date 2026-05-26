@@ -87,7 +87,35 @@ ReverseProxy:
       Metadata:
         cors: default
 
-    # Scalar/OpenAPI Routes for Service Discovery Documentation
+    membership-subscriptions-route:
+      ClusterId: membership-cluster
+      Match:
+        Path: /api/subscriptions/{**catch-all}
+      Metadata:
+        cors: default
+
+    payment-route:
+      ClusterId: payment-cluster
+      Match:
+        Path: /api/payments/{**catch-all}
+      Metadata:
+        cors: default
+
+    chat-route:
+      ClusterId: chat-cluster
+      Match:
+        Path: /api/conversations/{**catch-all}
+      Metadata:
+        cors: default
+
+    chat-hub-route:
+      ClusterId: chat-cluster
+      Match:
+        Path: /hubs/chat/{**catch-all}
+      Metadata:
+        cors: default
+
+    # Scalar/OpenAPI Routes
     identity-openapi-route:
       ClusterId: identity-cluster
       Match:
@@ -101,13 +129,6 @@ ReverseProxy:
         Path: /docs/membership/{**catch-all}
       Transforms:
         - PathPattern: "/openapi/v1.json"
-
-    payment-route:
-      ClusterId: payment-cluster
-      Match:
-        Path: /api/payments/{**catch-all}
-      Metadata:
-        cors: default
 
     requests-route:
       ClusterId: payment-cluster
@@ -144,6 +165,13 @@ ReverseProxy:
       Transforms:
         - PathPattern: "/openapi/v1.json"
 
+    chat-openapi-route:
+      ClusterId: chat-cluster
+      Match:
+        Path: /docs/chat/{**catch-all}
+      Transforms:
+        - PathPattern: "/openapi/v1.json"
+
   Clusters:
     identity-cluster:
       Destinations:
@@ -174,3 +202,23 @@ ReverseProxy:
       Destinations:
         aggregation-api:
           Address: http+https://aggregation-api
+
+    courses-cluster:
+      Destinations:
+        courses-api:
+          Address: http+https://courses-api
+
+    activity-cluster:
+      Destinations:
+        activity-api:
+          Address: http+https://activity-api
+
+    aggregation-cluster:
+      Destinations:
+        aggregation-api:
+          Address: http+https://aggregation-api
+
+    chat-cluster:
+      Destinations:
+        chat-api:
+          Address: http+https://chat-api

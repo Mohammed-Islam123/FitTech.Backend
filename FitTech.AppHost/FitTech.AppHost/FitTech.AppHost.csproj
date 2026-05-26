@@ -17,6 +17,7 @@
         <ProjectReference Include="..\..\Services\Courses\Courses.csproj" />
         <ProjectReference Include="..\..\Services\Activity\Activity.csproj" />
         <ProjectReference Include="..\..\Services\Aggregation\Aggregation.csproj" />
+        <ProjectReference Include="..\..\Services\Chat\Chat.csproj" />
     </ItemGroup>
     <ItemGroup>
       <PackageReference Include="Aspire.Hosting.AppHost" />
