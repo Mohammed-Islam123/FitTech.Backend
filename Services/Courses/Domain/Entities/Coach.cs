@@ -7,7 +7,8 @@ public class Coach
 {
     public Guid Id { get; set; } = Guid.CreateVersion7();
     public Guid UserId { get; set; }
-    public string FullName { get; set; } = null!;
+    public string FirstName { get; set; } = null!;
+    public string LastName { get; set; } = null!;
     public string Email { get; set; } = null!;
     public string PhoneNumber { get; set; } = null!;
     public string? Bio { get; set; }

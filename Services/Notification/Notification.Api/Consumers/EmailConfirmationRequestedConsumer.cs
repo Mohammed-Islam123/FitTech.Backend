@@ -7,7 +7,9 @@ namespace Notification.Api.Consumers;
 public class EmailConfirmationRequestedConsumer(
     IEmailService emailService,
     IEmailTemplateService templateService,
-    IConfiguration config) : IConsumer<EmailConfirmationRequestedEvent>
+    IConfiguration config,
+    IHostEnvironment hostEnvironment,
+    ILogger<EmailConfirmationRequestedConsumer> logger) : IConsumer<EmailConfirmationRequestedEvent>
 {
     public async Task Consume(ConsumeContext<EmailConfirmationRequestedEvent> context)
     {
@@ -28,5 +30,23 @@ public class EmailConfirmationRequestedConsumer(
             @event.FirstName,
             "Confirm your FitTech email",
             html);
+
+        if (hostEnvironment.IsDevelopment())
+        {
+            var identityUrl = config["Identity:BaseUrl"] ?? "http://localhost:5051";
+            var rawToken = @event.Token;
+            var body = $$"""{"userId":"{{@event.UserId}}","token":"{{rawToken}}"}""";
+
+            logger.LogInformation(
+                """
+                ┌───────────────────────────────────────────────────────────────────────────┐
+                │ DEV MODE: Verify email via curl (no frontend needed)                    │
+                └───────────────────────────────────────────────────────────────────────────┘
+                curl -X POST {IdentityUrl}/api/User/verify-email \
+                  -H "Content-Type: application/json" \
+                  -d '{Body}'
+                """,
+                identityUrl, body);
+        }
     }
 }

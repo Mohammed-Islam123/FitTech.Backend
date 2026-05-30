@@ -1,5 +1,6 @@
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
+using System.Text.Json.Serialization;
 
 namespace Membership.Infrastructure.Auth;
 
@@ -48,7 +49,7 @@ public sealed class ServiceTokenHandler : DelegatingHandler
 
             var response = await _identityClient.PostAsJsonAsync(
                 "/auth/service-token",
-                new { client_id = _clientId, client_secret = _clientSecret },
+                new { clientId = _clientId, clientSecret = _clientSecret },
                 ct);
 
             response.EnsureSuccessStatusCode();
@@ -68,4 +69,7 @@ public sealed class ServiceTokenHandler : DelegatingHandler
     }
 }
 
-public sealed record ServiceTokenResponse(string AccessToken, int ExpiresIn, string TokenType);
+public sealed record ServiceTokenResponse(
+    [property: JsonPropertyName("access_token")] string AccessToken,
+    [property: JsonPropertyName("expires_in")] int ExpiresIn,
+    [property: JsonPropertyName("token_type")] string TokenType);

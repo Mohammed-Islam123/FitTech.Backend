@@ -1,6 +1,7 @@
 using Aggregation.Shared;
 using Carter;
 using ErrorOr;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Aggregation.Features.Dashboard.GetFinanceDashboard;
 
@@ -17,7 +18,7 @@ public class GetFinanceDashboardEndpoint : ICarterModule
     }
 
     private static async Task<IResult> Handle(
-        GetFinanceDashboardHandler handler, CancellationToken ct)
+        [FromServices] GetFinanceDashboardHandler handler, CancellationToken ct)
     {
         var result = await handler.Handle(ct);
         return result.Match(r => Results.Ok(r), errors => ErrorOnExtensions.MapErrorsToResult(errors));

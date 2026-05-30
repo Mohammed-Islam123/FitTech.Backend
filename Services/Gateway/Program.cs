@@ -8,10 +8,30 @@ using Yarp.ReverseProxy.Swagger.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Load YARP configuration from gateway.yaml into IConfiguration
+builder.Configuration.AddYamlFile("gateway.yaml", optional: false, reloadOnChange: true);
+
 builder.AddServiceDefaults();
 
-var (routes, clusters, swaggerConfig) = YarpConfiguration.GetYarpConfiguration();
+// ── YARP reverse proxy ──────────────────────────────────────────────
+// Routes and clusters are loaded from gateway.yaml (ReverseProxy section).
+// The yaml file is copied to output and loaded via IConfiguration.
+// Destinations use Aspire service discovery addresses like:
+//   http+https://identity-api
+// The .AddServiceDiscoveryDestinationResolver() call resolves these
+// at runtime to the actual host:port (e.g. https://localhost:7259).
+var swaggerConfig   = YarpConfiguration.GetSwaggerConfig();
 
+builder.Services.AddReverseProxy()
+    .LoadFromConfig(builder.Configuration.GetSection("ReverseProxy"))
+    .AddSwagger(swaggerConfig)
+    .AddServiceDiscoveryDestinationResolver();
+
+builder.Services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+// ── CORS ────────────────────────────────────────────────────────────
 builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(policy =>
@@ -27,6 +47,7 @@ builder.Services.AddCors(options =>
               .AllowCredentials());
 });
 
+// ── Auth ────────────────────────────────────────────────────────────
 var identityUrl = builder.Configuration["services:identity-api:http:0"]
     ?? "http://identity-api";
 
@@ -40,15 +61,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 builder.Services.AddAuthorization();
 
-builder.Services.AddReverseProxy()
-    .LoadFromMemory(routes, clusters)
-    .AddSwagger(swaggerConfig)
-    .AddServiceDiscoveryDestinationResolver();
-
-builder.Services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
+// ── Middleware pipeline ──────────────────────────────────────────────
 var app = builder.Build();
 
 app.UseCors();
@@ -58,6 +71,7 @@ app.UseAuthorization();
 
 if (app.Environment.IsDevelopment())
 {
+    // ── Swagger / Scalar ────────────────────────────────────────────
     app.UseSwagger(options => options.PreSerializeFilters.Add((doc, req) =>
     {
         var newPaths = new OpenApiPaths();
@@ -71,28 +85,25 @@ if (app.Environment.IsDevelopment())
         doc.Paths = newPaths;
     }));
 
-app.MapScalarApiReference(options =>
-{
-    options.Title = "FitTech API Gateway";
-    options.Theme = ScalarTheme.Mars;
-    options.AddDocument("Identity API", "/docs/identity/openapi/v1.json");
-    options.AddDocument("Membership API", "/docs/membership/openapi/v1.json");
-    options.AddDocument("Payment API", "/docs/payment/openapi/v1.json");
-    options.AddDocument("Courses API", "/docs/courses/openapi/v1.json");
-    options.AddDocument("Activity API", "/docs/activity/openapi/v1.json");
-    options.AddDocument("Aggregation API", "/docs/aggregation/openapi/v1.json");
-});
     app.MapScalarApiReference(options =>
     {
-        options.WithTitle("FitTech API")
-               .WithTheme(ScalarTheme.Mars)
-               .WithPersistentAuthentication()
-               .AddHttpAuthentication("Bearer", scheme =>
-               {
-                   scheme.Description = "Enter your JWT Bearer token";
-               });
+        options.Title = "FitTech API Gateway";
+        options.Theme = ScalarTheme.Mars;
+        options
+            .WithPersistentAuthentication()
+            .AddHttpAuthentication("Bearer", scheme =>
+            {
+                scheme.Description = "Enter your JWT Bearer token";
+            });
 
         options.OpenApiRoutePattern = "/swagger/FitTech-API/swagger.json";
+
+        options.AddDocument("Identity API",    "/docs/identity/openapi/v1.json");
+        options.AddDocument("Membership API",  "/docs/membership/openapi/v1.json");
+        options.AddDocument("Payment API",     "/docs/payment/openapi/v1.json");
+        options.AddDocument("Courses API",     "/docs/courses/openapi/v1.json");
+        options.AddDocument("Activity API",    "/docs/activity/openapi/v1.json");
+        options.AddDocument("Aggregation API", "/docs/aggregation/openapi/v1.json");
     }).RequireCors();
 
     app.Map("/swagger/{documentName}/swagger.json", () => { })

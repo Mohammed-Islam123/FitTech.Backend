@@ -54,12 +54,13 @@ public class GetMyProfileHandler(
             (DateTime.UtcNow - member.JoinDate).TotalDays / 365.25);
 
         return new GetMyProfileResponse(
-            FullName: $"{member.FirstName} {member.LastName}",
-            Gender: null,
-            DateOfBirth: null,
+            FirstName: member.FirstName,
+            LastName: member.LastName,
+            Gender: identityProfile?.Gender,
+            DateOfBirth: identityProfile?.DateOfBirth,
             PhoneNumber: identityProfile?.PhoneNumber,
             Email: identityProfile?.Email ?? string.Empty,
-            EmailConfirmed: false,
+            EmailConfirmed: identityProfile?.EmailConfirmed ?? false,
             AccountCreationDate: member.JoinDate,
             MembershipDurationYears: membershipDurationYears,
             IsActive: member.Status == MemberStatus.Active,

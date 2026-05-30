@@ -42,7 +42,7 @@ public class GetProgramRequestHandler(CoursesDbContext context, IUserAccessor us
             program.MaxParticipants,
             program.PictureUrl,
             program.Status.ToString(),
-            program.Coach.FullName,
+            $"{program.Coach.FirstName} {program.Coach.LastName}",
             program.TimeSlots.Select(t => new TimeSlotResponse(
                 t.Id,
                 t.Day.ToString(),

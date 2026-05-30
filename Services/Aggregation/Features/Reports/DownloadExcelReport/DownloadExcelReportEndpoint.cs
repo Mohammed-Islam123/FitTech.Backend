@@ -1,6 +1,7 @@
 using Aggregation.Shared;
 using Carter;
 using ErrorOr;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Aggregation.Features.Reports.DownloadExcelReport;
 
@@ -17,7 +18,7 @@ public class DownloadExcelReportEndpoint : ICarterModule
     }
 
     private static async Task<IResult> Handle(
-        DownloadExcelReportHandler handler, CancellationToken ct)
+        [FromServices] DownloadExcelReportHandler handler, CancellationToken ct)
     {
         var result = await handler.Handle(ct);
         return result.Match(

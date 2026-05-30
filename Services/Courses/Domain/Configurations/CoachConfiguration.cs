@@ -9,7 +9,8 @@ public class CoachConfiguration : IEntityTypeConfiguration<Coach>
     public void Configure(EntityTypeBuilder<Coach> builder)
     {
         builder.HasKey(c => c.Id);
-        builder.Property(c => c.FullName).HasMaxLength(200).IsRequired();
+        builder.Property(c => c.FirstName).HasMaxLength(100).IsRequired();
+        builder.Property(c => c.LastName).HasMaxLength(100).IsRequired();
         builder.Property(c => c.Email).HasMaxLength(200).IsRequired();
         builder.Property(c => c.PhoneNumber).HasMaxLength(50).IsRequired();
         builder.Property(c => c.Bio).HasMaxLength(2000);

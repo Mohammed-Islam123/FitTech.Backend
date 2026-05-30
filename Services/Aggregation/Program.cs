@@ -1,6 +1,10 @@
 using Aggregation.Common.Security;
 using Aggregation.Consumers;
 using Aggregation.Domain;
+using Aggregation.Features.Dashboard.GetAdminDashboard;
+using Aggregation.Features.Dashboard.GetFinanceDashboard;
+using Aggregation.Features.Reports.DownloadExcelReport;
+using Aggregation.Infrastructure.Seed;
 using Carter;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -48,6 +52,10 @@ builder.Services.AddAuthorization(options =>
 });
 
 builder.Services.AddOpenApi();
+builder.Services.AddScoped<AggregationSeeder>();
+builder.Services.AddScoped<GetAdminDashboardHandler>();
+builder.Services.AddScoped<GetFinanceDashboardHandler>();
+builder.Services.AddScoped<DownloadExcelReportHandler>();
 
 var app = builder.Build();
 
@@ -55,7 +63,9 @@ if (app.Environment.IsDevelopment())
 {
     using var scope = app.Services.CreateScope();
     var context = scope.ServiceProvider.GetRequiredService<AggregationDbContext>();
-    await context.Database.EnsureCreatedAsync();
+    await context.Database.MigrateAsync();
+    var seeder = scope.ServiceProvider.GetRequiredService<AggregationSeeder>();
+    await seeder.SeedAsync(CancellationToken.None);
 }
 
 app.MapDefaultEndpoints();

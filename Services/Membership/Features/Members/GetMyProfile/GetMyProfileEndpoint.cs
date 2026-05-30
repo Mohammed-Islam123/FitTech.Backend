@@ -25,9 +25,10 @@ public class GetMyProfileEndpoint : ICarterModule
             {
                 var exampleResponse = new JsonObject
                 {
-                    ["fullName"] = "John Doe",
-                    ["gender"] = null,
-                    ["dateOfBirth"] = null,
+                    ["firstName"] = "John",
+                    ["lastName"] = "Doe",
+                    ["gender"] = "Male",
+                    ["dateOfBirth"] = DateTime.UtcNow.AddYears(-25).ToString("O"),
                     ["phoneNumber"] = "+213-555-123456",
                     ["email"] = "john.doe@example.com",
                     ["emailConfirmed"] = true,
@@ -50,11 +51,10 @@ public class GetMyProfileEndpoint : ICarterModule
     }
 
     private static async Task<IResult> Handle(
-        IMessageBus messageBus,
+        GetMyProfileHandler handler,
         CancellationToken ct)
     {
-        var result = await messageBus.InvokeAsync<ErrorOr<GetMyProfileResponse>>(
-            new GetMyProfileQuery(), ct);
+        var result = await handler.Handle(new GetMyProfileQuery(), ct);
 
         return result.Match(
             response => Results.Ok(response),

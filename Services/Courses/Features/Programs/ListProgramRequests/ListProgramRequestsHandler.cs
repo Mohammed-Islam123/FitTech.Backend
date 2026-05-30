@@ -27,7 +27,7 @@ public class ListProgramRequestsHandler(CoursesDbContext context, IUserAccessor 
                 p.Id,
                 p.Name,
                 p.Description,
-                p.Coach.FullName))
+                p.Coach.FirstName + " " + p.Coach.LastName))
             .ToListAsync(ct);
     }
 }

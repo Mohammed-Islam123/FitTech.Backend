@@ -48,7 +48,7 @@ public class RejectProgramHandler(
             ProgramId: program.Id,
             ProgramName: program.Name,
             CoachId: program.CoachId,
-            CoachName: program.Coach.FullName,
+            CoachName: $"{program.Coach.FirstName} {program.Coach.LastName}",
             RejectedAt: program.ReviewedAt!.Value));
 
         return new RejectProgramResponse(program.Id, program.Status.ToString());

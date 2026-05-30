@@ -48,7 +48,7 @@ builder.Services.Configure<DataProtectionTokenProviderOptions>(opt =>
 });
 
 var issuer = builder.Configuration["JwtSettings:Issuer"]!;
-var keyManager = new RsaKeyManager();
+var keyManager = new RsaKeyManager(builder.Configuration);
 builder.Services.AddSingleton(keyManager);
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

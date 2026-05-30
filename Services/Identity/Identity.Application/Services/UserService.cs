@@ -84,7 +84,8 @@ public class UserService(IUserRepository _userRepository, ITokenService _tokenSe
             ProfilePhotoUrl = user.ProfilePhotoUrl ?? "",
             IsCoach = dto.IsCoach,
             DateOfBirth = user.DateOfBirth,
-            RegisteredAt = user.CreatedAt
+            RegisteredAt = user.CreatedAt,
+            GeneratedPassword = dto.Password
         });
 
 
@@ -318,7 +319,10 @@ public class UserService(IUserRepository _userRepository, ITokenService _tokenSe
             ProfilePhotoUrl = user.ProfilePhotoUrl,
             Email = user.Email,
             LastLoginAt = user.LastLoginAt,
-            UserName = user.UserName
+            UserName = user.UserName,
+            Gender = user.Gender?.ToString(),
+            DateOfBirth = user.DateOfBirth,
+            EmailConfirmed = user.IsEmailConfirmed
         };
     }
 

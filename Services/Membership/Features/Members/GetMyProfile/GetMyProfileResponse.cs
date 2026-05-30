@@ -1,12 +1,11 @@
-using Membership.Domain.Enums;
-
 namespace Membership.Features.Members.GetMyProfile;
 
 /// <description>
 /// Response containing the authenticated member's full profile.
 /// </description>
 public record GetMyProfileResponse(
-    string FullName,
+    string FirstName,
+    string LastName,
     string? Gender,
     DateOnly? DateOfBirth,
     string? PhoneNumber,

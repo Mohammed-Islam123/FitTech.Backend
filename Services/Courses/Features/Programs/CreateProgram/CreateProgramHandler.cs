@@ -90,7 +90,7 @@ public class CreateProgramHandler(
             ProgramId: program.Id,
             ProgramName: program.Name,
             CoachId: coach.Id,
-            CoachName: coach.FullName,
+            CoachName: $"{coach.FirstName} {coach.LastName}",
             CreatedAt: program.CreatedAt));
 
         return new CreateProgramResponse(program.Id);

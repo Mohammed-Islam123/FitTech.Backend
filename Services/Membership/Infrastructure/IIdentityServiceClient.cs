@@ -1,4 +1,3 @@
-using Membership.Domain.Enums;
 using Refit;
 using Shared.Wrappers;
 
@@ -18,8 +17,8 @@ public interface IIdentityServiceClient
         [AliasAs("FirstName")] string firstName,
         [AliasAs("LastName")] string lastName,
         [AliasAs("PhoneNumber")] string phoneNumber,
-        [AliasAs("DateOfBirth")] DateOnly dateOfBirth,
-        [AliasAs("Gender")] Gender gender,
+        [AliasAs("DateOfBirth")] string dateOfBirth,
+        [AliasAs("Gender")] string gender,
         [AliasAs("MedicalFile")] StreamPart? medicalFile,
         [AliasAs("ProfilePicture")] StreamPart? profilePicture);
 
@@ -30,8 +29,8 @@ public interface IIdentityServiceClient
         [AliasAs("FirstName")] string firstName,
         [AliasAs("LastName")] string lastName,
         [AliasAs("PhoneNumber")] string phoneNumber,
-        [AliasAs("Gender")] Gender? gender,
-        [AliasAs("DateOfBirth")] DateOnly? dateOfBirth,
+        [AliasAs("Gender")] string? gender,
+        [AliasAs("DateOfBirth")] string? dateOfBirth,
         [AliasAs("ProfilePicture")] StreamPart? profilePicture);
 
     [Post("/api/User/change-password")]
@@ -63,6 +62,9 @@ public class IdentityProfileDto
     public string? UserName { get; set; }
     public DateTime? LastLoginAt { get; set; }
     public string? ProfilePhotoUrl { get; set; }
+    public string? Gender { get; set; }
+    public DateOnly? DateOfBirth { get; set; }
+    public bool EmailConfirmed { get; set; }
 }
 
 public class IdentityMedicalFileDto

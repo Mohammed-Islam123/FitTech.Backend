@@ -18,7 +18,7 @@ public class CreateCoachEndpoint : ICarterModule
         app.MapPost("/api/coaches", Handle)
             .WithName("CreateCoach")
             .WithTags("Coaches")
-            .WithDescription("Creates a new coach. Uses a user ID from the identity service. Restricted to Administrators.")
+            .WithDescription("Creates a new coach. Registers the user in Identity and creates a coach profile. Restricted to Administrators.")
             .RequireAuthorization("AdminOnly")
             .Produces<CreateCoachResponse>(StatusCodes.Status201Created)
             .ProducesProblem(StatusCodes.Status400BadRequest)
@@ -27,10 +27,12 @@ public class CreateCoachEndpoint : ICarterModule
             {
                 var exampleRequest = new JsonObject
                 {
-                    ["fullName"] = "Ahmed Benali",
+                    ["firstName"] = "Ahmed",
+                    ["lastName"] = "Benali",
                     ["email"] = "ahmed.benali@fittech.dz",
                     ["phoneNumber"] = "+213-555-789012",
-                    ["userId"] = Guid.NewGuid().ToString(),
+                    ["dateOfBirth"] = "1990-05-15",
+                    ["gender"] = "Male",
                     ["bio"] = "Certified personal trainer with 5 years experience."
                 };
                 var exampleResponse = new JsonObject

@@ -4,6 +4,7 @@ using Membership.Common.Security;
 using Membership.Coommon.Behaviours;
 using Membership.Domain;
 using Membership.Infrastructure;
+using Membership.Infrastructure.Seed;
 using Membership.Infrastructure.Auth;
 using Membership.Features.Members.CreateMember;
 using MicroElements.AspNetCore.OpenApi.FluentValidation;
@@ -31,6 +32,7 @@ builder.Host.UseWolverine(opts =>
         .AutoProvision();
     opts.Policies.DisableConventionalLocalRouting();
     opts.Policies.AddMiddleware<ValidationBehavior>();
+
 });
 
 var identityUrl = builder.Configuration["services:identity-api:http:0"]
@@ -72,20 +74,14 @@ builder.Services.AddRefitClient<IPaymentServiceClient>()
 builder.Services.AddFluentValidationRulesToOpenApi();
 
 builder.Services.AddOpenApi();
-
+builder.Services.AddScoped<MembershipSeeder>();
+builder.Services.AddMembershipServices();
 var app = builder.Build();
-
-if (app.Environment.IsDevelopment())
-{
-    using var scope = app.Services.CreateScope();
-    var context = scope.ServiceProvider.GetRequiredService<MembershipDbContext>();
-    await context.Database.MigrateAsync();
-}
 
 app.MapDefaultEndpoints();
 app.UseAuthentication();
 app.UseAuthorization();
-app.MapOpenApi().AllowAnonymous();;
+app.MapOpenApi().AllowAnonymous(); ;
 app.MapScalarApiReference(opt =>
 {
     opt.WithTitle("Membership API")
@@ -93,4 +89,15 @@ app.MapScalarApiReference(opt =>
 });
 app.MapCarter();
 
-app.Run();
+await app.StartAsync();
+
+if (app.Environment.IsDevelopment())
+{
+    using var scope = app.Services.CreateScope();
+    var context = scope.ServiceProvider.GetRequiredService<MembershipDbContext>();
+    await context.Database.MigrateAsync();
+    var seeder = scope.ServiceProvider.GetRequiredService<MembershipSeeder>();
+    await seeder.SeedAsync(CancellationToken.None);
+}
+
+await app.WaitForShutdownAsync();

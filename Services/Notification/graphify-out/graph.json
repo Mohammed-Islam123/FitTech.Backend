@@ -1,0 +1,929 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "appsettings.Development.json",
+      "file_type": "code",
+      "source_file": "Notification.Api/appsettings.Development.json",
+      "source_location": "L1",
+      "id": "notification_api_appsettings_development_json",
+      "community": 5,
+      "norm_label": "appsettings.development.json"
+    },
+    {
+      "label": "Logging",
+      "file_type": "code",
+      "source_file": "Notification.Api/appsettings.Development.json",
+      "source_location": "L2",
+      "id": "notification_api_appsettings_development_logging",
+      "community": 5,
+      "norm_label": "logging"
+    },
+    {
+      "label": "LogLevel",
+      "file_type": "code",
+      "source_file": "Notification.Api/appsettings.Development.json",
+      "source_location": "L3",
+      "id": "notification_api_appsettings_development_logging_loglevel",
+      "community": 5,
+      "norm_label": "loglevel"
+    },
+    {
+      "label": "Default",
+      "file_type": "code",
+      "source_file": "Notification.Api/appsettings.Development.json",
+      "source_location": "L4",
+      "id": "notification_api_appsettings_development_loglevel_default",
+      "community": 5,
+      "norm_label": "default"
+    },
+    {
+      "label": "Microsoft.Hosting.Lifetime",
+      "file_type": "code",
+      "source_file": "Notification.Api/appsettings.Development.json",
+      "source_location": "L5",
+      "id": "notification_api_appsettings_development_loglevel_microsoft_hosting_lifetime",
+      "community": 5,
+      "norm_label": "microsoft.hosting.lifetime"
+    },
+    {
+      "label": "appsettings.json",
+      "file_type": "code",
+      "source_file": "Notification.Api/appsettings.json",
+      "source_location": "L1",
+      "id": "notification_api_appsettings_json",
+      "community": 0,
+      "norm_label": "appsettings.json"
+    },
+    {
+      "label": "Logging",
+      "file_type": "code",
+      "source_file": "Notification.Api/appsettings.json",
+      "source_location": "L2",
+      "id": "notification_api_appsettings_logging",
+      "community": 0,
+      "norm_label": "logging"
+    },
+    {
+      "label": "LogLevel",
+      "file_type": "code",
+      "source_file": "Notification.Api/appsettings.json",
+      "source_location": "L3",
+      "id": "notification_api_appsettings_logging_loglevel",
+      "community": 0,
+      "norm_label": "loglevel"
+    },
+    {
+      "label": "Default",
+      "file_type": "code",
+      "source_file": "Notification.Api/appsettings.json",
+      "source_location": "L4",
+      "id": "notification_api_appsettings_loglevel_default",
+      "community": 0,
+      "norm_label": "default"
+    },
+    {
+      "label": "Microsoft.Hosting.Lifetime",
+      "file_type": "code",
+      "source_file": "Notification.Api/appsettings.json",
+      "source_location": "L5",
+      "id": "notification_api_appsettings_loglevel_microsoft_hosting_lifetime",
+      "community": 0,
+      "norm_label": "microsoft.hosting.lifetime"
+    },
+    {
+      "label": "Email",
+      "file_type": "code",
+      "source_file": "Notification.Api/appsettings.json",
+      "source_location": "L8",
+      "id": "notification_api_appsettings_email",
+      "community": 1,
+      "norm_label": "email"
+    },
+    {
+      "label": "Host",
+      "file_type": "code",
+      "source_file": "Notification.Api/appsettings.json",
+      "source_location": "L9",
+      "id": "notification_api_appsettings_email_host",
+      "community": 1,
+      "norm_label": "host"
+    },
+    {
+      "label": "Port",
+      "file_type": "code",
+      "source_file": "Notification.Api/appsettings.json",
+      "source_location": "L10",
+      "id": "notification_api_appsettings_email_port",
+      "community": 1,
+      "norm_label": "port"
+    },
+    {
+      "label": "SenderName",
+      "file_type": "code",
+      "source_file": "Notification.Api/appsettings.json",
+      "source_location": "L11",
+      "id": "notification_api_appsettings_email_sendername",
+      "community": 1,
+      "norm_label": "sendername"
+    },
+    {
+      "label": "SenderEmail",
+      "file_type": "code",
+      "source_file": "Notification.Api/appsettings.json",
+      "source_location": "L12",
+      "id": "notification_api_appsettings_email_senderemail",
+      "community": 1,
+      "norm_label": "senderemail"
+    },
+    {
+      "label": "UserName",
+      "file_type": "code",
+      "source_file": "Notification.Api/appsettings.json",
+      "source_location": "L13",
+      "id": "notification_api_appsettings_email_username",
+      "community": 1,
+      "norm_label": "username"
+    },
+    {
+      "label": "Password",
+      "file_type": "code",
+      "source_file": "Notification.Api/appsettings.json",
+      "source_location": "L14",
+      "id": "notification_api_appsettings_email_password",
+      "community": 1,
+      "norm_label": "password"
+    },
+    {
+      "label": "UseTLS",
+      "file_type": "code",
+      "source_file": "Notification.Api/appsettings.json",
+      "source_location": "L15",
+      "id": "notification_api_appsettings_email_usetls",
+      "community": 1,
+      "norm_label": "usetls"
+    },
+    {
+      "label": "Frontend",
+      "file_type": "code",
+      "source_file": "Notification.Api/appsettings.json",
+      "source_location": "L17",
+      "id": "notification_api_appsettings_frontend",
+      "community": 0,
+      "norm_label": "frontend"
+    },
+    {
+      "label": "BaseUrl",
+      "file_type": "code",
+      "source_file": "Notification.Api/appsettings.json",
+      "source_location": "L18",
+      "id": "notification_api_appsettings_frontend_baseurl",
+      "community": 0,
+      "norm_label": "baseurl"
+    },
+    {
+      "label": "Identity",
+      "file_type": "code",
+      "source_file": "Notification.Api/appsettings.json",
+      "source_location": "L20",
+      "id": "notification_api_appsettings_identity",
+      "community": 0,
+      "norm_label": "identity"
+    },
+    {
+      "label": "BaseUrl",
+      "file_type": "code",
+      "source_file": "Notification.Api/appsettings.json",
+      "source_location": "L21",
+      "id": "notification_api_appsettings_identity_baseurl",
+      "community": 0,
+      "norm_label": "baseurl"
+    },
+    {
+      "label": "Program.cs",
+      "file_type": "code",
+      "source_file": "Notification.Api/Program.cs",
+      "source_location": "L1",
+      "id": "notification_api_program_cs",
+      "community": 8,
+      "norm_label": "program.cs"
+    },
+    {
+      "label": "Worker.cs",
+      "file_type": "code",
+      "source_file": "Notification.Api/Worker.cs",
+      "source_location": "L1",
+      "id": "notification_api_worker_cs",
+      "community": 6,
+      "norm_label": "worker.cs"
+    },
+    {
+      "label": "Worker",
+      "file_type": "code",
+      "source_file": "Notification.Api/Worker.cs",
+      "source_location": "L3",
+      "id": "notification_api_worker_worker",
+      "community": 6,
+      "norm_label": "worker"
+    },
+    {
+      "label": "BackgroundService",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "backgroundservice",
+      "community": 6,
+      "norm_label": "backgroundservice"
+    },
+    {
+      "label": ".ExecuteAsync()",
+      "file_type": "code",
+      "source_file": "Notification.Api/Worker.cs",
+      "source_location": "L5",
+      "id": "notification_api_worker_worker_executeasync",
+      "community": 6,
+      "norm_label": ".executeasync()"
+    },
+    {
+      "label": "EmailConfirmationRequestedConsumer.cs",
+      "file_type": "code",
+      "source_file": "Notification.Api/Consumers/EmailConfirmationRequestedConsumer.cs",
+      "source_location": "L1",
+      "id": "notification_api_consumers_emailconfirmationrequestedconsumer_cs",
+      "community": 7,
+      "norm_label": "emailconfirmationrequestedconsumer.cs"
+    },
+    {
+      "label": "EmailConfirmationRequestedConsumer",
+      "file_type": "code",
+      "source_file": "Notification.Api/Consumers/EmailConfirmationRequestedConsumer.cs",
+      "source_location": "L7",
+      "id": "consumers_emailconfirmationrequestedconsumer_emailconfirmationrequestedconsumer",
+      "community": 7,
+      "norm_label": "emailconfirmationrequestedconsumer"
+    },
+    {
+      "label": "IConsumer",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "iconsumer",
+      "community": 7,
+      "norm_label": "iconsumer"
+    },
+    {
+      "label": ".Consume()",
+      "file_type": "code",
+      "source_file": "Notification.Api/Consumers/EmailConfirmationRequestedConsumer.cs",
+      "source_location": "L14",
+      "id": "consumers_emailconfirmationrequestedconsumer_emailconfirmationrequestedconsumer_consume",
+      "community": 7,
+      "norm_label": ".consume()"
+    },
+    {
+      "label": "UserRegisteredConsumer.cs",
+      "file_type": "code",
+      "source_file": "Notification.Api/Consumers/UserRegisteredConsumer.cs",
+      "source_location": "L1",
+      "id": "notification_api_consumers_userregisteredconsumer_cs",
+      "community": 9,
+      "norm_label": "userregisteredconsumer.cs"
+    },
+    {
+      "label": "launchSettings.json",
+      "file_type": "code",
+      "source_file": "Notification.Api/Properties/launchSettings.json",
+      "source_location": "L1",
+      "id": "notification_api_properties_launchsettings_json",
+      "community": 2,
+      "norm_label": "launchsettings.json"
+    },
+    {
+      "label": "$schema",
+      "file_type": "code",
+      "source_file": "Notification.Api/Properties/launchSettings.json",
+      "source_location": "L2",
+      "id": "properties_launchsettings_schema",
+      "community": 2,
+      "norm_label": "$schema"
+    },
+    {
+      "label": "profiles",
+      "file_type": "code",
+      "source_file": "Notification.Api/Properties/launchSettings.json",
+      "source_location": "L3",
+      "id": "properties_launchsettings_profiles",
+      "community": 2,
+      "norm_label": "profiles"
+    },
+    {
+      "label": "Notification.Api",
+      "file_type": "code",
+      "source_file": "Notification.Api/Properties/launchSettings.json",
+      "source_location": "L4",
+      "id": "properties_launchsettings_profiles_notification_api",
+      "community": 2,
+      "norm_label": "notification.api"
+    },
+    {
+      "label": "commandName",
+      "file_type": "code",
+      "source_file": "Notification.Api/Properties/launchSettings.json",
+      "source_location": "L5",
+      "id": "properties_launchsettings_notification_api_commandname",
+      "community": 2,
+      "norm_label": "commandname"
+    },
+    {
+      "label": "dotnetRunMessages",
+      "file_type": "code",
+      "source_file": "Notification.Api/Properties/launchSettings.json",
+      "source_location": "L6",
+      "id": "properties_launchsettings_notification_api_dotnetrunmessages",
+      "community": 2,
+      "norm_label": "dotnetrunmessages"
+    },
+    {
+      "label": "environmentVariables",
+      "file_type": "code",
+      "source_file": "Notification.Api/Properties/launchSettings.json",
+      "source_location": "L7",
+      "id": "properties_launchsettings_notification_api_environmentvariables",
+      "community": 2,
+      "norm_label": "environmentvariables"
+    },
+    {
+      "label": "DOTNET_ENVIRONMENT",
+      "file_type": "code",
+      "source_file": "Notification.Api/Properties/launchSettings.json",
+      "source_location": "L8",
+      "id": "properties_launchsettings_environmentvariables_dotnet_environment",
+      "community": 2,
+      "norm_label": "dotnet_environment"
+    },
+    {
+      "label": "EmailService.cs",
+      "file_type": "code",
+      "source_file": "Notification.Api/Services/EmailService.cs",
+      "source_location": "L1",
+      "id": "notification_api_services_emailservice_cs",
+      "community": 4,
+      "norm_label": "emailservice.cs"
+    },
+    {
+      "label": "EmailService",
+      "file_type": "code",
+      "source_file": "Notification.Api/Services/EmailService.cs",
+      "source_location": "L7",
+      "id": "services_emailservice_emailservice",
+      "community": 4,
+      "norm_label": "emailservice"
+    },
+    {
+      "label": ".SendEmailAsync()",
+      "file_type": "code",
+      "source_file": "Notification.Api/Services/EmailService.cs",
+      "source_location": "L9",
+      "id": "services_emailservice_emailservice_sendemailasync",
+      "community": 4,
+      "norm_label": ".sendemailasync()"
+    },
+    {
+      "label": "EmailTemplateService.cs",
+      "file_type": "code",
+      "source_file": "Notification.Api/Services/EmailTemplateService.cs",
+      "source_location": "L1",
+      "id": "notification_api_services_emailtemplateservice_cs",
+      "community": 3,
+      "norm_label": "emailtemplateservice.cs"
+    },
+    {
+      "label": "EmailTemplateService",
+      "file_type": "code",
+      "source_file": "Notification.Api/Services/EmailTemplateService.cs",
+      "source_location": "L7",
+      "id": "services_emailtemplateservice_emailtemplateservice",
+      "community": 3,
+      "norm_label": "emailtemplateservice"
+    },
+    {
+      "label": "Dictionary",
+      "file_type": "code",
+      "source_file": "Notification.Api/Services/EmailTemplateService.cs",
+      "source_location": "L11",
+      "id": "dictionary",
+      "community": 3,
+      "norm_label": "dictionary"
+    },
+    {
+      "label": ".Render()",
+      "file_type": "code",
+      "source_file": "Notification.Api/Services/EmailTemplateService.cs",
+      "source_location": "L39",
+      "id": "services_emailtemplateservice_emailtemplateservice_render",
+      "community": 3,
+      "norm_label": ".render()"
+    },
+    {
+      "label": "IEmailService.cs",
+      "file_type": "code",
+      "source_file": "Notification.Api/Services/Interfaces/IEmailService.cs",
+      "source_location": "L1",
+      "id": "notification_api_services_interfaces_iemailservice_cs",
+      "community": 4,
+      "norm_label": "iemailservice.cs"
+    },
+    {
+      "label": "IEmailService",
+      "file_type": "code",
+      "source_file": "Notification.Api/Services/Interfaces/IEmailService.cs",
+      "source_location": "L3",
+      "id": "interfaces_iemailservice_iemailservice",
+      "community": 4,
+      "norm_label": "iemailservice"
+    },
+    {
+      "label": ".SendEmailAsync()",
+      "file_type": "code",
+      "source_file": "Notification.Api/Services/Interfaces/IEmailService.cs",
+      "source_location": "L5",
+      "id": "interfaces_iemailservice_iemailservice_sendemailasync",
+      "community": 4,
+      "norm_label": ".sendemailasync()"
+    },
+    {
+      "label": "IEmailTemplateService.cs",
+      "file_type": "code",
+      "source_file": "Notification.Api/Services/Interfaces/IEmailTemplateService.cs",
+      "source_location": "L1",
+      "id": "notification_api_services_interfaces_iemailtemplateservice_cs",
+      "community": 3,
+      "norm_label": "iemailtemplateservice.cs"
+    },
+    {
+      "label": "IEmailTemplateService",
+      "file_type": "code",
+      "source_file": "Notification.Api/Services/Interfaces/IEmailTemplateService.cs",
+      "source_location": "L3",
+      "id": "interfaces_iemailtemplateservice_iemailtemplateservice",
+      "community": 3,
+      "norm_label": "iemailtemplateservice"
+    },
+    {
+      "label": ".Render()",
+      "file_type": "code",
+      "source_file": "Notification.Api/Services/Interfaces/IEmailTemplateService.cs",
+      "source_location": "L5",
+      "id": "interfaces_iemailtemplateservice_iemailtemplateservice_render",
+      "community": 3,
+      "norm_label": ".render()"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/appsettings.Development.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "notification_api_appsettings_development_json",
+      "target": "notification_api_appsettings_development_logging",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/appsettings.Development.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "notification_api_appsettings_development_logging",
+      "target": "notification_api_appsettings_development_logging_loglevel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/appsettings.Development.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "notification_api_appsettings_development_logging_loglevel",
+      "target": "notification_api_appsettings_development_loglevel_default",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/appsettings.Development.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "notification_api_appsettings_development_logging_loglevel",
+      "target": "notification_api_appsettings_development_loglevel_microsoft_hosting_lifetime",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/appsettings.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "notification_api_appsettings_json",
+      "target": "notification_api_appsettings_logging",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/appsettings.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "notification_api_appsettings_json",
+      "target": "notification_api_appsettings_email",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/appsettings.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "notification_api_appsettings_json",
+      "target": "notification_api_appsettings_frontend",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/appsettings.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "notification_api_appsettings_json",
+      "target": "notification_api_appsettings_identity",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/appsettings.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "notification_api_appsettings_logging",
+      "target": "notification_api_appsettings_logging_loglevel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/appsettings.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "notification_api_appsettings_logging_loglevel",
+      "target": "notification_api_appsettings_loglevel_default",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/appsettings.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "notification_api_appsettings_logging_loglevel",
+      "target": "notification_api_appsettings_loglevel_microsoft_hosting_lifetime",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/appsettings.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "notification_api_appsettings_email",
+      "target": "notification_api_appsettings_email_host",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/appsettings.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "notification_api_appsettings_email",
+      "target": "notification_api_appsettings_email_port",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/appsettings.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "notification_api_appsettings_email",
+      "target": "notification_api_appsettings_email_sendername",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/appsettings.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "notification_api_appsettings_email",
+      "target": "notification_api_appsettings_email_senderemail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/appsettings.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "notification_api_appsettings_email",
+      "target": "notification_api_appsettings_email_username",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/appsettings.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "notification_api_appsettings_email",
+      "target": "notification_api_appsettings_email_password",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/appsettings.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "notification_api_appsettings_email",
+      "target": "notification_api_appsettings_email_usetls",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/appsettings.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "notification_api_appsettings_frontend",
+      "target": "notification_api_appsettings_frontend_baseurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/appsettings.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "notification_api_appsettings_identity",
+      "target": "notification_api_appsettings_identity_baseurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/Worker.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "notification_api_worker_cs",
+      "target": "notification_api_worker_worker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/Worker.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "notification_api_worker_worker",
+      "target": "backgroundservice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/Worker.cs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "notification_api_worker_worker",
+      "target": "notification_api_worker_worker_executeasync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/Consumers/EmailConfirmationRequestedConsumer.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "notification_api_consumers_emailconfirmationrequestedconsumer_cs",
+      "target": "consumers_emailconfirmationrequestedconsumer_emailconfirmationrequestedconsumer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/Consumers/EmailConfirmationRequestedConsumer.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "consumers_emailconfirmationrequestedconsumer_emailconfirmationrequestedconsumer",
+      "target": "iconsumer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/Consumers/EmailConfirmationRequestedConsumer.cs",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "consumers_emailconfirmationrequestedconsumer_emailconfirmationrequestedconsumer",
+      "target": "consumers_emailconfirmationrequestedconsumer_emailconfirmationrequestedconsumer_consume",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/Properties/launchSettings.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "notification_api_properties_launchsettings_json",
+      "target": "properties_launchsettings_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/Properties/launchSettings.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "notification_api_properties_launchsettings_json",
+      "target": "properties_launchsettings_profiles",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/Properties/launchSettings.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "properties_launchsettings_profiles",
+      "target": "properties_launchsettings_profiles_notification_api",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/Properties/launchSettings.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "properties_launchsettings_profiles_notification_api",
+      "target": "properties_launchsettings_notification_api_commandname",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/Properties/launchSettings.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "properties_launchsettings_profiles_notification_api",
+      "target": "properties_launchsettings_notification_api_dotnetrunmessages",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/Properties/launchSettings.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "properties_launchsettings_profiles_notification_api",
+      "target": "properties_launchsettings_notification_api_environmentvariables",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/Properties/launchSettings.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "properties_launchsettings_notification_api_environmentvariables",
+      "target": "properties_launchsettings_environmentvariables_dotnet_environment",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/Services/EmailService.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "notification_api_services_emailservice_cs",
+      "target": "services_emailservice_emailservice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/Services/EmailService.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "services_emailservice_emailservice",
+      "target": "interfaces_iemailservice_iemailservice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/Services/EmailService.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "services_emailservice_emailservice",
+      "target": "services_emailservice_emailservice_sendemailasync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/Services/EmailTemplateService.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "notification_api_services_emailtemplateservice_cs",
+      "target": "services_emailtemplateservice_emailtemplateservice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/Services/EmailTemplateService.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "services_emailtemplateservice_emailtemplateservice",
+      "target": "interfaces_iemailtemplateservice_iemailtemplateservice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/Services/EmailTemplateService.cs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "context": "field",
+      "source": "services_emailtemplateservice_emailtemplateservice",
+      "target": "dictionary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/Services/EmailTemplateService.cs",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "services_emailtemplateservice_emailtemplateservice",
+      "target": "services_emailtemplateservice_emailtemplateservice_render",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/Services/Interfaces/IEmailService.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "notification_api_services_interfaces_iemailservice_cs",
+      "target": "interfaces_iemailservice_iemailservice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/Services/Interfaces/IEmailService.cs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "interfaces_iemailservice_iemailservice",
+      "target": "interfaces_iemailservice_iemailservice_sendemailasync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/Services/Interfaces/IEmailTemplateService.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "notification_api_services_interfaces_iemailtemplateservice_cs",
+      "target": "interfaces_iemailtemplateservice_iemailtemplateservice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "Notification.Api/Services/Interfaces/IEmailTemplateService.cs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "interfaces_iemailtemplateservice_iemailtemplateservice",
+      "target": "interfaces_iemailtemplateservice_iemailtemplateservice_render",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "0bf45bde75c001b7ce8a1742ddb12b481e202a46"
+}

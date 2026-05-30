@@ -70,69 +70,24 @@ public static class DataSeeder
 
     private static async Task SeedUsersAsync(UserManager<ApplicationUser> userManager)
     {
-        var users = new[]
+        var adminUser = new ApplicationUser
         {
-            new
-            {
-                User = new ApplicationUser
-                {
-                    UserName        = "admin",
-                    Email           = "Admin@fitteck.com",
-                    FirstName       = "FitTeck",
-                    LastName        = "Admin",
-                    IsActive        = true,
-                    EmailConfirmed  = true,
-                    IsEmailConfirmed = true,
-                    CreatedAt       = DateTime.UtcNow,
-                    Gender          = Gender.Male,
-                },
-                Password = "Admin@12345",
-                Role     = "Admin"
-            },
-            new
-            {
-                User = new ApplicationUser
-                {
-                    UserName        = "member",
-                    Email           = "Member@fitteck.com",
-                    FirstName       = "FitTeck",
-                    LastName        = "Member",
-                    IsActive        = true,
-                    EmailConfirmed  = true,
-                    IsEmailConfirmed = true,
-                    CreatedAt       = DateTime.UtcNow,
-                    Gender          = Gender.Male,
-                },
-                Password = "Member@12345",
-                Role     = "Member"
-            },
-            new
-            {
-                User = new ApplicationUser
-                {
-                    UserName        = "coach",
-                    Email           = "Coach@fitteck.com",
-                    FirstName       = "FitTeck",
-                    LastName        = "Coach",
-                    IsActive        = true,
-                    EmailConfirmed  = true,
-                    IsEmailConfirmed = true,
-                    CreatedAt       = DateTime.UtcNow,
-                    Gender          = Gender.Male,
-                },
-                Password = "Coach@12345",
-                Role     = "Coach"
-            },
+            UserName        = "admin",
+            Email           = "Admin@fitteck.com",
+            FirstName       = "FitTeck",
+            LastName        = "Admin",
+            IsActive        = true,
+            EmailConfirmed  = true,
+            IsEmailConfirmed = true,
+            CreatedAt       = DateTime.UtcNow,
+            Gender          = Gender.Male,
         };
 
-        foreach (var entry in users)
+        if (await userManager.FindByEmailAsync(adminUser.Email!) is null)
         {
-            if (await userManager.FindByEmailAsync(entry.User.Email!) is null)
-            {
-                var result = await userManager.CreateAsync(entry.User, entry.Password);
-                if (result.Succeeded)
-                    await userManager.AddToRoleAsync(entry.User, entry.Role);
-            }
+            var result = await userManager.CreateAsync(adminUser, "Admin@12345");
+            if (result.Succeeded)
+                await userManager.AddToRoleAsync(adminUser, "Admin");
         }
     }
 }

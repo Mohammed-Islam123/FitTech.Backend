@@ -14,4 +14,5 @@ public record UserCreatedEvent
     public bool IsCoach { get; init; }
     public DateOnly? DateOfBirth { get; init; }
     public DateTime RegisteredAt { get; init; }
+    public string? GeneratedPassword { get; init; }
 }

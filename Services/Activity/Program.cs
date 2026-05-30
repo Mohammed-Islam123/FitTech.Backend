@@ -2,6 +2,7 @@ using Activity.Common.Behaviours;
 using Activity.Common.Security;
 using Activity.Domain;
 using Activity.Infrastructure;
+using Activity.Infrastructure.Seed;
 using Carter;
 using FluentValidation;
 using MicroElements.AspNetCore.OpenApi.FluentValidation;
@@ -60,6 +61,7 @@ builder.Services.AddRefitClient<ICoursesServiceClient>()
 
 builder.Services.AddFluentValidationRulesToOpenApi();
 builder.Services.AddOpenApi();
+builder.Services.AddScoped<ActivitySeeder>();
 
 var app = builder.Build();
 
@@ -68,6 +70,8 @@ if (app.Environment.IsDevelopment())
     using var scope = app.Services.CreateScope();
     var context = scope.ServiceProvider.GetRequiredService<ActivityDbContext>();
     await context.Database.MigrateAsync();
+    var seeder = scope.ServiceProvider.GetRequiredService<ActivitySeeder>();
+    await seeder.SeedAsync(CancellationToken.None);
 }
 
 app.MapDefaultEndpoints();

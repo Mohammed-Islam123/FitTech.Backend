@@ -5,6 +5,5 @@ public record MemberCreatedEvent(
     Guid UserId,
     string FullName,
     string Email,
-    string GeneratedPassword,
     string AssignedPlanName
 );

@@ -64,8 +64,8 @@ public class UpdateMemberHandler(
                 firstName: req.FirstName,
                 lastName: req.LastName,
                 phoneNumber: req.PhoneNumber,
-                gender: req.Gender,
-                dateOfBirth: req.DateOfBirth,
+                gender: req.Gender?.ToString(),
+                dateOfBirth: req.DateOfBirth?.ToString("yyyy-MM-dd"),
                 profilePicture: profileStreamPart
             );
 

@@ -75,7 +75,7 @@ public class AcceptProgramHandler(
             ProgramId: program.Id,
             ProgramName: program.Name,
             CoachId: program.CoachId,
-            CoachName: program.Coach.FullName,
+            CoachName: $"{program.Coach.FirstName} {program.Coach.LastName}",
             AcceptedAt: program.ReviewedAt!.Value));
 
         return new AcceptProgramResponse(program.Id, program.Status.ToString());

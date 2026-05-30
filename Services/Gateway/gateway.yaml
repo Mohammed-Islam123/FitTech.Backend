@@ -4,118 +4,83 @@ ReverseProxy:
       ClusterId: identity-cluster
       Match:
         Path: /api/User/{**catch-all}
-      Metadata:
-        cors: default
 
     membership-route:
       ClusterId: membership-cluster
       Match:
         Path: /api/members/{**catch-all}
-      Metadata:
-        cors: default
 
     membership-plans-route:
       ClusterId: membership-cluster
       Match:
         Path: /api/plans/{**catch-all}
-      Metadata:
-        cors: default
 
     subscriptions-route:
       ClusterId: membership-cluster
       Match:
         Path: /api/subscriptions/{**catch-all}
-      Metadata:
-        cors: default
 
     me-route:
       ClusterId: membership-cluster
       Match:
         Path: /api/me/{**catch-all}
-      Metadata:
-        cors: default
 
     courses-route:
       ClusterId: membership-cluster
       Match:
         Path: /api/courses/{**catch-all}
-      Metadata:
-        cors: default
 
-    # Courses Service Routes
-    coaches-route:
-      ClusterId: courses-cluster
+    requests-route:
+      ClusterId: payment-cluster
       Match:
-        Path: /api/coaches/{**catch-all}
-      Metadata:
-        cors: default
-
-    programs-route:
-      ClusterId: courses-cluster
-      Match:
-        Path: /api/programs/{**catch-all}
-      Metadata:
-        cors: default
-
-    sessions-route:
-      ClusterId: courses-cluster
-      Match:
-        Path: /api/sessions/{**catch-all}
-      Metadata:
-        cors: default
-
-    # Activity Service Routes
-    activity-route:
-      ClusterId: activity-cluster
-      Match:
-        Path: /api/activity/{**catch-all}
-      Metadata:
-        cors: default
-
-    # Aggregation Service Routes
-    dashboard-route:
-      ClusterId: aggregation-cluster
-      Match:
-        Path: /api/dashboard/{**catch-all}
-      Metadata:
-        cors: default
-
-    reports-route:
-      ClusterId: aggregation-cluster
-      Match:
-        Path: /api/reports/{**catch-all}
-      Metadata:
-        cors: default
-
-    membership-subscriptions-route:
-      ClusterId: membership-cluster
-      Match:
-        Path: /api/subscriptions/{**catch-all}
-      Metadata:
-        cors: default
+        Path: /api/requests/{**catch-all}
 
     payment-route:
       ClusterId: payment-cluster
       Match:
         Path: /api/payments/{**catch-all}
-      Metadata:
-        cors: default
+
+    coaches-route:
+      ClusterId: courses-cluster
+      Match:
+        Path: /api/coaches/{**catch-all}
+
+    programs-route:
+      ClusterId: courses-cluster
+      Match:
+        Path: /api/programs/{**catch-all}
+
+    sessions-route:
+      ClusterId: courses-cluster
+      Match:
+        Path: /api/sessions/{**catch-all}
+
+    activity-route:
+      ClusterId: activity-cluster
+      Match:
+        Path: /api/activity/{**catch-all}
+
+    dashboard-route:
+      ClusterId: aggregation-cluster
+      Match:
+        Path: /api/dashboard/{**catch-all}
+
+    reports-route:
+      ClusterId: aggregation-cluster
+      Match:
+        Path: /api/reports/{**catch-all}
 
     chat-route:
       ClusterId: chat-cluster
       Match:
         Path: /api/conversations/{**catch-all}
-      Metadata:
-        cors: default
 
     chat-hub-route:
       ClusterId: chat-cluster
       Match:
         Path: /hubs/chat/{**catch-all}
-      Metadata:
-        cors: default
 
-    # Scalar/OpenAPI Routes
+    # OpenAPI doc discovery routes
     identity-openapi-route:
       ClusterId: identity-cluster
       Match:
@@ -129,13 +94,6 @@ ReverseProxy:
         Path: /docs/membership/{**catch-all}
       Transforms:
         - PathPattern: "/openapi/v1.json"
-
-    requests-route:
-      ClusterId: payment-cluster
-      Match:
-        Path: /api/requests/{**catch-all}
-      Metadata:
-        cors: default
 
     payment-openapi-route:
       ClusterId: payment-cluster
@@ -187,21 +145,6 @@ ReverseProxy:
       Destinations:
         payment-api:
           Address: http+https://payment-api
-
-    courses-cluster:
-      Destinations:
-        courses-api:
-          Address: http+https://courses-api
-
-    activity-cluster:
-      Destinations:
-        activity-api:
-          Address: http+https://activity-api
-
-    aggregation-cluster:
-      Destinations:
-        aggregation-api:
-          Address: http+https://aggregation-api
 
     courses-cluster:
       Destinations:

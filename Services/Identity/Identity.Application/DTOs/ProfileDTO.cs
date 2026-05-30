@@ -9,4 +9,7 @@ public class ProfileDTO
     public string? UserName { get; set; } = null!;
     public DateTime? LastLoginAt { get; set; }
     public string? ProfilePhotoUrl { get; set; }
+    public string? Gender { get; set; }
+    public DateOnly? DateOfBirth { get; set; }
+    public bool EmailConfirmed { get; set; }
 }

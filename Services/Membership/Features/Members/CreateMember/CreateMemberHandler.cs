@@ -67,8 +67,8 @@ public class CreateMemberHandler(
                 firstName: req.FirstName,
                 lastName: req.LastName,
                 phoneNumber: req.PhoneNumber,
-                dateOfBirth: req.DateOfBirth,
-                gender: req.Gender,
+                dateOfBirth: req.DateOfBirth.ToString("yyyy-MM-dd"),
+                gender: req.Gender.ToString(),
                 medicalFile: medicalStreamPart,
                 profilePicture: profileStreamPart
             );
@@ -140,7 +140,6 @@ public class CreateMemberHandler(
                 UserId: userId,
                 FullName: $"{req.FirstName} {req.LastName}",
                 Email: req.Email,
-                GeneratedPassword: generatedPassword,
                 AssignedPlanName: plan.Name
             );
 

@@ -2,10 +2,13 @@ using Carter;
 using Courses.Common.Behaviours;
 using Courses.Common.Security;
 using Courses.Domain;
+using Courses.Infrastructure;
+using Courses.Infrastructure.Seed;
 using FluentValidation;
 using MicroElements.AspNetCore.OpenApi.FluentValidation;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Refit;
 using Scalar.AspNetCore;
 using Wolverine;
 using Wolverine.RabbitMQ;
@@ -55,17 +58,20 @@ builder.Services.AddAuthorization(options =>
             .RequireRole("Admin", "Coach"));
 });
 
+builder.Services.AddHttpClient("IdentityAuth", c =>
+    c.BaseAddress = new Uri("http://identity-api"));
+
+builder.Services.AddTransient<Courses.Infrastructure.Auth.ServiceTokenHandler>();
+
+builder.Services.AddRefitClient<IIdentityServiceClient>()
+    .ConfigureHttpClient(c => c.BaseAddress = new Uri("http://identity-api"))
+    .AddHttpMessageHandler<Courses.Infrastructure.Auth.ServiceTokenHandler>();
+
 builder.Services.AddFluentValidationRulesToOpenApi();
 builder.Services.AddOpenApi();
+builder.Services.AddScoped<CoursesSeeder>();
 
 var app = builder.Build();
-
-if (app.Environment.IsDevelopment())
-{
-    using var scope = app.Services.CreateScope();
-    var context = scope.ServiceProvider.GetRequiredService<CoursesDbContext>();
-    await context.Database.MigrateAsync();
-}
 
 app.MapDefaultEndpoints();
 app.UseAuthentication();
@@ -78,4 +84,15 @@ app.MapScalarApiReference(opt =>
 });
 app.MapCarter();
 
-app.Run();
+await app.StartAsync();
+
+if (app.Environment.IsDevelopment())
+{
+    using var scope = app.Services.CreateScope();
+    var context = scope.ServiceProvider.GetRequiredService<CoursesDbContext>();
+    await context.Database.MigrateAsync();
+    var seeder = scope.ServiceProvider.GetRequiredService<CoursesSeeder>();
+    await seeder.SeedAsync(CancellationToken.None);
+}
+
+await app.WaitForShutdownAsync();

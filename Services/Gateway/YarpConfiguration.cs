@@ -3,110 +3,67 @@ using Yarp.ReverseProxy.Swagger;
 
 namespace Gateway;
 
-public class YarpConfiguration
+/// <summary>
+/// Generates the Swagger/OpenAPI document filter config for YARP's Swagger extension.
+/// This tells Scalar how to discover and proxy each service's openapi/v1.json.
+/// 
+/// Routes and clusters are loaded from gateway.yaml — this class ONLY handles the
+/// Swagger metadata mapping.
+/// </summary>
+public static class YarpConfiguration
 {
-    public static (List<RouteConfig>, List<ClusterConfig>, ReverseProxyDocumentFilterConfig) GetYarpConfiguration()
+    /// <summary>
+    /// Builds the ReverseProxyDocumentFilterConfig that maps each YARP cluster
+    /// to its upstream OpenAPI document, exposed under /docs/{service}/openapi/v1.json.
+    /// 
+    /// How it works:
+    ///   1. Each cluster has a Destination with an Address (e.g. "http+https://identity-api").
+    ///   2. The Swagger extension discovers the OpenAPI doc at the destination by calling
+    ///      {Address}/openapi/v1.json (or the configured Paths).
+    ///   3. The PrefixPath determines where the doc is exposed on the gateway
+    ///      (e.g. cluster "identity-cluster" → PrefixPath "/identity" → /docs/identity/openapi/v1.json).
+    ///   4. Scalar UI (configured in Program.cs) maps each document to its gateway path.
+    /// </summary>
+    public static ReverseProxyDocumentFilterConfig GetSwaggerConfig()
     {
-        var services = new List<(string aspireServiceName, string name)>
+        var services = new[]
         {
-            ("identity-api",   "User"),
-            ("membership-api", "members"),
-            ("payment-api",    "payments"),
-            ("chat-api",       "conversations"),
+            ("identity-cluster",    "identity"),
+            ("membership-cluster",  "membership"),
+            ("payment-cluster",     "payment"),
+            ("courses-cluster",     "courses"),
+            ("activity-cluster",    "activity"),
+            ("aggregation-cluster", "aggregation"),
+            ("chat-cluster",        "chat"),
         };
 
-        var sockets = new List<(string aspireServiceName, string name)>
+        return new ReverseProxyDocumentFilterConfig
         {
-            ("chat-api", "hubs/chat"),
-        };
-
-        var serviceRoutes  = GenerateRoutes(services, isSocket: false);
-        var socketRoutes   = GenerateRoutes(sockets,  isSocket: true);
-        var routes         = serviceRoutes.Concat(socketRoutes).ToList();
-
-        var serviceClusters = GenerateClusters(services, isSocket: false);
-        var socketClusters  = GenerateClusters(sockets,  isSocket: true);
-        var clusters        = serviceClusters.Concat(socketClusters).ToList();
-
-        var swaggerConfig = new ReverseProxyDocumentFilterConfig
-        {
-            Swagger = new() { CommonDocumentName = "FitTech-API", IsCommonDocument = true },
-            Routes  = routes.ToDictionary(_ => _.RouteId, _ => _),
-            Clusters = clusters
-                .Where(c => !c.ClusterId.Contains("socket"))
-                .Select(cluster => new KeyValuePair<string, ReverseProxyDocumentFilterConfig.Cluster>(
-                    cluster.ClusterId,
-                    new()
+            Swagger = new()
+            {
+                CommonDocumentName = "FitTech-API",
+                IsCommonDocument = true
+            },
+            Clusters = services.ToDictionary(
+                s => s.Item1,
+                s => new ReverseProxyDocumentFilterConfig.Cluster
+                {
+                    Destinations = new Dictionary<string, ReverseProxyDocumentFilterConfig.Cluster.Destination>
                     {
-                        Destinations = cluster.Destinations?.Select(destination =>
-                            new KeyValuePair<string, ReverseProxyDocumentFilterConfig.Cluster.Destination>(
-                                destination.Key,
+                        [$"destination-{s.Item1}"] = new()
+                        {
+                            Address = $"http+https://{s.Item1.Replace("-cluster", "-api")}",
+                            Swaggers =
+                            [
                                 new()
                                 {
-                                    Address = destination.Value.Address,
-                                    Swaggers =
-                                    [
-                                        new()
-                                        {
-                                            PrefixPath = string.Concat("/", cluster.ClusterId.AsSpan("cluster-".Length)),
-                                            Paths = ["/openapi/v1.json"]
-                                        }
-                                    ]
+                                    PrefixPath = $"/{s.Item2}",
+                                    Paths = ["/openapi/v1.json"]
                                 }
-                            )).ToDictionary()
+                            ]
+                        }
                     }
-                )).ToDictionary()
+                })
         };
-
-        return (routes, clusters, swaggerConfig);
-    }
-
-    private static List<RouteConfig> GenerateRoutes(
-        List<(string aspireServiceName, string name)> services, bool isSocket)
-    {
-        return services.GroupBy(x => x.name).Select(g =>
-        {
-            var service = g.First();
-            return new RouteConfig
-            {
-                ClusterId = isSocket ? $"cluster-socket-{service.name}" : $"cluster-{service.name}",
-                RouteId   = isSocket ? $"route-socket-{service.name}"  : $"route-{service.name}",
-                Match = new RouteMatch
-                {
-                    Path = isSocket
-                        ? $"/{service.name}/{{**catch-all}}"
-                        : $"/api/{service.name}/{{**catch-all}}"
-                },
-                Transforms =
-                [
-                    new Dictionary<string, string>
-                    {
-                        { "PathPattern", isSocket
-                            ? $"/{service.name}/{{**catch-all}}"
-                            : "/api/{**catch-all}" }
-                    }
-                ],
-                CorsPolicy = isSocket ? "socketPolicy" : "default"
-            };
-        }).ToList();
-    }
-
-    private static List<ClusterConfig> GenerateClusters(
-        List<(string aspireServiceName, string name)> services, bool isSocket)
-    {
-        return services.GroupBy(x => x.name).Select(g =>
-        {
-            var first  = g.First();
-            var prefix = isSocket ? "cluster-socket" : "cluster";
-            return new ClusterConfig
-            {
-                ClusterId = $"{prefix}-{first.name}",
-                Destinations = g.Select(s =>
-                    new KeyValuePair<string, DestinationConfig>(
-                        $"destination-{s.aspireServiceName}",
-                        new DestinationConfig { Address = $"http://{s.aspireServiceName}/" }
-                    )).ToDictionary()
-            };
-        }).ToList();
     }
 }

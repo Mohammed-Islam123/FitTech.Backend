@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Payment.Common.Security;
 using Payment.Infrastructure;
 using Payment.Infrastructure.Persistence;
+using Payment.Infrastructure.Seed;
 using Refit;
 using Scalar.AspNetCore;
 using Wolverine;
@@ -59,6 +60,7 @@ builder.Services.AddRefitClient<IIdentityServiceClient>()
     .ConfigureHttpClient(c => c.BaseAddress = new Uri("http://identity-api"));
 
 builder.Services.AddOpenApi();
+builder.Services.AddScoped<PaymentSeeder>();
 
 var app = builder.Build();
 
@@ -67,6 +69,8 @@ if (app.Environment.IsDevelopment())
     using var scope = app.Services.CreateScope();
     var context = scope.ServiceProvider.GetRequiredService<PaymentDbContext>();
     await context.Database.MigrateAsync();
+    var seeder = scope.ServiceProvider.GetRequiredService<PaymentSeeder>();
+    await seeder.SeedAsync(CancellationToken.None);
 }
 
 app.MapDefaultEndpoints();

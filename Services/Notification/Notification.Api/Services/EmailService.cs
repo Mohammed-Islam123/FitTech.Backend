@@ -21,11 +21,13 @@ public class EmailService(IConfiguration config) : IEmailService
         await client.ConnectAsync(
             config["Email:Host"],
             int.Parse(config["Email:Port"]!),
-            SecureSocketOptions.StartTls);
+            SecureSocketOptions.Auto); // Allows plain-text fallback for smtp4dev
+
         await client.AuthenticateAsync(
             config["Email:UserName"],
             config["Email:Password"]);
         await client.SendAsync(message);
         await client.DisconnectAsync(true);
+
     }
 }
