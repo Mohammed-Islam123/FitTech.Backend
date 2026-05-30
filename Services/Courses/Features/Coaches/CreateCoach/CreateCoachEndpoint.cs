@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OpenApi;
 using Microsoft.AspNetCore.Routing;
-using Wolverine;
 
 namespace Courses.Features.Coaches.CreateCoach;
 
@@ -50,11 +49,10 @@ public class CreateCoachEndpoint : ICarterModule
 
     private static async Task<IResult> Handle(
         [FromBody] CreateCoachRequest request,
-        IMessageBus messageBus,
+        CreateCoachHandler handler,
         CancellationToken ct)
     {
-        var result = await messageBus.InvokeAsync<ErrorOr<CreateCoachResponse>>(
-            new CreateCoachCommand(request), ct);
+        var result = await handler.Handle(new CreateCoachCommand(request), ct);
         return result.Match(
             response => Results.Created($"/api/coaches/{response.CoachId}", response),
             errors => ErrorOnExtensions.MapErrorsToResult(errors));

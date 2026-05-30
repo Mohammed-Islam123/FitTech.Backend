@@ -3,7 +3,6 @@ using Activity.Shared;
 using Carter;
 using ErrorOr;
 using Microsoft.AspNetCore.Mvc;
-using Wolverine;
 
 namespace Activity.Features.EntryExit.ManualExit;
 
@@ -26,10 +25,9 @@ public class ManualExitEndpoint : ICarterModule
     }
 
     private static async Task<IResult> Handle(
-        [FromBody] ManualExitRequest request, IMessageBus messageBus, CancellationToken ct)
+        [FromBody] ManualExitRequest request, ManualExitHandler handler, CancellationToken ct)
     {
-        var result = await messageBus.InvokeAsync<ErrorOr<ManualExitResponse>>(
-            new ManualExitCommand(request), ct);
+        var result = await handler.Handle(new ManualExitCommand(request), ct);
         return result.Match(r => Results.Ok(r), errors => ErrorOnExtensions.MapErrorsToResult(errors));
     }
 }

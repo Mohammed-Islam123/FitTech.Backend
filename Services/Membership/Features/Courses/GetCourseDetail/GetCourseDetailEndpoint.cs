@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.OpenApi;
 using Microsoft.AspNetCore.Routing;
-using Wolverine;
 
 namespace Membership.Features.Courses.GetCourseDetail;
 
@@ -56,10 +55,10 @@ public class GetCourseDetailEndpoint : ICarterModule
 
     private static async Task<IResult> Handle(
         Guid courseId,
-        IMessageBus messageBus,
+        GetCourseDetailHandler handler,
         CancellationToken ct)
     {
-        var result = await messageBus.InvokeAsync<ErrorOr<GetCourseDetailResponse>>(
+        var result = await handler.Handle(
             new GetCourseDetailQuery(courseId), ct);
 
         return result.Match(

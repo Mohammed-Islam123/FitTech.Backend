@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OpenApi;
 using Microsoft.AspNetCore.Routing;
-using Wolverine;
 
 namespace Membership.Features.Members.UpdateMember;
 
@@ -79,10 +78,10 @@ public class UpdateMemberEndpoint : ICarterModule
     private static async Task<IResult> UpdateById(
         Guid id,
         [FromForm] UpdateMemberRequest request,
-        IMessageBus messageBus,
+        UpdateMemberHandler handler,
         CancellationToken ct)
     {
-        var result = await messageBus.InvokeAsync<ErrorOr<UpdateMemberResponse>>(new UpdateMemberCommand(request, id), ct);
+        var result = await handler.Handle(new UpdateMemberCommand(request, id), ct);
         return result.Match(
             response => Results.Ok(response),
             errors => ErrorOnExtensions.MapErrorsToResult(errors));
@@ -90,10 +89,10 @@ public class UpdateMemberEndpoint : ICarterModule
 
     private static async Task<IResult> UpdateSelf(
         [FromForm] UpdateMemberRequest request,
-        IMessageBus messageBus,
+        UpdateMemberHandler handler,
         CancellationToken ct)
     {
-        var result = await messageBus.InvokeAsync<ErrorOr<UpdateMemberResponse>>(new UpdateMemberCommand(request), ct);
+        var result = await handler.Handle(new UpdateMemberCommand(request), ct);
         return result.Match(
             response => Results.Ok(response),
             errors => ErrorOnExtensions.MapErrorsToResult(errors));

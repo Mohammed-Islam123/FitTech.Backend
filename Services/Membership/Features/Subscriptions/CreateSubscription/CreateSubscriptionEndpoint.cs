@@ -4,7 +4,6 @@ using ErrorOr;
 using Membership.Common.Security;
 using Microsoft.AspNetCore.Mvc;
 using Membership.Shared;
-using Wolverine;
 
 namespace Membership.Features.Subscriptions.CreateSubscription;
 
@@ -56,10 +55,10 @@ public class CreateSubscriptionEndpoint : ICarterModule
 
     private static async Task<IResult> Handle(
         [FromBody] CreateSubscriptionRequest request,
-        IMessageBus messageBus,
+        CreateSubscriptionHandler handler,
         CancellationToken ct)
     {
-        var result = await messageBus.InvokeAsync<ErrorOr<CreateSubscriptionResponse>>(
+        var result = await handler.Handle(
             new CreateSubscriptionCommand(request), ct);
 
         return result.Match(

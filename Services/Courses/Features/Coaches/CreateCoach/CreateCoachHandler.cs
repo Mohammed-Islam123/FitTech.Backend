@@ -53,7 +53,6 @@ public class CreateCoachHandler(
             return Error.Failure("Identity.ConnectionFailed",
                 $"Failed to connect to Identity service: {ex.Message}");
         }
-
         if (!identityResponse.IsSuccessStatusCode || identityResponse.Content is null || !identityResponse.Content.Success)
         {
             return Error.Failure("Identity.CreateFailed",
@@ -115,4 +114,3 @@ public class CreateCoachHandler(
         return new string(result);
     }
 }
-

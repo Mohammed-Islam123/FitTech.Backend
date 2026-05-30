@@ -3,7 +3,6 @@ using Activity.Shared;
 using Carter;
 using ErrorOr;
 using Microsoft.AspNetCore.Mvc;
-using Wolverine;
 
 namespace Activity.Features.EntryExit.ScanEntryExit;
 
@@ -26,10 +25,9 @@ public class ScanEntryExitEndpoint : ICarterModule
     }
 
     private static async Task<IResult> Handle(
-        [FromBody] ScanEntryExitRequest request, IMessageBus messageBus, CancellationToken ct)
+        [FromBody] ScanEntryExitRequest request, ScanEntryExitHandler handler, CancellationToken ct)
     {
-        var result = await messageBus.InvokeAsync<ErrorOr<ScanEntryExitResponse>>(
-            new ScanEntryExitCommand(request), ct);
+        var result = await handler.Handle(new ScanEntryExitCommand(request), ct);
         return result.Match(r => Results.Ok(r), errors => ErrorOnExtensions.MapErrorsToResult(errors));
     }
 }

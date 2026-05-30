@@ -1,7 +1,6 @@
 using Carter;
 using ErrorOr;
 using Payment.Shared;
-using Wolverine;
 
 namespace Payment.Features.Requests.AcceptCoursePurchase;
 
@@ -20,10 +19,9 @@ public class AcceptCoursePurchaseEndpoint : ICarterModule
             .ProducesProblem(StatusCodes.Status409Conflict);
     }
 
-    private static async Task<IResult> Handle(Guid requestId, IMessageBus messageBus, CancellationToken ct)
+    private static async Task<IResult> Handle(Guid requestId, AcceptCoursePurchaseHandler handler, CancellationToken ct)
     {
-        var result = await messageBus.InvokeAsync<ErrorOr<AcceptRequestResponse>>(
-            new AcceptCoursePurchaseCommand(requestId), ct);
+        var result = await handler.Handle(new AcceptCoursePurchaseCommand(requestId), ct);
         return result.Match(
             response => Results.Ok(response),
             errors => ErrorOnExtensions.MapErrorsToResult(errors));

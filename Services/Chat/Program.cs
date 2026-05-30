@@ -69,12 +69,7 @@ builder.Services.AddMassTransit(x =>
     });
 });
 
-builder.Services.AddCors(opt =>
-    opt.AddDefaultPolicy(p =>
-        p.SetIsOriginAllowed(_ => true)
-         .AllowAnyHeader()
-         .AllowAnyMethod()
-         .AllowCredentials()));
+builder.AddPermissiveCors();
 
 builder.Services.AddOpenApi();
 
@@ -87,7 +82,7 @@ app.MapScalarApiReference(opt =>
        .WithTheme(ScalarTheme.Mars);
 });
 
-app.UseCors();
+app.UsePermissiveCors();
 app.UseAuthentication();
 app.UseAuthorization();
 

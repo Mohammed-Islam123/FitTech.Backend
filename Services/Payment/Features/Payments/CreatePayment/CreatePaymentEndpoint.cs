@@ -3,7 +3,6 @@ using Carter;
 using ErrorOr;
 using Microsoft.AspNetCore.Mvc;
 using Payment.Shared;
-using Wolverine;
 
 namespace Payment.Features.Payments.CreatePayment;
 
@@ -55,11 +54,10 @@ public class CreatePaymentEndpoint : ICarterModule
 
     private static async Task<IResult> Handle(
         [FromBody] CreatePaymentRequest request,
-        IMessageBus messageBus,
+        CreatePaymentHandler handler,
         CancellationToken ct)
     {
-        var result = await messageBus.InvokeAsync<ErrorOr<CreatePaymentResponse>>(
-            new CreatePaymentCommand(request), ct);
+        var result = await handler.Handle(new CreatePaymentCommand(request), ct);
 
         return result.Match(
             response => Results.Created($"/api/payments/{response.PaymentId}", response),

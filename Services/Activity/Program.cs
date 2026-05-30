@@ -16,6 +16,7 @@ using Wolverine.RabbitMQ;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.AddServiceDefaults();
+builder.AddPermissiveCors();
 
 builder.AddNpgsqlDbContext<ActivityDbContext>(connectionName: "activityDb");
 builder.Services.AddCarter();
@@ -62,6 +63,7 @@ builder.Services.AddRefitClient<ICoursesServiceClient>()
 builder.Services.AddFluentValidationRulesToOpenApi();
 builder.Services.AddOpenApi();
 builder.Services.AddScoped<ActivitySeeder>();
+builder.Services.AddActivityServices();
 
 var app = builder.Build();
 
@@ -75,6 +77,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.MapDefaultEndpoints();
+app.UsePermissiveCors();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapOpenApi();

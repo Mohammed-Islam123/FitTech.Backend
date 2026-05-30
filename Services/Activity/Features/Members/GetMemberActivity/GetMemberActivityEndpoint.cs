@@ -1,7 +1,6 @@
 using Activity.Shared;
 using Carter;
 using ErrorOr;
-using Wolverine;
 
 namespace Activity.Features.Members.GetMemberActivity;
 
@@ -17,10 +16,9 @@ public class GetMemberActivityEndpoint : ICarterModule
             .Produces<List<GetMemberActivityResponse>>(StatusCodes.Status200OK);
     }
 
-    private static async Task<IResult> Handle(Guid memberId, IMessageBus messageBus, CancellationToken ct)
+    private static async Task<IResult> Handle(Guid memberId, GetMemberActivityHandler handler, CancellationToken ct)
     {
-        var result = await messageBus.InvokeAsync<ErrorOr<List<GetMemberActivityResponse>>>(
-            new GetMemberActivityQuery(memberId), ct);
+        var result = await handler.Handle(new GetMemberActivityQuery(memberId), ct);
         return result.Match(r => Results.Ok(r), errors => ErrorOnExtensions.MapErrorsToResult(errors));
     }
 }

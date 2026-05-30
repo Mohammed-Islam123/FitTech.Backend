@@ -3,7 +3,6 @@ using Carter;
 using ErrorOr;
 using Microsoft.AspNetCore.Mvc;
 using Payment.Shared;
-using Wolverine;
 
 namespace Payment.Features.Requests.RequestMembershipRenewal;
 
@@ -35,11 +34,10 @@ public class RequestMembershipRenewalEndpoint : ICarterModule
 
     private static async Task<IResult> Handle(
         [FromBody] RequestMembershipRenewalRequest request,
-        IMessageBus messageBus,
+        RequestMembershipRenewalHandler handler,
         CancellationToken ct)
     {
-        var result = await messageBus.InvokeAsync<ErrorOr<RequestMembershipRenewalResponse>>(
-            new RequestMembershipRenewalCommand(request), ct);
+        var result = await handler.Handle(new RequestMembershipRenewalCommand(request), ct);
         return result.Match(
             response => Results.Created($"/api/requests/membership-renewal/{response.RequestId}", response),
             errors => ErrorOnExtensions.MapErrorsToResult(errors));

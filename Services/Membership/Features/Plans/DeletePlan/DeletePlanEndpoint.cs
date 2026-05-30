@@ -4,7 +4,6 @@ using Membership.Shared;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using Wolverine;
 
 namespace Membership.Features.Plans.DeletePlan;
 
@@ -23,10 +22,10 @@ public class DeletePlanEndpoint : ICarterModule
 
     private static async Task<IResult> Handle(
         Guid id,
-        IMessageBus messageBus,
+        DeletePlanHandler handler,
         CancellationToken ct)
     {
-        var result = await messageBus.InvokeAsync<ErrorOr<Success>>(new DeletePlanCommand(id), ct);
+        var result = await handler.Handle(new DeletePlanCommand(id), ct);
         return result.Match(
             _ => Results.NoContent(),
             errors => ErrorOnExtensions.MapErrorsToResult(errors));

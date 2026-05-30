@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OpenApi;
 using Microsoft.AspNetCore.Routing;
-using Wolverine;
 
 namespace Membership.Features.Members.UpdateMyProfile;
 
@@ -44,10 +43,10 @@ public class UpdateMyProfileEndpoint : ICarterModule
 
     private static async Task<IResult> Handle(
         [FromForm] UpdateMyProfileRequest request,
-        IMessageBus messageBus,
+        UpdateMyProfileHandler handler,
         CancellationToken ct)
     {
-        var result = await messageBus.InvokeAsync<ErrorOr<UpdateMyProfileResponse>>(
+        var result = await handler.Handle(
             new UpdateMyProfileCommand(request), ct);
 
         return result.Match(

@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.OpenApi;
 using Microsoft.AspNetCore.Routing;
-using Wolverine;
 
 namespace Courses.Features.Programs.AcceptProgram;
 
@@ -39,11 +38,10 @@ public class AcceptProgramEndpoint : ICarterModule
 
     private static async Task<IResult> Handle(
         Guid programId,
-        IMessageBus messageBus,
+        AcceptProgramHandler handler,
         CancellationToken ct)
     {
-        var result = await messageBus.InvokeAsync<ErrorOr<AcceptProgramResponse>>(
-            new AcceptProgramCommand(programId), ct);
+        var result = await handler.Handle(new AcceptProgramCommand(programId), ct);
         return result.Match(
             response => Results.Ok(response),
             errors => ErrorOnExtensions.MapErrorsToResult(errors));

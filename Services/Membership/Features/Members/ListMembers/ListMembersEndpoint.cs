@@ -2,7 +2,6 @@ using Carter;
 using ErrorOr;
 using Microsoft.AspNetCore.OpenApi;
 using System.Text.Json.Nodes;
-using Wolverine;
 
 namespace Membership.Features.Members.ListMembers;
 
@@ -56,10 +55,10 @@ public class ListMembersEndpoint : ICarterModule
     /// </example>
     private static async Task<IResult> Handle(
         [AsParameters] ListMembersRequest request,
-        IMessageBus messageBus,
+        ListMembersHandler handler,
         CancellationToken ct)
     {
-        var result = await messageBus.InvokeAsync<ErrorOr<ListMembersResponse>>(new ListMembersQuery(request), ct);
+        var result = await handler.Handle(new ListMembersQuery(request), ct);
 
         return result.Match(
             response => Results.Ok(response),

@@ -4,7 +4,6 @@ using Membership.Shared;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using Wolverine;
 
 namespace Membership.Features.Plans.UpdatePlan;
 
@@ -25,10 +24,10 @@ public class UpdatePlanEndpoint : ICarterModule
     private static async Task<IResult> Handle(
         Guid id,
         UpdatePlanRequest request,
-        IMessageBus messageBus,
+        UpdatePlanHandler handler,
         CancellationToken ct)
     {
-        var result = await messageBus.InvokeAsync<ErrorOr<Success>>(new UpdatePlanCommand(id, request), ct);
+        var result = await handler.Handle(new UpdatePlanCommand(id, request), ct);
         return result.Match(
             _ => Results.NoContent(),
             errors => ErrorOnExtensions.MapErrorsToResult(errors));

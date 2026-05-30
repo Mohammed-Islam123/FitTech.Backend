@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.OpenApi;
 using Microsoft.AspNetCore.Routing;
-using Wolverine;
 
 namespace Membership.Features.Members.ActivateMember;
 
@@ -44,10 +43,10 @@ public class ActivateMemberEndpoint : ICarterModule
 
     private static async Task<IResult> Handle(
         Guid memberId,
-        IMessageBus messageBus,
+        ActivateMemberHandler handler,
         CancellationToken ct)
     {
-        var result = await messageBus.InvokeAsync<ErrorOr<ActivateMemberResponse>>(
+        var result = await handler.Handle(
             new ActivateMemberCommand(memberId), ct);
 
         return result.Match(

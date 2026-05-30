@@ -3,7 +3,6 @@ using Activity.Shared;
 using Carter;
 using ErrorOr;
 using Microsoft.AspNetCore.Mvc;
-using Wolverine;
 
 namespace Activity.Features.EntryExit.ManualEnter;
 
@@ -26,10 +25,9 @@ public class ManualEnterEndpoint : ICarterModule
     }
 
     private static async Task<IResult> Handle(
-        [FromBody] ManualEnterRequest request, IMessageBus messageBus, CancellationToken ct)
+        [FromBody] ManualEnterRequest request, ManualEnterHandler handler, CancellationToken ct)
     {
-        var result = await messageBus.InvokeAsync<ErrorOr<ManualEnterResponse>>(
-            new ManualEnterCommand(request), ct);
+        var result = await handler.Handle(new ManualEnterCommand(request), ct);
         return result.Match(
             r => Results.Created($"/api/activity/sessions/{r.SessionId}", r),
             errors => ErrorOnExtensions.MapErrorsToResult(errors));

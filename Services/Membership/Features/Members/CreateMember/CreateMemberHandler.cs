@@ -179,5 +179,3 @@ public class CreateMemberHandler(
         return new string(result);
     }
 }
-
-

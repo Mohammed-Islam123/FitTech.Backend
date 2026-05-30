@@ -15,6 +15,7 @@ using Wolverine.RabbitMQ;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.AddServiceDefaults();
+builder.AddPermissiveCors();
 
 builder.AddNpgsqlDbContext<AggregationDbContext>(connectionName: "aggregationDb");
 builder.Services.AddCarter();
@@ -69,6 +70,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.MapDefaultEndpoints();
+app.UsePermissiveCors();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapOpenApi();

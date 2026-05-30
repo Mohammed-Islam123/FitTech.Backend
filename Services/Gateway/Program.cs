@@ -31,21 +31,7 @@ builder.Services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwa
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// ── CORS ────────────────────────────────────────────────────────────
-builder.Services.AddCors(options =>
-{
-    options.AddDefaultPolicy(policy =>
-        policy.SetIsOriginAllowed(_ => true)
-              .AllowAnyMethod()
-              .AllowAnyHeader()
-              .AllowCredentials());
-
-    options.AddPolicy("socketPolicy", policy =>
-        policy.SetIsOriginAllowed(_ => true)
-              .AllowAnyMethod()
-              .AllowAnyHeader()
-              .AllowCredentials());
-});
+builder.AddPermissiveCors();
 
 // ── Auth ────────────────────────────────────────────────────────────
 var identityUrl = builder.Configuration["services:identity-api:http:0"]
@@ -64,7 +50,7 @@ builder.Services.AddAuthorization();
 // ── Middleware pipeline ──────────────────────────────────────────────
 var app = builder.Build();
 
-app.UseCors();
+app.UsePermissiveCors();
 app.UseWebSockets();
 app.UseAuthentication();
 app.UseAuthorization();

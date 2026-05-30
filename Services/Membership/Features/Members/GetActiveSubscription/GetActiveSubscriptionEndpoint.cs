@@ -2,7 +2,6 @@ using Carter;
 using ErrorOr;
 using Microsoft.AspNetCore.OpenApi;
 using System.Text.Json.Nodes;
-using Wolverine;
 
 namespace Membership.Features.Members.GetActiveSubscription;
 
@@ -50,10 +49,10 @@ public class GetActiveSubscriptionEndpoint : ICarterModule
     /// </example>
     private static async Task<IResult> Handle(
         Guid? memberId,
-        IMessageBus messageBus,
+        GetActiveSubscriptionHandler handler,
         CancellationToken ct)
     {
-        var result = await messageBus.InvokeAsync<ErrorOr<GetActiveSubscriptionResponse>>(
+        var result = await handler.Handle(
             new GetActiveSubscriptionQuery(memberId), 
             ct);
 

@@ -1,7 +1,6 @@
 using Carter;
 using ErrorOr;
 using Payment.Shared;
-using Wolverine;
 
 namespace Payment.Features.Requests.ListCoursePurchaseRequests;
 
@@ -18,10 +17,9 @@ public class ListCoursePurchaseRequestsEndpoint : ICarterModule
             .ProducesProblem(StatusCodes.Status401Unauthorized);
     }
 
-    private static async Task<IResult> Handle(IMessageBus messageBus, CancellationToken ct)
+    private static async Task<IResult> Handle(ListCoursePurchaseRequestsHandler handler, CancellationToken ct)
     {
-        var result = await messageBus.InvokeAsync<ErrorOr<List<ListMembershipRenewalRequests.ListRequestResponse>>>(
-            new ListCoursePurchaseRequestsQuery(), ct);
+        var result = await handler.Handle(new ListCoursePurchaseRequestsQuery(), ct);
         return result.Match(
             response => Results.Ok(response),
             errors => ErrorOnExtensions.MapErrorsToResult(errors));

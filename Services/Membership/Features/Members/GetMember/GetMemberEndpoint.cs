@@ -2,7 +2,6 @@ using Carter;
 using ErrorOr;
 using Microsoft.AspNetCore.OpenApi;
 using System.Text.Json.Nodes;
-using Wolverine;
 using Membership.Shared;
 namespace Membership.Features.Members.GetMember;
 
@@ -45,10 +44,10 @@ public class GetMemberEndpoint : ICarterModule
 
     private static async Task<IResult> Handle(
         Guid id,
-        IMessageBus messageBus,
+        GetMemberHandler handler,
         CancellationToken ct)
     {
-        var result = await messageBus.InvokeAsync<ErrorOr<GetMemberResponse>>(new GetMemberQuery(id), ct);
+        var result = await handler.Handle(new GetMemberQuery(id), ct);
 
         return result.Match(
             response => Results.Ok(response),

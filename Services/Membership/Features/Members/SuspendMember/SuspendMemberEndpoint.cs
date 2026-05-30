@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.OpenApi;
 using Microsoft.AspNetCore.Routing;
-using Wolverine;
 
 namespace Membership.Features.Members.SuspendMember;
 
@@ -44,10 +43,10 @@ public class SuspendMemberEndpoint : ICarterModule
 
     private static async Task<IResult> Handle(
         Guid memberId,
-        IMessageBus messageBus,
+        SuspendMemberHandler handler,
         CancellationToken ct)
     {
-        var result = await messageBus.InvokeAsync<ErrorOr<SuspendMemberResponse>>(
+        var result = await handler.Handle(
             new SuspendMemberCommand(memberId), ct);
 
         return result.Match(

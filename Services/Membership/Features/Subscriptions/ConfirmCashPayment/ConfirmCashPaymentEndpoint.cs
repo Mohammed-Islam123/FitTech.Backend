@@ -3,7 +3,6 @@ using Carter;
 using ErrorOr;
 using Microsoft.AspNetCore.Mvc;
 using Membership.Shared;
-using Wolverine;
 
 namespace Membership.Features.Subscriptions.ConfirmCashPayment;
 
@@ -56,10 +55,10 @@ public class ConfirmCashPaymentEndpoint : ICarterModule
 
     private static async Task<IResult> Handle(
         [FromBody] ConfirmCashPaymentRequest request,
-        IMessageBus messageBus,
+        ConfirmCashPaymentHandler handler,
         CancellationToken ct)
     {
-        var result = await messageBus.InvokeAsync<ErrorOr<ConfirmCashPaymentResponse>>(
+        var result = await handler.Handle(
             new ConfirmCashPaymentCommand(request), ct);
 
         return result.Match(

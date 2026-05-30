@@ -14,12 +14,14 @@ using Wolverine.RabbitMQ;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.AddServiceDefaults();
+builder.AddPermissiveCors();
 
 builder.AddNpgsqlDbContext<PaymentDbContext>(connectionName: "paymentDb");
 builder.Services.AddCarter();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<IUserAccessor, UserAccessor>();
 builder.Services.AddValidatorsFromAssemblyContaining<Program>();
+builder.Services.AddPaymentServices();
 
 builder.Host.UseWolverine(opts =>
 {
@@ -74,6 +76,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.MapDefaultEndpoints();
+app.UsePermissiveCors();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapOpenApi();

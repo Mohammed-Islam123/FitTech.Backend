@@ -4,7 +4,6 @@ using ErrorOr;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using Wolverine;
 
 namespace Courses.Features.Coaches.GetCoachClientProfile;
 
@@ -25,11 +24,10 @@ public class GetCoachClientProfileEndpoint : ICarterModule
     private static async Task<IResult> Handle(
         Guid coachId,
         Guid memberId,
-        IMessageBus messageBus,
+        GetCoachClientProfileHandler handler,
         CancellationToken ct)
     {
-        var result = await messageBus.InvokeAsync<ErrorOr<GetCoachClientProfileResponse>>(
-            new GetCoachClientProfileQuery(coachId, memberId), ct);
+        var result = await handler.Handle(new GetCoachClientProfileQuery(coachId, memberId), ct);
         return result.Match(
             response => Results.Ok(response),
             errors => ErrorOnExtensions.MapErrorsToResult(errors));

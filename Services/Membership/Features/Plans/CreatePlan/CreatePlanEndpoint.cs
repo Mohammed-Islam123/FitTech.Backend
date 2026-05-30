@@ -4,7 +4,6 @@ using Membership.Shared;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using Wolverine;
 
 namespace Membership.Features.Plans.CreatePlan;
 
@@ -23,10 +22,10 @@ public class CreatePlanEndpoint : ICarterModule
 
     private static async Task<IResult> Handle(
         CreatePlanRequest request,
-        IMessageBus messageBus,
+        CreatePlanHandler handler,
         CancellationToken ct)
     {
-        var result = await messageBus.InvokeAsync<ErrorOr<CreatePlanResponse>>(new CreatePlanCommand(request), ct);
+        var result = await handler.Handle(new CreatePlanCommand(request), ct);
         return result.Match(
             response => Results.Created($"/api/plans/{response.PlanId}", response),
             errors => ErrorOnExtensions.MapErrorsToResult(errors));

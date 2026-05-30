@@ -1,7 +1,6 @@
 using Carter;
 using ErrorOr;
 using Payment.Shared;
-using Wolverine;
 
 namespace Payment.Features.Payments.ListPayments;
 
@@ -19,11 +18,10 @@ public class ListPaymentsEndpoint : ICarterModule
     }
 
     private static async Task<IResult> Handle(
-        IMessageBus messageBus,
+        ListPaymentsHandler handler,
         CancellationToken ct)
     {
-        var result = await messageBus.InvokeAsync<ErrorOr<List<ListPaymentsResponse>>>(
-            new ListPaymentsQuery(), ct);
+        var result = await handler.Handle(new ListPaymentsQuery(), ct);
         return result.Match(
             response => Results.Ok(response),
             errors => ErrorOnExtensions.MapErrorsToResult(errors));

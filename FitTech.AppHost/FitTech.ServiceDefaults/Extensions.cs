@@ -44,6 +44,27 @@ public static class Extensions
         return builder;
     }
 
+    public static TBuilder AddPermissiveCors<TBuilder>(this TBuilder builder)
+        where TBuilder : IHostApplicationBuilder
+    {
+        builder.Services.AddCors(options =>
+        {
+            options.AddDefaultPolicy(policy =>
+                policy.SetIsOriginAllowed(_ => true)
+                      .AllowAnyHeader()
+                      .AllowAnyMethod()
+                      .AllowCredentials());
+        });
+
+        return builder;
+    }
+
+    public static WebApplication UsePermissiveCors(this WebApplication app)
+    {
+        app.UseCors();
+        return app;
+    }
+
     public static TBuilder ConfigureOpenTelemetry<TBuilder>(this TBuilder builder)
         where TBuilder : IHostApplicationBuilder
     {

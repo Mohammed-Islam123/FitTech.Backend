@@ -2,7 +2,6 @@ using Carter;
 using ErrorOr;
 using Microsoft.AspNetCore.OpenApi;
 using System.Text.Json.Nodes;
-using Wolverine;
 
 namespace Membership.Features.Members.GetSubscriptionHistory;
 
@@ -55,10 +54,10 @@ public class GetSubscriptionHistoryEndpoint : ICarterModule
     /// </example>
     private static async Task<IResult> Handle(
         Guid id,
-        IMessageBus messageBus,
+        GetSubscriptionHistoryHandler handler,
         CancellationToken ct)
     {
-        var result = await messageBus.InvokeAsync<ErrorOr<SubscriptionHistoryResponse>>(new GetSubscriptionHistoryQuery(id), ct);
+        var result = await handler.Handle(new GetSubscriptionHistoryQuery(id), ct);
 
         return result.Match(
             response => Results.Ok(response),

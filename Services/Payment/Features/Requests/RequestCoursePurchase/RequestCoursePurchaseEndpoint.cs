@@ -3,7 +3,6 @@ using Carter;
 using ErrorOr;
 using Microsoft.AspNetCore.Mvc;
 using Payment.Shared;
-using Wolverine;
 
 namespace Payment.Features.Requests.RequestCoursePurchase;
 
@@ -35,11 +34,10 @@ public class RequestCoursePurchaseEndpoint : ICarterModule
 
     private static async Task<IResult> Handle(
         [FromBody] RequestCoursePurchaseRequest request,
-        IMessageBus messageBus,
+        RequestCoursePurchaseHandler handler,
         CancellationToken ct)
     {
-        var result = await messageBus.InvokeAsync<ErrorOr<RequestCoursePurchaseResponse>>(
-            new RequestCoursePurchaseCommand(request), ct);
+        var result = await handler.Handle(new RequestCoursePurchaseCommand(request), ct);
         return result.Match(
             response => Results.Created($"/api/requests/course-purchase/{response.RequestId}", response),
             errors => ErrorOnExtensions.MapErrorsToResult(errors));

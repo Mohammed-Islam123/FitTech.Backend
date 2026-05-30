@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OpenApi;
 using Microsoft.AspNetCore.Routing;
-using Wolverine;
 
 namespace Courses.Features.Programs.CreateProgram;
 
@@ -60,11 +59,10 @@ public class CreateProgramEndpoint : ICarterModule
 
     private static async Task<IResult> Handle(
         [FromBody] CreateProgramRequest request,
-        IMessageBus messageBus,
+        CreateProgramHandler handler,
         CancellationToken ct)
     {
-        var result = await messageBus.InvokeAsync<ErrorOr<CreateProgramResponse>>(
-            new CreateProgramCommand(request), ct);
+        var result = await handler.Handle(new CreateProgramCommand(request), ct);
         return result.Match(
             response => Results.Created($"/api/programs/{response.ProgramId}", response),
             errors => ErrorOnExtensions.MapErrorsToResult(errors));

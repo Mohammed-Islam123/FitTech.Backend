@@ -4,7 +4,6 @@ using ErrorOr;
 using Membership.Shared;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.OpenApi;
-using Wolverine;
 
 namespace Membership.Features.Members.CreateMember;
 
@@ -55,10 +54,10 @@ public class CreateMemberEndpoint : ICarterModule
 
     private static async Task<IResult> Handle(
         [FromForm] CreateMemberRequest request,
-        IMessageBus messageBus,
+        CreateMemberHandler handler,
         CancellationToken ct)
     {
-        var result = await messageBus.InvokeAsync<ErrorOr<CreateMemberResponse>>(new CreateMemberCommand(request), ct);
+        var result = await handler.Handle(new CreateMemberCommand(request), ct);
 
         return result.Match(
             response => Results.Created($"/api/members/{response.MemberId}", response),
