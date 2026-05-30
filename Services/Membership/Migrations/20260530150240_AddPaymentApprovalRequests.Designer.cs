@@ -3,6 +3,7 @@ using System;
 using Membership.Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Membership.Migrations
 {
     [DbContext(typeof(MembershipDbContext))]
-    partial class MembershipDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260530150240_AddPaymentApprovalRequests")]
+    partial class AddPaymentApprovalRequests
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

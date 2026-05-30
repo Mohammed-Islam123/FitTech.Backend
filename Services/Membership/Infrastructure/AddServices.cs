@@ -16,8 +16,11 @@ using Membership.Features.Plans.CreatePlan;
 using Membership.Features.Plans.DeletePlan;
 using Membership.Features.Plans.ListPlans;
 using Membership.Features.Plans.UpdatePlan;
+using Membership.Features.Subscriptions.AcceptRenewal;
 using Membership.Features.Subscriptions.ConfirmCashPayment;
 using Membership.Features.Subscriptions.CreateSubscription;
+using Membership.Features.Subscriptions.RejectRenewal;
+using Membership.Features.Subscriptions.RequestRenewal;
 
 namespace Membership.Infrastructure;
 
@@ -45,6 +48,9 @@ public static class AddServices
         services.AddScoped<UpdatePlanHandler>();
         services.AddScoped<ConfirmCashPaymentHandler>();
         services.AddScoped<CreateSubscriptionHandler>();
+        services.AddScoped<RequestRenewalHandler>();
+        services.AddScoped<AcceptRenewalHandler>();
+        services.AddScoped<RejectRenewalHandler>();
         return services;
     }
 }

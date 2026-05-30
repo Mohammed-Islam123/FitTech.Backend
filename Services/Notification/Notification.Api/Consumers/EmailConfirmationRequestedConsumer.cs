@@ -21,7 +21,7 @@ public class EmailConfirmationRequestedConsumer(
 
         var html = templateService.Render("email-confirmation", new Dictionary<string, string>
         {
-            ["FirstName"]  = @event.FirstName,
+            ["FirstName"] = @event.FirstName,
             ["ConfirmUrl"] = confirmUrl,
         });
 
@@ -42,9 +42,7 @@ public class EmailConfirmationRequestedConsumer(
                 ┌───────────────────────────────────────────────────────────────────────────┐
                 │ DEV MODE: Verify email via curl (no frontend needed)                    │
                 └───────────────────────────────────────────────────────────────────────────┘
-                curl -X POST {IdentityUrl}/api/User/verify-email \
-                  -H "Content-Type: application/json" \
-                  -d '{Body}'
+                curl -L  -X POST {IdentityUrl}/api/User/verify-email -H "Content-Type: application/json" -d '{Body}'
                 """,
                 identityUrl, body);
         }

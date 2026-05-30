@@ -1,3 +1,0 @@
-namespace Payment.Features.Requests.RequestMembershipRenewal;
-
-public record RequestMembershipRenewalCommand(RequestMembershipRenewalRequest Request);

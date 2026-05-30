@@ -7,6 +7,7 @@ using Membership.Infrastructure;
 using Membership.Infrastructure.Seed;
 using Membership.Infrastructure.Auth;
 using Membership.Features.Members.CreateMember;
+using Membership.Features.Payments;
 using MicroElements.AspNetCore.OpenApi.FluentValidation;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -33,6 +34,7 @@ builder.Host.UseWolverine(opts =>
         .AutoProvision();
     opts.Policies.DisableConventionalLocalRouting();
     opts.Policies.AddMiddleware<ValidationBehavior>();
+    opts.Discovery.IncludeType<PaymentConfirmedConsumer>();
 
 });
 
@@ -77,6 +79,7 @@ builder.Services.AddFluentValidationRulesToOpenApi();
 builder.Services.AddOpenApi();
 builder.Services.AddScoped<MembershipSeeder>();
 builder.Services.AddMembershipServices();
+builder.Services.AddScoped<PaymentConfirmedConsumer>();
 var app = builder.Build();
 
 app.MapDefaultEndpoints();

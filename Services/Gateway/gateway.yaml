@@ -30,11 +30,6 @@ ReverseProxy:
       Match:
         Path: /api/courses/{**catch-all}
 
-    requests-route:
-      ClusterId: payment-cluster
-      Match:
-        Path: /api/requests/{**catch-all}
-
     payment-route:
       ClusterId: payment-cluster
       Match:

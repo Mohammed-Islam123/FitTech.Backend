@@ -1,3 +1,0 @@
-namespace Payment.Features.Requests.RequestCoursePurchase;
-
-public record RequestCoursePurchaseCommand(RequestCoursePurchaseRequest Request);

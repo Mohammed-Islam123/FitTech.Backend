@@ -9,5 +9,6 @@ public record CreateCoachRequest(
     string PhoneNumber,
     DateOnly? DateOfBirth,
     Gender? Gender,
-    string? Bio
+    string? Bio,
+    string? Password = null
 );

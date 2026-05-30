@@ -30,6 +30,8 @@ public sealed class CoursesSeeder(
         var coachHandler = new CreateCoachHandler(context, adminAccessor, identityClient, messageBus);
 
         var coachIds = new List<Guid>(CoachSeedCount);
+        var coachPassword = "Coach@12345";
+
         for (var i = 0; i < CoachSeedCount; i++)
         {
             var firstName = faker.Name.FirstName();
@@ -47,7 +49,8 @@ public sealed class CoursesSeeder(
                 phone,
                 birthDate,
                 gender,
-                faker.Lorem.Sentence(8));
+                faker.Lorem.Sentence(8),
+                coachPassword);
 
             var result = await coachHandler.Handle(new CreateCoachCommand(request), ct);
             if (result.IsError)

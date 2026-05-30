@@ -37,6 +37,9 @@ public class PaymentConfiguration : IEntityTypeConfiguration<PaymentEntity>
         builder.Property(p => p.ReferenceId)
             .IsRequired();
 
+        builder.Property(p => p.GatewayTransactionId)
+            .HasMaxLength(100);
+
         builder.Property(p => p.Notes)
             .HasMaxLength(500);
 

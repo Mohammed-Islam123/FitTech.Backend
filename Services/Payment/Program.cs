@@ -22,6 +22,7 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<IUserAccessor, UserAccessor>();
 builder.Services.AddValidatorsFromAssemblyContaining<Program>();
 builder.Services.AddPaymentServices();
+builder.Services.AddPaymentGateway();
 
 builder.Host.UseWolverine(opts =>
 {

@@ -32,7 +32,7 @@ public class CreateCoachHandler(
         }
 
         var req = command.Request;
-        var generatedPassword = GenerateSecurePassword(16);
+        var generatedPassword = req.Password ?? GenerateSecurePassword(16);
 
         ApiResponse<Response<string>> identityResponse;
         try

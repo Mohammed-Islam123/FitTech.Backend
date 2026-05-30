@@ -10,6 +10,7 @@ public sealed class MembershipDbContext(DbContextOptions<MembershipDbContext> op
     public DbSet<NfcCard> NfcCards { get; set; } = null!;
     public DbSet<SubscriptionPlan> SubscriptionPlans { get; set; } = null!;
     public DbSet<Subscription> Subscriptions { get; set; } = null!;
+    public DbSet<PaymentApprovalRequest> PaymentApprovalRequests { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
