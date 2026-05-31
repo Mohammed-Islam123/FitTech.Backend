@@ -10,5 +10,6 @@ public record CreateCoachRequest(
     DateOnly? DateOfBirth,
     Gender? Gender,
     string? Bio,
+    string? ProfilePhotoUrl = null,
     string? Password = null
 );

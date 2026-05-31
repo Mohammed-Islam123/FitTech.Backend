@@ -73,7 +73,10 @@ builder.Services.AddRefitClient<IIdentityServiceClient>()
     .AddHttpMessageHandler<Courses.Infrastructure.Auth.ServiceTokenHandler>();
 
 builder.Services.AddFluentValidationRulesToOpenApi();
-builder.Services.AddOpenApi();
+builder.Services.AddOpenApi(options =>
+{
+    options.AddDocumentTransformer<BearerSecuritySchemeTransformer>();
+});
 builder.Services.AddScoped<CoursesSeeder>();
 builder.Services.AddCoursesServices();
 

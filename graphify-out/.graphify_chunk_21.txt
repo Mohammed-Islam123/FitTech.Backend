@@ -1,0 +1,4 @@
+D:\projects\GYM\FitTech.Backend\Services\Telemetry\mvnw
+D:\projects\GYM\FitTech.Backend\Services\Telemetry\HELP.md
+D:\projects\GYM\FitTech.Backend\Services\Telemetry\src\main\java\com\fittech\telemetry\TelemetryApplication.java
+D:\projects\GYM\FitTech.Backend\Services\Telemetry\src\test\java\com\fittech\telemetry\TelemetryApplicationTests.java

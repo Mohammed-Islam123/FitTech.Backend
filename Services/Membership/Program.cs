@@ -76,7 +76,10 @@ builder.Services.AddRefitClient<IPaymentServiceClient>()
 
 builder.Services.AddFluentValidationRulesToOpenApi();
 
-builder.Services.AddOpenApi();
+builder.Services.AddOpenApi(options =>
+{
+    options.AddDocumentTransformer<BearerSecuritySchemeTransformer>();
+});
 builder.Services.AddScoped<MembershipSeeder>();
 builder.Services.AddMembershipServices();
 builder.Services.AddScoped<PaymentConfirmedConsumer>();

@@ -6,6 +6,7 @@ namespace Courses.Features.Programs.GetEnrolledPrograms;
 public record GetEnrolledProgramsResponse(
     Guid Id,
     string Name,
+    Guid CoachId,
     string? CoachName,
     string? Description,
     DateTime EnrolledAt

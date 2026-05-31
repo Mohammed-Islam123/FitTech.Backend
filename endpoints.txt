@@ -28,9 +28,9 @@ Member-Facing Endpoints
 GET /me — Returns the authenticated member's personal details: full name, gender, date of birth, phone number, email, email confirmation status, account creation date, membership duration in years, active status, profile picture, goals, and medical file ID.
 PATCH /me — Updates the authenticated member's profile: medical file, goals, and/or profile picture.
 GET /me/subscription — Returns the current subscription details for the authenticated member: name, price, days remaining, sessions remaining, access roles, and other relevant fields.
-GET /me/courses/available — Returns the list of courses the authenticated member is not enrolled in. For each: name, image, price, and coach name.
-GET /me/courses/enrolled — Returns the list of courses the authenticated member is enrolled in. For each: name, coach name, description, and other relevant details.
-GET /courses/{courseId} — Returns the full details of a specific course: name, price, description, spots left, capacity, sessions, and other relevant fields.
+GET /api/programs/available — Returns the list of programs the authenticated member is not enrolled in. For each: name, image, price, coach ID, and coach name.
+GET /api/programs/enrolled — Returns the list of programs the authenticated member is enrolled in. For each: name, coach ID, coach name, description, and other relevant details.
+GET /api/programs/{programId} — Returns the full details of a specific program: name, price, description, spots left, capacity, coach ID, coach name, and other relevant fields.
 
 
 Offline Payment Requests
@@ -58,8 +58,10 @@ GET /programs/requests — Returns all program creation requests submitted by co
 GET /programs/requests/{programId} — Returns the full details of a specific program creation request for admin review.
 PATCH /programs/requests/{programId}/accept — Admin accepts a program creation request. Triggers session generation between the start and end dates.
 PATCH /programs/requests/{programId}/reject — Admin rejects a program creation request.
+GET /coaches/{coachId} — Returns the public profile of a coach without email or phone number. For each: first name, last name, bio, specialties, and profile photo.
 GET /coaches/{coachId}/programs — Returns all programs for a specific coach, including inactive and pending ones. For each: program details and acceptance status (pending, accepted, or rejected).
 GET /coaches/{coachId}/clients — Returns all members subscribed to any of the coach's programs. For each: full name, email, phone number, registration date, and list of assigned courses (course ID and name).
 GET /programs/{programId}/members — Returns the list of members enrolled in a specific course, used to display the attendance table for a session.
 POST /sessions/{sessionId}/attendance — Coach marks attendance for a specific session. For each member: specifies present or absent.
+GET /sessions/history?startDate={date}&endDate={date} — Returns session history for the authenticated member within a date range, including attendance status per session.
 GET /coaches/{coachId}/clients/{memberId} — Returns the full profile of a specific member enrolled in the coach's program, including their medical file.

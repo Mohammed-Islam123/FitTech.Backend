@@ -40,6 +40,7 @@ public class GetAvailableProgramsHandler(
                 p.Name,
                 p.PictureUrl,
                 p.TotalPrice,
+                p.CoachId,
                 p.Coach.FirstName + " " + p.Coach.LastName,
                 p.Description))
             .ToListAsync(ct);

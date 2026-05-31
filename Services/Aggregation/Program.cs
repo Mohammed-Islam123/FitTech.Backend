@@ -52,7 +52,10 @@ builder.Services.AddAuthorization(options =>
         policy.RequireAuthenticatedUser().RequireRole("Admin"));
 });
 
-builder.Services.AddOpenApi();
+builder.Services.AddOpenApi(options =>
+{
+    options.AddDocumentTransformer<BearerSecuritySchemeTransformer>();
+});
 builder.Services.AddScoped<AggregationSeeder>();
 builder.Services.AddScoped<GetAdminDashboardHandler>();
 builder.Services.AddScoped<GetFinanceDashboardHandler>();

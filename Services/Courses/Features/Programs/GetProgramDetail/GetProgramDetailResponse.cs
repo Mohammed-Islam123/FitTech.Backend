@@ -10,6 +10,7 @@ public record GetProgramDetailResponse(
     string? Description,
     int SpotsLeft,
     int Capacity,
+    Guid CoachId,
     string? CoachName,
     string? Level,
     string? ExerciseType,

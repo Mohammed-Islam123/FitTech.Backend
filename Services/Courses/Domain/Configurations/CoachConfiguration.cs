@@ -15,6 +15,7 @@ public class CoachConfiguration : IEntityTypeConfiguration<Coach>
         builder.Property(c => c.PhoneNumber).HasMaxLength(50).IsRequired();
         builder.Property(c => c.Bio).HasMaxLength(2000);
         builder.Property(c => c.Specialties).HasMaxLength(500);
+        builder.Property(c => c.ProfilePhotoUrl).HasMaxLength(500);
         builder.HasIndex(c => c.UserId).IsUnique();
     }
 }

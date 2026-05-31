@@ -62,7 +62,10 @@ builder.Services.AddAuthorization(options =>
 builder.Services.AddRefitClient<IIdentityServiceClient>()
     .ConfigureHttpClient(c => c.BaseAddress = new Uri("http://identity-api"));
 
-builder.Services.AddOpenApi();
+builder.Services.AddOpenApi(options =>
+{
+    options.AddDocumentTransformer<BearerSecuritySchemeTransformer>();
+});
 builder.Services.AddScoped<PaymentSeeder>();
 
 var app = builder.Build();

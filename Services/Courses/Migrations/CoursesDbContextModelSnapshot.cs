@@ -83,6 +83,10 @@ namespace Courses.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("character varying(50)");
 
+                    b.Property<string>("ProfilePhotoUrl")
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)");
+
                     b.Property<string>("Specialties")
                         .HasMaxLength(500)
                         .HasColumnType("character varying(500)");

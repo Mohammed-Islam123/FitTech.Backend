@@ -112,20 +112,25 @@ var shopApi = builder.AddJavaApp(
     workingDirectory: "../../Services/Shop/",
     options: new JavaAppExecutableResourceOptions
     {
-        OtelAgentPath = "agents/opentelemetry-javaagent.jar"
+        OtelAgentPath = "../../FitTech.AppHost/FitTech.AppHost/agents"
     }
 )
+.WithEnvironment("SERVER_PORT", "5104")
+.WithEnvironment("LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_WEB", "DEBUG")
 .WithHttpEndpoint(port: 5104, name: "http")
 .WithHttpsEndpoint(port: 7104, name: "https");
 
-var telemetryApi = builder.AddJavaApp(
-    name: "telemetry-api",
-    workingDirectory: "../../Services/Telemetry/",
+
+
+var workoutLogsApi = builder.AddJavaApp(
+    name: "workout-logs-api",
+    workingDirectory: "../../Services/Workout-Logs/",
     options: new JavaAppExecutableResourceOptions
     {
-        OtelAgentPath = "agents/opentelemetry-javaagent.jar"
+        OtelAgentPath = "../../FitTech.AppHost/FitTech.AppHost/agents"
     }
 )
+.WithEnvironment("SERVER_PORT", "5105")
 .WithHttpEndpoint(port: 5105, name: "http")
 .WithHttpsEndpoint(port: 7105, name: "https");
 
@@ -134,9 +139,10 @@ var equipmentsApi = builder.AddJavaApp(
     workingDirectory: "../../Services/Equipments/",
     options: new JavaAppExecutableResourceOptions
     {
-        OtelAgentPath = "agents/opentelemetry-javaagent.jar"
+        OtelAgentPath = "../../FitTech.AppHost/FitTech.AppHost/agents"
     }
 )
+.WithEnvironment("SERVER_PORT", "5106")
 .WithHttpEndpoint(port: 5106, name: "http")
 .WithHttpsEndpoint(port: 7106, name: "https");
 
@@ -144,7 +150,6 @@ var equipmentsApi = builder.AddJavaApp(
 
 var scalar = builder.AddScalarApiReference(options =>
 {
-    // Match this to what your APIs actually expose (default is openapi/v1.json)
     options.OpenApiRoutePattern = "openapi/{documentName}.json";
 });
 
@@ -166,8 +171,16 @@ scalar.WaitFor(identityApi)
       .WaitFor(aggregationApi)
       ;
 builder.AddProject<Projects.Gateway>("gateway")
-       .WithEndpoint("http", endpoint => endpoint.Port = 5098)
-       .WithEndpoint("https", endpoint => endpoint.Port = 7248)
+.WithEndpoint("http", endpoint =>
+       {
+           endpoint.Port = 5098;
+           endpoint.TargetHost = "*";
+       })
+       .WithEndpoint("https", endpoint =>
+       {
+           endpoint.Port = 7248;
+           endpoint.TargetHost = "*";
+       })
        .WithReference(identityApi)
        .WithReference(paymentApi)
        .WithReference(coursesApi)
@@ -179,6 +192,6 @@ builder.AddProject<Projects.Gateway>("gateway")
        .WaitFor(chatApi)
        .WaitFor(equipmentsApi)
        .WaitFor(shopApi)
-       .WaitFor(telemetryApi);
+       .WaitFor(workoutLogsApi);
 
 builder.Build().Run();

@@ -45,6 +45,7 @@ public class GetProgramDetailHandler(CoursesDbContext context)
             Description: program.Description,
             SpotsLeft: spotsLeft,
             Capacity: program.MaxParticipants,
+            CoachId: program.CoachId,
             CoachName: $"{program.Coach.FirstName} {program.Coach.LastName}",
             Level: program.Level,
             ExerciseType: program.ExerciseType,

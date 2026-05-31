@@ -74,7 +74,10 @@ builder.Services.AddMassTransit(x =>
 
 builder.AddPermissiveCors();
 
-builder.Services.AddOpenApi();
+builder.Services.AddOpenApi(options =>
+{
+    options.AddDocumentTransformer<BearerSecuritySchemeTransformer>();
+});
 
 var app = builder.Build();
 

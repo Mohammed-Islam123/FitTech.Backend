@@ -8,6 +8,7 @@ public record GetAvailableProgramsResponse(
     string Name,
     string? ImageUrl,
     decimal Price,
+    Guid CoachId,
     string? CoachName,
     string? Description
 );

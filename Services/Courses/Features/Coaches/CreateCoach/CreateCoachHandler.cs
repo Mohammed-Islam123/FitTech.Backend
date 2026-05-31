@@ -72,7 +72,8 @@ public class CreateCoachHandler(
             LastName = req.LastName,
             Email = req.Email,
             PhoneNumber = req.PhoneNumber,
-            Bio = req.Bio
+            Bio = req.Bio,
+            ProfilePhotoUrl = req.ProfilePhotoUrl
         };
 
         context.Coaches.Add(coach);

@@ -30,6 +30,7 @@ public class GetEnrolledProgramsHandler(
             .Select(e => new GetEnrolledProgramsResponse(
                 e.Program.Id,
                 e.Program.Name,
+                e.Program.CoachId,
                 e.Program.Coach.FirstName + " " + e.Program.Coach.LastName,
                 e.Program.Description,
                 e.EnrolledAt))

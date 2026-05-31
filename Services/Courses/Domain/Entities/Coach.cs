@@ -13,6 +13,7 @@ public class Coach
     public string PhoneNumber { get; set; } = null!;
     public string? Bio { get; set; }
     public string? Specialties { get; set; }
+    public string? ProfilePhotoUrl { get; set; }
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
     public ICollection<Program> Programs { get; set; } = [];

@@ -61,7 +61,10 @@ builder.Services.AddRefitClient<ICoursesServiceClient>()
     .ConfigureHttpClient(c => c.BaseAddress = new Uri("http://courses-api"));
 
 builder.Services.AddFluentValidationRulesToOpenApi();
-builder.Services.AddOpenApi();
+builder.Services.AddOpenApi(options =>
+{
+    options.AddDocumentTransformer<BearerSecuritySchemeTransformer>();
+});
 builder.Services.AddScoped<ActivitySeeder>();
 builder.Services.AddActivityServices();
 

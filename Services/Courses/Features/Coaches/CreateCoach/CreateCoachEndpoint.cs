@@ -32,7 +32,8 @@ public class CreateCoachEndpoint : ICarterModule
                     ["phoneNumber"] = "+213-555-789012",
                     ["dateOfBirth"] = "1990-05-15",
                     ["gender"] = "Male",
-                    ["bio"] = "Certified personal trainer with 5 years experience."
+                    ["bio"] = "Certified personal trainer with 5 years experience.",
+                    ["profilePhotoUrl"] = "https://cdn.fittech.dz/photos/coach-ahmed.jpg"
                 };
                 var exampleResponse = new JsonObject
                 {
