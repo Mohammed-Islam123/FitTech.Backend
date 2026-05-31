@@ -9,14 +9,22 @@
         <RootNamespace>FitTech.AppHost.AppHost</RootNamespace>
     </PropertyGroup>
     <ItemGroup>
-        <ProjectReference Include="../../Services/Identity/Identity.Api/Identity.Api.csproj" />
-        <ProjectReference Include="..\..\Services\Membership\Membership.csproj" />
-        <ProjectReference Include="..\..\Services\Notification\Notification.Api\Notification.Api.csproj" />
+        <ProjectReference
+            Include="../../Services/Identity/Identity.Api/Identity.Api.csproj"
+        />
+        <ProjectReference
+            Include="..\..\Services\Membership\Membership.csproj"
+        />
+        <ProjectReference
+            Include="..\..\Services\Notification\Notification.Api\Notification.Api.csproj"
+        />
         <ProjectReference Include="..\..\Services\Gateway\Gateway.csproj" />
         <ProjectReference Include="..\..\Services\Payment\Payment.csproj" />
         <ProjectReference Include="..\..\Services\Courses\Courses.csproj" />
         <ProjectReference Include="..\..\Services\Activity\Activity.csproj" />
-        <ProjectReference Include="..\..\Services\Aggregation\Aggregation.csproj" />
+        <ProjectReference
+            Include="..\..\Services\Aggregation\Aggregation.csproj"
+        />
         <ProjectReference Include="..\..\Services\Chat\Chat.csproj" />
     </ItemGroup>
     <ItemGroup>
@@ -24,5 +32,6 @@
       <PackageReference Include="Aspire.Hosting.PostgreSQL" />
       <PackageReference Include="Aspire.Hosting.RabbitMQ" />
       <PackageReference Include="Scalar.Aspire" />
+      <PackageReference Include="CommunityToolkit.Aspire.Hosting.Java" />
     </ItemGroup>
 </Project>

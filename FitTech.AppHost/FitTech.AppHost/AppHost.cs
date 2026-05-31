@@ -98,18 +98,54 @@ var notificationApi = builder.AddProject<Projects.Notification_Api>("notificatio
        .WaitFor(rabbit)
        .WaitFor(smtpServer);
 
-
 var chatApi = builder.AddProject<Projects.Chat>("chat-api")
                      .WithEndpoint("http", endpoint => endpoint.Port = 5274)
                      .WithEndpoint("https", endpoint => endpoint.Port = 7238)
                      .WithReference(chatDb)
                      .WithReference(rabbit)
+                     .WithReference(identityApi)
                      .WaitFor(chatDb)
                      .WaitFor(rabbit);
+
+var shopApi = builder.AddJavaApp(
+    name: "shop-api",
+    workingDirectory: "../../Services/Shop/",
+    options: new JavaAppExecutableResourceOptions
+    {
+        OtelAgentPath = "agents/opentelemetry-javaagent.jar"
+    }
+)
+.WithHttpEndpoint(port: 5104, name: "http")
+.WithHttpsEndpoint(port: 7104, name: "https");
+
+var telemetryApi = builder.AddJavaApp(
+    name: "telemetry-api",
+    workingDirectory: "../../Services/Telemetry/",
+    options: new JavaAppExecutableResourceOptions
+    {
+        OtelAgentPath = "agents/opentelemetry-javaagent.jar"
+    }
+)
+.WithHttpEndpoint(port: 5105, name: "http")
+.WithHttpsEndpoint(port: 7105, name: "https");
+
+var equipmentsApi = builder.AddJavaApp(
+    name: "equipments-api",
+    workingDirectory: "../../Services/Equipments/",
+    options: new JavaAppExecutableResourceOptions
+    {
+        OtelAgentPath = "agents/opentelemetry-javaagent.jar"
+    }
+)
+.WithHttpEndpoint(port: 5106, name: "http")
+.WithHttpsEndpoint(port: 7106, name: "https");
+
+
+
 var scalar = builder.AddScalarApiReference(options =>
 {
-      // Match this to what your APIs actually expose (default is openapi/v1.json)
-      options.OpenApiRoutePattern = "openapi/{documentName}.json";
+    // Match this to what your APIs actually expose (default is openapi/v1.json)
+    options.OpenApiRoutePattern = "openapi/{documentName}.json";
 });
 
 // Use WithApiReference to register the services
@@ -127,7 +163,8 @@ scalar.WaitFor(identityApi)
       .WaitFor(chatApi)
       .WaitFor(coursesApi)
       .WaitFor(activityApi)
-      .WaitFor(aggregationApi);
+      .WaitFor(aggregationApi)
+      ;
 builder.AddProject<Projects.Gateway>("gateway")
        .WithEndpoint("http", endpoint => endpoint.Port = 5098)
        .WithEndpoint("https", endpoint => endpoint.Port = 7248)
@@ -136,9 +173,12 @@ builder.AddProject<Projects.Gateway>("gateway")
        .WithReference(coursesApi)
        .WithReference(activityApi)
        .WithReference(aggregationApi)
-       .WithReference(chatApi) 
+       .WithReference(chatApi)
        .WaitFor(identityApi)
        .WaitFor(membershipApi)
-       .WaitFor(chatApi);
+       .WaitFor(chatApi)
+       .WaitFor(equipmentsApi)
+       .WaitFor(shopApi)
+       .WaitFor(telemetryApi);
 
 builder.Build().Run();

@@ -36,7 +36,7 @@ public class CreateMemberHandler(
             }
         }
 
-        var generatedPassword = GenerateSecurePassword(16);
+        var generatedPassword = req.Password ?? GenerateSecurePassword(16);
 
         // Prepare file streams for Refit
         StreamPart? medicalStreamPart = null;

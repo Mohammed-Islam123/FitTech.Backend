@@ -57,6 +57,10 @@ builder.Services.AddAuthorization(options =>
     options.AddPolicy("AdminOrCoach", policy =>
         policy.RequireAuthenticatedUser()
             .RequireRole("Admin", "Coach"));
+
+    options.AddPolicy("MemberOnly", policy =>
+        policy.RequireAuthenticatedUser()
+            .RequireRole("Member"));
 });
 
 builder.Services.AddHttpClient("IdentityAuth", c =>

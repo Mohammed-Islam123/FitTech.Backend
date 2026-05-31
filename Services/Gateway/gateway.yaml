@@ -26,7 +26,7 @@ ReverseProxy:
         Path: /api/me/{**catch-all}
 
     courses-route:
-      ClusterId: membership-cluster
+      ClusterId: courses-cluster
       Match:
         Path: /api/courses/{**catch-all}
 

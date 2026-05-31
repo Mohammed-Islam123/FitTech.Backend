@@ -1,6 +1,3 @@
-using Membership.Features.Courses.GetAvailableCourses;
-using Membership.Features.Courses.GetCourseDetail;
-using Membership.Features.Courses.GetEnrolledCourses;
 using Membership.Features.Members.ActivateMember;
 using Membership.Features.Members.CreateMember;
 using Membership.Features.Members.DeleteMember;
@@ -28,9 +25,6 @@ public static class AddServices
 {
     public static IServiceCollection AddMembershipServices(this IServiceCollection services)
     {
-        services.AddScoped<GetAvailableCoursesHandler>();
-        services.AddScoped<GetCourseDetailHandler>();
-        services.AddScoped<GetEnrolledCoursesHandler>();
         services.AddScoped<ActivateMemberHandler>();
         services.AddScoped<CreateMemberHandler>();
         services.AddScoped<DeleteMemberHandler>();

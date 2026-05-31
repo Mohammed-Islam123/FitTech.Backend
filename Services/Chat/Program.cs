@@ -18,16 +18,19 @@ builder.AddServiceDefaults();
 
 builder.AddNpgsqlDbContext<ChatDbContext>("chatDb");
 
+var identityUrl = builder.Configuration["services:identity-api:http:0"]
+    ?? "http://identity-api";
+
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(opt =>
     {
-        opt.Authority = builder.Configuration["Jwt:Authority"];
+        opt.Authority = identityUrl;
         opt.RequireHttpsMetadata = false;
 
         opt.TokenValidationParameters = new TokenValidationParameters
         {
             ValidateIssuer = true,
-            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidIssuer = "http://identity-api",
             ValidateAudience = false,
             ValidateLifetime = true,
             NameClaimType = "name",

@@ -14,6 +14,8 @@ public class CreateMemberRequest
     public Guid PlanId { get; set; }
     public string? CardUid { get; set; }
 
+    public string? Password { get; set; }
+
     public IFormFile? MedicalCertificate { get; set; }
     public IFormFile? ProfilePicture { get; set; }
 }

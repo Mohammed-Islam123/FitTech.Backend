@@ -64,6 +64,7 @@ public sealed class MembershipSeeder(
         var faker = new Faker("en");
 
         var memberHandler = new CreateMemberHandler(context, identityClient, messageBus);
+        var memberPassword = "Member@12345";
 
         for (var i = 0; i < MemberSeedCount; i++)
         {
@@ -87,6 +88,7 @@ public sealed class MembershipSeeder(
                 Gender = gender,
                 PlanId = planId,
                 CardUid = cardUid,
+                Password = memberPassword,
                 MedicalCertificate = null,
                 ProfilePicture = null
             };

@@ -1,6 +1,7 @@
 #graphify
 graphify-out/manifest.json
 graphify-out/cost.json
+.venv_graphify/
 
 
 # Build output
@@ -54,6 +55,9 @@ appsettings.Production.json
 .env
 .env.*
 secrets.json
+
+# Auto-generated JWT signing keys (RsaKeyManager)
+**/keys/rsa-key.pem
 
 # Test results
 TestResults/
