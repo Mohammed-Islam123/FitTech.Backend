@@ -75,6 +75,31 @@ ReverseProxy:
       Match:
         Path: /hubs/chat/{**catch-all}
 
+    workout-logs-route:
+      ClusterId: workout-logs-cluster
+      Match:
+        Path: /api/workout-logs/{**catch-all}
+
+    shop-route:
+      ClusterId: shop-cluster
+      Match:
+        Path: /api/shop/{**catch-all}
+
+    products-route:
+      ClusterId: shop-cluster
+      Match:
+        Path: /api/products/{**catch-all}
+
+    equipments-route:
+      ClusterId: equipments-cluster
+      Match:
+        Path: /api/equipments/{**catch-all}
+
+    issues-route:
+      ClusterId: equipments-cluster
+      Match:
+        Path: /api/issues/{**catch-all}
+
     # OpenAPI doc discovery routes
     identity-openapi-route:
       ClusterId: identity-cluster
@@ -125,6 +150,27 @@ ReverseProxy:
       Transforms:
         - PathPattern: "/openapi/v1.json"
 
+    workout-logs-openapi-route:
+      ClusterId: workout-logs-cluster
+      Match:
+        Path: /docs/workout-logs/{**catch-all}
+      Transforms:
+        - PathPattern: "/openapi/v1.json"
+
+    shop-openapi-route:
+      ClusterId: shop-cluster
+      Match:
+        Path: /docs/shop/{**catch-all}
+      Transforms:
+        - PathPattern: "/openapi/v1.json"
+
+    equipments-openapi-route:
+      ClusterId: equipments-cluster
+      Match:
+        Path: /docs/equipments/{**catch-all}
+      Transforms:
+        - PathPattern: "/openapi/v1.json"
+
   Clusters:
     identity-cluster:
       Destinations:
@@ -160,3 +206,18 @@ ReverseProxy:
       Destinations:
         chat-api:
           Address: http+https://chat-api
+
+    workout-logs-cluster:
+      Destinations:
+        workout-logs-api:
+          Address: http+https://workout-logs-api
+
+    shop-cluster:
+      Destinations:
+        shop-api:
+          Address: http+https://shop-api
+
+    equipments-cluster:
+      Destinations:
+        equipments-api:
+          Address: http+https://equipments-api

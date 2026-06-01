@@ -1,0 +1,113 @@
+Fiche de présentation du projet
+École Supérieure en Informatique, BP 73, Bureau de Poste EL WIAM, 22000, Sidi Bel Abbes, Algerie
+Tel:  (213 ) 48 74 94 52         Fax:  (213 ) 48 74 94 50         www.esi-sba.dz
+Titre complet
+Système de gestion d’une  Salle de sport connectée « FitTech »
+Encadreur
+AMAR BENSABER Djamel
+Résumé
+Système de gestion d’une salle de sport connectée
+Une salle de sport moderne, "FitTech", souhaite développer un système intégré de 
+gestion des abonnements, des réservations de cours et du suivi d'activité.
+Le système doit être composé d'une application mobile pour les membres, d'une 
+interface web pour les coachs et les administrateurs, et d'une infrastructure matérielle 
+(capteurs, lecteurs NFC, machines connectées).
+Besoins fonctionnels détaillés :
+
+Gestion des membres et abonnements :
+a. Inscription d'un nouveau membre : saisie des informations personnelles 
+(nom, prénom, date de naissance, email, téléphone, photo), choix de 
+l'abonnement, paiement en ligne ou sur place.
+b. Types d'abonnements :
+- Mensuel (renouvellement automatique, résiliable à tout moment)
+- Annuel (engagement 12 mois, paiement en une fois ou mensualisé)
+- À la séance (achat d'un pack de séances, par exemple 10 entrées)
+- Essai gratuit (1 séance)
+c. Profil santé : chaque membre peut (optionnellement) renseigner des 
+objectifs (perte de poids, prise de masse, endurance) et des restrictions 
+médicales (problèmes de dos, allergies, etc.). Ces informations sont visibles 
+par les coachs pour adapter les conseils.
+d. Gestion de la carte NFC : chaque membre reçoit une carte NFC unique qui 
+sert de clé d'accès à la salle. La carte est activée lors de l'achat d'un 
+abonnement et désactivée en cas d'expiration ou de résiliation.
+e. Espace membre : consultation des informations personnelles, historique des 
+séances, factures, et possibilité de mettre en pause l'abonnement (pour raison 
+médicale par exemple, maximum 2 mois par an).
+
+Réservation de cours :
+a. Les coachs créent des cours (spinning, crossfit, etc.) avec un nombre 
+maximum de participants, une date et heure, une durée et un niveau requis.
+b. Les membres peuvent réserver un cours via l'application mobile, jusqu'à 7 
+jours à l'avance.
+c. Si le cours est complet, le membre peut s'inscrire sur une liste d'attente. En 
+cas de désistement, le premier de la liste est automatiquement inscrit et notifié.
+d. Annulation : le membre peut annuler sa réservation jusqu'à 2 heures avant le 
+cours. Passé ce délai, la séance est décomptée de son abonnement (ou du pack 
+à la séance) et le membre est notifié.
+e. Présence : le coach valide la présence des membres à l'aide d'une tablette. Si 
+École Supérieure en Informatique, BP 73, Bureau de Poste EL WIAM, 22000, Sidi Bel Abbes, Algerie
+Tel:  (213 ) 48 74 94 52         Fax:  (213 ) 48 74 94 50         www.esi-sba.dz
+un membre ne se présente pas à un cours réservé (et n'a pas annulé), il reçoit 
+un avertissement. Après 3 avertissements, son compte est suspendu pendant 
+une semaine.
+
+Accès et suivi d'activité :
+a. Accès à la salle : le membre badge avec sa carte NFC à l'entrée. Le système 
+vérifie que l'abonnement est valide et enregistre l'heure d'entrée. À la sortie, le 
+membre badge à nouveau pour enregistrer la durée de la séance.
+b. Machines connectées : les machines (tapis de course, vélos elliptiques, etc.) 
+sont équipées de capteurs qui enregistrent les performances (distance, calories, 
+rythme cardiaque, etc.). Ces données sont envoyées au système et associées au 
+membre (via connexion de l'application mobile ou badgeage sur la machine).
+c. Tableau de bord de performance : l'application mobile du membre affiche 
+des statistiques (nombre de séances par semaine, calories brûlées, progression 
+sur les objectifs, etc.) et des recommandations personnalisées (par exemple, 
+augmenter l'intensité).
+
+Gestion du personnel :
+a. Coachs :
+- Chaque coach a un profil (nom, photo, spécialités, biographie) visible sur 
+l'application mobile.
+- Ils gèrent leur planning (création de cours, disponibilités).
+- Ils peuvent consulter les profils santé des membres participants à leurs cours 
+pour adapter les exercices.
+b. Administrateurs :
+- Gestion des abonnements (création, modification, suspension).
+- Gestion des membres (inscription, désactivation de compte, historique des 
+paiements).
+- Gestion des coachs (ajout, suppression, attribution des cours).
+- Génération de rapports financiers (chiffre d'affaires, taux de fréquentation, 
+etc.) et statistiques d'utilisation.
+
+Notification et communication :
+a. Notifications automatiques :
+- Rappel de cours (2 heures avant)
+- Alerte objectif atteint (par exemple, 10 séances ce mois-ci)
+- Offres personnalisées (renouvellement d'abonnement, promotion sur des 
+produits)
+- Notification en cas d'annulation de cours par le coach
+b. Communication interne : les membres peuvent envoyer des messages aux 
+coachs via l'application (pour des conseils ou des questions).
+
+Autres fonctionnalités :
+a. Gestion des équipements : suivi de l'état des machines (fonctionnement, 
+besoin de maintenance) via des alertes remontées par les membres ou les 
+coachs.
+b. Vente de produits : boutique en ligne (compléments alimentaires, 
+vêtements) intégrée à l'application.
+Outils et 
+Langages
+Application cliente:
+o Mobile : Android/IOS (swift)   pour les clients
+École Supérieure en Informatique, BP 73, Bureau de Poste EL WIAM, 22000, Sidi Bel Abbes, Algerie
+Tel:  (213 ) 48 74 94 52         Fax:  (213 ) 48 74 94 50         www.esi-sba.dz
+o Web : Laravel/NodeJs+ JS(Angular/JQuery) pour le collaborateur
+Application Serveur :
+o BDD: MySQL / PostgreSQL
+o Couche métier:
+ SpringBoot
+▪
+ EJB Security/ Spring Security
+▪
+o Couche présentation : JSF(PrimeFaces)+ Angular
+Autres technologies : A discuter

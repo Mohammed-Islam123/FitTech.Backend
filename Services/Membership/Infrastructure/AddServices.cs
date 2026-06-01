@@ -3,6 +3,7 @@ using Membership.Features.Members.CreateMember;
 using Membership.Features.Members.DeleteMember;
 using Membership.Features.Members.GetActiveSubscription;
 using Membership.Features.Members.GetMember;
+using Membership.Features.Members.GetMemberByCard;
 using Membership.Features.Members.GetMyProfile;
 using Membership.Features.Members.GetSubscriptionHistory;
 using Membership.Features.Members.ListMembers;
@@ -35,6 +36,7 @@ public static class AddServices
         services.AddScoped<DeleteMemberHandler>();
         services.AddScoped<GetActiveSubscriptionHandler>();
         services.AddScoped<GetMemberHandler>();
+        services.AddScoped<GetMemberByCardHandler>();
         services.AddScoped<GetMyProfileHandler>();
         services.AddScoped<GetSubscriptionHistoryHandler>();
         services.AddScoped<ListMembersHandler>();

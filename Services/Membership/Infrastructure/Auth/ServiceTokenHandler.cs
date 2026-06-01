@@ -6,6 +6,7 @@ namespace Membership.Infrastructure.Auth;
 
 public sealed class ServiceTokenHandler : DelegatingHandler
 {
+    private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly HttpClient _identityClient;
     private readonly string _clientId;
     private readonly string _clientSecret;
@@ -16,10 +17,12 @@ public sealed class ServiceTokenHandler : DelegatingHandler
     private DateTime _tokenExpiry;
 
     public ServiceTokenHandler(
+        IHttpContextAccessor httpContextAccessor,
         IHttpClientFactory httpClientFactory,
         IConfiguration configuration,
         ILogger<ServiceTokenHandler> logger)
     {
+        _httpContextAccessor = httpContextAccessor;
         _identityClient = httpClientFactory.CreateClient("IdentityAuth");
         _clientId = configuration["ServiceAuth:ClientId"]!;
         _clientSecret = configuration["ServiceAuth:ClientSecret"]!;
@@ -29,6 +32,16 @@ public sealed class ServiceTokenHandler : DelegatingHandler
     protected override async Task<HttpResponseMessage> SendAsync(
         HttpRequestMessage request, CancellationToken cancellationToken)
     {
+        // If there's an incoming user request, forward the user's JWT
+        // so downstream services see the original caller's roles and identity.
+        var incomingAuth = _httpContextAccessor.HttpContext?.Request.Headers["Authorization"].FirstOrDefault();
+        if (incomingAuth is not null)
+        {
+            request.Headers.Authorization = AuthenticationHeaderValue.Parse(incomingAuth);
+            return await base.SendAsync(request, cancellationToken);
+        }
+
+        // Otherwise (background job, event consumer) use machine-to-machine token.
         var token = await GetTokenAsync(cancellationToken);
         request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
         return await base.SendAsync(request, cancellationToken);

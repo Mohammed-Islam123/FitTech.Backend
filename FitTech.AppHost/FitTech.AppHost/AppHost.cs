@@ -24,6 +24,12 @@ var aggregationDb = mainDb.AddDatabase("aggregationDb");
 
 var chatDb = mainDb.AddDatabase("chatDb");
 
+var workoutLogsDb = mainDb.AddDatabase("workoutLogsDb");
+
+var shopDb = mainDb.AddDatabase("shopDb");
+
+var equipmentsDb = mainDb.AddDatabase("equipmentsDb");
+
 var rabbitUser = builder.AddParameter("rabbitmq-username");
 var rabbitPass = builder.AddParameter("rabbitmq-password", secret: true);
 
@@ -45,12 +51,22 @@ var identityApi = builder.AddProject<Projects.Identity_Api>("identity-api")
                          .WaitFor(rabbit);
 
 
+var activityApi = builder.AddProject<Projects.Activity>("activity-api")
+    .WithEndpoint("http", endpoint => endpoint.Port = 5102)
+    .WithEndpoint("https", endpoint => endpoint.Port = 7102)
+    .WithReference(activityDb)
+    .WithReference(rabbit)
+    .WithReference(identityApi)
+    .WaitFor(activityDb)
+    .WaitFor(rabbit);
+
 var membershipApi = builder.AddProject<Projects.Membership>("membership-api")
                           .WithEndpoint("http", endpoint => endpoint.Port = 5121)
                           .WithEndpoint("https", endpoint => endpoint.Port = 7297)
                           .WithReference(membershipDb)
                           .WithReference(rabbit)
                           .WithReference(identityApi)
+                          .WithReference(activityApi)
                           .WaitFor(membershipDb)
                           .WaitFor(rabbit);
 
@@ -72,15 +88,6 @@ var coursesApi = builder.AddProject<Projects.Courses>("courses-api")
     .WithReference(rabbit)
     .WithReference(identityApi)
     .WaitFor(coursesDb)
-    .WaitFor(rabbit);
-
-var activityApi = builder.AddProject<Projects.Activity>("activity-api")
-    .WithEndpoint("http", endpoint => endpoint.Port = 5102)
-    .WithEndpoint("https", endpoint => endpoint.Port = 7102)
-    .WithReference(activityDb)
-    .WithReference(rabbit)
-    .WithReference(identityApi)
-    .WaitFor(activityDb)
     .WaitFor(rabbit);
 
 var aggregationApi = builder.AddProject<Projects.Aggregation>("aggregation-api")
@@ -118,7 +125,9 @@ var shopApi = builder.AddJavaApp(
 .WithEnvironment("SERVER_PORT", "5104")
 .WithEnvironment("LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_WEB", "DEBUG")
 .WithHttpEndpoint(port: 5104, name: "http")
-.WithHttpsEndpoint(port: 7104, name: "https");
+.WithHttpsEndpoint(port: 7104, name: "https")
+.WithReference(shopDb)
+.WaitFor(shopDb);
 
 
 
@@ -132,7 +141,10 @@ var workoutLogsApi = builder.AddJavaApp(
 )
 .WithEnvironment("SERVER_PORT", "5105")
 .WithHttpEndpoint(port: 5105, name: "http")
-.WithHttpsEndpoint(port: 7105, name: "https");
+.WithEnvironment("LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_WEB", "DEBUG")
+.WithHttpsEndpoint(port: 7105, name: "https")
+.WithReference(workoutLogsDb)
+.WaitFor(workoutLogsDb);
 
 var equipmentsApi = builder.AddJavaApp(
     name: "equipments-api",
@@ -144,7 +156,9 @@ var equipmentsApi = builder.AddJavaApp(
 )
 .WithEnvironment("SERVER_PORT", "5106")
 .WithHttpEndpoint(port: 5106, name: "http")
-.WithHttpsEndpoint(port: 7106, name: "https");
+.WithHttpsEndpoint(port: 7106, name: "https")
+.WithReference(equipmentsDb)
+.WaitFor(equipmentsDb);
 
 
 
@@ -160,7 +174,10 @@ scalar.WithApiReference(identityApi)
       .WithApiReference(chatApi)
       .WithApiReference(coursesApi)
       .WithApiReference(activityApi)
-      .WithApiReference(aggregationApi);
+      .WithApiReference(aggregationApi)
+      .WithApiReference(workoutLogsApi)
+      .WithApiReference(shopApi)
+      .WithApiReference(equipmentsApi);
 
 scalar.WaitFor(identityApi)
       .WaitFor(membershipApi)
@@ -169,7 +186,10 @@ scalar.WaitFor(identityApi)
       .WaitFor(coursesApi)
       .WaitFor(activityApi)
       .WaitFor(aggregationApi)
-      ;
+       .WaitFor(workoutLogsApi)
+       .WaitFor(shopApi)
+       .WaitFor(equipmentsApi)
+       ;
 builder.AddProject<Projects.Gateway>("gateway")
 .WithEndpoint("http", endpoint =>
        {
@@ -187,7 +207,10 @@ builder.AddProject<Projects.Gateway>("gateway")
        .WithReference(coursesApi)
        .WithReference(activityApi)
        .WithReference(aggregationApi)
-       .WithReference(chatApi)
+.WithReference(chatApi)
+.WithReference(workoutLogsApi)
+.WithReference(shopApi)
+.WithReference(equipmentsApi)
        .WaitFor(identityApi)
        .WaitFor(membershipApi)
        .WaitFor(chatApi)

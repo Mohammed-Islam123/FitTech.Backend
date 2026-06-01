@@ -3,6 +3,7 @@ using Courses.Features.Coaches.GetCoachClientProfile;
 using Courses.Features.Coaches.GetCoachClients;
 using Courses.Features.Coaches.GetCoachPrograms;
 using Courses.Features.Coaches.GetCoachProfile;
+using Courses.Features.Coaches.ListCoaches;
 using Courses.Features.Programs.AcceptProgram;
 using Courses.Features.Programs.AcceptPurchase;
 using Courses.Features.Programs.CreateProgram;
@@ -31,6 +32,7 @@ public static class AddServices
         services.AddScoped<GetCoachClientsHandler>();
         services.AddScoped<GetCoachProgramsHandler>();
         services.AddScoped<GetCoachProfileHandler>();
+        services.AddScoped<ListCoachesHandler>();
         services.AddScoped<AcceptProgramHandler>();
         services.AddScoped<AcceptPurchaseHandler>();
         services.AddScoped<CreateProgramHandler>();

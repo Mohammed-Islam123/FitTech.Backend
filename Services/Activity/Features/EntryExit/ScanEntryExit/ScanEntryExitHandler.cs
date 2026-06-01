@@ -1,6 +1,7 @@
 using Activity.Common.Security;
 using Activity.Domain;
 using Activity.Domain.Entities;
+using Activity.Infrastructure;
 using ErrorOr;
 using Microsoft.EntityFrameworkCore;
 using Shared.Events;
@@ -15,7 +16,8 @@ namespace Activity.Features.EntryExit.ScanEntryExit;
 public class ScanEntryExitHandler(
     ActivityDbContext context,
     IUserAccessor userAccessor,
-    IMessageBus messageBus)
+    IMessageBus messageBus,
+    IMembershipServiceClient membershipClient)
 {
     public async Task<ErrorOr<ScanEntryExitResponse>> Handle(
         ScanEntryExitCommand command, CancellationToken ct)
@@ -40,10 +42,18 @@ public class ScanEntryExitHandler(
                 null, null, []);
         }
 
+        // Resolve the card UID to a real member via the Membership service
+        var memberResponse = await membershipClient.GetMemberByCardAsync(cardUid);
+        if (!memberResponse.IsSuccessStatusCode || memberResponse.Content is null)
+            return Error.NotFound("Card.NotRegistered",
+                $"No active member found for card UID '{cardUid}'. The card may not be assigned.");
+
+        var member = memberResponse.Content;
+
         var session = new MemberActivity
         {
             Id = Guid.CreateVersion7(),
-            MemberId = Guid.Empty,
+            MemberId = member.MemberId,
             CardUid = cardUid,
             CheckInTime = DateTime.UtcNow
         };
@@ -54,6 +64,6 @@ public class ScanEntryExitHandler(
         await messageBus.PublishAsync(new MemberCheckedInEvent(
             session.MemberId, cardUid, null, session.CheckInTime));
 
-        return new ScanEntryExitResponse(true, "Entering", $"Card-{cardUid}", null, null, []);
+        return new ScanEntryExitResponse(true, "Entering", $"{member.FirstName} {member.LastName}", null, null, []);
     }
 }
