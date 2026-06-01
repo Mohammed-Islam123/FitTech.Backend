@@ -13,14 +13,8 @@ builder.Configuration.AddYamlFile("gateway.yaml", optional: false, reloadOnChang
 
 builder.AddServiceDefaults();
 
-// ── YARP reverse proxy ──────────────────────────────────────────────
-// Routes and clusters are loaded from gateway.yaml (ReverseProxy section).
-// The yaml file is copied to output and loaded via IConfiguration.
-// Destinations use Aspire service discovery addresses like:
-//   http+https://identity-api
-// The .AddServiceDiscoveryDestinationResolver() call resolves these
-// at runtime to the actual host:port (e.g. https://localhost:7259).
-var swaggerConfig   = YarpConfiguration.GetSwaggerConfig();
+
+var swaggerConfig = YarpConfiguration.GetSwaggerConfig();
 
 builder.Services.AddReverseProxy()
     .LoadFromConfig(builder.Configuration.GetSection("ReverseProxy"))
@@ -84,12 +78,12 @@ if (app.Environment.IsDevelopment())
 
         options.OpenApiRoutePattern = "/swagger/FitTech-API/swagger.json";
 
-        options.AddDocument("Identity API",    "/docs/identity/openapi/v1.json");
-        options.AddDocument("Membership API",  "/docs/membership/openapi/v1.json");
-        options.AddDocument("Payment API",     "/docs/payment/openapi/v1.json");
-        options.AddDocument("Courses API",     "/docs/courses/openapi/v1.json");
-        options.AddDocument("Activity API",    "/docs/activity/openapi/v1.json");
-        options.AddDocument("Aggregation API", "/docs/aggregation/openapi/v1.json");
+        options.AddDocument("Identity API", "/openapi/v1.json");
+        options.AddDocument("Membership API", "/openapi/v1.json");
+        options.AddDocument("Payment API", "/openapi/v1.json");
+        options.AddDocument("Courses API", "/openapi/v1.json");
+        options.AddDocument("Activity API", "/openapi/v1.json");
+        options.AddDocument("Aggregation API", "/openapi/v1.json");
     }).RequireCors();
 
     app.Map("/swagger/{documentName}/swagger.json", () => { })

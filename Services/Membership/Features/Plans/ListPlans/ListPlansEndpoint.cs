@@ -14,7 +14,8 @@ public class ListPlansEndpoint : ICarterModule
         app.MapGet("/api/plans", Handle)
             .WithName("ListPlans")
             .WithTags("Plans")
-            .WithDescription("Retrieves all subscription plans. Restricted to Administrators.")
+            .WithDescription("Retrieves all subscription plans. Admins see all plans; members see only active plans.")
+            .RequireAuthorization()
             .Produces<List<ListPlansResponse>>(StatusCodes.Status200OK)
             .ProducesProblem(StatusCodes.Status401Unauthorized);
     }

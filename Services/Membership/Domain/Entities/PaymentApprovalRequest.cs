@@ -21,7 +21,6 @@ public class PaymentApprovalRequest
 public static class PaymentApprovalRequestType
 {
     public const string MembershipRenewal = "MembershipRenewal";
-    public const string CoursePurchase = "CoursePurchase";
 }
 
 public static class PaymentApprovalRequestStatus

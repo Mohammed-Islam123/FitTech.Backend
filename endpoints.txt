@@ -35,14 +35,11 @@ GET /api/programs/{programId} — Returns the full details of a specific program
 
 Offline Payment Requests
 
-POST /requests/membership-renewal — Member submits a request to renew their membership via hand-to-hand payment.
-POST /requests/course-purchase — Member submits a request to purchase a course via hand-to-hand payment.
-GET /requests/membership-renewal — Returns the list of pending membership renewal requests. For each: member name, email, and membership details.
-GET /requests/course-purchase — Returns the list of pending course purchase requests. For each: member name, email, and course details.
-PATCH /requests/membership-renewal/{requestId}/accept — Admin accepts a membership renewal request.
-PATCH /requests/membership-renewal/{requestId}/reject — Admin rejects a membership renewal request.
-PATCH /requests/course-purchase/{requestId}/accept — Admin accepts a course purchase request.
-PATCH /requests/course-purchase/{requestId}/reject — Admin rejects a course purchase request.
+POST /api/subscriptions/renew — Member submits a cash renewal request for an expired subscription. Validates ownership, expiry status, and amount against plan price. Creates a pending request for admin review.
+GET /api/subscriptions/renew/pending — Admin retrieves all pending cash membership renewal requests.
+PATCH /api/subscriptions/renew/{requestId}/accept — Admin accepts a cash renewal request. Creates payment record, extends subscription, expires old one, sends thank-you email.
+PATCH /api/subscriptions/renew/{requestId}/reject — Admin rejects a cash renewal request. Notifies the member.
+POST /api/subscriptions/renew/online — Member submits an online (credit card) renewal. Payment is processed immediately (simulated), subscription auto-extended, no admin approval needed. Sends thank-you email.
 
 
 Payments
@@ -58,6 +55,11 @@ GET /programs/requests — Returns all program creation requests submitted by co
 GET /programs/requests/{programId} — Returns the full details of a specific program creation request for admin review.
 PATCH /programs/requests/{programId}/accept — Admin accepts a program creation request. Triggers session generation between the start and end dates.
 PATCH /programs/requests/{programId}/reject — Admin rejects a program creation request.
+POST /programs/{programId}/purchase/cash — Member submits a cash purchase request. Validates program status, capacity, amount. Admin must approve.
+POST /programs/{programId}/purchase/online — Member purchases a program online. Payment auto-processed (simulated), enrollment created immediately.
+GET /programs/purchase/pending — Admin retrieves all pending cash course purchase requests.
+PATCH /programs/purchase/{requestId}/accept — Admin accepts a cash purchase request. Creates payment and enrollment.
+PATCH /programs/purchase/{requestId}/reject — Admin rejects a purchase request. Notifies the member.
 GET /coaches/{coachId} — Returns the public profile of a coach without email or phone number. For each: first name, last name, bio, specialties, and profile photo.
 GET /coaches/{coachId}/programs — Returns all programs for a specific coach, including inactive and pending ones. For each: program details and acceptance status (pending, accepted, or rejected).
 GET /coaches/{coachId}/clients — Returns all members subscribed to any of the coach's programs. For each: full name, email, phone number, registration date, and list of assigned courses (course ID and name).

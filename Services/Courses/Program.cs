@@ -72,6 +72,10 @@ builder.Services.AddRefitClient<IIdentityServiceClient>()
     .ConfigureHttpClient(c => c.BaseAddress = new Uri("http://identity-api"))
     .AddHttpMessageHandler<Courses.Infrastructure.Auth.ServiceTokenHandler>();
 
+builder.Services.AddRefitClient<IPaymentServiceClient>()
+    .ConfigureHttpClient(c => c.BaseAddress = new Uri("http://payment-api"))
+    .AddHttpMessageHandler<Courses.Infrastructure.Auth.ServiceTokenHandler>();
+
 builder.Services.AddFluentValidationRulesToOpenApi();
 builder.Services.AddOpenApi(options =>
 {

@@ -12,8 +12,9 @@ using Wolverine;
 namespace Membership.Features.Subscriptions.AcceptRenewal;
 
 /// <description>
-/// Admin accepts a renewal request. Creates a Payment record in the Payment service,
-/// creates a new extended subscription, and publishes notification events.
+/// Admin accepts a cash renewal request. Creates a Payment record in the Payment service,
+/// creates a new extended subscription, expires the old one, and publishes a thank-you email
+/// with full transaction details.
 /// </description>
 public class AcceptRenewalHandler(
     MembershipDbContext context,
@@ -39,7 +40,6 @@ public class AcceptRenewalHandler(
         if (request.Status != PaymentApprovalRequestStatus.Pending)
             return Error.Conflict("Request.AlreadyResolved", "This request has already been resolved.");
 
-        // Load existing subscription to get member + plan details
         var existingSubscription = await context.Subscriptions
             .Include(s => s.Member)
             .Include(s => s.Plan)
@@ -48,7 +48,11 @@ public class AcceptRenewalHandler(
         if (existingSubscription is null)
             return Error.NotFound("Subscription.NotFound", "The subscription for this renewal no longer exists.");
 
-        // Create payment record in Payment service
+        // Validate amount against plan price one more time at accept stage
+        if (request.Amount != existingSubscription.Plan.Price)
+            return Error.Validation("Payment.AmountMismatch",
+                $"The renewal amount must match the plan price of {existingSubscription.Plan.Price} DZD.");
+
         var paymentPayload = new CreatePaymentRequest(
             UserId: existingSubscription.Member.UserId,
             Amount: request.Amount,
@@ -62,11 +66,9 @@ public class AcceptRenewalHandler(
         if (!paymentResponse.IsSuccessStatusCode || paymentResponse.Content is null)
             return Error.Failure("Payment.Failed", "Failed to register payment with Payment Service.");
 
-        // Update request status
         request.Status = PaymentApprovalRequestStatus.Accepted;
         request.ResolvedAt = DateTime.UtcNow;
 
-        // Create a new subscription period (extending the existing one)
         var newStart = existingSubscription.EndOnUTC ?? DateTime.UtcNow;
         var newEnd = existingSubscription.Plan.DurationValue.HasValue
             ? existingSubscription.Plan.DurationUnit switch
@@ -91,19 +93,28 @@ public class AcceptRenewalHandler(
         };
 
         context.Subscriptions.Add(renewedSubscription);
-
-        // Mark previous subscription as expired
         existingSubscription.Status = SubscriptionStatus.Expired;
 
         await context.SaveChangesAsync(ct);
 
-        // Publish email notification (Membership has all context)
         var member = existingSubscription.Member;
         var plan = existingSubscription.Plan;
+        var endDateText = newEnd?.ToString("yyyy-MM-dd") ?? "N/A (session-based)";
+
         await messageBus.PublishAsync(new SendEmailEvent(
-            To: member.FirstName, // Note: email should come from Identity; using placeholder for now
+            To: member.FirstName,
             Subject: $"Renewal Confirmed - {plan.Name}",
-            Body: $"Your renewal for {plan.Name} has been confirmed. Payment of {request.Amount} DZD has been received."
+            Body: $"<h2>Thank You for Your Renewal!</h2>" +
+                  $"<p>Dear {member.FirstName},</p>" +
+                  $"<p>Your membership renewal has been confirmed and your subscription is now active.</p>" +
+                  $"<table border='1' cellpadding='8' cellspacing='0' style='border-collapse:collapse;'>" +
+                  $"<tr><td><strong>Plan</strong></td><td>{plan.Name}</td></tr>" +
+                  $"<tr><td><strong>Amount Paid</strong></td><td>{request.Amount} DZD</td></tr>" +
+                  $"<tr><td><strong>Payment Method</strong></td><td>Cash (Hand-to-Hand)</td></tr>" +
+                  $"<tr><td><strong>Renewal Date</strong></td><td>{DateTime.UtcNow:yyyy-MM-dd}</td></tr>" +
+                  $"<tr><td><strong>Valid Until</strong></td><td>{endDateText}</td></tr>" +
+                  $"</table>" +
+                  $"<p>Thank you for choosing FitTech! Keep pushing your limits.</p>"
         ));
 
         return new AcceptRenewalResponse(request.Id, paymentResponse.Content.PaymentId, request.Status);

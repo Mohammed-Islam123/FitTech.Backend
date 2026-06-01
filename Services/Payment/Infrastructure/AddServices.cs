@@ -1,3 +1,4 @@
+using Payment.Features.Payments.ConfirmPayment;
 using Payment.Features.Payments.CreatePayment;
 using Payment.Features.Payments.CreatePaymentIntent;
 using Payment.Features.Payments.ListPayments;
@@ -12,6 +13,7 @@ public static class AddServices
     {
         services.AddScoped<CreatePaymentHandler>();
         services.AddScoped<CreatePaymentIntentHandler>();
+        services.AddScoped<ConfirmPaymentHandler>();
         services.AddScoped<ListPaymentsHandler>();
         services.AddScoped<WebhookHandler>();
 

@@ -1,6 +1,6 @@
 using Refit;
 
-namespace Membership.Infrastructure;
+namespace Courses.Infrastructure;
 
 public record CreatePaymentRequest(
     Guid UserId,
@@ -12,7 +12,7 @@ public record CreatePaymentRequest(
 
 public record CreatePaymentResponse(Guid PaymentId);
 
-public record ConfirmPaymentResponseDto(Guid PaymentId, string Status);
+public record ConfirmPaymentResponse(Guid PaymentId, string Status);
 
 public interface IPaymentServiceClient
 {
@@ -20,5 +20,5 @@ public interface IPaymentServiceClient
     Task<ApiResponse<CreatePaymentResponse>> CreatePaymentAsync(CreatePaymentRequest request);
 
     [Post("/api/payments/{paymentId}/confirm")]
-    Task<ApiResponse<ConfirmPaymentResponseDto>> ConfirmPaymentAsync(Guid paymentId);
+    Task<ApiResponse<ConfirmPaymentResponse>> ConfirmPaymentAsync(Guid paymentId);
 }

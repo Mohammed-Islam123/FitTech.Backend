@@ -16,6 +16,8 @@ using Membership.Features.Plans.UpdatePlan;
 using Membership.Features.Subscriptions.AcceptRenewal;
 using Membership.Features.Subscriptions.ConfirmCashPayment;
 using Membership.Features.Subscriptions.CreateSubscription;
+using Membership.Features.Subscriptions.ListRenewalRequests;
+using Membership.Features.Subscriptions.OnlineRenewal;
 using Membership.Features.Subscriptions.RejectRenewal;
 using Membership.Features.Subscriptions.RequestRenewal;
 
@@ -45,6 +47,8 @@ public static class AddServices
         services.AddScoped<RequestRenewalHandler>();
         services.AddScoped<AcceptRenewalHandler>();
         services.AddScoped<RejectRenewalHandler>();
+        services.AddScoped<OnlineRenewalHandler>();
+        services.AddScoped<ListRenewalRequestsHandler>();
         return services;
     }
 }

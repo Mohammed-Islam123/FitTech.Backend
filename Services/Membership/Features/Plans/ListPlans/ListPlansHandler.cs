@@ -9,13 +9,15 @@ public class ListPlansHandler(MembershipDbContext context, IUserAccessor userAcc
 {
     public async Task<ErrorOr<List<ListPlansResponse>>> Handle(ListPlansQuery query, CancellationToken ct)
     {
+        var queryable = context.SubscriptionPlans.AsNoTracking();
+
         if (!userAccessor.IsAdmin)
         {
-            return Error.Unauthorized("Plan.Unauthorized", "Only Administrators can list subscription plans.");
+            // Non-admin users (members) see only active plans
+            queryable = queryable.Where(p => p.IsActive);
         }
 
-        return await context.SubscriptionPlans
-            .AsNoTracking()
+        return await queryable
             .Select(p => new ListPlansResponse(
                 p.Id,
                 p.Name,

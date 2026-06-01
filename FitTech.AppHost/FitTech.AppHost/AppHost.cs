@@ -182,6 +182,7 @@ builder.AddProject<Projects.Gateway>("gateway")
            endpoint.TargetHost = "*";
        })
        .WithReference(identityApi)
+       .WithReference(membershipApi)
        .WithReference(paymentApi)
        .WithReference(coursesApi)
        .WithReference(activityApi)

@@ -11,6 +11,7 @@ public sealed class CoursesDbContext(DbContextOptions<CoursesDbContext> options)
     public DbSet<Session> Sessions { get; set; } = null!;
     public DbSet<ProgramEnrollment> ProgramEnrollments { get; set; } = null!;
     public DbSet<AttendanceRecord> AttendanceRecords { get; set; } = null!;
+    public DbSet<CoursePurchaseRequest> CoursePurchaseRequests { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
