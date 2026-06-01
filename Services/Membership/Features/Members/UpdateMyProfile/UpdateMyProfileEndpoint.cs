@@ -18,7 +18,7 @@ public class UpdateMyProfileEndpoint : ICarterModule
             .WithName("UpdateMyProfileViaMe")
             .DisableAntiforgery()
             .WithTags("Members")
-            .WithDescription("Updates the authenticated member's profile: medical file, goals, and/or profile picture.")
+            .WithDescription("Updates the authenticated member's profile. All fields are optional (PATCH semantics). Supports name, phone, gender, date of birth, profile picture, goals, medical restrictions, medical file, and password change via Identity service.")
             .RequireAuthorization("MemberOnly")
             .Produces<UpdateMyProfileResponse>(StatusCodes.Status200OK)
             .ProducesProblem(StatusCodes.Status400BadRequest)
@@ -35,6 +35,22 @@ public class UpdateMyProfileEndpoint : ICarterModule
                     response.Content.TryGetValue("application/json", out var content))
                 {
                     content.Example = exampleResponse;
+                }
+
+                if (operation.RequestBody?.Content?.TryGetValue("multipart/form-data", out var reqContent) == true)
+                {
+                    reqContent.Example = new JsonObject
+                    {
+                        ["firstName"] = "Jane",
+                        ["lastName"] = "Smith",
+                        ["phoneNumber"] = "0987654321",
+                        ["gender"] = 2,
+                        ["dateOfBirth"] = "1995-05-05",
+                        ["goals"] = "Gain muscle",
+                        ["medicalRestrictions"] = "Back pain",
+                        ["oldPassword"] = "OldP@ss123",
+                        ["newPassword"] = "NewP@ss123"
+                    };
                 }
 
                 return Task.CompletedTask;

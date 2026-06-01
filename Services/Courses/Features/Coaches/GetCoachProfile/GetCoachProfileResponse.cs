@@ -5,6 +5,7 @@ namespace Courses.Features.Coaches.GetCoachProfile;
 /// </description>
 public record GetCoachProfileResponse(
     Guid CoachId,
+    Guid UserId,
     string FirstName,
     string LastName,
     string? Bio,

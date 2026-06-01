@@ -27,6 +27,7 @@ public class GetCoachProfileHandler(CoursesDbContext context)
 
         return new GetCoachProfileResponse(
             CoachId: coach.Id,
+            UserId: coach.UserId,
             FirstName: coach.FirstName,
             LastName: coach.LastName,
             Bio: coach.Bio,

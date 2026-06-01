@@ -1,22 +1,15 @@
 using FluentValidation;
 
-namespace Membership.Features.Members.UpdateMember;
+namespace Membership.Features.Members.UpdateMyProfile;
 
-public class UpdateMemberValidator : AbstractValidator<UpdateMemberCommand>
+/// <description>
+/// Validates password-change rules only.
+/// No other fields are required — PATCH semantics allow partial updates.
+/// </description>
+public class UpdateMyProfileValidator : AbstractValidator<UpdateMyProfileCommand>
 {
-    public UpdateMemberValidator()
+    public UpdateMyProfileValidator()
     {
-        RuleFor(x => x.Request.FirstName)
-            .NotEmpty()
-            .MaximumLength(50);
-
-        RuleFor(x => x.Request.LastName)
-            .NotEmpty()
-            .MaximumLength(50);
-
-        RuleFor(x => x.Request.PhoneNumber)
-            .NotEmpty();
-
         RuleFor(x => x.Request.NewPassword)
             .NotEmpty()
             .When(x => !string.IsNullOrEmpty(x.Request.OldPassword))

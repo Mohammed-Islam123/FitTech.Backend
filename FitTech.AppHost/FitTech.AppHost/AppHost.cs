@@ -40,6 +40,8 @@ var rabbit = builder.AddRabbitMQ("rabbitmq", userName: rabbitUser, password: rab
 var smtpServer = builder.AddContainer("smtp4dev", "rnwood/smtp4dev")
     .WithLifetime(ContainerLifetime.Persistent)
     .WithHttpEndpoint(port: 5005, targetPort: 80)
+    .WithEnvironment("ServerOptions__NumberOfMessagesToKeep", "500")
+    .WithEnvironment("ServerOptions__NumberOfSessionsToKeep", "500")
     .WithEndpoint(port: 2525, targetPort: 25);
 
 var identityApi = builder.AddProject<Projects.Identity_Api>("identity-api")

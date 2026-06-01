@@ -115,7 +115,18 @@ public sealed class MembershipSeeder(
 
             var goals = faker.Lorem.Sentence(6);
             var profileResult = await profileHandler.Handle(
-                new UpdateMyProfileCommand(new UpdateMyProfileRequest(null, goals, null)),
+                new UpdateMyProfileCommand(new UpdateMyProfileRequest(
+                    FirstName: null,
+                    LastName: null,
+                    PhoneNumber: null,
+                    Gender: null,
+                    DateOfBirth: null,
+                    MedicalFile: null,
+                    Goals: goals,
+                    MedicalRestrictions: null,
+                    ProfilePicture: null,
+                    OldPassword: null,
+                    NewPassword: null)),
                 ct);
 
             if (profileResult.IsError)

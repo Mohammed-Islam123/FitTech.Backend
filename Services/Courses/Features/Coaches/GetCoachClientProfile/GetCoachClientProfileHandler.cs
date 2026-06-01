@@ -40,6 +40,7 @@ public class GetCoachClientProfileHandler(CoursesDbContext context, IUserAccesso
 
         return new GetCoachClientProfileResponse(
             query.MemberId,
+            query.MemberId,
             $"Member-{query.MemberId.ToString().Substring(0, 8)}",
             null,
             null,

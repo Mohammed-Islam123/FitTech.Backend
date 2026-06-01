@@ -8,7 +8,6 @@ using Membership.Features.Members.GetMyProfile;
 using Membership.Features.Members.GetSubscriptionHistory;
 using Membership.Features.Members.ListMembers;
 using Membership.Features.Members.SuspendMember;
-using Membership.Features.Members.UpdateMember;
 using Membership.Features.Members.UpdateMyProfile;
 using Membership.Features.Plans.CreatePlan;
 using Membership.Features.Plans.DeletePlan;
@@ -41,7 +40,6 @@ public static class AddServices
         services.AddScoped<GetSubscriptionHistoryHandler>();
         services.AddScoped<ListMembersHandler>();
         services.AddScoped<SuspendMemberHandler>();
-        services.AddScoped<UpdateMemberHandler>();
         services.AddScoped<UpdateMyProfileHandler>();
         services.AddScoped<CreatePlanHandler>();
         services.AddScoped<DeletePlanHandler>();
