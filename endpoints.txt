@@ -28,6 +28,9 @@ Member-Facing Endpoints
 GET /me — Returns the authenticated member's personal details: full name, gender, date of birth, phone number, email, email confirmation status, account creation date, membership duration in years, active status, profile picture, goals, and medical file ID.
 PATCH /me — Updates the authenticated member's profile: medical file, goals, and/or profile picture.
 GET /me/subscription — Returns the current subscription details for the authenticated member: name, price, days remaining, sessions remaining, access roles, and other relevant fields.
+GET /me/subscriptions — Returns the authenticated member's full subscription history (all subscriptions, including expired/cancelled).
+GET /me/payments — Returns the authenticated member's payment history. For each: payment ID, amount, payment method (Cash/CreditCard), payment type (Subscription/CoursePurchase/etc.), reference ID, status, and date.
+GET /me/sessions — Returns the authenticated member's gym entry/exit session history. For each: session ID, check-in time, check-out time, course ID (if any), and whether it was a manual entry.
 GET /api/programs/available — Returns the list of programs the authenticated member is not enrolled in. For each: name, image, price, coach ID, and coach name.
 GET /api/programs/enrolled — Returns the list of programs the authenticated member is enrolled in. For each: name, coach ID, coach name, description, and other relevant details.
 GET /api/programs/{programId} — Returns the full details of a specific program: name, price, description, spots left, capacity, coach ID, coach name, and other relevant fields.
@@ -45,6 +48,8 @@ POST /api/subscriptions/renew/online — Member submits an online (credit card) 
 Payments
 
 GET /payments — Returns a list of all payments made by members. For each: member full name, email, amount, subscription, date and time, and payment type (online or hand-to-hand).
+GET /payments/member/me — Returns the authenticated member's payment history. For each: amount, payment method, type, reference, status, date.
+GET /payments/member/{userId} — Admin views payment history for a specific member by Identity UserId.
 
 
 Booking & Scheduling Service

@@ -20,6 +20,9 @@ using Membership.Features.Subscriptions.ListRenewalRequests;
 using Membership.Features.Subscriptions.OnlineRenewal;
 using Membership.Features.Subscriptions.RejectRenewal;
 using Membership.Features.Subscriptions.RequestRenewal;
+using Membership.Features.Me.Payments;
+using Membership.Features.Me.Sessions;
+using Membership.Features.Me.Subscriptions;
 
 namespace Membership.Infrastructure;
 
@@ -49,6 +52,9 @@ public static class AddServices
         services.AddScoped<RejectRenewalHandler>();
         services.AddScoped<OnlineRenewalHandler>();
         services.AddScoped<ListRenewalRequestsHandler>();
+        services.AddScoped<MePaymentsHandler>();
+        services.AddScoped<MeSessionsHandler>();
+        services.AddScoped<MeSubscriptionsHandler>();
         return services;
     }
 }

@@ -4,5 +4,6 @@ public enum PaymentType
 {
     Subscription = 0,
     ECommerce = 1,
-    Session = 2
+    Session = 2,
+    CoursePurchase = 3
 }

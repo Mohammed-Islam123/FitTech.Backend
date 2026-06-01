@@ -67,7 +67,7 @@ public class PurchaseOnlineHandler(
                 UserId: userId.Value,
                 Amount: program.TotalPrice,
                 PaymentMethod: PaymentMethod.CreditCard.ToString(),
-                PaymentType: "CoursePurchase",
+                PaymentType: PaymentType.CoursePurchase.ToString(),
                 ReferenceId: program.Id,
                 Notes: req.Notes);
 

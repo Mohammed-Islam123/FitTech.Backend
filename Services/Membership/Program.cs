@@ -74,6 +74,10 @@ builder.Services.AddRefitClient<IPaymentServiceClient>()
     .ConfigureHttpClient(c => c.BaseAddress = new Uri("http://payment-api"))
     .AddHttpMessageHandler<ServiceTokenHandler>();
 
+builder.Services.AddRefitClient<IActivityServiceClient>()
+    .ConfigureHttpClient(c => c.BaseAddress = new Uri("http://activity-api"))
+    .AddHttpMessageHandler<ServiceTokenHandler>();
+
 builder.Services.AddFluentValidationRulesToOpenApi();
 
 builder.Services.AddOpenApi(options =>

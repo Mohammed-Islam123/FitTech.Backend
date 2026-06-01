@@ -53,7 +53,7 @@ public class AcceptPurchaseHandler(
                 UserId: request.MemberId,
                 Amount: request.Amount,
                 PaymentMethod: PaymentMethod.Cash.ToString(),
-                PaymentType: "CoursePurchase",
+                PaymentType: PaymentType.CoursePurchase.ToString(),
                 ReferenceId: program.Id,
                 Notes: command.Notes ?? request.Notes);
 
