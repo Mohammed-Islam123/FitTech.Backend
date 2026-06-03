@@ -1,5 +1,3 @@
-CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
-
 CREATE TABLE IF NOT EXISTS workout_logs (
     id UUID PRIMARY KEY,
     member_id UUID NOT NULL,

@@ -33,8 +33,11 @@ Authorization: Bearer <token>
 3. [React — Admin Reviews & Accepts/Rejects Cash Renewals](#3-react--admin-reviews--acceptsrejects-cash-renewals)
 4. [Flutter — Member Submits Online Renewal](#4-flutter--member-submits-online-renewal-auto-accepted)
 5. [Flutter — Member Views Subscription History](#5-flutter--member-views-subscription-history)
-6. [Error Handling](#6-error-handling)
-7. [Endpoint Reference Card](#7-endpoint-reference-card)
+6. [React — Member Browses Plans & Buys with Cash](#6-react--member-browses-plans--buys-with-cash)
+7. [React — Admin Reviews & Accepts/Rejects Cash Purchases](#7-react--admin-reviews--acceptsrejects-cash-purchases)
+8. [Flutter — Member Buys a New Plan Online](#8-flutter--member-buys-a-new-plan-online-auto-accepted)
+9. [Error Handling](#9-error-handling)
+10. [Endpoint Reference Card](#10-endpoint-reference-card)
 
 ---
 
@@ -559,7 +562,399 @@ Future<List<MeSubscriptionResponse>> getMySubscriptions() async {
 
 ---
 
-## 6. Error Handling
+## 6. React — Member Browses Plans & Buys with Cash
+
+**User action:** Member has no active subscription (or wants a different plan). They browse available plans, pick one, and submit a cash purchase request for admin approval.
+
+**Backend flow:** Creates a `PaymentApprovalRequest` with `RequestType=PlanPurchase` and `Status=Pending`. Admin will later view and accept/reject it.
+
+**Key differences from renewal:**
+- Request sends `planId` instead of `subscriptionId`
+- No `amount` field — the server resolves the plan price automatically
+- The member must NOT have an active subscription (409 if they do)
+
+### 6.1 Member — Browse Available Plans
+
+**User action:** Member opens the "Plans" page to see what plans are available to purchase.
+
+**Endpoint:** `GET /api/plans`
+
+**Auth:** `Authenticated`
+
+**Response (200):**
+```json
+[
+  {
+    "id": "plan-9999-...",
+    "name": "Monthly Premium",
+    "description": "Full gym access + classes",
+    "price": 5000,
+    "durationValue": 1,
+    "durationUnit": "Months",
+    "sessionCount": null,
+    "isActive": true
+  },
+  {
+    "id": "plan-8888-...",
+    "name": "10 Session Pack",
+    "description": "10 gym sessions, no expiry",
+    "price": 2000,
+    "durationValue": null,
+    "durationUnit": null,
+    "sessionCount": 10,
+    "isActive": true
+  }
+]
+```
+
+**React:**
+```tsx
+async function getAvailablePlans() {
+  const res = await fetch(`${API}/api/plans`, { headers: authHeaders() });
+  if (!res.ok) throw new Error(await res.text());
+  return res.json(); // PlanItem[]
+}
+```
+
+### 6.2 Member — Submit Cash Purchase Request
+
+**User action:** Member selects a plan → taps "Buy with Cash" → a confirmation dialog shows the plan name and price → taps "Submit Request".
+
+**Endpoint:** `POST /api/subscriptions/purchase`
+
+**Auth:** `MemberOnly`
+
+**Request body (JSON):**
+```json
+{
+  "planId": "plan-9999-...",
+  "notes": "Will pay in cash tomorrow at the front desk"
+}
+```
+
+> The server auto-resolves the plan price. No need to send `amount`.
+
+**Response (201):**
+```json
+{
+  "requestId": "req-bbbb-..."
+}
+```
+
+**React:**
+```tsx
+async function submitCashPurchase(planId: string, notes?: string) {
+  const res = await fetch(`${API}/api/subscriptions/purchase`, {
+    method: "POST",
+    headers: {
+      ...authHeaders(),
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ planId, notes }),
+  });
+  if (!res.ok) {
+    const error = await res.json();
+    throw new Error(error.detail || "Failed to submit purchase request");
+  }
+  return res.json();
+}
+```
+
+---
+
+## 7. React — Admin Reviews & Accepts/Rejects Cash Purchases
+
+### 7.1 Admin — View Pending Purchase Requests
+
+**User action:** Admin opens the "Pending Purchases" dashboard → sees a list of member purchase requests with plan names, amounts, and dates.
+
+**Endpoint:** `GET /api/subscriptions/purchase/pending`
+
+**Auth:** `AdminOnly`
+
+**Response (200):**
+```json
+[
+  {
+    "requestId": "req-bbbb-...",
+    "memberId": "a1b2c3d4-...",
+    "memberName": "Jane Doe",
+    "planId": "plan-9999-...",
+    "planName": "Monthly Premium",
+    "amount": 5000,
+    "status": "Pending",
+    "createdAt": "2026-06-03T14:00:00Z",
+    "notes": "Will pay in cash tomorrow at the front desk"
+  }
+]
+```
+
+**React:**
+```tsx
+async function fetchPendingPurchases() {
+  const res = await fetch(`${API}/api/subscriptions/purchase/pending`, {
+    headers: authHeaders(),
+  });
+  if (!res.ok) throw new Error(await res.text());
+  return res.json(); // PendingPurchaseRequest[]
+}
+```
+
+### 7.2 Admin — Accept a Cash Purchase
+
+**User action:** Admin receives cash from the member → taps "Accept" → the system creates a subscription, records the payment, and activates the plan.
+
+**Endpoint:** `PATCH /api/subscriptions/purchase/{requestId}/accept`
+
+**Auth:** `AdminOnly`
+
+**Response (200):**
+```json
+{
+  "requestId": "req-bbbb-...",
+  "paymentId": "pay-cccc-...",
+  "status": "Accepted"
+}
+```
+
+**React:**
+```tsx
+async function acceptCashPurchase(requestId: string) {
+  const res = await fetch(`${API}/api/subscriptions/purchase/${requestId}/accept`, {
+    method: "PATCH",
+    headers: authHeaders(),
+  });
+  if (!res.ok) {
+    const error = await res.json();
+    throw new Error(error.detail || "Failed to accept purchase");
+  }
+  return res.json();
+}
+```
+
+### 7.3 Admin — Reject a Cash Purchase
+
+**User action:** Admin decides to reject the request → optionally provides a reason.
+
+**Endpoint:** `PATCH /api/subscriptions/purchase/{requestId}/reject`
+
+**Auth:** `AdminOnly`
+
+**Request body (JSON) — optional:**
+```json
+{
+  "reason": "Selected plan is no longer available"
+}
+```
+
+**Response (200):**
+```json
+{
+  "requestId": "req-bbbb-...",
+  "status": "Rejected"
+}
+```
+
+**React:**
+```tsx
+async function rejectCashPurchase(requestId: string, reason?: string) {
+  const res = await fetch(`${API}/api/subscriptions/purchase/${requestId}/reject`, {
+    method: "PATCH",
+    headers: {
+      ...authHeaders(),
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ reason }),
+  });
+  if (!res.ok) {
+    const error = await res.json();
+    throw new Error(error.detail || "Failed to reject purchase");
+  }
+  return res.json();
+}
+```
+
+---
+
+## 8. Flutter — Member Buys a New Plan Online (Auto-Accepted)
+
+**User action:** Member browses plans → taps "Buy Online" → confirms purchase → the system processes the payment (simulated) and activates the subscription immediately.
+
+### 8.1 Member — Purchase Online
+
+**Endpoint:** `POST /api/subscriptions/purchase/online`
+
+**Auth:** `MemberOnly`
+
+**Request body (JSON):**
+```json
+{
+  "planId": "plan-9999-...",
+  "notes": null
+}
+```
+
+> The server auto-resolves the plan price. No need to send `amount`.
+
+**Response (200):**
+```json
+{
+  "subscriptionId": "sub-3333-...",
+  "paymentId": "pay-dddd-...",
+  "planName": "Monthly Premium",
+  "amount": 5000,
+  "paymentMethod": "CreditCard",
+  "purchasedAt": "2026-06-03T15:00:00Z",
+  "validUntil": "2026-07-03T00:00:00Z"
+}
+```
+
+**Flutter:**
+```dart
+class OnlinePurchaseResponse {
+  final String subscriptionId;
+  final String paymentId;
+  final String planName;
+  final double amount;
+  final String paymentMethod;
+  final DateTime purchasedAt;
+  final DateTime? validUntil;
+
+  OnlinePurchaseResponse({
+    required this.subscriptionId,
+    required this.paymentId,
+    required this.planName,
+    required this.amount,
+    required this.paymentMethod,
+    required this.purchasedAt,
+    this.validUntil,
+  });
+
+  factory OnlinePurchaseResponse.fromJson(Map<String, dynamic> json) {
+    return OnlinePurchaseResponse(
+      subscriptionId: json['subscriptionId'],
+      paymentId: json['paymentId'],
+      planName: json['planName'],
+      amount: (json['amount'] as num).toDouble(),
+      paymentMethod: json['paymentMethod'],
+      purchasedAt: DateTime.parse(json['purchasedAt']),
+      validUntil: json['validUntil'] != null
+          ? DateTime.parse(json['validUntil'])
+          : null,
+    );
+  }
+}
+
+Future<OnlinePurchaseResponse> purchaseOnline({
+  required String planId,
+  String? notes,
+}) async {
+  final uri = Uri.parse('$apiGateway/api/subscriptions/purchase/online');
+  final response = await http.post(
+    uri,
+    headers: {
+      ...await _authHeaders(),
+      'Content-Type': 'application/json',
+    },
+    body: jsonEncode({
+      'planId': planId,
+      'notes': notes,
+    }),
+  );
+
+  if (response.statusCode == 200) {
+    return OnlinePurchaseResponse.fromJson(jsonDecode(response.body));
+  }
+
+  final error = jsonDecode(response.body);
+  throw ApiException(error['detail'] ?? 'Purchase failed');
+}
+```
+
+### 8.2 Screen Example
+
+```dart
+class PlansScreen extends StatefulWidget {
+  @override
+  State<PlansScreen> createState() => _PlansScreenState();
+}
+
+class _PlansScreenState extends State<PlansScreen> {
+  late Future<List<PlanItem>> _plansFuture;
+  bool _isProcessing = false;
+  String? _processingPlanId;
+
+  @override
+  void initState() {
+    super.initState();
+    _plansFuture = getAvailablePlans();
+  }
+
+  Future<void> _purchaseOnline(PlanItem plan) async {
+    setState(() {
+      _isProcessing = true;
+      _processingPlanId = plan.id;
+    });
+    try {
+      final response = await purchaseOnline(planId: plan.id);
+
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            '${plan.name} activated! Valid until ${response.validUntil?.toLocal().toString().substring(0, 10) ?? "N/A"}'),
+        ),
+      );
+      Navigator.pop(context, true);
+    } on ApiException catch (e) {
+      ScaffoldMessenger.of(context)
+          .showSnackBar(SnackBar(content: Text(e.message)));
+    } finally {
+      setState(() {
+        _isProcessing = false;
+        _processingPlanId = null;
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text("Choose a Plan")),
+      body: FutureBuilder<List<PlanItem>>(
+        future: _plansFuture,
+        builder: (ctx, snapshot) {
+          if (!snapshot.hasData) {
+            return const Center(child: CircularProgressIndicator());
+          }
+          final plans = snapshot.data!;
+          return ListView.builder(
+            itemCount: plans.length,
+            itemBuilder: (ctx, i) {
+              final plan = plans[i];
+              final isProcessingThis = _isProcessing && _processingPlanId == plan.id;
+              return Card(
+                child: ListTile(
+                  title: Text(plan.name),
+                  subtitle: Text("${plan.price} DZD${plan.description != null ? ' - ${plan.description}' : ''}"),
+                  trailing: isProcessingThis
+                      ? const CircularProgressIndicator()
+                      : ElevatedButton(
+                          onPressed: () => _purchaseOnline(plan),
+                          child: const Text("Buy Online"),
+                        ),
+                ),
+              );
+            },
+          );
+        },
+      ),
+    );
+  }
+}
+```
+
+## 9. Error Handling
 
 All error responses follow the RFC 9457 Problem Details format:
 
@@ -578,8 +973,8 @@ All error responses follow the RFC 9457 Problem Details format:
 | **400** | Bad Request | Amount doesn't match plan price, subscription not expired |
 | **401** | Unauthorized | Missing or expired JWT |
 | **403** | Forbidden | Valid JWT but wrong role (e.g., Member tries admin action) |
-| **404** | Not Found | Subscription or request ID doesn't exist |
-| **409** | Conflict | Request already resolved, subscribed already active/already paid |
+| **404** | Not Found | Subscription, plan, member, or request ID doesn't exist |
+| **409** | Conflict | Request already resolved, member already has an active subscription |
 | **500** | Server Error | Backend exception |
 
 **React generic error handler:**
@@ -613,7 +1008,7 @@ class ApiException implements Exception {
 
 ---
 
-## 7. Endpoint Reference Card
+## 10. Endpoint Reference Card
 
 ### Subscription Management
 
@@ -638,6 +1033,27 @@ class ApiException implements Exception {
 | Method | Path | Auth | Body | Returns |
 |--------|------|------|------|---------|
 | `POST` | `/api/subscriptions/renew/online` | Member | `{ subscriptionId, amount, notes? }` | `OnlineRenewalResponse` |
+
+### Plans (Browse Available Plans)
+
+| Method | Path | Auth | Body | Returns |
+|--------|------|------|------|---------|
+| `GET` | `/api/plans` | Auth'd | — | `PlanItem[]` |
+
+### Cash Purchase Flow — Buy New Plan (Member → Admin)
+
+| Method | Path | Auth | Body | Returns |
+|--------|------|------|------|---------|
+| `POST` | `/api/subscriptions/purchase` | Member | `{ planId, notes? }` | `{ requestId }` |
+| `GET` | `/api/subscriptions/purchase/pending` | Admin | — | `PendingPurchaseRequest[]` |
+| `PATCH` | `/api/subscriptions/purchase/{id}/accept` | Admin | `{ notes? }` | `{ requestId, paymentId, status }` |
+| `PATCH` | `/api/subscriptions/purchase/{id}/reject` | Admin | `{ reason? }` | `{ requestId, status }` |
+
+### Online Purchase Flow — Buy New Plan (Member, Auto-Accepted)
+
+| Method | Path | Auth | Body | Returns |
+|--------|------|------|------|---------|
+| `POST` | `/api/subscriptions/purchase/online` | Member | `{ planId, notes? }` | `OnlinePurchaseResponse` |
 
 ### Admin Direct Creation
 

@@ -1,10 +1,13 @@
 package com.fittech.workoutlogs.config;
 
+import io.r2dbc.spi.ConnectionFactories;
 import io.r2dbc.spi.ConnectionFactory;
 import io.r2dbc.spi.ConnectionFactoryOptions;
-import org.springframework.boot.r2dbc.ConnectionFactoryBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.r2dbc.connection.init.ConnectionFactoryInitializer;
+import org.springframework.r2dbc.connection.init.ResourceDatabasePopulator;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -35,15 +38,27 @@ public class R2dbcConfig {
         String username = require(parts, "username");
         String password = require(parts, "password");
 
-        var options = ConnectionFactoryOptions.builder()
+        return ConnectionFactories.get(ConnectionFactoryOptions.builder()
                 .option(ConnectionFactoryOptions.DRIVER, "postgresql")
                 .option(ConnectionFactoryOptions.HOST, host)
                 .option(ConnectionFactoryOptions.PORT, port)
                 .option(ConnectionFactoryOptions.DATABASE, database)
                 .option(ConnectionFactoryOptions.USER, username)
-                .option(ConnectionFactoryOptions.PASSWORD, password);
+                .option(ConnectionFactoryOptions.PASSWORD, password)
+                .build());
+    }
 
-        return ConnectionFactoryBuilder.withOptions(options).build();
+    @Bean
+    public ConnectionFactoryInitializer r2dbcInitializer(ConnectionFactory connectionFactory) {
+        var initializer = new ConnectionFactoryInitializer();
+        initializer.setConnectionFactory(connectionFactory);
+
+        var populator = new ResourceDatabasePopulator();
+        populator.setContinueOnError(true);
+        populator.addScript(new ClassPathResource("schema.sql"));
+        initializer.setDatabasePopulator(populator);
+
+        return initializer;
     }
 
     private String require(Map<String, String> parts, String key) {

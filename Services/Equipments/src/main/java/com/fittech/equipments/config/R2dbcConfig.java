@@ -1,8 +1,8 @@
 package com.fittech.equipments.config;
 
+import io.r2dbc.spi.ConnectionFactories;
 import io.r2dbc.spi.ConnectionFactory;
 import io.r2dbc.spi.ConnectionFactoryOptions;
-import org.springframework.boot.r2dbc.ConnectionFactoryBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
@@ -37,15 +37,14 @@ public class R2dbcConfig {
         String username = require(parts, "username");
         String password = require(parts, "password");
 
-        var options = ConnectionFactoryOptions.builder()
+        return ConnectionFactories.get(ConnectionFactoryOptions.builder()
                 .option(ConnectionFactoryOptions.DRIVER, "postgresql")
                 .option(ConnectionFactoryOptions.HOST, host)
                 .option(ConnectionFactoryOptions.PORT, port)
                 .option(ConnectionFactoryOptions.DATABASE, database)
                 .option(ConnectionFactoryOptions.USER, username)
-                .option(ConnectionFactoryOptions.PASSWORD, password);
-
-        return ConnectionFactoryBuilder.withOptions(options).build();
+                .option(ConnectionFactoryOptions.PASSWORD, password)
+                .build());
     }
 
     @Bean
@@ -54,6 +53,7 @@ public class R2dbcConfig {
         initializer.setConnectionFactory(connectionFactory);
 
         var populator = new ResourceDatabasePopulator();
+        populator.setContinueOnError(true);
         populator.addScript(new ClassPathResource("schema.sql"));
         initializer.setDatabasePopulator(populator);
 

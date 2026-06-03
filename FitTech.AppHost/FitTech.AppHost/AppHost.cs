@@ -97,6 +97,11 @@ var coursesApi = builder.AddProject<Projects.Courses>("courses-api")
     .WaitFor(rabbit)
     .WaitFor(identityApi);
 
+// Inject cross-service endpoint addresses into Activity for internal Refit clients
+activityApi
+    .WithReference(membershipApi)
+    .WithReference(coursesApi);
+
 var aggregationApi = builder.AddProject<Projects.Aggregation>("aggregation-api")
     .WithEndpoint("http", endpoint => endpoint.Port = 5103)
     .WithEndpoint("https", endpoint => endpoint.Port = 7103)

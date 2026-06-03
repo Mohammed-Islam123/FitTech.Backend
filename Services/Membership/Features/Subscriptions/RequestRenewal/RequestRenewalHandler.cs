@@ -29,6 +29,13 @@ public class RequestRenewalHandler(
 
         var req = command.Request;
 
+        // Resolve Member by JWT UserId (must match Member.Id, not UserId)
+        var member = await context.Members
+            .FirstOrDefaultAsync(m => m.UserId == userId.Value, ct);
+
+        if (member is null)
+            return Error.NotFound("Member.NotFound", "Member profile not found.");
+
         // Validate subscription ownership, existence, and status
         var subscription = await context.Subscriptions
             .Include(s => s.Plan)
@@ -37,7 +44,7 @@ public class RequestRenewalHandler(
         if (subscription is null)
             return Error.NotFound("Subscription.NotFound", "The specified subscription does not exist.");
 
-        if (subscription.MemberId != userId.Value)
+        if (subscription.MemberId != member.Id)
             return Error.Forbidden("Subscription.Forbidden", "This subscription does not belong to you.");
 
         if (subscription.Status != SubscriptionStatus.Expired)

@@ -3,7 +3,8 @@
 # Tests the complete NFC card scan flow: entry → verify → workout log → exit
 #
 # Prerequisites:
-#   - All services running (via Aspire: dotnet run --project FitTech.AppHost)
+#   - All services running via Aspire (required for internal service discovery)
+#     dotnet run --project FitTech.AppHost/FitTech.AppHost/FitTech.AppHost.csproj
 #   - Seed data loaded (auto-seeded on first run in Development mode)
 #   - Hurl installed (https://hurl.dev)
 #
@@ -27,12 +28,12 @@ Content-Type: application/json
 }
 HTTP 200
 [Asserts]
-jsonpath "$.success" == true
-jsonpath "$.data.succeeded" == true
-jsonpath "$.data.token" exists
-jsonpath "$.data.requiresTwoFactor" == false
+jsonpath "$.Success" == true
+jsonpath "$.Data.Succeeded" == true
+jsonpath "$.Data.Token" exists
+jsonpath "$.Data.RequiresTwoFactor" == false
 [Captures]
-admin_token: jsonpath "$.data.token"
+admin_token: jsonpath "$.Data.Token"
 
 # ============================================================
 # Step 2: Admin resolves card CARD-0050 to a member
@@ -48,16 +49,17 @@ jsonpath "$.status" == "Active"
 [Captures]
 member50_id: jsonpath "$.memberId"
 member50_name: jsonpath "$.firstName"
+member50_lastname: jsonpath "$.lastName"
 
 # ============================================================
 # Step 3: Admin scans card for ENTRY
-# The Activity service should:
-#   - Resolve the card to member 50
-#   - Verify member is Active
-#   - Verify member has an active subscription
-#   - Verify remaining sessions > 0
-#   - Track the entry (decrement sessions)
-#   - Create a MemberActivity record
+# The Activity service internally:
+#   - Resolves the card to member 50
+#   - Verifies member is Active
+#   - Verifies member has an active subscription
+#   - Verifies remaining sessions > 0
+#   - Tracks the entry (decrement sessions)
+#   - Creates a MemberActivity record
 # ============================================================
 POST {{gateway}}/api/activity/entry-exit/scan
 Authorization: Bearer {{admin_token}}
@@ -69,7 +71,7 @@ HTTP 200
 [Asserts]
 jsonpath "$.success" == true
 jsonpath "$.verificationType" == "Entering"
-jsonpath "$.memberName" == "{{member50_name}}"
+jsonpath "$.memberName" == "{{member50_name}} {{member50_lastname}}"
 jsonpath "$.remainingSessions" exists
 
 # ============================================================
@@ -84,11 +86,11 @@ Content-Type: application/json
 }
 HTTP 200
 [Asserts]
-jsonpath "$.success" == true
-jsonpath "$.data.succeeded" == true
-jsonpath "$.data.token" exists
+jsonpath "$.Success" == true
+jsonpath "$.Data.Succeeded" == true
+jsonpath "$.Data.Token" exists
 [Captures]
-member50_token: jsonpath "$.data.token"
+member50_token: jsonpath "$.Data.Token"
 
 # ============================================================
 # Step 5: Member 50 gets their profile (to get memberId for workout logs)
@@ -118,7 +120,7 @@ jsonpath "$[0].checkOutTime" == null
 active_session_id: jsonpath "$[0].sessionId"
 
 # ============================================================
-# Step 7: Member 50 creates a workout log for this session
+# Step 7: Member 50 creates a workout log (achievements) for this session
 # ============================================================
 POST {{gateway}}/api/workout-logs
 Authorization: Bearer {{member50_token}}
@@ -161,7 +163,49 @@ jsonpath "$.exercises[2].name" == "Deadlift"
 workout_log_id: jsonpath "$.id"
 
 # ============================================================
-# Step 8: Admin scans card for EXIT
+# Step 8: Member 50 updates their workout log (edits achievements)
+# ============================================================
+PUT {{gateway}}/api/workout-logs/{{workout_log_id}}
+Authorization: Bearer {{member50_token}}
+Content-Type: application/json
+{
+    "notes": "Updated: Added an extra set on everything!",
+    "exercises": [
+        {
+            "name": "Bench Press",
+            "description": "5 sets of 8 reps at 80kg",
+            "caloriesBurned": 150.0,
+            "durationMinutes": 25
+        },
+        {
+            "name": "Squat",
+            "description": "5 sets of 10 reps at 100kg",
+            "caloriesBurned": 180.0,
+            "durationMinutes": 30
+        },
+        {
+            "name": "Deadlift",
+            "description": "4 sets of 5 reps at 120kg",
+            "caloriesBurned": 170.0,
+            "durationMinutes": 22
+        },
+        {
+            "name": "Pull-ups",
+            "description": "3 sets of 12 reps bodyweight",
+            "caloriesBurned": 80.0,
+            "durationMinutes": 10
+        }
+    ]
+}
+HTTP 200
+[Asserts]
+jsonpath "$.id" == "{{workout_log_id}}"
+jsonpath "$.notes" == "Updated: Added an extra set on everything!"
+jsonpath "$.exercises" count == 4
+jsonpath "$.exercises[3].name" == "Pull-ups"
+
+# ============================================================
+# Step 9: Admin scans card for EXIT
 # The Activity service should find the active session and mark checkout
 # ============================================================
 POST {{gateway}}/api/activity/entry-exit/scan
@@ -174,10 +218,10 @@ HTTP 200
 [Asserts]
 jsonpath "$.success" == true
 jsonpath "$.verificationType" == "Exiting"
-jsonpath "$.memberName" == "{{member50_name}}"
+jsonpath "$.memberName" == "{{member50_name}} {{member50_lastname}}"
 
 # ============================================================
-# Step 9: Member 50 checks sessions again
+# Step 10: Member 50 checks sessions again
 # Should now see the session with a checkOutTime
 # ============================================================
 GET {{gateway}}/api/me/sessions
@@ -186,10 +230,10 @@ HTTP 200
 [Asserts]
 jsonpath "$[0].sessionId" == "{{active_session_id}}"
 jsonpath "$[0].checkOutTime" exists
-jsonpath "$[0].checkOutTime" isNotEqualTo null
+jsonpath "$[0].checkOutTime" != null
 
 # ============================================================
-# Step 10: Member 50 fetches their workout log to verify it's saved
+# Step 11: Member 50 fetches their workout log to verify it's saved
 # ============================================================
 GET {{gateway}}/api/workout-logs/{{workout_log_id}}
 Authorization: Bearer {{member50_token}}
@@ -197,11 +241,11 @@ HTTP 200
 [Asserts]
 jsonpath "$.id" == "{{workout_log_id}}"
 jsonpath "$.activitySessionId" == "{{active_session_id}}"
-jsonpath "$.notes" == "Great workout! Test session for card flow validation."
-jsonpath "$.exercises" count == 3
+jsonpath "$.notes" == "Updated: Added an extra set on everything!"
+jsonpath "$.exercises" count == 4
 
 # ============================================================
-# Step 11: Member 50 lists workout logs by activity session
+# Step 12: Member 50 lists workout logs by activity session
 # ============================================================
 GET {{gateway}}/api/workout-logs?activitySessionId={{active_session_id}}
 Authorization: Bearer {{member50_token}}
@@ -211,6 +255,29 @@ jsonpath "$" count >= 1
 jsonpath "$[0].activitySessionId" == "{{active_session_id}}"
 jsonpath "$[0].id" == "{{workout_log_id}}"
 
+# ============================================================
+# Step 13: Admin checks member activity history
+# Should see the entry and exit for today
+# ============================================================
+GET {{gateway}}/api/activity/members/{{member50_id}}
+Authorization: Bearer {{admin_token}}
+HTTP 200
+[Asserts]
+jsonpath "$" count >= 1
+jsonpath "$[0].memberId" == "{{member50_id}}"
+jsonpath "$[0].checkInTime" exists
+jsonpath "$[0].checkOutTime" exists
+jsonpath "$[0].checkOutTime" != null
+
+# ============================================================
+# Step 14: Admin checks today's sessions
+# Should include member 50's session
+# ============================================================
+GET {{gateway}}/api/activity/sessions/today
+Authorization: Bearer {{admin_token}}
+HTTP 200
+[Asserts]
+jsonpath "$" count >= 1
 
 # =============================================================================
 # TEST SUMMARY
@@ -219,8 +286,10 @@ jsonpath "$[0].id" == "{{workout_log_id}}"
 # ✅ Step 3:    Card scan for ENTRY → "Entering" response
 # ✅ Step 4-5:  Member authentication + profile retrieval
 # ✅ Step 6:    Session appears in member's session list (active, no checkout)
-# ✅ Step 7:    Workout log created and linked to the gym session
-# ✅ Step 8:    Card scan for EXIT → "Exiting" response
-# ✅ Step 9:    Session now has checkOutTime
-# ✅ Step 10-11: Workout log persists and is searchable
+# ✅ Step 7:    Workout log (achievements) created and linked to gym session
+# ✅ Step 8:    Workout log updated with additional exercises
+# ✅ Step 9:    Card scan for EXIT → "Exiting" response
+# ✅ Step 10:   Session now has checkOutTime
+# ✅ Step 11-12: Workout log persists and is searchable by session
+# ✅ Step 13-14: Activity history and today's sessions reflect the visit
 # =============================================================================

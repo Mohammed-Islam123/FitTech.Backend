@@ -2,6 +2,7 @@ using Activity.Common.Behaviours;
 using Activity.Common.Security;
 using Activity.Domain;
 using Activity.Infrastructure;
+using Activity.Infrastructure.Auth;
 using Activity.Infrastructure.Seed;
 using Carter;
 using FluentValidation;
@@ -69,11 +70,18 @@ builder.Services.AddAuthorization(options =>
         policy.RequireAuthenticatedUser().RequireRole("Admin", "Coach", "Member"));
 });
 
+builder.Services.AddHttpClient("IdentityAuth", c =>
+    c.BaseAddress = new Uri("http://identity-api"));
+
+builder.Services.AddTransient<ServiceTokenHandler>();
+
 builder.Services.AddRefitClient<IMembershipServiceClient>()
-    .ConfigureHttpClient(c => c.BaseAddress = new Uri("http://membership-api"));
+    .ConfigureHttpClient(c => c.BaseAddress = new Uri("http://membership-api"))
+    .AddHttpMessageHandler<ServiceTokenHandler>();
 
 builder.Services.AddRefitClient<ICoursesServiceClient>()
-    .ConfigureHttpClient(c => c.BaseAddress = new Uri("http://courses-api"));
+    .ConfigureHttpClient(c => c.BaseAddress = new Uri("http://courses-api"))
+    .AddHttpMessageHandler<ServiceTokenHandler>();
 
 builder.Services.AddFluentValidationRulesToOpenApi();
 builder.Services.AddOpenApi(options =>

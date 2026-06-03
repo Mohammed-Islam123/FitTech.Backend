@@ -47,7 +47,8 @@ public class OnlineRenewalHandler(
         if (subscription is null)
             return Error.NotFound("Subscription.NotFound", "The specified subscription does not exist.");
 
-        if (subscription.MemberId != userId.Value)
+        // Verify ownership: subscription.Member.UserId (DB) vs JWT userId
+        if (subscription.Member.UserId != userId.Value)
             return Error.Forbidden("Subscription.Forbidden", "This subscription does not belong to you.");
 
         if (subscription.Status != SubscriptionStatus.Expired)

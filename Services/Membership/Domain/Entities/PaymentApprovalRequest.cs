@@ -11,7 +11,7 @@ public class PaymentApprovalRequest
     public Guid MemberId { get; set; }
     public string RequestType { get; set; } = null!; // "MembershipRenewal", "CoursePurchase"
     public decimal Amount { get; set; }
-    public Guid ReferenceId { get; set; } // SubscriptionId or CourseId
+    public Guid ReferenceId { get; set; } // SubscriptionId, PlanId, or CourseId
     public string Status { get; set; } = "Pending"; // Pending, Accepted, Rejected
     public string? Notes { get; set; }
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
@@ -21,6 +21,7 @@ public class PaymentApprovalRequest
 public static class PaymentApprovalRequestType
 {
     public const string MembershipRenewal = "MembershipRenewal";
+    public const string PlanPurchase = "PlanPurchase";
 }
 
 public static class PaymentApprovalRequestStatus
