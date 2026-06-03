@@ -2,6 +2,10 @@
 # Card Flow End-to-End Test
 # Tests the complete NFC card scan flow: entry → verify → workout log → exit
 #
+# IMPORTANT: This test requires a CLEAN database state.
+# If a previous run failed mid-test, the member may still be "checked in".
+# Restart Aspire to get a fresh database before re-running this test.
+#
 # Prerequisites:
 #   - All services running via Aspire (required for internal service discovery)
 #     dotnet run --project FitTech.AppHost/FitTech.AppHost/FitTech.AppHost.csproj
