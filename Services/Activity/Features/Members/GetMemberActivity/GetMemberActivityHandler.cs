@@ -18,7 +18,7 @@ public class GetMemberActivityHandler(ActivityDbContext context, IUserAccessor u
             .Where(a => a.MemberId == query.MemberId)
             .OrderByDescending(a => a.CheckInTime)
             .Select(a => new GetMemberActivityResponse(
-                a.Id, a.CheckInTime, a.CheckOutTime, a.CourseId, a.IsManual))
+                a.Id, a.CheckInTime, a.CheckOutTime, a.IsManual))
             .ToListAsync(ct);
     }
 }

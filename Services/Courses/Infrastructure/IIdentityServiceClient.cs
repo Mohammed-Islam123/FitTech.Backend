@@ -20,9 +20,6 @@ public interface IIdentityServiceClient
 
     [Get("/api/User/profile/{userId}")]
     Task<ApiResponse<Response<IdentityProfileDto>>> GetProfileAsync(Guid userId);
-
-    [Get("/api/User/{userId}/medical-file")]
-    Task<ApiResponse<Response<IdentityMedicalFileDto>>> GetMedicalFileAsync(Guid userId);
 }
 
 public class IdentityProfileDto
@@ -37,13 +34,3 @@ public class IdentityProfileDto
     public string? ProfilePhotoUrl { get; set; }
 }
 
-public class IdentityMedicalFileDto
-{
-    public Guid Id { get; set; }
-    public Guid UserId { get; set; }
-    public string FileName { get; set; } = null!;
-    public string FileUrl { get; set; } = null!;
-    public string ContentType { get; set; } = null!;
-    public long FileSize { get; set; }
-    public DateTime UploadedAt { get; set; }
-}

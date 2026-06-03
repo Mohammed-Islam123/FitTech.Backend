@@ -27,12 +27,11 @@ public class ManualExitHandler(
             return Error.NotFound("Session.NotFound", "No active session found for this member.");
 
         activeSession.CheckOutTime = DateTime.UtcNow;
-        activeSession.CourseId ??= command.Request.CourseId;
         await context.SaveChangesAsync(ct);
 
         await messageBus.PublishAsync(new MemberCheckedOutEvent(
             activeSession.MemberId, activeSession.CardUid,
-            activeSession.CourseId, activeSession.CheckOutTime.Value));
+            null, activeSession.CheckOutTime.Value));
 
         return new ManualExitResponse(activeSession.Id, activeSession.CheckOutTime.Value);
     }

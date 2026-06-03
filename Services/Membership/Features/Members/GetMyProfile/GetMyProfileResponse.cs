@@ -4,6 +4,7 @@ namespace Membership.Features.Members.GetMyProfile;
 /// Response containing the authenticated member's full profile.
 /// </description>
 public record GetMyProfileResponse(
+    Guid MemberId,
     string FirstName,
     string LastName,
     string? Gender,
@@ -16,5 +17,5 @@ public record GetMyProfileResponse(
     bool IsActive,
     string? ProfilePictureUrl,
     string? Goals,
-    Guid? MedicalFileId
+    string? MedicalFileUrl
 );

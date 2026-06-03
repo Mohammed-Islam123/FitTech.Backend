@@ -8,13 +8,14 @@ CREATE TABLE IF NOT EXISTS products (
     category VARCHAR(100),
     image_path VARCHAR(500),
     stock INTEGER NOT NULL DEFAULT 0,
+    is_active BOOLEAN NOT NULL DEFAULT TRUE,
     created_at TIMESTAMP WITH TIME ZONE NOT NULL,
-    updated_at TIMESTAMP WITH TIME ZONE NOT NULL
+    updated_at TIMESTAMP WITH TIME ZONE
 );
 
 CREATE TABLE IF NOT EXISTS purchases (
     id UUID PRIMARY KEY,
-    member_id UUID NOT NULL,
+    member_id UUID,
     product_id UUID NOT NULL REFERENCES products(id),
     quantity INTEGER NOT NULL,
     purchased_at TIMESTAMP WITH TIME ZONE NOT NULL

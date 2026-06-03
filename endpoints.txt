@@ -25,8 +25,8 @@ POST /entry-exit/manual/exit — Manually marks a member as exited. Takes member
 
 Member-Facing Endpoints
 
-GET /me — Returns the authenticated member's personal details: full name, gender, date of birth, phone number, email, email confirmation status, account creation date, membership duration in years, active status, profile picture, goals, and medical file ID.
-PATCH /me — Updates the authenticated member's profile. All fields optional (PATCH semantics): first name, last name, phone number, gender, date of birth, profile picture, goals, medical restrictions, medical file, old password, new password. Identity fields are forwarded to the Identity service. Password change supported via oldPassword + newPassword.
+GET /me — Returns the authenticated member's personal details: full name, gender, date of birth, phone number, email, email confirmation status, account creation date, membership duration in years, active status, profile picture, goals, and medical file URL.
+PATCH /me — Updates the authenticated member's profile. All fields optional (PATCH semantics): medical file, goals, profile picture, old password, new password. Password change supported via oldPassword + newPassword.
 GET /me/subscription — Returns the current subscription details for the authenticated member: name, price, days remaining, sessions remaining, access roles, and other relevant fields.
 GET /me/subscriptions — Returns the authenticated member's full subscription history (all subscriptions, including expired/cancelled).
 GET /me/payments — Returns the authenticated member's payment history. For each: payment ID, amount, payment method (Cash/CreditCard), payment type (Subscription/CoursePurchase/etc.), reference ID, status, and date.

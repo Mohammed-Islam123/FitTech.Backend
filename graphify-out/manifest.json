@@ -1,16 +1,16 @@
 {
   "D:\\projects\\GYM\\FitTech.Backend\\.mcp.json": {
-    "mtime": 1779381035.5029643,
+    "mtime": 1780162551.1270456,
     "ast_hash": "cc85d223811843f84f6ffecee8d8eab2",
     "semantic_hash": "cc85d223811843f84f6ffecee8d8eab2"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\aspire.config.json": {
-    "mtime": 1775048270.6667686,
+    "mtime": 1780162551.5947042,
     "ast_hash": "c5b3f3a57f3a32412fca02eb9dfe61c7",
     "semantic_hash": "c5b3f3a57f3a32412fca02eb9dfe61c7"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.opencode\\opencode.json": {
-    "mtime": 1779468519.0775774,
+    "mtime": 1780162551.1270456,
     "ast_hash": "1efe24ecf938911d4f23e4b1c6ec91f7",
     "semantic_hash": "1efe24ecf938911d4f23e4b1c6ec91f7"
   },
@@ -20,1132 +20,1102 @@
     "semantic_hash": "36da8f59257d063f5ef74f59e181690e"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.opencode\\plugins\\graphify.js": {
-    "mtime": 1779467955.596739,
+    "mtime": 1780162551.1270456,
     "ast_hash": "32b67963417a30cb80544e0b2a56a98d",
     "semantic_hash": "32b67963417a30cb80544e0b2a56a98d"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.playwright\\cli.config.json": {
-    "mtime": 1779381035.4214754,
+    "mtime": 1780162551.1340466,
     "ast_hash": "76bd58223256f9675eeece4d22f9e223",
     "semantic_hash": "76bd58223256f9675eeece4d22f9e223"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\FitTech.AppHost\\FitTech.AppHost\\AppHost.cs": {
-    "mtime": 1779963713.8824892,
-    "ast_hash": "91c48485855776de615f9451aca6808b",
+    "mtime": 1780335516.0444164,
+    "ast_hash": "3279a568a2a55e327a16dbc1522aba19",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\FitTech.AppHost\\FitTech.AppHost\\appsettings.Development.json": {
-    "mtime": 1772571581.861745,
+    "mtime": 1780162551.1401577,
     "ast_hash": "804b473502a4c415cf75db61c56c32aa",
     "semantic_hash": "804b473502a4c415cf75db61c56c32aa"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\FitTech.AppHost\\FitTech.AppHost\\appsettings.json": {
-    "mtime": 1773443805.157833,
+    "mtime": 1780162551.1401577,
     "ast_hash": "7c4f4d2afbe563f8cadf0e46adff7c97",
     "semantic_hash": "7c4f4d2afbe563f8cadf0e46adff7c97"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\FitTech.AppHost\\FitTech.AppHost\\Properties\\launchSettings.json": {
-    "mtime": 1775071009.3680446,
-    "ast_hash": "4b9edbcf7b3aeed27a8b4d0407c3335d",
-    "semantic_hash": "4b9edbcf7b3aeed27a8b4d0407c3335d"
+    "mtime": 1780257103.9884033,
+    "ast_hash": "5423afc960d26c35818799474b054e43",
+    "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\FitTech.AppHost\\FitTech.ServiceDefaults\\Extensions.cs": {
-    "mtime": 1775076709.8791537,
-    "ast_hash": "d48a7ca74f8f7f5d4d121e30477c462a",
-    "semantic_hash": "d48a7ca74f8f7f5d4d121e30477c462a"
+    "mtime": 1780162551.1411605,
+    "ast_hash": "b159a26b56d73e427f3f89427b1b7117",
+    "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Gateway\\appsettings.Development.json": {
-    "mtime": 1773443805.1618476,
+    "mtime": 1780162551.2675333,
     "ast_hash": "804b473502a4c415cf75db61c56c32aa",
     "semantic_hash": "804b473502a4c415cf75db61c56c32aa"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Gateway\\appsettings.json": {
-    "mtime": 1773443805.1618476,
+    "mtime": 1780162551.2675333,
     "ast_hash": "1a4d7cd8ed9e202b6454e808bd960f9f",
     "semantic_hash": "1a4d7cd8ed9e202b6454e808bd960f9f"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Gateway\\Program.cs": {
-    "mtime": 1780041277.1778326,
-    "ast_hash": "fbc8d34db810066260f207c7edf9d91e",
+    "mtime": 1780301843.5667968,
+    "ast_hash": "0fde7d35a459a1197a3299a73329c2d0",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Gateway\\Properties\\launchSettings.json": {
-    "mtime": 1773443805.1608658,
+    "mtime": 1780162551.2655385,
     "ast_hash": "d15565ac436ceb0fdaed2cc3ac48fc47",
     "semantic_hash": "d15565ac436ceb0fdaed2cc3ac48fc47"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Api\\appsettings.Development.json": {
-    "mtime": 1773443805.1638546,
+    "mtime": 1780162551.2755299,
     "ast_hash": "7e6c7a987efefba9fcbc47bad697c920",
     "semantic_hash": "7e6c7a987efefba9fcbc47bad697c920"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Api\\appsettings.json": {
-    "mtime": 1779960615.90287,
+    "mtime": 1780162551.2765298,
     "ast_hash": "892c29fb8f585a2b4cd14c64019d9c19",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Api\\Program.cs": {
-    "mtime": 1780137312.1885004,
-    "ast_hash": "8061f95e9cea28639874ba9b53e392e0",
+    "mtime": 1780225959.8257654,
+    "ast_hash": "46669fa6edeeb3bdc6bb0522e0d1a10e",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Api\\Controllers\\UserController.cs": {
-    "mtime": 1776523524.4311426,
+    "mtime": 1780162551.2705333,
     "ast_hash": "8e670f5c95d8f0606c89429ba1c47fda",
     "semantic_hash": "8e670f5c95d8f0606c89429ba1c47fda"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Api\\Properties\\launchSettings.json": {
-    "mtime": 1773443805.1638546,
+    "mtime": 1780162551.2735317,
     "ast_hash": "bb023ea2888d0e1cb9f2ee20830ddea7",
     "semantic_hash": "bb023ea2888d0e1cb9f2ee20830ddea7"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Application\\DTOs\\ChangePasswordDTO.cs": {
-    "mtime": 1773443805.1648664,
+    "mtime": 1780162551.2775426,
     "ast_hash": "02aee0d1dbaeea463acb36ec7ff262bc",
     "semantic_hash": "02aee0d1dbaeea463acb36ec7ff262bc"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Application\\DTOs\\ConfirmEmailDTO.cs": {
-    "mtime": 1773443805.1648664,
+    "mtime": 1780162551.2775426,
     "ast_hash": "2125a1598e2b1e259bf7c3125f0f56d0",
     "semantic_hash": "2125a1598e2b1e259bf7c3125f0f56d0"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Application\\DTOs\\EmailConfirmationTokenResponseDTO.cs": {
-    "mtime": 1773443805.1648664,
+    "mtime": 1780162551.278543,
     "ast_hash": "5254dd79e9389dc36dc6a5a68a835c53",
     "semantic_hash": "5254dd79e9389dc36dc6a5a68a835c53"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Application\\DTOs\\EmailDTO.cs": {
-    "mtime": 1773443805.1648664,
+    "mtime": 1780162551.2795305,
     "ast_hash": "9ec5773f85857655d2cf533921d8c507",
     "semantic_hash": "9ec5773f85857655d2cf533921d8c507"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Application\\DTOs\\ForgotPasswordResponseDTO.cs": {
-    "mtime": 1773443805.1648664,
+    "mtime": 1780162551.2795305,
     "ast_hash": "fc6061a2c6ef89c7135059a5034f5bea",
     "semantic_hash": "fc6061a2c6ef89c7135059a5034f5bea"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Application\\DTOs\\LoginDTO.cs": {
-    "mtime": 1773443805.1648664,
+    "mtime": 1780162551.280542,
     "ast_hash": "43c2b888f0f009f1207184568ab0aa95",
     "semantic_hash": "43c2b888f0f009f1207184568ab0aa95"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Application\\DTOs\\LoginResponseDTO.cs": {
-    "mtime": 1779543302.79562,
+    "mtime": 1780162551.2815673,
     "ast_hash": "a09685e883f547ab9bd3ed5c83982230",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Application\\DTOs\\MedicalFileDTO.cs": {
-    "mtime": 1773443805.1663754,
+    "mtime": 1780162551.2825637,
     "ast_hash": "1e61291176c8aadafccb888e353c3397",
     "semantic_hash": "1e61291176c8aadafccb888e353c3397"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Application\\DTOs\\ProfileDTO.cs": {
-    "mtime": 1780137249.921625,
+    "mtime": 1780162551.2835574,
     "ast_hash": "27fe5b25f9ab5ef38839b9f58c3868b3",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Application\\DTOs\\RefreshTokenRequestDTO.cs": {
-    "mtime": 1773443805.1663754,
+    "mtime": 1780162551.2845538,
     "ast_hash": "800ff690ef9933a67b8412b337709190",
     "semantic_hash": "800ff690ef9933a67b8412b337709190"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Application\\DTOs\\RefreshTokenResponseDTO.cs": {
-    "mtime": 1773443805.1663754,
+    "mtime": 1780162551.2845538,
     "ast_hash": "57e12c172616f3b310d3a01f15032682",
     "semantic_hash": "57e12c172616f3b310d3a01f15032682"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Application\\DTOs\\RegisterDTO.cs": {
-    "mtime": 1779819544.5770159,
+    "mtime": 1780162551.2855525,
     "ast_hash": "988991c074402eaac90e6f77cdde18f2",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Application\\DTOs\\ResetPasswordDTO.cs": {
-    "mtime": 1773443805.1673899,
+    "mtime": 1780162551.2865584,
     "ast_hash": "2fb0c461f53602f7ebab0dc1435ca857",
     "semantic_hash": "2fb0c461f53602f7ebab0dc1435ca857"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Application\\DTOs\\UpdateProfileDTO.cs": {
-    "mtime": 1776510740.5569253,
+    "mtime": 1780162551.2885551,
     "ast_hash": "86c5b4060d93ac3f57661d1ae8d7d7d3",
     "semantic_hash": "86c5b4060d93ac3f57661d1ae8d7d7d3"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Application\\DTOs\\UploadMedicalFileDTO.cs": {
-    "mtime": 1773443805.167907,
+    "mtime": 1780162551.2895522,
     "ast_hash": "63ddc26344698fbba3bf549f817b7cb7",
     "semantic_hash": "63ddc26344698fbba3bf549f817b7cb7"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Application\\Interfaces\\ITokenService.cs": {
-    "mtime": 1779543302.0071647,
+    "mtime": 1780162551.2915554,
     "ast_hash": "e138a0bf1f110d455634b63aa014cf01",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Application\\Interfaces\\IUserService.cs": {
-    "mtime": 1776523472.7131517,
+    "mtime": 1780162551.2925532,
     "ast_hash": "cc9163bd5b09eeada0ab7ed3bdf80499",
     "semantic_hash": "cc9163bd5b09eeada0ab7ed3bdf80499"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Application\\Repositories\\IUserRepository.cs": {
-    "mtime": 1773443805.1689315,
+    "mtime": 1780162551.2935536,
     "ast_hash": "0e25c8819e875f260c6b3eeee9ee971c",
     "semantic_hash": "0e25c8819e875f260c6b3eeee9ee971c"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Application\\Services\\UserService.cs": {
-    "mtime": 1780137252.8461416,
+    "mtime": 1780162551.2945552,
     "ast_hash": "e7b623b19a887185d924c0bda27b3d78",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Domain\\Entities\\Address.cs": {
-    "mtime": 1773443805.1699278,
+    "mtime": 1780162551.2960668,
     "ast_hash": "4ab18349622c06387d292ed364a7b450",
     "semantic_hash": "4ab18349622c06387d292ed364a7b450"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Domain\\Entities\\Client.cs": {
-    "mtime": 1773443805.1699278,
+    "mtime": 1780162551.2970796,
     "ast_hash": "0bba3102c91375725a9166e0820226ee",
     "semantic_hash": "0bba3102c91375725a9166e0820226ee"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Domain\\Entities\\MedicalFile.cs": {
-    "mtime": 1773443805.170928,
+    "mtime": 1780162551.2980776,
     "ast_hash": "431f872a0f9337899016e5921daf412e",
     "semantic_hash": "431f872a0f9337899016e5921daf412e"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Domain\\Entities\\RefreshToken.cs": {
-    "mtime": 1773443805.170928,
+    "mtime": 1780162551.2990797,
     "ast_hash": "72470811fc12f22e992d06f49f2b6221",
     "semantic_hash": "72470811fc12f22e992d06f49f2b6221"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Domain\\Entities\\User.cs": {
-    "mtime": 1775900482.871737,
+    "mtime": 1780162551.3000808,
     "ast_hash": "3fb1726c1c1be126ff2e7f2a9ddc2610",
     "semantic_hash": "3fb1726c1c1be126ff2e7f2a9ddc2610"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Domain\\Enums\\Gender.cs": {
-    "mtime": 1773443805.170928,
+    "mtime": 1780162551.3020794,
     "ast_hash": "98f3dc3546bf3d66dac8bb2faf15776d",
     "semantic_hash": "98f3dc3546bf3d66dac8bb2faf15776d"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Infrastructure\\IdentityDbFactory.cs": {
-    "mtime": 1776159595.7999766,
+    "mtime": 1780162551.3070781,
     "ast_hash": "02585d8e36d495bdccb0743db47dece5",
     "semantic_hash": "02585d8e36d495bdccb0743db47dece5"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Infrastructure\\UserDbContext.cs": {
-    "mtime": 1773443805.174944,
+    "mtime": 1780162551.3140926,
     "ast_hash": "8b5402171ed35cd18ae185ae096f07ec",
     "semantic_hash": "8b5402171ed35cd18ae185ae096f07ec"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Infrastructure\\Identity\\ApplicationRole.cs": {
-    "mtime": 1773443805.172943,
+    "mtime": 1780162551.3050783,
     "ast_hash": "a336f64e1e5f2aa8b89f110046cbc413",
     "semantic_hash": "a336f64e1e5f2aa8b89f110046cbc413"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Infrastructure\\Identity\\ApplicationUser.cs": {
-    "mtime": 1775900495.8676221,
+    "mtime": 1780162551.3060784,
     "ast_hash": "9ee7b55f1025fec31b08c9fb86c07214",
     "semantic_hash": "9ee7b55f1025fec31b08c9fb86c07214"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Infrastructure\\Migrations\\20260414095017_InitialCreate.cs": {
-    "mtime": 1776160217.1414208,
+    "mtime": 1780162551.3100839,
     "ast_hash": "9f81e3423adc3f691b0b84a21f563478",
     "semantic_hash": "9f81e3423adc3f691b0b84a21f563478"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Infrastructure\\Migrations\\20260414095017_InitialCreate.Designer.cs": {
-    "mtime": 1776160217.1424253,
+    "mtime": 1780162551.3080788,
     "ast_hash": "c0e030915186e04e4a285df3e66d7ffd",
     "semantic_hash": "c0e030915186e04e4a285df3e66d7ffd"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Infrastructure\\Migrations\\UserDbContextModelSnapshot.cs": {
-    "mtime": 1776160217.1434178,
+    "mtime": 1780162551.311079,
     "ast_hash": "e16754595deb2882db05a51648a8dd9b",
     "semantic_hash": "e16754595deb2882db05a51648a8dd9b"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Infrastructure\\Repositories\\UserRepository.cs": {
-    "mtime": 1775900526.049804,
+    "mtime": 1780162551.3120804,
     "ast_hash": "711e5e4373a03c4b870aff2300a2cb8d",
     "semantic_hash": "711e5e4373a03c4b870aff2300a2cb8d"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Infrastructure\\Seed\\DataSeeder.cs": {
-    "mtime": 1779896615.9825757,
+    "mtime": 1780220434.640407,
     "ast_hash": "0aec48fb58fc047482dfb74e76805b17",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\appsettings.Development.json": {
-    "mtime": 1775071460.6766026,
+    "mtime": 1780162551.484888,
     "ast_hash": "9401e0b4cd886a9f54f8866cb2397007",
     "semantic_hash": "9401e0b4cd886a9f54f8866cb2397007"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\appsettings.json": {
-    "mtime": 1780093348.0126395,
+    "mtime": 1780162551.4868855,
     "ast_hash": "66adb9b2f73bba1a113c5f555e091dbb",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Program.cs": {
-    "mtime": 1780135103.6149733,
-    "ast_hash": "67b63298acb0ed5ed3c67a95d6ec8a8d",
+    "mtime": 1780352671.8257678,
+    "ast_hash": "f9185b2c8a82f6bc10358211da423839",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Common\\Security\\UserAccessor.cs": {
-    "mtime": 1776520659.1115942,
+    "mtime": 1780162551.3170986,
     "ast_hash": "fd80348dd4a34756daad2336ce77d1e6",
     "semantic_hash": "fd80348dd4a34756daad2336ce77d1e6"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Coommon\\Behaviours\\ValidationBehavior.cs": {
-    "mtime": 1775081021.668174,
+    "mtime": 1780162551.3180923,
     "ast_hash": "7eb3d7b606754c113b86f2625e4c8bf8",
     "semantic_hash": "7eb3d7b606754c113b86f2625e4c8bf8"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Domain\\MembershipContextFactory.cs": {
-    "mtime": 1779522884.4844632,
+    "mtime": 1780162551.3341937,
     "ast_hash": "7f075ad264b0502d2ccd6f930823baad",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Domain\\MembershipDbContext.cs": {
-    "mtime": 1775147931.2988021,
-    "ast_hash": "70e6067558ad0f15547c446c49a8ebbe",
-    "semantic_hash": "70e6067558ad0f15547c446c49a8ebbe"
+    "mtime": 1780162551.3352108,
+    "ast_hash": "bfe9a2d0e2ce605913a84e53f987be48",
+    "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Domain\\Configurations\\SubscriptionConfiguration.cs": {
-    "mtime": 1779475578.8227654,
+    "mtime": 1780162551.3200915,
     "ast_hash": "7d6a05b8134e97923505b1b0a6578039",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Domain\\Configurations\\SubscriptionPlanConfiguration.cs": {
-    "mtime": 1776535039.191462,
+    "mtime": 1780162551.3220928,
     "ast_hash": "5815b0e52cf91e08f6c8c01a72459036",
     "semantic_hash": "5815b0e52cf91e08f6c8c01a72459036"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Domain\\Entities\\Member.cs": {
-    "mtime": 1775148782.5200098,
+    "mtime": 1780162551.3230948,
     "ast_hash": "fef70f6777d8654179dec6f7315f0805",
     "semantic_hash": "fef70f6777d8654179dec6f7315f0805"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Domain\\Entities\\MemberHealthProfile.cs": {
-    "mtime": 1774910798.6385612,
-    "ast_hash": "8dce90e9aface7787b2ce4a660d48d15",
-    "semantic_hash": "8dce90e9aface7787b2ce4a660d48d15"
+    "mtime": 1780352484.1192024,
+    "ast_hash": "948e48c1846e3860524fb43ea30dc08d",
+    "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Domain\\Entities\\NfcCard.cs": {
-    "mtime": 1774910798.991432,
+    "mtime": 1780162551.3250923,
     "ast_hash": "44204f1b2504563f829a4337bb5bcf73",
     "semantic_hash": "44204f1b2504563f829a4337bb5bcf73"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Domain\\Entities\\Subscription.cs": {
-    "mtime": 1777054756.739694,
+    "mtime": 1780162551.327607,
     "ast_hash": "fba76f895ba583ba850b8901325bc54a",
     "semantic_hash": "fba76f895ba583ba850b8901325bc54a"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Domain\\Entities\\SubscriptionPlan.cs": {
-    "mtime": 1776535018.2192183,
+    "mtime": 1780162551.3286188,
     "ast_hash": "0550446fb497731ba898b661c5901a3b",
     "semantic_hash": "0550446fb497731ba898b661c5901a3b"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Domain\\Enums\\DurationUnit.cs": {
-    "mtime": 1774910796.8515987,
+    "mtime": 1780162551.3296263,
     "ast_hash": "f09b2ffd415b25209a617bc8b64689b2",
     "semantic_hash": "f09b2ffd415b25209a617bc8b64689b2"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Domain\\Enums\\Gender.cs": {
-    "mtime": 1775147292.3883018,
+    "mtime": 1780162551.3306217,
     "ast_hash": "6f6c166de96f84b0c34a746ac9f79701",
     "semantic_hash": "6f6c166de96f84b0c34a746ac9f79701"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Domain\\Enums\\MemberStatus.cs": {
-    "mtime": 1774910796.3393915,
+    "mtime": 1780162551.33162,
     "ast_hash": "393a8291c06339b48cbf6b65b3472b0b",
     "semantic_hash": "393a8291c06339b48cbf6b65b3472b0b"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Domain\\Enums\\SubscriptionStatus.cs": {
-    "mtime": 1774910796.4254675,
+    "mtime": 1780162551.3326192,
     "ast_hash": "97c5b926b9853ed834c55b4e03a1bf13",
     "semantic_hash": "97c5b926b9853ed834c55b4e03a1bf13"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\CreateMember\\CreateMemberCommand.cs": {
-    "mtime": 1775352971.9975986,
+    "mtime": 1780162551.3539085,
     "ast_hash": "92b3161d79d2a3f2fa6b3485535bafbb",
     "semantic_hash": "92b3161d79d2a3f2fa6b3485535bafbb"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\CreateMember\\CreateMemberEndpoint.cs": {
-    "mtime": 1780138430.4092488,
+    "mtime": 1780162551.3569202,
     "ast_hash": "9797a71e8d5f8ac14abdc183a7e963c6",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\CreateMember\\CreateMemberHandler.cs": {
-    "mtime": 1780139086.7323885,
-    "ast_hash": "d8c8ca45fd039f81aa2848492bf83310",
+    "mtime": 1780220445.4066038,
+    "ast_hash": "4e25219d187098ca7bcc9b1000dbf511",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\CreateMember\\CreateMemberRequest.cs": {
-    "mtime": 1780139086.7267697,
-    "ast_hash": "b9c0acf775b5204625fd70bbea06d513",
+    "mtime": 1780220439.870702,
+    "ast_hash": "1d937ad30f5eab474573e7608580be4c",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\CreateMember\\CreateMemberResponse.cs": {
-    "mtime": 1775352972.0236683,
+    "mtime": 1780162552.8089938,
     "ast_hash": "6bad9e9fbb80718e23f2e596ebee96d9",
     "semantic_hash": "6bad9e9fbb80718e23f2e596ebee96d9"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\CreateMember\\CreateMemberValidator.cs": {
-    "mtime": 1776079480.2742891,
+    "mtime": 1780162551.3609197,
     "ast_hash": "d6c2cf2cb4289a21395ca85a3eefa0fe",
     "semantic_hash": "d6c2cf2cb4289a21395ca85a3eefa0fe"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\DeleteMember\\DeleteMemberCommand.cs": {
-    "mtime": 1776523825.70646,
+    "mtime": 1780162551.361924,
     "ast_hash": "4b81c1384357d679fd594df6ca29fd5d",
     "semantic_hash": "4b81c1384357d679fd594df6ca29fd5d"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\DeleteMember\\DeleteMemberEndpoint.cs": {
-    "mtime": 1780138430.4092488,
+    "mtime": 1780162551.3639216,
     "ast_hash": "ff33ae77b50a07012aee247f59e6c6b1",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\DeleteMember\\DeleteMemberHandler.cs": {
-    "mtime": 1777056072.6376991,
+    "mtime": 1780162551.3649187,
     "ast_hash": "97a756b1719529408b20f942a72ab364",
     "semantic_hash": "97a756b1719529408b20f942a72ab364"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\GetActiveSubscription\\GetActiveSubscriptionEndpoint.cs": {
-    "mtime": 1780138430.4107168,
+    "mtime": 1780162551.3659198,
     "ast_hash": "e0ffbed77896e8ae06632b5d710f9834",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\GetActiveSubscription\\GetActiveSubscriptionHandler.cs": {
-    "mtime": 1777026374.884251,
+    "mtime": 1780162551.366923,
     "ast_hash": "03e431e5c928e7341321b819e7e2ec58",
     "semantic_hash": "03e431e5c928e7341321b819e7e2ec58"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\GetActiveSubscription\\GetActiveSubscriptionQuery.cs": {
-    "mtime": 1777026354.253171,
+    "mtime": 1780162551.3689215,
     "ast_hash": "b0874a74fdf5eea38d3bd91c3fc715bf",
     "semantic_hash": "b0874a74fdf5eea38d3bd91c3fc715bf"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\GetActiveSubscription\\GetActiveSubscriptionResponse.cs": {
-    "mtime": 1777026354.253171,
+    "mtime": 1780162551.369436,
     "ast_hash": "eeffdae8ba181b6da4b7e24967b2f5aa",
     "semantic_hash": "eeffdae8ba181b6da4b7e24967b2f5aa"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\GetMember\\GetMemberEndpoint.cs": {
-    "mtime": 1780138430.411726,
+    "mtime": 1780162551.3704517,
     "ast_hash": "d611417df424e6e986235ac6f442b206",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\GetMember\\GetMemberHandler.cs": {
-    "mtime": 1776530843.801285,
+    "mtime": 1780162551.3714573,
     "ast_hash": "7494ea742a782f02ba5ace6b985d6f09",
     "semantic_hash": "7494ea742a782f02ba5ace6b985d6f09"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\GetMember\\GetMemberQuery.cs": {
-    "mtime": 1775859423.7350576,
+    "mtime": 1780162551.3724537,
     "ast_hash": "359b407ba6a7c67dfff31dc9a1180503",
     "semantic_hash": "359b407ba6a7c67dfff31dc9a1180503"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\GetMember\\GetMemberResponse.cs": {
-    "mtime": 1775858647.9169886,
+    "mtime": 1780162551.3734481,
     "ast_hash": "fcc8b0087d8e1540f71900e881504c01",
     "semantic_hash": "fcc8b0087d8e1540f71900e881504c01"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\GetSubscriptionHistory\\GetSubscriptionHistoryEndpoint.cs": {
-    "mtime": 1780138430.4127285,
+    "mtime": 1780162551.3807805,
     "ast_hash": "6ea5bd1207bb9c93fb3aa4c59b409664",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\GetSubscriptionHistory\\GetSubscriptionHistoryHandler.cs": {
-    "mtime": 1775862578.739697,
+    "mtime": 1780162551.3818257,
     "ast_hash": "9bc1cb68570bf48cf20dbbee56f8d4b1",
     "semantic_hash": "9bc1cb68570bf48cf20dbbee56f8d4b1"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\GetSubscriptionHistory\\GetSubscriptionHistoryQuery.cs": {
-    "mtime": 1776070476.7218173,
+    "mtime": 1780162551.3828368,
     "ast_hash": "005c6b351a72c5c22e715937d8a06dc4",
     "semantic_hash": "005c6b351a72c5c22e715937d8a06dc4"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\GetSubscriptionHistory\\GetSubscriptionHistoryResponse.cs": {
-    "mtime": 1775862555.9211435,
+    "mtime": 1780162551.3838377,
     "ast_hash": "0f0a616bf253dc3c274eb9f4cd25c391",
     "semantic_hash": "0f0a616bf253dc3c274eb9f4cd25c391"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\ListMembers\\ListMembersEndpoint.cs": {
-    "mtime": 1780138430.4137256,
+    "mtime": 1780162551.384838,
     "ast_hash": "20046b0716a69a9ef0ef56e74a200873",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\ListMembers\\ListMembersHandler.cs": {
-    "mtime": 1775864800.805128,
+    "mtime": 1780162551.3858378,
     "ast_hash": "e4c8d871d3a5d47cffea9b21899d67bb",
     "semantic_hash": "e4c8d871d3a5d47cffea9b21899d67bb"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\ListMembers\\ListMembersQuery.cs": {
-    "mtime": 1776070753.510528,
+    "mtime": 1780162551.387349,
     "ast_hash": "0ba4420ee2e428fd9dc6b039d1269f3a",
     "semantic_hash": "0ba4420ee2e428fd9dc6b039d1269f3a"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\ListMembers\\ListMembersRequest.cs": {
-    "mtime": 1775864778.966681,
+    "mtime": 1780162551.3883603,
     "ast_hash": "7e742e6af3241407ea50dd9ffe855c28",
     "semantic_hash": "7e742e6af3241407ea50dd9ffe855c28"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\ListMembers\\ListMembersResponse.cs": {
-    "mtime": 1775864769.7972898,
+    "mtime": 1780162551.3893602,
     "ast_hash": "ded661179c4cc87e68c02fca04654835",
     "semantic_hash": "ded661179c4cc87e68c02fca04654835"
   },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\UpdateMember\\UpdateMemberCommand.cs": {
-    "mtime": 1776511596.7464023,
-    "ast_hash": "3c2fcecb303b69420d6edcd1b3fc0216",
-    "semantic_hash": "3c2fcecb303b69420d6edcd1b3fc0216"
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\UpdateMember\\UpdateMemberEndpoint.cs": {
-    "mtime": 1780138430.4137256,
-    "ast_hash": "97c9e87b5cc274ceda099bfd56c579bb",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\UpdateMember\\UpdateMemberHandler.cs": {
-    "mtime": 1779962430.6539361,
-    "ast_hash": "1b768c97b7dd7faf3e4aaefb5309b585",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\UpdateMember\\UpdateMemberRequest.cs": {
-    "mtime": 1776510968.460821,
-    "ast_hash": "8dcb5b01df672e9b27a4ca277f064033",
-    "semantic_hash": "8dcb5b01df672e9b27a4ca277f064033"
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\UpdateMember\\UpdateMemberResponse.cs": {
-    "mtime": 1776511661.020903,
-    "ast_hash": "18fbfaccf39f9076e2888b8571b9c45f",
-    "semantic_hash": "18fbfaccf39f9076e2888b8571b9c45f"
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\UpdateMember\\UpdateMemberValidator.cs": {
-    "mtime": 1776519629.157408,
-    "ast_hash": "4fdd1a67a31573307cf1075ba9c8b266",
-    "semantic_hash": "4fdd1a67a31573307cf1075ba9c8b266"
-  },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Plans\\CreatePlan\\CreatePlanCommand.cs": {
-    "mtime": 1776531214.8680744,
+    "mtime": 1780162551.4089022,
     "ast_hash": "9415f9fb7fd6f4306096d2da2a8865dd",
     "semantic_hash": "9415f9fb7fd6f4306096d2da2a8865dd"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Plans\\CreatePlan\\CreatePlanEndpoint.cs": {
-    "mtime": 1780138430.4037917,
+    "mtime": 1780162551.409899,
     "ast_hash": "5005fb306df1f620701ca5c352575b64",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Plans\\CreatePlan\\CreatePlanHandler.cs": {
-    "mtime": 1776535577.445675,
+    "mtime": 1780162551.410897,
     "ast_hash": "860c023a0a905c4dd72330f4a82e65c5",
     "semantic_hash": "860c023a0a905c4dd72330f4a82e65c5"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Plans\\CreatePlan\\CreatePlanRequest.cs": {
-    "mtime": 1776535105.5069306,
+    "mtime": 1780162551.4119103,
     "ast_hash": "414cad13972823d034cffcd776f40559",
     "semantic_hash": "414cad13972823d034cffcd776f40559"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Plans\\CreatePlan\\CreatePlanResponse.cs": {
-    "mtime": 1776531233.894122,
+    "mtime": 1780162551.412928,
     "ast_hash": "321c35a4cef867d736c09d85977a66a2",
     "semantic_hash": "321c35a4cef867d736c09d85977a66a2"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Plans\\CreatePlan\\CreatePlanValidator.cs": {
-    "mtime": 1776535785.3335648,
+    "mtime": 1780162551.414927,
     "ast_hash": "0ddbaeea97bcd4dd1f6a380c88edfa29",
     "semantic_hash": "0ddbaeea97bcd4dd1f6a380c88edfa29"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Plans\\DeletePlan\\DeletePlanCommand.cs": {
-    "mtime": 1776538165.09399,
+    "mtime": 1780162551.4159212,
     "ast_hash": "8a7ea78a1d137610835b220f7a5fe9dc",
     "semantic_hash": "8a7ea78a1d137610835b220f7a5fe9dc"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Plans\\DeletePlan\\DeletePlanEndpoint.cs": {
-    "mtime": 1780138430.4047954,
+    "mtime": 1780162551.416926,
     "ast_hash": "e4e17736529c3869d60b4ce09679a314",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Plans\\DeletePlan\\DeletePlanHandler.cs": {
-    "mtime": 1776538211.779456,
+    "mtime": 1780162551.417922,
     "ast_hash": "00ccc29d2f03257a0c4245214bfc2ff9",
     "semantic_hash": "00ccc29d2f03257a0c4245214bfc2ff9"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Plans\\ListPlans\\ListPlansEndpoint.cs": {
-    "mtime": 1780138430.4057934,
-    "ast_hash": "ff7811953b8ba4256f9d1e9d2b1815a5",
+    "mtime": 1780269260.964918,
+    "ast_hash": "f8da36abecfc1c67cfeeb1a1621b6221",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Plans\\ListPlans\\ListPlansHandler.cs": {
-    "mtime": 1780089961.598878,
-    "ast_hash": "829fc16a600c2001682e1e71565872c1",
-    "semantic_hash": "829fc16a600c2001682e1e71565872c1"
+    "mtime": 1780269258.0498884,
+    "ast_hash": "2d0c665b509d3e513f71e3585539a2d1",
+    "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Plans\\ListPlans\\ListPlansQuery.cs": {
-    "mtime": 1776536176.129115,
+    "mtime": 1780162551.4209256,
     "ast_hash": "b7b7e7c13186cfa48e3c401031fc7643",
     "semantic_hash": "b7b7e7c13186cfa48e3c401031fc7643"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Plans\\ListPlans\\ListPlansResponse.cs": {
-    "mtime": 1776536249.3896275,
+    "mtime": 1780162551.421939,
     "ast_hash": "dd3172a025ae8bd09e5d2478f2b0d232",
     "semantic_hash": "dd3172a025ae8bd09e5d2478f2b0d232"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Plans\\UpdatePlan\\UpdatePlanCommand.cs": {
-    "mtime": 1776537728.3482127,
+    "mtime": 1780162551.425924,
     "ast_hash": "c76bcec0d6c29b7d04d0c834aa29ca1f",
     "semantic_hash": "c76bcec0d6c29b7d04d0c834aa29ca1f"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Plans\\UpdatePlan\\UpdatePlanEndpoint.cs": {
-    "mtime": 1780138430.4067936,
+    "mtime": 1780162551.425924,
     "ast_hash": "3307f6a5a9a3f51b634b53f7010074c5",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Plans\\UpdatePlan\\UpdatePlanHandler.cs": {
-    "mtime": 1776537791.1519341,
+    "mtime": 1780162551.4281144,
     "ast_hash": "ae7c99af05929b12b559af966032ba88",
     "semantic_hash": "ae7c99af05929b12b559af966032ba88"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Plans\\UpdatePlan\\UpdatePlanRequest.cs": {
-    "mtime": 1776537675.6697414,
+    "mtime": 1780162551.4291341,
     "ast_hash": "f42d12dff72128f9cd268656c6d222e7",
     "semantic_hash": "f42d12dff72128f9cd268656c6d222e7"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Subscriptions\\ConfirmCashPayment\\ConfirmCashPaymentCommand.cs": {
-    "mtime": 1777054749.9491043,
+    "mtime": 1780162551.4366443,
     "ast_hash": "d52dd9ad6e1146682b9d83db9538e993",
     "semantic_hash": "d52dd9ad6e1146682b9d83db9538e993"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Subscriptions\\ConfirmCashPayment\\ConfirmCashPaymentEndpoint.cs": {
-    "mtime": 1780138430.4017954,
+    "mtime": 1780162551.4376583,
     "ast_hash": "c0dceae3b40e8dba629205ca5ed16dd3",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Subscriptions\\ConfirmCashPayment\\ConfirmCashPaymentHandler.cs": {
-    "mtime": 1777054749.9501169,
+    "mtime": 1780162551.4386575,
     "ast_hash": "b58bebc030b3131a62fbab1cdd0f8d61",
     "semantic_hash": "b58bebc030b3131a62fbab1cdd0f8d61"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Subscriptions\\ConfirmCashPayment\\ConfirmCashPaymentRequest.cs": {
-    "mtime": 1777054749.9491043,
+    "mtime": 1780162551.4396622,
     "ast_hash": "c8672d05163f913c34599822d21b93db",
     "semantic_hash": "c8672d05163f913c34599822d21b93db"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Subscriptions\\ConfirmCashPayment\\ConfirmCashPaymentResponse.cs": {
-    "mtime": 1777054749.9491043,
+    "mtime": 1780162551.440656,
     "ast_hash": "62c994c0cc04fb2c4f993cad671ef4a2",
     "semantic_hash": "62c994c0cc04fb2c4f993cad671ef4a2"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Subscriptions\\ConfirmCashPayment\\ConfirmCashPaymentValidator.cs": {
-    "mtime": 1777054749.9491043,
+    "mtime": 1780162551.4426558,
     "ast_hash": "95a4ece7e6631ed4c74b609a28f77ec8",
     "semantic_hash": "95a4ece7e6631ed4c74b609a28f77ec8"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Subscriptions\\CreateSubscription\\CreateSubscriptionCommand.cs": {
-    "mtime": 1777054736.0141382,
+    "mtime": 1780162551.4432375,
     "ast_hash": "af311811766bae4f41689c5670cead57",
     "semantic_hash": "af311811766bae4f41689c5670cead57"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Subscriptions\\CreateSubscription\\CreateSubscriptionEndpoint.cs": {
-    "mtime": 1780138430.4027934,
+    "mtime": 1780162551.444254,
     "ast_hash": "686f17fb01ad7ca2e23f7f3f887bf13c",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Subscriptions\\CreateSubscription\\CreateSubscriptionHandler.cs": {
-    "mtime": 1777054736.0141382,
+    "mtime": 1780162551.445254,
     "ast_hash": "617017eae114870e0a5c4d7dbb48e97e",
     "semantic_hash": "617017eae114870e0a5c4d7dbb48e97e"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Subscriptions\\CreateSubscription\\CreateSubscriptionRequest.cs": {
-    "mtime": 1777054736.0141382,
+    "mtime": 1780162551.4462507,
     "ast_hash": "50591a506568bc7545ff1fa37171cca4",
     "semantic_hash": "50591a506568bc7545ff1fa37171cca4"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Subscriptions\\CreateSubscription\\CreateSubscriptionResponse.cs": {
-    "mtime": 1777054736.0269382,
+    "mtime": 1780162551.448262,
     "ast_hash": "639b4079320e71d897c3afeb6340215b",
     "semantic_hash": "639b4079320e71d897c3afeb6340215b"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Subscriptions\\CreateSubscription\\CreateSubscriptionValidator.cs": {
-    "mtime": 1779475174.349152,
+    "mtime": 1780162551.449261,
     "ast_hash": "802ae32eb59985e9011c3c388700bd63",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Infrastructure\\IdentityRequests.cs": {
-    "mtime": 1776520745.1901362,
+    "mtime": 1780162551.4677942,
     "ast_hash": "5ef07e9d4a2ec9f0a090aa53a4df3c38",
     "semantic_hash": "5ef07e9d4a2ec9f0a090aa53a4df3c38"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Infrastructure\\IIdentityServiceClient.cs": {
-    "mtime": 1780137256.496562,
-    "ast_hash": "addb8133157afc6caf4ab535feb4e99b",
+    "mtime": 1780352697.1028736,
+    "ast_hash": "b8e0a8ceb2e3309f0b95def0688d819a",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Infrastructure\\IPaymentServiceClient.cs": {
-    "mtime": 1777054698.421139,
-    "ast_hash": "9ad12521bbd20932bb3fb1de9d631225",
-    "semantic_hash": "9ad12521bbd20932bb3fb1de9d631225"
+    "mtime": 1780314071.0272849,
+    "ast_hash": "d6033b845024f4f21d75ac010ca1e6ce",
+    "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Migrations\\20260413104607_InitialMembershipSchema.cs": {
-    "mtime": 1776077168.039078,
+    "mtime": 1780162551.4737935,
     "ast_hash": "c30b7a5c89bd05a1707e460f44175e13",
     "semantic_hash": "c30b7a5c89bd05a1707e460f44175e13"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Migrations\\20260413104607_InitialMembershipSchema.Designer.cs": {
-    "mtime": 1776077168.0400572,
+    "mtime": 1780162551.4717948,
     "ast_hash": "91e1fe5c5f02db91c64be71ca85ae843",
     "semantic_hash": "91e1fe5c5f02db91c64be71ca85ae843"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Migrations\\MembershipDbContextModelSnapshot.cs": {
-    "mtime": 1779475677.3500113,
-    "ast_hash": "187895378cfab84f20b4ed46cebad74a",
+    "mtime": 1780352582.05594,
+    "ast_hash": "7bf593e6d83014e8ba3f6552fea4f00c",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Properties\\launchSettings.json": {
-    "mtime": 1774908506.894215,
+    "mtime": 1780162551.4828925,
     "ast_hash": "184fa885257a899be06d0724a2417882",
     "semantic_hash": "184fa885257a899be06d0724a2417882"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Shared\\ErrorOnExtensions.cs": {
-    "mtime": 1776519916.4905713,
+    "mtime": 1780162551.4838908,
     "ast_hash": "b8069129345a4028a3f173ce5366d72f",
     "semantic_hash": "b8069129345a4028a3f173ce5366d72f"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Notification\\Notification.Api\\appsettings.Development.json": {
-    "mtime": 1773443805.1780386,
+    "mtime": 1780162551.5014179,
     "ast_hash": "efb942c8788e089b2e52cbbff0b04b7e",
     "semantic_hash": "efb942c8788e089b2e52cbbff0b04b7e"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Notification\\Notification.Api\\appsettings.json": {
-    "mtime": 1780091896.7690308,
+    "mtime": 1780162551.5024173,
     "ast_hash": "552aa523a8535fa48e613a45a3ff3b51",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Notification\\Notification.Api\\Program.cs": {
-    "mtime": 1780092201.3665924,
+    "mtime": 1780162551.49189,
     "ast_hash": "f18b17d39634646e179831f73c813412",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Notification\\Notification.Api\\Worker.cs": {
-    "mtime": 1773443805.1780386,
+    "mtime": 1780162551.5004158,
     "ast_hash": "96efea0f6086a77ca49e7b46c56d8903",
     "semantic_hash": "96efea0f6086a77ca49e7b46c56d8903"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Notification\\Notification.Api\\Consumers\\UserRegisteredConsumer.cs": {
-    "mtime": 1780092192.9151826,
+    "mtime": 1780162551.4888892,
     "ast_hash": "fb8f47da99cf41f854c9a44c48f0b73e",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Notification\\Notification.Api\\Properties\\launchSettings.json": {
-    "mtime": 1773443805.1780386,
+    "mtime": 1780162551.492887,
     "ast_hash": "9f98341e78accd448dcc48c04ceba60b",
     "semantic_hash": "9f98341e78accd448dcc48c04ceba60b"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\appsettings.Development.json": {
-    "mtime": 1777054584.3310795,
+    "mtime": 1780162551.5722642,
     "ast_hash": "804b473502a4c415cf75db61c56c32aa",
     "semantic_hash": "804b473502a4c415cf75db61c56c32aa"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\appsettings.json": {
-    "mtime": 1777054584.34509,
+    "mtime": 1780162551.5732648,
     "ast_hash": "f7e65dde4e5533740a0d57ac9355c0e8",
     "semantic_hash": "f7e65dde4e5533740a0d57ac9355c0e8"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Program.cs": {
-    "mtime": 1780138610.8333664,
-    "ast_hash": "9e20b6634dd5d6161b3e61797cddc7b2",
+    "mtime": 1780225959.8257654,
+    "ast_hash": "b63ba12c9520eac75f5393b14363d860",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Domain\\Entities\\Payment.cs": {
-    "mtime": 1779480090.670197,
-    "ast_hash": "7c2f9c68d2421baf8773dd323cf107cd",
+    "mtime": 1780162551.5263386,
+    "ast_hash": "4c896e77b7885d96861a14b5f03521cb",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Domain\\Errors\\PaymentErrors.cs": {
-    "mtime": 1777054663.8400033,
+    "mtime": 1780162551.5273387,
     "ast_hash": "f4beac24e67055e9d389e5958116a13b",
     "semantic_hash": "f4beac24e67055e9d389e5958116a13b"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Payments\\CreatePayment\\CreatePaymentCommand.cs": {
-    "mtime": 1777054674.7279334,
+    "mtime": 1780162551.5293431,
     "ast_hash": "644c520d41231d9cbe4cdbbd2be7510a",
     "semantic_hash": "644c520d41231d9cbe4cdbbd2be7510a"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Payments\\CreatePayment\\CreatePaymentEndpoint.cs": {
-    "mtime": 1780138610.8403609,
+    "mtime": 1780162551.530341,
     "ast_hash": "6962529039b661034b1b3be19fdbb675",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Payments\\CreatePayment\\CreatePaymentHandler.cs": {
-    "mtime": 1779480084.8612237,
+    "mtime": 1780162551.5313425,
     "ast_hash": "413e2efe6c29150c6a562e2e9c966de7",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Payments\\CreatePayment\\CreatePaymentRequest.cs": {
-    "mtime": 1777054674.728944,
+    "mtime": 1780162551.5327153,
     "ast_hash": "927291ccdd47f8c9ac5202d3c5cc01be",
     "semantic_hash": "927291ccdd47f8c9ac5202d3c5cc01be"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Payments\\CreatePayment\\CreatePaymentResponse.cs": {
-    "mtime": 1777054674.7279334,
+    "mtime": 1780162551.533812,
     "ast_hash": "5a83a90546247066fb498e9c681a880c",
     "semantic_hash": "5a83a90546247066fb498e9c681a880c"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Payments\\CreatePayment\\CreatePaymentValidator.cs": {
-    "mtime": 1777054674.7279334,
+    "mtime": 1780162551.53501,
     "ast_hash": "f13a9578b9681e62a3f5bdf9b20b4cf4",
     "semantic_hash": "f13a9578b9681e62a3f5bdf9b20b4cf4"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Infrastructure\\Persistence\\PaymentDbContext.cs": {
-    "mtime": 1779619425.3900905,
-    "ast_hash": "f5a2a2a77cd5afd2a61cd07c6b80b560",
+    "mtime": 1780162551.5600827,
+    "ast_hash": "c3ccbf5a127335d90118f628f3a34876",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Infrastructure\\Persistence\\Configurations\\PaymentConfiguration.cs": {
-    "mtime": 1779480059.4478335,
-    "ast_hash": "dd06b85367f25dd09005ec6c607a0a7b",
+    "mtime": 1780162551.5590777,
+    "ast_hash": "eccff6ecc32cc24420da4cd5f5d48ff1",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Properties\\launchSettings.json": {
-    "mtime": 1779957792.5355668,
+    "mtime": 1780162551.5696018,
     "ast_hash": "7a22abc1a11c8e9993d80422f6ea408b",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Shared\\ErrorOnExtensions.cs": {
-    "mtime": 1777054678.9566321,
+    "mtime": 1780162551.5712507,
     "ast_hash": "b74d525bcbe441d5c6c2852954989575",
     "semantic_hash": "b74d525bcbe441d5c6c2852954989575"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Shared\\Enums\\Currency.cs": {
-    "mtime": 1777054516.8750827,
+    "mtime": 1780162551.5742621,
     "ast_hash": "7437896e5b5cdb872404e0c3cd5ddffd",
     "semantic_hash": "7437896e5b5cdb872404e0c3cd5ddffd"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Shared\\Enums\\PaymentMethod.cs": {
-    "mtime": 1777054516.866083,
+    "mtime": 1780162551.5752618,
     "ast_hash": "17ced46c154fc7de3b8887c98b9c0d8b",
     "semantic_hash": "17ced46c154fc7de3b8887c98b9c0d8b"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Shared\\Enums\\PaymentStatus.cs": {
-    "mtime": 1777054516.8611786,
+    "mtime": 1780162551.5762625,
     "ast_hash": "3f8b1a2540fdbe5930c33d9c6a42e0bf",
     "semantic_hash": "3f8b1a2540fdbe5930c33d9c6a42e0bf"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Shared\\Enums\\PaymentType.cs": {
-    "mtime": 1777054516.8750827,
-    "ast_hash": "18e1ad8cbd440b8c56947f9c91dc1e20",
-    "semantic_hash": "18e1ad8cbd440b8c56947f9c91dc1e20"
+    "mtime": 1780314016.783137,
+    "ast_hash": "5f6167f6fd3abe56a1f5f33d7eed2fd6",
+    "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Shared\\Events\\MemberCreatedEvent.cs": {
-    "mtime": 1780092224.004223,
+    "mtime": 1780162551.5851867,
     "ast_hash": "a1211c84bf43f6b5ab3fe48f090b8c60",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Shared\\Events\\PaymentConfirmedEvent.cs": {
-    "mtime": 1777054499.6360848,
+    "mtime": 1780162551.5876958,
     "ast_hash": "b0fd5714e5fbc724f32a0ccff6dccb01",
     "semantic_hash": "b0fd5714e5fbc724f32a0ccff6dccb01"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Shared\\Events\\UserCreatedEvent.cs": {
-    "mtime": 1780092112.1092248,
+    "mtime": 1780162551.5917103,
     "ast_hash": "fa77c656da43748124fb5bea8dbe4479",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Shared\\Wrappers\\Response.cs": {
-    "mtime": 1773443805.1798706,
+    "mtime": 1780162551.593705,
     "ast_hash": "09c2edc2421dce3a0727db5fb7c9fafc",
     "semantic_hash": "09c2edc2421dce3a0727db5fb7c9fafc"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\AGENTS.md": {
-    "mtime": 1779524260.0373182,
+    "mtime": 1780162551.1350474,
     "ast_hash": "e15fa59bf089e07ffe803d191ff7f705",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\GEMINI.md": {
-    "mtime": 1775899703.2131557,
+    "mtime": 1780162551.1431584,
     "ast_hash": "4ba171bb15f5dc0092ca371b3733794b",
     "semantic_hash": "4ba171bb15f5dc0092ca371b3733794b"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\opencode.md": {
-    "mtime": 1779524247.6810467,
+    "mtime": 1780162552.5020783,
     "ast_hash": "7ab861a443667dd08bdbb8be34b8a64d",
     "semantic_hash": "7ab861a443667dd08bdbb8be34b8a64d"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\README.md": {
-    "mtime": 1773443805.1598568,
+    "mtime": 1780162551.1431584,
     "ast_hash": "bba282ccf5f763d387251fdbb89bf330",
     "semantic_hash": "bba282ccf5f763d387251fdbb89bf330"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.agents\\rules\\MASTER.md": {
-    "mtime": 1775856358.4575934,
+    "mtime": 1780162551.1030352,
     "ast_hash": "072098247d29f5da90c8dae2b809cd6a",
     "semantic_hash": "072098247d29f5da90c8dae2b809cd6a"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.ai\\architecture.md": {
-    "mtime": 1775856447.5011864,
+    "mtime": 1780162551.1040332,
     "ast_hash": "445fa088c9c2e817de05e08c7c9c9be6",
     "semantic_hash": "445fa088c9c2e817de05e08c7c9c9be6"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.ai\\MASTER_INSTRUCTIONS.md": {
-    "mtime": 1779524179.565177,
+    "mtime": 1780162551.1040332,
     "ast_hash": "d8f2e6791e7bc0e9b8dab9c78637ea36",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.ai\\paymentService_instructions.md": {
-    "mtime": 1777052969.1349566,
+    "mtime": 1780162551.108034,
     "ast_hash": "e6e5525d9806989f8bdb14372f873540",
     "semantic_hash": "e6e5525d9806989f8bdb14372f873540"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.ai\\progress.md": {
-    "mtime": 1779620474.0758429,
+    "mtime": 1780162551.109034,
     "ast_hash": "a6d9a87025fccfcc7983f1a7542801fd",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.ai\\project_brief.md": {
-    "mtime": 1779612439.4071364,
+    "mtime": 1780162551.1100342,
     "ast_hash": "b5e505f7c0c608589bf757e3a6cbf167",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.ai\\features\\feature_DeleteMember.md": {
-    "mtime": 1776524190.5435183,
+    "mtime": 1780162551.1050372,
     "ast_hash": "011497f7ed75c759609b0283b7c43348",
     "semantic_hash": "011497f7ed75c759609b0283b7c43348"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.ai\\features\\feature_GetActiveSubscription.md": {
-    "mtime": 1777026414.8564696,
+    "mtime": 1780162551.1050372,
     "ast_hash": "a1b6d43b432f5463b76ae3eb69ca5655",
     "semantic_hash": "a1b6d43b432f5463b76ae3eb69ca5655"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.ai\\features\\feature_GetMemberDetail.md": {
-    "mtime": 1775860532.2472136,
+    "mtime": 1780162551.1060393,
     "ast_hash": "69a27062bbe0ec49d42f2e86fccd8ddf",
     "semantic_hash": "69a27062bbe0ec49d42f2e86fccd8ddf"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.ai\\features\\feature_GetSubscriptionHistory.md": {
-    "mtime": 1775862594.254946,
+    "mtime": 1780162551.1060393,
     "ast_hash": "005922c29e4bb955c1fbd4670be24ed7",
     "semantic_hash": "005922c29e4bb955c1fbd4670be24ed7"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.ai\\features\\feature_ListMembers.md": {
-    "mtime": 1775864818.8916545,
+    "mtime": 1780162551.1070344,
     "ast_hash": "0a0b6b3e822d5bd4c2ba006d58064ea4",
     "semantic_hash": "0a0b6b3e822d5bd4c2ba006d58064ea4"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.ai\\features\\feature_ManageSubscriptionPlans.md": {
-    "mtime": 1776538246.7047434,
+    "mtime": 1780162551.1070344,
     "ast_hash": "d75a9f0f7a1e830349f88904439a7fe3",
     "semantic_hash": "d75a9f0f7a1e830349f88904439a7fe3"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.ai\\features\\feature_UpdateMember.md": {
-    "mtime": 1776519640.4493423,
+    "mtime": 1780162551.1070344,
     "ast_hash": "f7d7ee02fd17425a79d4e8c5c43116f6",
     "semantic_hash": "f7d7ee02fd17425a79d4e8c5c43116f6"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.ai\\features\\membershipService.instructions.md": {
-    "mtime": 1779618452.9676597,
+    "mtime": 1780162551.108034,
     "ast_hash": "9721dfa0ef9bcd94ba96a348ddf4b76c",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.claude\\skills\\aspire\\SKILL.md": {
-    "mtime": 1779380998.775689,
+    "mtime": 1780162551.1110365,
     "ast_hash": "730610ff4ed54259f40e75ce242183cb",
     "semantic_hash": "730610ff4ed54259f40e75ce242183cb"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.claude\\skills\\playwright-cli\\SKILL.md": {
-    "mtime": 1779381029.0948732,
+    "mtime": 1780162551.1120362,
     "ast_hash": "b5a8fa6906768a1d4d3aeb00d0c0a1f2",
     "semantic_hash": "b5a8fa6906768a1d4d3aeb00d0c0a1f2"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.claude\\skills\\playwright-cli\\references\\element-attributes.md": {
-    "mtime": 1779381029.0764697,
+    "mtime": 1780162551.1120362,
     "ast_hash": "8b8ffc48e38a5b4a04baec18a2732cd7",
     "semantic_hash": "8b8ffc48e38a5b4a04baec18a2732cd7"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.claude\\skills\\playwright-cli\\references\\playwright-tests.md": {
-    "mtime": 1779381029.0795777,
+    "mtime": 1780162551.113035,
     "ast_hash": "99970dceff6228941c8f994e7dd71d27",
     "semantic_hash": "99970dceff6228941c8f994e7dd71d27"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.claude\\skills\\playwright-cli\\references\\request-mocking.md": {
-    "mtime": 1779381029.0854983,
+    "mtime": 1780162551.113035,
     "ast_hash": "3b74af1fc908062c9c7f2cef04be6a24",
     "semantic_hash": "3b74af1fc908062c9c7f2cef04be6a24"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.claude\\skills\\playwright-cli\\references\\running-code.md": {
-    "mtime": 1779381029.088668,
+    "mtime": 1780162551.113035,
     "ast_hash": "971c216502efd1af848fe0711e2cffc7",
     "semantic_hash": "971c216502efd1af848fe0711e2cffc7"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.claude\\skills\\playwright-cli\\references\\session-management.md": {
-    "mtime": 1779381029.091832,
+    "mtime": 1780162551.1140337,
     "ast_hash": "82975a2a618d15314a5c4397b6245a7c",
     "semantic_hash": "82975a2a618d15314a5c4397b6245a7c"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.claude\\skills\\playwright-cli\\references\\spec-driven-testing.md": {
-    "mtime": 1779381029.1037002,
+    "mtime": 1780162551.1140337,
     "ast_hash": "30aa0cce7077d985e0159254c7034ea4",
     "semantic_hash": "30aa0cce7077d985e0159254c7034ea4"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.claude\\skills\\playwright-cli\\references\\storage-state.md": {
-    "mtime": 1779381029.1096752,
+    "mtime": 1780162551.115032,
     "ast_hash": "074c38cbac4b12b82e97241ac549b449",
     "semantic_hash": "074c38cbac4b12b82e97241ac549b449"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.claude\\skills\\playwright-cli\\references\\test-generation.md": {
-    "mtime": 1779381029.1138465,
+    "mtime": 1780162551.1160324,
     "ast_hash": "9c57c3164e307594ae3649455b950b5c",
     "semantic_hash": "9c57c3164e307594ae3649455b950b5c"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.claude\\skills\\playwright-cli\\references\\tracing.md": {
-    "mtime": 1779381029.117485,
+    "mtime": 1780162551.1160324,
     "ast_hash": "2ecb8b98a4fa4e2d481e3de623072559",
     "semantic_hash": "2ecb8b98a4fa4e2d481e3de623072559"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.claude\\skills\\playwright-cli\\references\\video-recording.md": {
-    "mtime": 1779381029.1199703,
+    "mtime": 1780162551.1170344,
     "ast_hash": "ddd269974535b4bd6c5d4b5d75b4849e",
     "semantic_hash": "ddd269974535b4bd6c5d4b5d75b4849e"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.github\\copilot-instructions.md": {
-    "mtime": 1779467985.8577802,
+    "mtime": 1780162551.1190376,
     "ast_hash": "b0a7d3481e439fdd3b4b9c88a4180d67",
     "semantic_hash": "b0a7d3481e439fdd3b4b9c88a4180d67"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.github\\csharp.instructions.md": {
-    "mtime": 1773507362.9391873,
+    "mtime": 1780162551.1190376,
     "ast_hash": "a144738c2d592ff2db8342fe59077f99",
     "semantic_hash": "a144738c2d592ff2db8342fe59077f99"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.github\\skills\\aspire\\SKILL.md": {
-    "mtime": 1779380998.7711651,
+    "mtime": 1780162551.120036,
     "ast_hash": "730610ff4ed54259f40e75ce242183cb",
     "semantic_hash": "730610ff4ed54259f40e75ce242183cb"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.github\\skills\\playwright-cli\\SKILL.md": {
-    "mtime": 1779381029.0948732,
+    "mtime": 1780162551.120036,
     "ast_hash": "b5a8fa6906768a1d4d3aeb00d0c0a1f2",
     "semantic_hash": "b5a8fa6906768a1d4d3aeb00d0c0a1f2"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.github\\skills\\playwright-cli\\references\\element-attributes.md": {
-    "mtime": 1779381029.0764697,
+    "mtime": 1780162551.121035,
     "ast_hash": "8b8ffc48e38a5b4a04baec18a2732cd7",
     "semantic_hash": "8b8ffc48e38a5b4a04baec18a2732cd7"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.github\\skills\\playwright-cli\\references\\playwright-tests.md": {
-    "mtime": 1779381029.0795777,
+    "mtime": 1780162551.121035,
     "ast_hash": "99970dceff6228941c8f994e7dd71d27",
     "semantic_hash": "99970dceff6228941c8f994e7dd71d27"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.github\\skills\\playwright-cli\\references\\request-mocking.md": {
-    "mtime": 1779381029.0854983,
+    "mtime": 1780162551.122043,
     "ast_hash": "3b74af1fc908062c9c7f2cef04be6a24",
     "semantic_hash": "3b74af1fc908062c9c7f2cef04be6a24"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.github\\skills\\playwright-cli\\references\\running-code.md": {
-    "mtime": 1779381029.088668,
+    "mtime": 1780162551.122043,
     "ast_hash": "971c216502efd1af848fe0711e2cffc7",
     "semantic_hash": "971c216502efd1af848fe0711e2cffc7"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.github\\skills\\playwright-cli\\references\\session-management.md": {
-    "mtime": 1779381029.091832,
+    "mtime": 1780162551.1230428,
     "ast_hash": "82975a2a618d15314a5c4397b6245a7c",
     "semantic_hash": "82975a2a618d15314a5c4397b6245a7c"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.github\\skills\\playwright-cli\\references\\spec-driven-testing.md": {
-    "mtime": 1779381029.1037002,
+    "mtime": 1780162551.1230428,
     "ast_hash": "30aa0cce7077d985e0159254c7034ea4",
     "semantic_hash": "30aa0cce7077d985e0159254c7034ea4"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.github\\skills\\playwright-cli\\references\\storage-state.md": {
-    "mtime": 1779381029.1096752,
+    "mtime": 1780162551.1240418,
     "ast_hash": "074c38cbac4b12b82e97241ac549b449",
     "semantic_hash": "074c38cbac4b12b82e97241ac549b449"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.github\\skills\\playwright-cli\\references\\test-generation.md": {
-    "mtime": 1779381029.1138465,
+    "mtime": 1780162551.1240418,
     "ast_hash": "9c57c3164e307594ae3649455b950b5c",
     "semantic_hash": "9c57c3164e307594ae3649455b950b5c"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.github\\skills\\playwright-cli\\references\\tracing.md": {
-    "mtime": 1779381029.117485,
+    "mtime": 1780162551.1250482,
     "ast_hash": "2ecb8b98a4fa4e2d481e3de623072559",
     "semantic_hash": "2ecb8b98a4fa4e2d481e3de623072559"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.github\\skills\\playwright-cli\\references\\video-recording.md": {
-    "mtime": 1779381029.1199703,
+    "mtime": 1780162551.1250482,
     "ast_hash": "ddd269974535b4bd6c5d4b5d75b4849e",
     "semantic_hash": "ddd269974535b4bd6c5d4b5d75b4849e"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.opencode\\skill\\aspire\\SKILL.md": {
-    "mtime": 1779380998.7736826,
+    "mtime": 1780162551.1280448,
     "ast_hash": "730610ff4ed54259f40e75ce242183cb",
     "semantic_hash": "730610ff4ed54259f40e75ce242183cb"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.opencode\\skill\\playwright-cli\\SKILL.md": {
-    "mtime": 1779381029.0948732,
+    "mtime": 1780162551.1280448,
     "ast_hash": "b5a8fa6906768a1d4d3aeb00d0c0a1f2",
     "semantic_hash": "b5a8fa6906768a1d4d3aeb00d0c0a1f2"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.opencode\\skill\\playwright-cli\\references\\element-attributes.md": {
-    "mtime": 1779381029.0764697,
+    "mtime": 1780162551.1290455,
     "ast_hash": "8b8ffc48e38a5b4a04baec18a2732cd7",
     "semantic_hash": "8b8ffc48e38a5b4a04baec18a2732cd7"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.opencode\\skill\\playwright-cli\\references\\playwright-tests.md": {
-    "mtime": 1779381029.0795777,
+    "mtime": 1780162551.1290455,
     "ast_hash": "99970dceff6228941c8f994e7dd71d27",
     "semantic_hash": "99970dceff6228941c8f994e7dd71d27"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.opencode\\skill\\playwright-cli\\references\\request-mocking.md": {
-    "mtime": 1779381029.0854983,
+    "mtime": 1780162551.1300457,
     "ast_hash": "3b74af1fc908062c9c7f2cef04be6a24",
     "semantic_hash": "3b74af1fc908062c9c7f2cef04be6a24"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.opencode\\skill\\playwright-cli\\references\\running-code.md": {
-    "mtime": 1779381029.088668,
+    "mtime": 1780162551.1310477,
     "ast_hash": "971c216502efd1af848fe0711e2cffc7",
     "semantic_hash": "971c216502efd1af848fe0711e2cffc7"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.opencode\\skill\\playwright-cli\\references\\session-management.md": {
-    "mtime": 1779381029.091832,
+    "mtime": 1780162551.1310477,
     "ast_hash": "82975a2a618d15314a5c4397b6245a7c",
     "semantic_hash": "82975a2a618d15314a5c4397b6245a7c"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.opencode\\skill\\playwright-cli\\references\\spec-driven-testing.md": {
-    "mtime": 1779381029.1037002,
+    "mtime": 1780162551.132048,
     "ast_hash": "30aa0cce7077d985e0159254c7034ea4",
     "semantic_hash": "30aa0cce7077d985e0159254c7034ea4"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.opencode\\skill\\playwright-cli\\references\\storage-state.md": {
-    "mtime": 1779381029.1096752,
+    "mtime": 1780162551.132048,
     "ast_hash": "074c38cbac4b12b82e97241ac549b449",
     "semantic_hash": "074c38cbac4b12b82e97241ac549b449"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.opencode\\skill\\playwright-cli\\references\\test-generation.md": {
-    "mtime": 1779381029.1138465,
+    "mtime": 1780162551.1330438,
     "ast_hash": "9c57c3164e307594ae3649455b950b5c",
     "semantic_hash": "9c57c3164e307594ae3649455b950b5c"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.opencode\\skill\\playwright-cli\\references\\tracing.md": {
-    "mtime": 1779381029.117485,
+    "mtime": 1780162551.1330438,
     "ast_hash": "2ecb8b98a4fa4e2d481e3de623072559",
     "semantic_hash": "2ecb8b98a4fa4e2d481e3de623072559"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.opencode\\skill\\playwright-cli\\references\\video-recording.md": {
-    "mtime": 1779381029.1199703,
+    "mtime": 1780162551.1340466,
     "ast_hash": "ddd269974535b4bd6c5d4b5d75b4849e",
     "semantic_hash": "ddd269974535b4bd6c5d4b5d75b4849e"
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Gateway\\gateway.yaml": {
-    "mtime": 1780041100.7737072,
-    "ast_hash": "512ede0f2ca552055b6baaa15a54e54b",
+    "mtime": 1780328140.966763,
+    "ast_hash": "ea188f3c2ee797ec7f45eef754b1140d",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\graphify_update.py": {
-    "mtime": 1779469780.7290623,
+    "mtime": 1780162552.499622,
     "ast_hash": "199e13891ea55a8b52d4503ea3bf93d3",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.claude\\settings.json": {
-    "mtime": 1779472862.182073,
+    "mtime": 1780162551.1100342,
     "ast_hash": "5d6ecd96cf065b16e8bb9fbf5d7d8f0d",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\.claude\\settings.local.json": {
-    "mtime": 1779473147.0330837,
+    "mtime": 1780162551.1100342,
     "ast_hash": "0fc980e8c6ea0c49bc190277667aad90",
     "semantic_hash": ""
   },
@@ -1155,1478 +1125,2093 @@
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\CLAUDE.md": {
-    "mtime": 1779472862.1798465,
+    "mtime": 1780162551.1350474,
     "ast_hash": "8a6643a420fdad6bfb583523bc6cef16",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\docs\\salle de sport.pdf": {
-    "mtime": 1773675455.8565981,
+    "mtime": 1780162551.5982435,
     "ast_hash": "b0a011da69c6be90f6127271d1ad484a",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\package.json": {
-    "mtime": 1779477755.7772286,
+    "mtime": 1780162552.5043066,
     "ast_hash": "cd0c0a8b7461ecfed445bf2de4000230",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\playwright.config.ts": {
-    "mtime": 1779478784.3043756,
+    "mtime": 1780162552.505311,
     "ast_hash": "176c852893c81974f6f2ca4141ad38d5",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\appsettings.Development.json": {
-    "mtime": 1779619957.5885403,
+    "mtime": 1780162551.171426,
     "ast_hash": "0f171a8431e3a30dda035d533a809f85",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\appsettings.json": {
-    "mtime": 1779619956.7779965,
+    "mtime": 1780162551.1724179,
     "ast_hash": "0f171a8431e3a30dda035d533a809f85",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Program.cs": {
-    "mtime": 1780138378.4584186,
-    "ast_hash": "96caa96a28e180deaecb74e83ff48394",
+    "mtime": 1780225959.8257654,
+    "ast_hash": "88ba143cc8ce3176021ded4b6fd5128f",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Common\\Behaviours\\ValidationBehavior.cs": {
-    "mtime": 1779619975.0584793,
+    "mtime": 1780162551.1451612,
     "ast_hash": "e0c8ed91a74b3a03d419b230aab61237",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Common\\Security\\UserAccessor.cs": {
-    "mtime": 1779619972.7745185,
+    "mtime": 1780162551.1451612,
     "ast_hash": "70375bbe8fb26951a806509e4fe1d4a2",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Domain\\ActivityDbContext.cs": {
-    "mtime": 1779619967.8172786,
+    "mtime": 1780162551.1461632,
     "ast_hash": "f8a3e8f653d771daa98c9cac8c1ef7bb",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Domain\\Configurations\\MemberActivityConfiguration.cs": {
-    "mtime": 1779619969.7272213,
+    "mtime": 1780162551.1476593,
     "ast_hash": "b5ae593e88d59e3c0c58f0f912f58957",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Domain\\Entities\\MemberActivity.cs": {
-    "mtime": 1779619966.2833931,
-    "ast_hash": "e7343233bd563d034e834a46fe2ee749",
+    "mtime": 1780361143.0525353,
+    "ast_hash": "9852d23fda3550f88cf73a2c06174ce5",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Features\\EntryExit\\ManualEnter\\ManualEnterCommand.cs": {
-    "mtime": 1779620042.2849698,
-    "ast_hash": "faad78bfb62ddeb5a23d587635ef9eb0",
+    "mtime": 1780361275.1251783,
+    "ast_hash": "6163aa06bda42d941ef7d8526fc89e35",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Features\\EntryExit\\ManualEnter\\ManualEnterEndpoint.cs": {
-    "mtime": 1780138378.4604154,
-    "ast_hash": "dcaab383a2176555452dd8ff74a5b98b",
+    "mtime": 1780361303.9637504,
+    "ast_hash": "355d627ca8c6c1d289777baad21c2922",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Features\\EntryExit\\ManualEnter\\ManualEnterHandler.cs": {
-    "mtime": 1779620046.6024802,
-    "ast_hash": "f779bc8fbf2a9820c0c0ddb316cd9954",
+    "mtime": 1780361257.1368754,
+    "ast_hash": "23a9f0b5dad07e1e1c22fe8259465430",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Features\\EntryExit\\ManualEnter\\ManualEnterResponse.cs": {
-    "mtime": 1779620043.2030087,
+    "mtime": 1780162551.1527412,
     "ast_hash": "15c4adde1c2d8dfe615a9eb6214319a8",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Features\\EntryExit\\ManualExit\\ManualExitCommand.cs": {
-    "mtime": 1779620051.752515,
-    "ast_hash": "03a3f315106a0ad8acad5fb034c48492",
+    "mtime": 1780361282.3627174,
+    "ast_hash": "1695ac38572fd6efa7de5bfa32de99c9",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Features\\EntryExit\\ManualExit\\ManualExitEndpoint.cs": {
-    "mtime": 1780138378.4634168,
-    "ast_hash": "267eeec4eb87470d0b62d299f6d938fc",
+    "mtime": 1780361312.881338,
+    "ast_hash": "8ae69fb7b85784e5de007c88143a5645",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Features\\EntryExit\\ManualExit\\ManualExitHandler.cs": {
-    "mtime": 1779620056.4215963,
-    "ast_hash": "ac5fce71b4d8ae350724dfe0107da217",
+    "mtime": 1780361268.129387,
+    "ast_hash": "019ce06936fee38871cc0204c17cf12f",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Features\\EntryExit\\ManualExit\\ManualExitResponse.cs": {
-    "mtime": 1779620052.5433877,
+    "mtime": 1780162551.1557472,
     "ast_hash": "68cbd44a0c6818eabfc3aaa3ebc5d109",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Features\\EntryExit\\ScanEntryExit\\ScanEntryExitCommand.cs": {
-    "mtime": 1779620020.662494,
+    "mtime": 1780162551.1557472,
     "ast_hash": "8bfac91dadde225bbfec9cd271b9dab4",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Features\\EntryExit\\ScanEntryExit\\ScanEntryExitEndpoint.cs": {
-    "mtime": 1780138378.465471,
+    "mtime": 1780162551.1567576,
     "ast_hash": "e2ff14d350b111ee10aabe702c9b4364",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Features\\EntryExit\\ScanEntryExit\\ScanEntryExitHandler.cs": {
-    "mtime": 1779620031.5163782,
-    "ast_hash": "8421ac86c9776d4ce9628eeeafedeaef",
+    "mtime": 1780361194.7056026,
+    "ast_hash": "e64479b37300bad077f7d59dd6645f11",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Features\\EntryExit\\ScanEntryExit\\ScanEntryExitRequest.cs": {
-    "mtime": 1779620021.747775,
+    "mtime": 1780162551.158749,
     "ast_hash": "b926074cdd4430596e268849432ddd02",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Features\\EntryExit\\ScanEntryExit\\ScanEntryExitResponse.cs": {
-    "mtime": 1779620024.0268312,
+    "mtime": 1780162551.159753,
     "ast_hash": "51bb8a7260c0273a4715c10200dd7cfc",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Features\\Members\\GetMemberActivity\\GetMemberActivityEndpoint.cs": {
-    "mtime": 1780138378.470479,
+    "mtime": 1780162551.159753,
     "ast_hash": "8db31913dc19fec0029df0e5101e1cf8",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Features\\Members\\GetMemberActivity\\GetMemberActivityHandler.cs": {
-    "mtime": 1779620010.5899088,
-    "ast_hash": "7d685981c7e1c7cac7ac9cbade6b618c",
+    "mtime": 1780361360.7254539,
+    "ast_hash": "0a23476e5f25649959e215255a5283d0",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Features\\Members\\GetMemberActivity\\GetMemberActivityQuery.cs": {
-    "mtime": 1779620005.9970477,
+    "mtime": 1780162551.161752,
     "ast_hash": "8167dc6afe9c1488f80f90bb8b75c378",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Features\\Members\\GetMemberActivity\\GetMemberActivityResponse.cs": {
-    "mtime": 1779620007.3938446,
-    "ast_hash": "02319042aa9b0e3353eab5fe48d30e63",
+    "mtime": 1780361343.6997428,
+    "ast_hash": "d07333ba035b9484e4ce8ebe41682b7d",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Features\\Sessions\\GetSessionsToday\\GetSessionsTodayEndpoint.cs": {
-    "mtime": 1780138378.4717185,
+    "mtime": 1780162551.1637528,
     "ast_hash": "4413f21c0245af0a2ce4b351d145a2d4",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Features\\Sessions\\GetSessionsToday\\GetSessionsTodayHandler.cs": {
-    "mtime": 1779619994.7298546,
-    "ast_hash": "0a0a17b10e87deca8a40b1988214c563",
+    "mtime": 1780361350.639254,
+    "ast_hash": "38ccaa0234ab81ae3e8d706e67227876",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Features\\Sessions\\GetSessionsToday\\GetSessionsTodayQuery.cs": {
-    "mtime": 1779619989.010672,
+    "mtime": 1780162551.1657476,
     "ast_hash": "d30474813dc7de3d1e4d0913a5a6b2ec",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Features\\Sessions\\GetSessionsToday\\GetSessionsTodayResponse.cs": {
-    "mtime": 1779619990.5697026,
-    "ast_hash": "6c67a8e05419b400abc348dc48da6371",
+    "mtime": 1780361337.5477822,
+    "ast_hash": "2be1b00d098d3227184441957e8d8928",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Infrastructure\\ICoursesServiceClient.cs": {
-    "mtime": 1779619980.8732963,
+    "mtime": 1780162551.1677558,
     "ast_hash": "a40001ba863588cf85c03ea05084f132",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Infrastructure\\IMembershipServiceClient.cs": {
-    "mtime": 1779619979.1552672,
-    "ast_hash": "2ddfdb27714dbee0a1257ae638019f50",
+    "mtime": 1780361227.4915335,
+    "ast_hash": "8a67ee6dd6066decf6ebd9cffc8451e5",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Infrastructure\\Seed\\ActivitySeeder.cs": {
-    "mtime": 1779837992.8923125,
+    "mtime": 1780162551.1694088,
     "ast_hash": "d7e78e7c95e145648d04124cd7d169dd",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Properties\\launchSettings.json": {
-    "mtime": 1779619959.168344,
+    "mtime": 1780162551.17042,
     "ast_hash": "70b1d42d9a97e53f33d9320be98ac55b",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Shared\\ErrorOnExtensions.cs": {
-    "mtime": 1779619977.175184,
+    "mtime": 1780162551.171426,
     "ast_hash": "18fd161df258ec578f798c312d42abfa",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Aggregation\\appsettings.Development.json": {
-    "mtime": 1779620311.9046223,
+    "mtime": 1780162551.1909888,
     "ast_hash": "57d61752259da89c780cc0038a85a8e1",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Aggregation\\appsettings.json": {
-    "mtime": 1779620311.0971744,
+    "mtime": 1780162551.1919887,
     "ast_hash": "57d61752259da89c780cc0038a85a8e1",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Aggregation\\Program.cs": {
-    "mtime": 1779960175.6677332,
-    "ast_hash": "971556bd8dd8e1b56077fe87cecc424f",
+    "mtime": 1780225959.8257654,
+    "ast_hash": "f26a4a6e4ef6e37045082d8468794b90",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Aggregation\\Common\\Security\\UserAccessor.cs": {
-    "mtime": 1779620332.065455,
+    "mtime": 1780162551.1734176,
     "ast_hash": "321b3a1e63f3586c87ecbf1d354126cc",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Aggregation\\Consumers\\ActivityEventConsumer.cs": {
-    "mtime": 1779620355.2878554,
+    "mtime": 1780162551.174416,
     "ast_hash": "2275ae7ac43c19ece66cdd11ff7ec5d4",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Aggregation\\Consumers\\MemberEventConsumer.cs": {
-    "mtime": 1779620454.902084,
+    "mtime": 1780162551.174416,
     "ast_hash": "33ff19485b8cb5fb523dd64072f64196",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Aggregation\\Consumers\\PaymentEventConsumer.cs": {
-    "mtime": 1779620351.6272886,
-    "ast_hash": "16c9f0b3fa784b678a89478b11f72267",
+    "mtime": 1780162551.1754162,
+    "ast_hash": "3173be5fe17aa8fbd5540330cd17ada6",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Aggregation\\Consumers\\ProgramEventConsumer.cs": {
-    "mtime": 1779620356.5534637,
+    "mtime": 1780162551.1764214,
     "ast_hash": "78d28f0b8e6e5cd5cf54aa1fed6eac17",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Aggregation\\Domain\\AggregationDbContext.cs": {
-    "mtime": 1779620330.1471522,
+    "mtime": 1780162551.1764214,
     "ast_hash": "bd6aff37a295f3c3fa92d821a0dc48d3",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Aggregation\\Domain\\Entities\\AggregatedStats.cs": {
-    "mtime": 1779620321.675037,
+    "mtime": 1780162551.1780381,
     "ast_hash": "dd02fb95c5f58184992bf2b7c6bbd1e9",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Aggregation\\Domain\\Entities\\MonthlyBreakdown.cs": {
-    "mtime": 1779620323.7014017,
+    "mtime": 1780162551.178666,
     "ast_hash": "c102597b893ee01375566ce42795a718",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Aggregation\\Domain\\Entities\\PlansBreakdown.cs": {
-    "mtime": 1779620325.557375,
+    "mtime": 1780162551.1797528,
     "ast_hash": "a814874fde8d0f4f2416a473e5790b9c",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Aggregation\\Features\\Dashboard\\GetAdminDashboard\\GetAdminDashboardEndpoint.cs": {
-    "mtime": 1779960194.2854843,
+    "mtime": 1780162551.180864,
     "ast_hash": "c4004b464d3fd291e9f07cbc5550e84a",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Aggregation\\Features\\Dashboard\\GetAdminDashboard\\GetAdminDashboardHandler.cs": {
-    "mtime": 1779620368.4917483,
+    "mtime": 1780162551.181391,
     "ast_hash": "02ddc43784682d32466667cdc79f1671",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Aggregation\\Features\\Dashboard\\GetAdminDashboard\\GetAdminDashboardResponse.cs": {
-    "mtime": 1779620363.511574,
+    "mtime": 1780162551.1819546,
     "ast_hash": "834b4e9747f5cd1fbe141164cd513da5",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Aggregation\\Features\\Dashboard\\GetFinanceDashboard\\GetFinanceDashboardEndpoint.cs": {
-    "mtime": 1779960210.0684376,
+    "mtime": 1780162551.1830463,
     "ast_hash": "9f57c65b23519764ceee1dab017fdc6f",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Aggregation\\Features\\Dashboard\\GetFinanceDashboard\\GetFinanceDashboardHandler.cs": {
-    "mtime": 1779620384.5849464,
+    "mtime": 1780162551.1835928,
     "ast_hash": "61861e027115ddbe644d3f665022e907",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Aggregation\\Features\\Dashboard\\GetFinanceDashboard\\GetFinanceDashboardResponse.cs": {
-    "mtime": 1779620381.1937513,
+    "mtime": 1780162551.1841385,
     "ast_hash": "9c3a5d9fc6b771f00f0be37b8cb3fa02",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Aggregation\\Features\\Reports\\DownloadExcelReport\\DownloadExcelReportEndpoint.cs": {
-    "mtime": 1779960230.8080845,
+    "mtime": 1780162551.1852157,
     "ast_hash": "08d38eaf19ea95ffb42746a1c3001ad1",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Aggregation\\Features\\Reports\\DownloadExcelReport\\DownloadExcelReportHandler.cs": {
-    "mtime": 1779620395.3362517,
+    "mtime": 1780162551.1857555,
     "ast_hash": "5e010969fb979f93af84924df2c90e24",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Aggregation\\Infrastructure\\Seed\\AggregationSeeder.cs": {
-    "mtime": 1779837995.0375347,
+    "mtime": 1780162551.1863012,
     "ast_hash": "4f880b9a1cca94a975d859de89a41941",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Aggregation\\Properties\\launchSettings.json": {
-    "mtime": 1779620313.5708194,
+    "mtime": 1780162551.189991,
     "ast_hash": "bad7f1cec47c4bedfb9b184b32dba5eb",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Aggregation\\Shared\\ErrorOnExtensions.cs": {
-    "mtime": 1779620334.1360803,
+    "mtime": 1780162551.189991,
     "ast_hash": "d6c09172e28a69331a3806af3f84dfa1",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Chat\\appsettings.json": {
-    "mtime": 1779819544.568217,
+    "mtime": 1780162551.208116,
     "ast_hash": "cb84a02fc12b5d3c0644cadea9d87d4a",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Chat\\Program.cs": {
-    "mtime": 1779819544.566219,
-    "ast_hash": "4349096bdf551c0e6b8cb0610595e896",
+    "mtime": 1780225959.8257654,
+    "ast_hash": "2c6adb6be7fc5429155ed7ae66a30b0c",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Chat\\Common\\UserAccessor.cs": {
-    "mtime": 1779819544.537522,
+    "mtime": 1780162551.193993,
     "ast_hash": "660ed149e3b995b119cc1ca32d28fbaf",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Chat\\Consumers\\UserCreatedConsumer.cs": {
-    "mtime": 1779819544.5395193,
+    "mtime": 1780162551.1949923,
     "ast_hash": "792f7e1a897c65aa0304b3af9629ced4",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Chat\\Domain\\Entities\\Conversation.cs": {
-    "mtime": 1779819544.5415192,
+    "mtime": 1780162551.1949923,
     "ast_hash": "59d6e72f7d0a38a9b89e118d39c08ede",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Chat\\Domain\\Entities\\ConversationParticipant.cs": {
-    "mtime": 1779819544.5425258,
+    "mtime": 1780162551.1959956,
     "ast_hash": "3977402e0e9179b703538a67fc5028c7",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Chat\\Domain\\Entities\\Message.cs": {
-    "mtime": 1779819544.543523,
+    "mtime": 1780162551.1971066,
     "ast_hash": "68fe38fb864fbe950a03cdc969c3114c",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Chat\\Domain\\Entities\\User.cs": {
-    "mtime": 1779819544.5445218,
+    "mtime": 1780162551.1971066,
     "ast_hash": "a44606c23c57f8bf3d7dc0c19339ee00",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Chat\\Features\\Conversations\\GetOrCreate\\GetOrCreateConversationEndpoint.cs": {
-    "mtime": 1779819544.5505636,
+    "mtime": 1780162551.1991055,
     "ast_hash": "ba330eb2aee78d73db473894b61b6d86",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Chat\\Features\\Conversations\\GetOrCreate\\Dtos\\ConversationResponse.cs": {
-    "mtime": 1779819544.5480335,
+    "mtime": 1780162551.198102,
     "ast_hash": "b7a2a427953cc908f82a64aa9d2200d1",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Chat\\Features\\Conversations\\GetOrCreate\\Dtos\\ParticipantDto.cs": {
-    "mtime": 1779819544.5490487,
+    "mtime": 1780162551.1991055,
     "ast_hash": "e97d2cf97d602f71f28b1988e9768692",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Chat\\Features\\Conversations\\ListConversations\\ListConversationsEndpoint.cs": {
-    "mtime": 1779819544.5515747,
+    "mtime": 1780162551.2001078,
     "ast_hash": "3e7c0b5b37c3ef64027b499d4693d514",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Chat\\Features\\Messages\\GetMessages\\GetMessagesEndpoint.cs": {
-    "mtime": 1779819544.5541058,
+    "mtime": 1780162551.2011156,
     "ast_hash": "50de2e5dc69738cd9fbbbf3a0a2173dd",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Chat\\Features\\Messages\\SendMessage\\MessageResponse.cs": {
-    "mtime": 1779819544.5550985,
+    "mtime": 1780162551.2011156,
     "ast_hash": "7c88c0ff45160c996c22dbcdc3bc0de2",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Chat\\Features\\Messages\\SendMessage\\SendMessage.cs": {
-    "mtime": 1779819544.5566146,
+    "mtime": 1780162551.2021174,
     "ast_hash": "7953cf6c35eb56180a0b6228c3778d33",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Chat\\Hubs\\ChatHub.cs": {
-    "mtime": 1779819544.5586317,
+    "mtime": 1780162551.203115,
     "ast_hash": "43d284ca516ae63cbc030f47b06229d4",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Chat\\Infrastructure\\ChatDbContext.cs": {
-    "mtime": 1779819544.5602157,
+    "mtime": 1780162551.203115,
     "ast_hash": "c0746235985c10d8e970ad0bc5147295",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Chat\\Infrastructure\\ChatDbContextFactory.cs": {
-    "mtime": 1779819544.5612202,
+    "mtime": 1780162551.2041137,
     "ast_hash": "75ab58856f33aca023c9b9f5dc3d1d0d",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Chat\\Migrations\\20260524171415_InitialChatSchema.cs": {
-    "mtime": 1779819544.5632224,
+    "mtime": 1780162551.2051146,
     "ast_hash": "492e106c288302f7e7392f61b448286c",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Chat\\Migrations\\20260524171415_InitialChatSchema.Designer.cs": {
-    "mtime": 1779819544.5622146,
+    "mtime": 1780162551.2051146,
     "ast_hash": "997f0ec0df83bb0c589408ceb194d112",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Chat\\Migrations\\ChatDbContextModelSnapshot.cs": {
-    "mtime": 1779819544.5652163,
+    "mtime": 1780162551.206114,
     "ast_hash": "a4d567fbd8a11cccd60cd1c4e9a58502",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Chat\\Properties\\launchSettings.json": {
-    "mtime": 1779819544.568217,
+    "mtime": 1780162551.2071152,
     "ast_hash": "268f48880c2c30dc95d781af315cfea2",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\appsettings.Development.json": {
-    "mtime": 1779618571.614837,
+    "mtime": 1780162551.2615333,
     "ast_hash": "477a525a47fc9bdbbf94690e6633d843",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\appsettings.json": {
-    "mtime": 1779960606.3962495,
+    "mtime": 1780162551.2625284,
     "ast_hash": "d9614ea849368532a72f32e369fce26b",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\GlobalUsings.cs": {
-    "mtime": 1779619062.7119453,
+    "mtime": 1780162551.253904,
     "ast_hash": "165e5b078134589cfbc57bc3a676808c",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Program.cs": {
-    "mtime": 1780139114.5801082,
-    "ast_hash": "cee97e60ee968858b6dafe320ba68cf1",
+    "mtime": 1780273049.756116,
+    "ast_hash": "c8b0c88a40a385d2b2d9f76a7d5f4ad5",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Common\\Behaviours\\ValidationBehavior.cs": {
-    "mtime": 1779619099.883158,
+    "mtime": 1780162551.2091167,
     "ast_hash": "525279b3e4ea20e65a44284d4d12a809",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Common\\Security\\UserAccessor.cs": {
-    "mtime": 1779619099.8871605,
+    "mtime": 1780162551.210114,
     "ast_hash": "2487af3bd57b6e74723fb4a2ed19e7cc",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Domain\\CoursesDbContext.cs": {
-    "mtime": 1779619099.9207494,
-    "ast_hash": "4825cd9c7031f3c0a40ed7282c5c6408",
+    "mtime": 1780273047.3720593,
+    "ast_hash": "312e5f9449ae587ec29f660cb16710d0",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Domain\\Configurations\\AttendanceRecordConfiguration.cs": {
-    "mtime": 1779619099.8901572,
+    "mtime": 1780162551.211118,
     "ast_hash": "2fee943d3e2b73dc8bc2771a61cf801c",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Domain\\Configurations\\CoachConfiguration.cs": {
-    "mtime": 1779836214.7542937,
-    "ast_hash": "a4b279491e14679e373e1df3b03bc847",
+    "mtime": 1780246339.2656045,
+    "ast_hash": "a3a008a1987016e89815042c772ea022",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Domain\\Configurations\\ProgramConfiguration.cs": {
-    "mtime": 1779619099.8931599,
+    "mtime": 1780162551.2131133,
     "ast_hash": "2dea84585f3b75874362f42bf17d1630",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Domain\\Configurations\\ProgramEnrollmentConfiguration.cs": {
-    "mtime": 1779619099.895157,
+    "mtime": 1780162551.2141168,
     "ast_hash": "c3ff59fc9c5981a4d0bf0dea3ceddec5",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Domain\\Configurations\\ProgramTimeSlotConfiguration.cs": {
-    "mtime": 1779619099.8961594,
+    "mtime": 1780162551.2141168,
     "ast_hash": "108492d209a8d7f7a37e018ae126cdd6",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Domain\\Configurations\\SessionConfiguration.cs": {
-    "mtime": 1779619099.9061723,
+    "mtime": 1780162551.2156394,
     "ast_hash": "a749a9dacc074b4d50b51b4896290ecf",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Domain\\Entities\\AttendanceRecord.cs": {
-    "mtime": 1779619099.9091654,
+    "mtime": 1780162551.2168255,
     "ast_hash": "94ce4a89307d38ea70db27d840b72c27",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Domain\\Entities\\Coach.cs": {
-    "mtime": 1779836203.8705902,
-    "ast_hash": "91891c5dba95097514e429b6f5b31549",
+    "mtime": 1780246337.28385,
+    "ast_hash": "c290907df921ee98ba960aefb9b5d791",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Domain\\Entities\\Program.cs": {
-    "mtime": 1779618589.869969,
+    "mtime": 1780162551.21785,
     "ast_hash": "7aef8fa1ede9c55925e1248e3e5058b5",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Domain\\Entities\\ProgramEnrollment.cs": {
-    "mtime": 1779619099.911176,
+    "mtime": 1780162551.2188413,
     "ast_hash": "e49617164e29edd117151073bbd9ec0a",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Domain\\Entities\\ProgramTimeSlot.cs": {
-    "mtime": 1779619099.9136713,
+    "mtime": 1780162551.2198381,
     "ast_hash": "337d13577db2d0cf359091f0693ff329",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Domain\\Entities\\Session.cs": {
-    "mtime": 1779619099.9146705,
+    "mtime": 1780162551.2198381,
     "ast_hash": "0d18aa71a3ff91e736e62c49695b7f87",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Domain\\Enums\\AttendanceStatus.cs": {
-    "mtime": 1779619099.9166746,
+    "mtime": 1780162551.2208378,
     "ast_hash": "0ca93e1d0d1a51ad84ed2c3f12e8179e",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Domain\\Enums\\CourseDayOfWeek.cs": {
-    "mtime": 1779619099.9187484,
+    "mtime": 1780162551.2218359,
     "ast_hash": "7af773b2cfc7d5f9d92f5b66be4dab67",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Domain\\Enums\\Gender.cs": {
-    "mtime": 1779836280.3643837,
+    "mtime": 1780162551.2218359,
     "ast_hash": "a06deec407771aa86248cbb26be935f1",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Domain\\Enums\\ProgramStatus.cs": {
-    "mtime": 1779619099.9197478,
+    "mtime": 1780162551.2228367,
     "ast_hash": "e58491e9a17bf399c18cbf2de48aab8f",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Coaches\\CreateCoach\\CreateCoachCommand.cs": {
-    "mtime": 1779619099.9247468,
+    "mtime": 1780162551.2238357,
     "ast_hash": "3e6e27db77a013501e4d226b0c417d04",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Coaches\\CreateCoach\\CreateCoachEndpoint.cs": {
-    "mtime": 1780139114.4818282,
-    "ast_hash": "b9612f7cde948b92c93f1ddf5208cd63",
+    "mtime": 1780246371.3258991,
+    "ast_hash": "ce220485e868dfb0bf5812cc05c48255",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Coaches\\CreateCoach\\CreateCoachHandler.cs": {
-    "mtime": 1780139130.0761013,
-    "ast_hash": "4aa18a0baf55a4c63ac4de7e030b2142",
+    "mtime": 1780246368.3506703,
+    "ast_hash": "0a3b914861df3e1c07975f890ca707e1",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Coaches\\CreateCoach\\CreateCoachRequest.cs": {
-    "mtime": 1780139086.718252,
-    "ast_hash": "3f407e08944ad14cdefbf5aba4c40d18",
+    "mtime": 1780246366.3263164,
+    "ast_hash": "6157bdae5982e34e0816d64341ef17d3",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Coaches\\CreateCoach\\CreateCoachResponse.cs": {
-    "mtime": 1779619099.931417,
+    "mtime": 1780162552.8067281,
     "ast_hash": "c2c9f3b8d0f8a57053fadf43238cf1a6",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Coaches\\CreateCoach\\CreateCoachValidator.cs": {
-    "mtime": 1779836308.6556563,
+    "mtime": 1780162551.2273488,
     "ast_hash": "af671a9664fe091a9982a90702d6a88a",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Coaches\\GetCoachClientProfile\\GetCoachClientProfileEndpoint.cs": {
-    "mtime": 1780139114.488196,
+    "mtime": 1780162551.2283654,
     "ast_hash": "615bb184c2e12b9d5990de416e8c511e",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Coaches\\GetCoachClientProfile\\GetCoachClientProfileHandler.cs": {
-    "mtime": 1779619184.5897107,
-    "ast_hash": "3f2139593a6544b0bb0932e18e98e9f3",
+    "mtime": 1780336492.3816247,
+    "ast_hash": "4312ea2e03e65c7f45f08928dfd9011a",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Coaches\\GetCoachClientProfile\\GetCoachClientProfileQuery.cs": {
-    "mtime": 1779619099.9374151,
+    "mtime": 1780162551.229367,
     "ast_hash": "b993e589a7b2b9781beaa05428b811cf",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Coaches\\GetCoachClientProfile\\GetCoachClientProfileResponse.cs": {
-    "mtime": 1779619099.939416,
-    "ast_hash": "1a3291037c931e83c2269f6f31a04dbc",
+    "mtime": 1780336486.7524226,
+    "ast_hash": "5bf6a27b4a7d4eb4bdaadd5e27c0c7ab",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Coaches\\GetCoachClients\\GetCoachClientsEndpoint.cs": {
-    "mtime": 1780139114.4848964,
+    "mtime": 1780162551.2303586,
     "ast_hash": "65fd563c2c2f956ad26f4fba2a976244",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Coaches\\GetCoachClients\\GetCoachClientsHandler.cs": {
-    "mtime": 1779619183.1136856,
+    "mtime": 1780162551.231361,
     "ast_hash": "4ba73416fc8c665bd4289586098cfa08",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Coaches\\GetCoachClients\\GetCoachClientsQuery.cs": {
-    "mtime": 1779619099.9464216,
+    "mtime": 1780162551.2323585,
     "ast_hash": "48927226ad1e775aaeec55df4cab7b75",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Coaches\\GetCoachClients\\GetCoachClientsResponse.cs": {
-    "mtime": 1779619099.948414,
+    "mtime": 1780162551.2323585,
     "ast_hash": "0999b95973550bdd3578abd0296ee0a1",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Coaches\\GetCoachPrograms\\GetCoachProgramsEndpoint.cs": {
-    "mtime": 1780139114.4911964,
+    "mtime": 1780162551.233359,
     "ast_hash": "04e65aa74ac071b5447235073ba1b596",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Coaches\\GetCoachPrograms\\GetCoachProgramsHandler.cs": {
-    "mtime": 1779619099.9524176,
+    "mtime": 1780162551.233359,
     "ast_hash": "cd21f66613f8b7468a3d0b502c01b0e7",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Coaches\\GetCoachPrograms\\GetCoachProgramsQuery.cs": {
-    "mtime": 1779619099.9534166,
+    "mtime": 1780162551.2343721,
     "ast_hash": "f9897dd2466227b23f49bca8d692adc5",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Coaches\\GetCoachPrograms\\GetCoachProgramsResponse.cs": {
-    "mtime": 1779619099.9618118,
+    "mtime": 1780162551.2353692,
     "ast_hash": "9da128ca42ecb23ca5791d931d6882b9",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\AcceptProgram\\AcceptProgramCommand.cs": {
-    "mtime": 1779619099.9648063,
+    "mtime": 1780162551.2363682,
     "ast_hash": "7dd53adf578d0fa29b6e24c6dd510630",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\AcceptProgram\\AcceptProgramEndpoint.cs": {
-    "mtime": 1780139114.4951894,
+    "mtime": 1780162551.2363682,
     "ast_hash": "f067faf6289999fdd83c30edf2710dca",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\AcceptProgram\\AcceptProgramHandler.cs": {
-    "mtime": 1779836254.0693486,
+    "mtime": 1780162551.2373688,
     "ast_hash": "518d0b89a4296ba46917dbc3cd0f8793",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\AcceptProgram\\AcceptProgramResponse.cs": {
-    "mtime": 1779619099.969805,
+    "mtime": 1780162551.2373688,
     "ast_hash": "5831c8b5f0ee80eb270d91965029f07e",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\CreateProgram\\CreateProgramCommand.cs": {
-    "mtime": 1779619099.9723108,
+    "mtime": 1780162551.2383685,
     "ast_hash": "e46aa1794aa7eefc98d115881e2e6334",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\CreateProgram\\CreateProgramEndpoint.cs": {
-    "mtime": 1780139114.4987085,
+    "mtime": 1780162551.239371,
     "ast_hash": "8dff54e14edbf563c65e47ab2d8edeb8",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\CreateProgram\\CreateProgramHandler.cs": {
-    "mtime": 1779836254.9027295,
+    "mtime": 1780162551.239371,
     "ast_hash": "f7e01d0b1f75ae7d88ebf77a5297a32b",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\CreateProgram\\CreateProgramRequest.cs": {
-    "mtime": 1779619099.9770107,
+    "mtime": 1780162551.240376,
     "ast_hash": "db73dcffb893dfb33e20b7dfbbf7852d",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\CreateProgram\\CreateProgramResponse.cs": {
-    "mtime": 1779619099.9790072,
+    "mtime": 1780162551.2413778,
     "ast_hash": "98f84fb1c69959985cc31550b55e5452",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\CreateProgram\\CreateProgramValidator.cs": {
-    "mtime": 1779619099.9800181,
+    "mtime": 1780162551.2413778,
     "ast_hash": "1f6060541af12279ecf3858ce1e77a7e",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\GetProgramMembers\\GetProgramMembersEndpoint.cs": {
-    "mtime": 1780139114.5017085,
+    "mtime": 1780162551.2423766,
     "ast_hash": "458e5a98d6a6aebbc270cc81bc9ec2b0",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\GetProgramMembers\\GetProgramMembersHandler.cs": {
-    "mtime": 1779619168.0546288,
+    "mtime": 1780162551.2423766,
     "ast_hash": "06b28dca058d445a4e98ec7241407f4d",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\GetProgramMembers\\GetProgramMembersQuery.cs": {
-    "mtime": 1779619099.9863,
+    "mtime": 1780162551.243375,
     "ast_hash": "b399ab85153c86b1ff2236b8eeb2ab73",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\GetProgramMembers\\GetProgramMembersResponse.cs": {
-    "mtime": 1779619099.9873238,
+    "mtime": 1780162551.2443664,
     "ast_hash": "f970c28ba0636f1f67d2a973be10bca4",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\GetProgramRequest\\GetProgramRequestEndpoint.cs": {
-    "mtime": 1780139114.5590844,
+    "mtime": 1780162551.2443664,
     "ast_hash": "a6234f0b66c757c375a46da054620ab6",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\GetProgramRequest\\GetProgramRequestHandler.cs": {
-    "mtime": 1779836255.326397,
+    "mtime": 1780162551.2453651,
     "ast_hash": "1a6b7783ff32f7ddd86e4785c060ff10",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\GetProgramRequest\\GetProgramRequestQuery.cs": {
-    "mtime": 1779619099.9933152,
+    "mtime": 1780162551.2463658,
     "ast_hash": "67d8faed15154b711a7d1155f5637799",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\GetProgramRequest\\GetProgramRequestResponse.cs": {
-    "mtime": 1779619099.9953122,
+    "mtime": 1780162551.2463658,
     "ast_hash": "95236f90143a41a18cc7229ed530b19e",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\ListProgramRequests\\ListProgramRequestsEndpoint.cs": {
-    "mtime": 1780139114.5704353,
+    "mtime": 1780162551.2473724,
     "ast_hash": "b3cc754a4b3c91054093c27e8367119e",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\ListProgramRequests\\ListProgramRequestsHandler.cs": {
-    "mtime": 1779836233.1376603,
+    "mtime": 1780162551.2473724,
     "ast_hash": "c76634c76d28e834228e7cef47c99efa",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\ListProgramRequests\\ListProgramRequestsQuery.cs": {
-    "mtime": 1779619100.001323,
+    "mtime": 1780162551.2473724,
     "ast_hash": "afbe809fee0a9b48938d12c3ce7a4eed",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\ListProgramRequests\\ListProgramRequestsResponse.cs": {
-    "mtime": 1779619100.0033147,
+    "mtime": 1780162551.2488868,
     "ast_hash": "9f52ef42984d22fa076c2a77d8f94a75",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\RejectProgram\\RejectProgramCommand.cs": {
-    "mtime": 1779619100.0113168,
+    "mtime": 1780162551.2488868,
     "ast_hash": "1f6520e52dda616bff011f087d3bfbb3",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\RejectProgram\\RejectProgramEndpoint.cs": {
-    "mtime": 1780139114.5750508,
+    "mtime": 1780162551.2499044,
     "ast_hash": "61eeb80c76e40f9dd4484c1df1803290",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\RejectProgram\\RejectProgramHandler.cs": {
-    "mtime": 1779836254.510708,
+    "mtime": 1780162551.2509036,
     "ast_hash": "d16483227157bddfe270191e84f5b903",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\RejectProgram\\RejectProgramResponse.cs": {
-    "mtime": 1779619100.018841,
+    "mtime": 1780162551.2509036,
     "ast_hash": "3c586cbaca9863fedb2c7c02fce5cbc1",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Sessions\\MarkAttendance\\MarkAttendanceCommand.cs": {
-    "mtime": 1779619100.0233586,
+    "mtime": 1780162551.251898,
     "ast_hash": "13a7a91f20b93cbb6b36e947b5023015",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Sessions\\MarkAttendance\\MarkAttendanceEndpoint.cs": {
-    "mtime": 1780139114.5781083,
+    "mtime": 1780162551.2529016,
     "ast_hash": "18d2ae4248298d93931b902ffa2e888b",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Sessions\\MarkAttendance\\MarkAttendanceHandler.cs": {
-    "mtime": 1779619100.0263638,
+    "mtime": 1780162551.2529016,
     "ast_hash": "1fa040eb1ec425c8e9459caf28798881",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Sessions\\MarkAttendance\\MarkAttendanceResponse.cs": {
-    "mtime": 1779619100.0273595,
+    "mtime": 1780162551.253904,
     "ast_hash": "266bdf1811d43069549a400054324922",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Infrastructure\\IIdentityServiceClient.cs": {
-    "mtime": 1779961591.720077,
-    "ast_hash": "c882a427d6d1822c6f43ceb226ecbbb0",
+    "mtime": 1780352711.3967006,
+    "ast_hash": "e2fc7616a4d58fc0e95356d073b4ae6d",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Infrastructure\\Auth\\ServiceTokenHandler.cs": {
-    "mtime": 1779960528.1793592,
+    "mtime": 1780162551.255521,
     "ast_hash": "f6fd342f8084c94ad5199d77a8b49dec",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Infrastructure\\Seed\\CoursesSeeder.cs": {
-    "mtime": 1780139086.725262,
-    "ast_hash": "cf53b2fcc39991cca92d2fcb237b6e85",
+    "mtime": 1780163747.3348804,
+    "ast_hash": "5a253f57ef2e01745c4d4fde94265fa2",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Infrastructure\\Seed\\SeedUserAccessor.cs": {
-    "mtime": 1779837981.5541615,
+    "mtime": 1780162551.2575345,
     "ast_hash": "af9cafc06c0eaee5ca5601f180cc9664",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Migrations\\20260526230225_SplitCoachName.cs": {
-    "mtime": 1779836545.1885178,
+    "mtime": 1780162551.2585378,
     "ast_hash": "e1882cbc4e6bfbad81d6e7bcda782b62",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Migrations\\20260526230225_SplitCoachName.Designer.cs": {
-    "mtime": 1779836545.1897218,
+    "mtime": 1780162551.2575345,
     "ast_hash": "7b2afd4b6d11c3166749633f7789387a",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Migrations\\CoursesDbContextModelSnapshot.cs": {
-    "mtime": 1779836545.1920009,
-    "ast_hash": "53756c8cb6fa3d40d0f65c8208cbd58f",
+    "mtime": 1780273113.3485403,
+    "ast_hash": "3a563907af861ea27c81c6f6f308ccd6",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Properties\\launchSettings.json": {
-    "mtime": 1779618574.092698,
+    "mtime": 1780162551.260532,
     "ast_hash": "80975a1a58dacf3b0f4732cd28cdd87d",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Shared\\ErrorOnExtensions.cs": {
-    "mtime": 1779619100.0413642,
+    "mtime": 1780162551.2615333,
     "ast_hash": "74fdd0992bb2f8953a374ce7bdb9f042",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Gateway\\ConfigureSwaggerOptions.cs": {
-    "mtime": 1779819544.569222,
+    "mtime": 1780162551.2635353,
     "ast_hash": "f95cbaa0731489353161e488709b2b36",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Gateway\\YarpConfiguration.cs": {
-    "mtime": 1780040650.985133,
+    "mtime": 1780162551.2665334,
     "ast_hash": "1fb44a74d97945a5110c6dcdf3c71fe2",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Api\\Controllers\\ServiceAuthController.cs": {
-    "mtime": 1779543295.9692662,
+    "mtime": 1780162551.269533,
     "ast_hash": "0c5b3843782be2a812b300a8afd4e92d",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Api\\Endpoints\\WellKnownEndpoints.cs": {
-    "mtime": 1780093321.7824697,
+    "mtime": 1780162551.271531,
     "ast_hash": "071bf1e242a7f1e26447ee23c64e8aa6",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Api\\Services\\RsaKeyManager.cs": {
-    "mtime": 1780137244.6717951,
+    "mtime": 1780162551.274531,
     "ast_hash": "ed3e0ca6a7c623b082e344d75afc3ebc",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Identity\\Identity.Api\\Services\\TokenService.cs": {
-    "mtime": 1779543292.7014432,
+    "mtime": 1780162551.274531,
     "ast_hash": "89d0e9a6d60e3aa05c91845de797a53a",
     "semantic_hash": ""
   },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Courses\\GetAvailableCourses\\GetAvailableCoursesEndpoint.cs": {
-    "mtime": 1780138430.4167817,
-    "ast_hash": "08136865791b433e3deb77c5c02f4829",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Courses\\GetAvailableCourses\\GetAvailableCoursesHandler.cs": {
-    "mtime": 1779618364.3130789,
-    "ast_hash": "749eacd10a798c61e85188e5f3ae4211",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Courses\\GetAvailableCourses\\GetAvailableCoursesQuery.cs": {
-    "mtime": 1779618268.205861,
-    "ast_hash": "050f73a2378e96eaa9aa35ca9339de72",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Courses\\GetAvailableCourses\\GetAvailableCoursesResponse.cs": {
-    "mtime": 1779618269.6758716,
-    "ast_hash": "c44c5b4296d614bbc2e54f3e418d26eb",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Courses\\GetCourseDetail\\GetCourseDetailEndpoint.cs": {
-    "mtime": 1780138430.417789,
-    "ast_hash": "59fca1afa77599cabdfc6deafa4a69ff",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Courses\\GetCourseDetail\\GetCourseDetailHandler.cs": {
-    "mtime": 1779618312.6987052,
-    "ast_hash": "bb015af819cc28da60142fc190ac4c13",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Courses\\GetCourseDetail\\GetCourseDetailQuery.cs": {
-    "mtime": 1779618308.3473017,
-    "ast_hash": "b332706ce2264c2331ec227b5858b759",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Courses\\GetCourseDetail\\GetCourseDetailResponse.cs": {
-    "mtime": 1779618310.1411119,
-    "ast_hash": "866d73115d6a8ea2447202bab9cf0461",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Courses\\GetEnrolledCourses\\GetEnrolledCoursesEndpoint.cs": {
-    "mtime": 1780138430.4187899,
-    "ast_hash": "fb8c4d040886d754d433dec2fc7b16f2",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Courses\\GetEnrolledCourses\\GetEnrolledCoursesHandler.cs": {
-    "mtime": 1779618365.6715624,
-    "ast_hash": "96d7cf7db415ada61c7a60ffaed06315",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Courses\\GetEnrolledCourses\\GetEnrolledCoursesQuery.cs": {
-    "mtime": 1779618288.4640079,
-    "ast_hash": "17234910d1e1db219816fd968694f522",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Courses\\GetEnrolledCourses\\GetEnrolledCoursesResponse.cs": {
-    "mtime": 1779618289.91717,
-    "ast_hash": "d44ee3353ec098709a5c19f606bb9d11",
-    "semantic_hash": ""
-  },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\ActivateMember\\ActivateMemberCommand.cs": {
-    "mtime": 1779618160.3203351,
+    "mtime": 1780162551.349922,
     "ast_hash": "7c2e4e2bb6e2010c3a29243dde0abc99",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\ActivateMember\\ActivateMemberEndpoint.cs": {
-    "mtime": 1780138430.407794,
+    "mtime": 1780162551.3509054,
     "ast_hash": "f8ff76ea7ebb5f750e4404c7b2ee664a",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\ActivateMember\\ActivateMemberHandler.cs": {
-    "mtime": 1779618167.3268154,
+    "mtime": 1780162551.3519075,
     "ast_hash": "cad0ff09bc376567e2d75c335bc2a105",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\ActivateMember\\ActivateMemberResponse.cs": {
-    "mtime": 1779618161.5789483,
+    "mtime": 1780162551.352907,
     "ast_hash": "8423785068ec9a50a8e764fdfa4801ac",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\GetMyProfile\\GetMyProfileEndpoint.cs": {
-    "mtime": 1780137269.1753478,
-    "ast_hash": "56743411c2e50a6b8eba3fe5b86d0f19",
+    "mtime": 1780352664.4300172,
+    "ast_hash": "8e5ef4a52c42d19fbdb988f1bb3d9ec5",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\GetMyProfile\\GetMyProfileHandler.cs": {
-    "mtime": 1780137264.1724708,
-    "ast_hash": "b61abcd4cacbb3a7e67cae75926aa9d8",
+    "mtime": 1780352641.9319506,
+    "ast_hash": "d956c6ada6674465546a9e39472b0637",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\GetMyProfile\\GetMyProfileQuery.cs": {
-    "mtime": 1779618192.7958863,
+    "mtime": 1780162551.3764503,
     "ast_hash": "f56bff0d52ef7f00457707ab4a5e95c0",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\GetMyProfile\\GetMyProfileResponse.cs": {
-    "mtime": 1780137260.0927358,
-    "ast_hash": "7825cf87adf898f566e353aaa52e9dff",
+    "mtime": 1780352650.11147,
+    "ast_hash": "4fab7315ef29431c82aec077d40e1e28",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\GetMySubscription\\GetMySubscriptionEndpoint.cs": {
-    "mtime": 1780138495.425946,
+    "mtime": 1780162551.3797855,
     "ast_hash": "87f9b403abe6b60399f0b05a215e077e",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\SuspendMember\\SuspendMemberCommand.cs": {
-    "mtime": 1779618140.840725,
+    "mtime": 1780162551.3903584,
     "ast_hash": "27bdd2397aee9e4f03f0e0c9d7396195",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\SuspendMember\\SuspendMemberEndpoint.cs": {
-    "mtime": 1780138430.4137256,
+    "mtime": 1780162551.391359,
     "ast_hash": "21bad3303147b82dfb10ba2508c8f463",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\SuspendMember\\SuspendMemberHandler.cs": {
-    "mtime": 1779618148.170702,
+    "mtime": 1780162551.3933587,
     "ast_hash": "916d73754b0e40ae9afac7b4582124dc",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\SuspendMember\\SuspendMemberResponse.cs": {
-    "mtime": 1779618142.06822,
+    "mtime": 1780162551.3943622,
     "ast_hash": "b753804e613003d0e48ff82fd4e0c42f",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\UpdateMyProfile\\UpdateMyProfileCommand.cs": {
-    "mtime": 1779618219.1453075,
+    "mtime": 1780162551.401898,
     "ast_hash": "319539d54c1cf9d18f21388d6c5194f3",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\UpdateMyProfile\\UpdateMyProfileEndpoint.cs": {
-    "mtime": 1780138430.4152336,
-    "ast_hash": "df317194c61e6b591595b0d53aeab96e",
+    "mtime": 1780339387.7563825,
+    "ast_hash": "9343739a02226415a85c6828ebd1d776",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\UpdateMyProfile\\UpdateMyProfileHandler.cs": {
-    "mtime": 1779618373.518433,
-    "ast_hash": "05934f2372d48e1284749040cac1f7e9",
+    "mtime": 1780352625.6252987,
+    "ast_hash": "9766621a8be0098fba36a3dab5b9a647",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\UpdateMyProfile\\UpdateMyProfileRequest.cs": {
-    "mtime": 1779618220.5616548,
-    "ast_hash": "c43ef001881024821f2d0c0cad356122",
+    "mtime": 1780339357.1621895,
+    "ast_hash": "9ef6005242c98f405b792a60c01f492f",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\UpdateMyProfile\\UpdateMyProfileResponse.cs": {
-    "mtime": 1779618221.7154257,
+    "mtime": 1780162551.4058979,
     "ast_hash": "867d64c55e1153375339a1bcb5601ca3",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Plans\\ListSubscriptions\\ListSubscriptionsEndpoint.cs": {
-    "mtime": 1780138496.790063,
+    "mtime": 1780162551.4239285,
     "ast_hash": "df9a7181aa5d3d5a0341199e43ab508b",
     "semantic_hash": ""
   },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Infrastructure\\ICoursesServiceClient.cs": {
-    "mtime": 1779618266.9464638,
-    "ast_hash": "4698d9c8732d980316bfacf1c3722513",
-    "semantic_hash": ""
-  },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Infrastructure\\Auth\\ServiceTokenHandler.cs": {
-    "mtime": 1779960563.7592442,
-    "ast_hash": "57ff6f33a90d86b63f08b5cee74dce82",
+    "mtime": 1780334136.1496263,
+    "ast_hash": "b6ba4cf323935974dd8563b9ff8134ab",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Infrastructure\\Seed\\MembershipSeeder.cs": {
-    "mtime": 1780139086.734389,
-    "ast_hash": "df4ad5a6f182be6abea3cf1527156340",
+    "mtime": 1780352790.6157696,
+    "ast_hash": "3aeb2a16432f7fcaa80ecdd11f931ec3",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Infrastructure\\Seed\\SeedUserAccessor.cs": {
-    "mtime": 1779838021.1028569,
+    "mtime": 1780162551.469795,
     "ast_hash": "4e9213c951ba3c4d00cdd93c22bd11b7",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Migrations\\20260522184757_IReallyDontKnow.cs": {
-    "mtime": 1779476186.1580155,
+    "mtime": 1780162551.4755566,
     "ast_hash": "f5f8342c4acd720fec7878dc5adaa7eb",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Migrations\\20260522184757_IReallyDontKnow.Designer.cs": {
-    "mtime": 1779475677.3490205,
+    "mtime": 1780162551.4750378,
     "ast_hash": "b1110ddad5eb5575eca08897adbc8593",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Notification\\Notification.Api\\Consumers\\EmailConfirmationRequestedConsumer.cs": {
-    "mtime": 1780091873.9236288,
-    "ast_hash": "1587f67a91b151d81a76c6ed85a963ab",
+    "mtime": 1780164373.0451832,
+    "ast_hash": "64137c6ae1fc975ac39b6224cf9dbc6a",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Notification\\Notification.Api\\Services\\EmailService.cs": {
-    "mtime": 1779964435.8646436,
+    "mtime": 1780162551.493889,
     "ast_hash": "e8f2ca1c0a62b4a7cfaa5d51fc944b4e",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Notification\\Notification.Api\\Services\\EmailTemplateService.cs": {
-    "mtime": 1779819544.587533,
+    "mtime": 1780162551.494887,
     "ast_hash": "4b8e307a84fd23da7a31b6d612170642",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Notification\\Notification.Api\\Services\\Interfaces\\IEmailService.cs": {
-    "mtime": 1779819544.58953,
+    "mtime": 1780162551.4964044,
     "ast_hash": "18283e850cbabd5ce6473327c07861d9",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Notification\\Notification.Api\\Services\\Interfaces\\IEmailTemplateService.cs": {
-    "mtime": 1779819544.5901964,
+    "mtime": 1780162551.4974165,
     "ast_hash": "ac5b08c4657ace6a55d69889989f87f8",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Common\\Security\\UserAccessor.cs": {
-    "mtime": 1779619434.3544066,
+    "mtime": 1780162551.5253384,
     "ast_hash": "4f183ae34099ae12c3a5457ba9422ae4",
     "semantic_hash": ""
   },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Domain\\Entities\\PaymentRequest.cs": {
-    "mtime": 1779619420.4893005,
-    "ast_hash": "1ae11408939270832aafd150c37f4fbb",
-    "semantic_hash": ""
-  },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Payments\\ListPayments\\ListPaymentsEndpoint.cs": {
-    "mtime": 1780138610.8443632,
+    "mtime": 1780162551.5424597,
     "ast_hash": "4e395cb33d97d6fb40199b3bac4422a2",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Payments\\ListPayments\\ListPaymentsHandler.cs": {
-    "mtime": 1779619630.434193,
+    "mtime": 1780162551.5440652,
     "ast_hash": "8aaf2e826dd2898d88883d575f8f3df8",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Payments\\ListPayments\\ListPaymentsQuery.cs": {
-    "mtime": 1779619461.610272,
+    "mtime": 1780162551.5450606,
     "ast_hash": "3a17535a36226b6289f75f5c91813fc2",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Payments\\ListPayments\\ListPaymentsResponse.cs": {
-    "mtime": 1779619462.915328,
+    "mtime": 1780162551.5460646,
     "ast_hash": "4004e91861cbb9c0ff542e34dc86eb68",
     "semantic_hash": ""
   },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Requests\\AcceptRequestResponse.cs": {
-    "mtime": 1779619552.6795018,
-    "ast_hash": "34a23e94fae5e2d5208abe76bd0c3605",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Requests\\AcceptCoursePurchase\\AcceptCoursePurchaseCommand.cs": {
-    "mtime": 1779619575.5026429,
-    "ast_hash": "249c45cf7ec1bb4fc4816229255710d7",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Requests\\AcceptCoursePurchase\\AcceptCoursePurchaseEndpoint.cs": {
-    "mtime": 1780138610.9273663,
-    "ast_hash": "e1a396ad74049b221904714cc558e649",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Requests\\AcceptCoursePurchase\\AcceptCoursePurchaseHandler.cs": {
-    "mtime": 1779619580.0068521,
-    "ast_hash": "71fa52b6a343008c98bb2c23ebec0a29",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Requests\\AcceptMembershipRenewal\\AcceptMembershipRenewalCommand.cs": {
-    "mtime": 1779619551.7760806,
-    "ast_hash": "6e71d76dc185ea2036f7854c6837646f",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Requests\\AcceptMembershipRenewal\\AcceptMembershipRenewalEndpoint.cs": {
-    "mtime": 1780138610.8554504,
-    "ast_hash": "293027654f92354dee17c01bdcd55486",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Requests\\AcceptMembershipRenewal\\AcceptMembershipRenewalHandler.cs": {
-    "mtime": 1779619556.8108442,
-    "ast_hash": "6a25ebc934c72e5e72d6dd5239f33de3",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Requests\\ListCoursePurchaseRequests\\ListCoursePurchaseRequestsEndpoint.cs": {
-    "mtime": 1780138610.8684554,
-    "ast_hash": "5a51684cb11ab592c595d05553050823",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Requests\\ListCoursePurchaseRequests\\ListCoursePurchaseRequestsHandler.cs": {
-    "mtime": 1779619541.8503623,
-    "ast_hash": "046815578295732d89e48327361665b6",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Requests\\ListCoursePurchaseRequests\\ListCoursePurchaseRequestsQuery.cs": {
-    "mtime": 1779619536.6397772,
-    "ast_hash": "1d9c901e9f846f6f3da02621c9abbb04",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Requests\\ListMembershipRenewalRequests\\ListMembershipRenewalRequestsEndpoint.cs": {
-    "mtime": 1780138610.8513815,
-    "ast_hash": "ce33cf7af1ece04a072f7a507382417e",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Requests\\ListMembershipRenewalRequests\\ListMembershipRenewalRequestsHandler.cs": {
-    "mtime": 1779619526.4093893,
-    "ast_hash": "ea85279c6e2ece016ee45f1e5b04b9a0",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Requests\\ListMembershipRenewalRequests\\ListMembershipRenewalRequestsQuery.cs": {
-    "mtime": 1779619519.4669833,
-    "ast_hash": "8c8bb3d3d19330322fa86cdbc2e53b18",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Requests\\ListMembershipRenewalRequests\\ListRequestResponse.cs": {
-    "mtime": 1779619521.28918,
-    "ast_hash": "1b7af746ae1c1d4d3cf836133da264a9",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Requests\\RejectCoursePurchase\\RejectCoursePurchaseCommand.cs": {
-    "mtime": 1779619584.9468963,
-    "ast_hash": "e4c4f2ae98713692ff15222d6bad60ed",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Requests\\RejectCoursePurchase\\RejectCoursePurchaseEndpoint.cs": {
-    "mtime": 1780138610.9333797,
-    "ast_hash": "b8a9df4b33bcc6d4159f7f08c2a048ca",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Requests\\RejectCoursePurchase\\RejectCoursePurchaseHandler.cs": {
-    "mtime": 1779619588.9216692,
-    "ast_hash": "b87e8fd24eb7cec8ada376719d2c1b89",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Requests\\RejectMembershipRenewal\\RejectMembershipRenewalCommand.cs": {
-    "mtime": 1779619566.2833009,
-    "ast_hash": "c35f01f8055f1f5ff062b16b14130429",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Requests\\RejectMembershipRenewal\\RejectMembershipRenewalEndpoint.cs": {
-    "mtime": 1780138610.8584275,
-    "ast_hash": "4c74089b28597c1fdea09b4284f85449",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Requests\\RejectMembershipRenewal\\RejectMembershipRenewalHandler.cs": {
-    "mtime": 1779619570.253286,
-    "ast_hash": "18358cac4e06695e7bdc0d1a2dce1da5",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Requests\\RequestCoursePurchase\\RequestCoursePurchaseCommand.cs": {
-    "mtime": 1779619500.723507,
-    "ast_hash": "b48002990ef440a16e3da3424dab4348",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Requests\\RequestCoursePurchase\\RequestCoursePurchaseEndpoint.cs": {
-    "mtime": 1780138610.8634572,
-    "ast_hash": "6ab4923f92c4b91726f1c62624d32a0b",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Requests\\RequestCoursePurchase\\RequestCoursePurchaseHandler.cs": {
-    "mtime": 1779619505.8530047,
-    "ast_hash": "ed26d7eb5fbdbe5b85f8553022815e4e",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Requests\\RequestCoursePurchase\\RequestCoursePurchaseRequest.cs": {
-    "mtime": 1779619501.5726879,
-    "ast_hash": "b66ff4a0911cb2d05ab4d9716215ccfd",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Requests\\RequestCoursePurchase\\RequestCoursePurchaseResponse.cs": {
-    "mtime": 1779619502.4954667,
-    "ast_hash": "f33a0d060c72c90d37046c82b4e93078",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Requests\\RequestMembershipRenewal\\RequestMembershipRenewalCommand.cs": {
-    "mtime": 1779619479.8757105,
-    "ast_hash": "b1f0576ed5497ce91b27106336ea102d",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Requests\\RequestMembershipRenewal\\RequestMembershipRenewalEndpoint.cs": {
-    "mtime": 1780138610.8483663,
-    "ast_hash": "1f77fa60d6213e3d90f6ca27afc97860",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Requests\\RequestMembershipRenewal\\RequestMembershipRenewalHandler.cs": {
-    "mtime": 1779619486.6661198,
-    "ast_hash": "99f763a90ee447f8b27011e0ae1b8fa9",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Requests\\RequestMembershipRenewal\\RequestMembershipRenewalRequest.cs": {
-    "mtime": 1779619481.1821864,
-    "ast_hash": "1ecbd0cce68cb5bd549894725d4dc1d6",
-    "semantic_hash": ""
-  },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Requests\\RequestMembershipRenewal\\RequestMembershipRenewalResponse.cs": {
-    "mtime": 1779619482.4752464,
-    "ast_hash": "f094bafd4431117317d7375c55e99458",
-    "semantic_hash": ""
-  },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Infrastructure\\IIdentityServiceClient.cs": {
-    "mtime": 1779619436.5411942,
+    "mtime": 1780162551.5570722,
     "ast_hash": "2259e6a5a9988cb4c9904ab24a3d82ef",
     "semantic_hash": ""
   },
-  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Infrastructure\\Persistence\\Configurations\\PaymentRequestConfiguration.cs": {
-    "mtime": 1779619423.125714,
-    "ast_hash": "08e9e3d6a07ae00026357116b57e71c1",
-    "semantic_hash": ""
-  },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Infrastructure\\Seed\\PaymentSeeder.cs": {
-    "mtime": 1779837997.0094657,
+    "mtime": 1780162551.561075,
     "ast_hash": "67f6617fa4b26dc8aabb6da9d8343a79",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Shared\\Events\\AttendanceMarkedEvent.cs": {
-    "mtime": 1779618876.5720785,
+    "mtime": 1780162551.5787761,
     "ast_hash": "e3e941f4fa7e30ac8b4ab08943a7a657",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Shared\\Events\\CoachCreatedEvent.cs": {
-    "mtime": 1780092224.8220935,
+    "mtime": 1780162551.579419,
     "ast_hash": "9efb986320e381f0970a5d8e2476b0f9",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Shared\\Events\\CoursePurchaseAcceptedEvent.cs": {
-    "mtime": 1779619454.4336448,
+    "mtime": 1780162551.5809517,
     "ast_hash": "1e129e16cab06b474eea9696ddba52c8",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Shared\\Events\\EmailConfirmationRequestedEvent.cs": {
-    "mtime": 1779819544.5942187,
+    "mtime": 1780162551.5824878,
     "ast_hash": "21ad2934e7f6b3da6e84692f674103de",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Shared\\Events\\MemberActivatedEvent.cs": {
-    "mtime": 1779618133.379361,
+    "mtime": 1780162551.5835147,
     "ast_hash": "fa2e343390ef4162d574375524552e1c",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Shared\\Events\\MemberCheckedInEvent.cs": {
-    "mtime": 1779619986.7966578,
+    "mtime": 1780162551.5841703,
     "ast_hash": "a903935064efe0e54917258b98cff33a",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Shared\\Events\\MemberCheckedOutEvent.cs": {
-    "mtime": 1779619987.959569,
+    "mtime": 1780162551.5851867,
     "ast_hash": "91c40ec74010c6453bd3055ac4c377ff",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Shared\\Events\\MembershipRenewalAcceptedEvent.cs": {
-    "mtime": 1779619453.433869,
+    "mtime": 1780162551.5861874,
     "ast_hash": "763a81bbef9dad3fa9e95f7302e79972",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Shared\\Events\\MemberSuspendedEvent.cs": {
-    "mtime": 1779618132.1182814,
+    "mtime": 1780162551.5861874,
     "ast_hash": "dadd6650bbe762c24e969d2a1e47bce1",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Shared\\Events\\ProgramAcceptedEvent.cs": {
-    "mtime": 1779618874.0409465,
+    "mtime": 1780162551.5887065,
     "ast_hash": "25722b3569d8fb8ba078ab4a748955b7",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Shared\\Events\\ProgramCreatedEvent.cs": {
-    "mtime": 1779618872.8665657,
+    "mtime": 1780162551.5897026,
     "ast_hash": "759c70a00d6802f5ed71478d2ecd9e11",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Shared\\Events\\ProgramRejectedEvent.cs": {
-    "mtime": 1779618875.2322662,
+    "mtime": 1780162551.5897026,
     "ast_hash": "506befa30ee169a3fb956041077767f8",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\test-results\\.last-run.json": {
-    "mtime": 1779523734.4563408,
+    "mtime": 1780162552.5103076,
     "ast_hash": "ec553ae8392e8b40100cd801476577e4",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\tests\\fixtures.ts": {
-    "mtime": 1779479419.8541992,
+    "mtime": 1780162552.5367713,
     "ast_hash": "5eabbb6897b277398ee06437cb541bfc",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\tests\\seed.spec.ts": {
-    "mtime": 1779479419.860211,
+    "mtime": 1780162552.544212,
     "ast_hash": "80d4a2b77856e2646874ed4661fa66b6",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\tests\\identity\\auth.spec.ts": {
-    "mtime": 1779481571.4344852,
+    "mtime": 1780162552.5392883,
     "ast_hash": "7cad60854a70d1b3ccdb1455b0563615",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\tests\\identity\\profile.spec.ts": {
-    "mtime": 1779482872.5823648,
+    "mtime": 1780162552.5403073,
     "ast_hash": "6b3c9e6dfc1822db7b1c3c2f14565c41",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\tests\\membership\\members.spec.ts": {
-    "mtime": 1779483236.165791,
+    "mtime": 1780162552.541307,
     "ast_hash": "0d64f985a8a9d145dba91da6ef8fe698",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\tests\\membership\\plans.spec.ts": {
-    "mtime": 1779483236.1602707,
+    "mtime": 1780162552.5426254,
     "ast_hash": "a1b6e03091622801bbae3e8a7668a29e",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\tests\\membership\\subscriptions.spec.ts": {
-    "mtime": 1779480894.614226,
+    "mtime": 1780162552.5431976,
     "ast_hash": "19d802d20cae02eb0f9a9eca32775664",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\endpoints.txt": {
-    "mtime": 1779612112.023203,
-    "ast_hash": "75dd9f415ae6b45d3779677d32597cc3",
+    "mtime": 1780352719.230674,
+    "ast_hash": "5713eb34a7634542d12872a52455f3d6",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\TESTING_TUTORIAL.md": {
-    "mtime": 1779480307.645965,
+    "mtime": 1780162551.5947042,
     "ast_hash": "421d5c9f3dcdd0d57cd05ba66be83b40",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Notification\\Notification.Api\\Templates\\email-confirmation.html": {
-    "mtime": 1779819544.5922136,
+    "mtime": 1780162551.4984207,
     "ast_hash": "5cb49cbf0386c58cdb6089701fdd15c8",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\test-results\\membership-members-Members-047c0-rs-list-members-with-search-api-tests\\error-context.md": {
-    "mtime": 1779523718.3830717,
+    "mtime": 1780162552.5123138,
     "ast_hash": "0822c048bc80a97fd575d319fde4173b",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\test-results\\membership-members-Members-1265a-reate-member-via-direct-URL-api-tests\\error-context.md": {
-    "mtime": 1779523716.183769,
+    "mtime": 1780162552.513311,
     "ast_hash": "e470dd0bf85bf56c2603e15420e53d4b",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\test-results\\membership-members-Members-a02f2-list-members-via-direct-URL-api-tests\\error-context.md": {
-    "mtime": 1779523717.285522,
+    "mtime": 1780162552.5143113,
     "ast_hash": "ac84a9757d33ceda075c67c68c08489c",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\test-results\\membership-members-Members-b61b8-annot-access-plans-endpoint-api-tests\\error-context.md": {
-    "mtime": 1779523720.8696346,
+    "mtime": 1780162552.5163145,
     "ast_hash": "1ab6272f9291e3f74cb7276b61bbd6e3",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\test-results\\membership-members-Members-d0458--members-with-status-filter-api-tests\\error-context.md": {
-    "mtime": 1779523719.4691517,
+    "mtime": 1780162552.5173113,
     "ast_hash": "5e168d1b2d06cd731b3d2078fb31fb6c",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\test-results\\membership-plans-Membershi-2008a-reate-a-plan-via-direct-URL-api-tests\\error-context.md": {
-    "mtime": 1779523721.8887749,
+    "mtime": 1780162552.5183153,
     "ast_hash": "35f1cad2bf50415c79259b137559cda9",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\test-results\\membership-plans-Membershi-d19dd-ate-plan-without-auth-fails-api-tests\\error-context.md": {
-    "mtime": 1779523723.9933932,
+    "mtime": 1780162552.520327,
     "ast_hash": "a24e53737d070d890f18d2cf0eca09eb",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\test-results\\membership-plans-Membership-Plans-list-plans-via-direct-URL-api-tests\\error-context.md": {
-    "mtime": 1779523723.0053496,
+    "mtime": 1780162552.521671,
     "ast_hash": "575cb2ff962aec6db64c5740ba4bbada",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\test-results\\membership-subscriptions-S-98c14-cription-without-auth-fails-api-tests\\error-context.md": {
-    "mtime": 1779523733.4402125,
+    "mtime": 1780162552.5229573,
     "ast_hash": "91496e7467fc0905fa80170bed267f7c",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\test-results\\membership-subscriptions-Subscriptions-create-subscription-api-tests\\error-context.md": {
-    "mtime": 1779523732.4766438,
+    "mtime": 1780162552.5241516,
     "ast_hash": "46aa29b84b64b42f09886a4be0d163b3",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\test-results\\membership-subscriptions-Subscriptions-setup---create-member-api-tests\\error-context.md": {
-    "mtime": 1779523731.558885,
+    "mtime": 1780162552.525771,
     "ast_hash": "28a7770667b83f566f74fb39112a0133",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\test-results\\membership-subscriptions-Subscriptions-setup---create-plan-api-tests\\error-context.md": {
-    "mtime": 1779523727.8911166,
+    "mtime": 1780162552.5277708,
     "ast_hash": "66eabebf5d338531346d00bf35e82adb",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Aggregation\\Migrations\\20260528100308_InitialCreate.cs": {
-    "mtime": 1779962588.404336,
+    "mtime": 1780162551.1879108,
     "ast_hash": "afad7d3265c0ad4291bd93e0d7d4b60e",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Aggregation\\Migrations\\20260528100308_InitialCreate.Designer.cs": {
-    "mtime": 1779962588.4053452,
+    "mtime": 1780162551.1873698,
     "ast_hash": "1954db3fc785ee48710796aab8554305",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Aggregation\\Migrations\\AggregationDbContextModelSnapshot.cs": {
-    "mtime": 1779962588.4063492,
+    "mtime": 1780162551.188984,
     "ast_hash": "be37e16d535657852d52505ce6ef7739",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Plans\\ListPlans\\ListPlansResponseWrapper.cs": {
-    "mtime": 1780085189.0700324,
+    "mtime": 1780162551.422926,
     "ast_hash": "368c95c58c40eeac7d3698078f60cd2f",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Notification\\Notification.Api\\Templates\\welcome.html": {
-    "mtime": 1780092179.833073,
+    "mtime": 1780162551.4994183,
     "ast_hash": "6578eef0e7bf6a5569649b755678300d",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\graphify-out\\memory\\query_20260529_111416_can_you_check_if_these_issues_are_valid_in_the_yar.md": {
-    "mtime": 1780053256.5980072,
+    "mtime": 1780162552.4912908,
     "ast_hash": "3bcd2ca2d09cfaaf58e6d6d52b39b831",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Infrastructure\\AddServices.cs": {
-    "mtime": 1780138378.4438071,
+    "mtime": 1780162551.1667511,
     "ast_hash": "fdf6122e630d646686fa2b6135bbedfa",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Infrastructure\\AddServices.cs": {
-    "mtime": 1780138526.1499746,
-    "ast_hash": "951d5d44d7c80a0e8d8107d79317da34",
+    "mtime": 1780337234.965671,
+    "ast_hash": "d96bfde1f21f0e3a278043fe6d5adbc6",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Infrastructure\\AddServices.cs": {
-    "mtime": 1780138610.8353765,
-    "ast_hash": "f704a709f149ec7b04a7968f630e8c43",
+    "mtime": 1780314048.8201728,
+    "ast_hash": "2fdce1d8bcff48e8aedd36c432d9fc34",
     "semantic_hash": ""
   },
   "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Infrastructure\\AddServices.cs": {
-    "mtime": 1780139114.5811005,
-    "ast_hash": "55996b4e2c17a71a1caa1ed2108aa94f",
+    "mtime": 1780325703.000782,
+    "ast_hash": "23de5b58a79830b384c5e6a127a237cd",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\FitTech.AppHost\\FitTech.ServiceDefaults\\OpenApi.cs": {
+    "mtime": 1780225733.92847,
+    "ast_hash": "023ba89708bd01bac77bca244e664cce",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Migrations\\20260601172230_AddMemberActivitiesEntity.cs": {
+    "mtime": 1780334550.3983548,
+    "ast_hash": "6c371fdf0038cf0e1a8436fd760e695d",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Migrations\\20260601172230_AddMemberActivitiesEntity.Designer.cs": {
+    "mtime": 1780334550.3983548,
+    "ast_hash": "d219339992d67fa0bf527bb595c3ff4a",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Migrations\\20260602005237_RemoveCourseIdAddMemberName.cs": {
+    "mtime": 1780361557.6020143,
+    "ast_hash": "b1ede2e8d9af712638b11adaf5f7494c",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Migrations\\20260602005237_RemoveCourseIdAddMemberName.Designer.cs": {
+    "mtime": 1780361557.6030517,
+    "ast_hash": "89538ae142218c195a77f372790cd335",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Activity\\Migrations\\ActivityDbContextModelSnapshot.cs": {
+    "mtime": 1780361557.6030517,
+    "ast_hash": "786f82f224ecbc96109dedc6615b40fd",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Domain\\Configurations\\CoursePurchaseRequestConfiguration.cs": {
+    "mtime": 1780273031.0231097,
+    "ast_hash": "a35da439a741a28a97e737ad51bd690a",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Domain\\Entities\\CoursePurchaseRequest.cs": {
+    "mtime": 1780273028.5729737,
+    "ast_hash": "fbbbf1fc9c01787e90199366acff561b",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Coaches\\GetCoachProfile\\GetCoachProfileEndpoint.cs": {
+    "mtime": 1780246335.342701,
+    "ast_hash": "a6d3e7b1a46155ff9a651d6994fc88c9",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Coaches\\GetCoachProfile\\GetCoachProfileHandler.cs": {
+    "mtime": 1780336476.0858197,
+    "ast_hash": "851479275e309e9fe7442bc628b05c41",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Coaches\\GetCoachProfile\\GetCoachProfileResponse.cs": {
+    "mtime": 1780336470.5811918,
+    "ast_hash": "d83c02a5e0bfccf969893803999cd95c",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Coaches\\ListCoaches\\ListCoachesEndpoint.cs": {
+    "mtime": 1780325683.2369978,
+    "ast_hash": "15bb970a317f7e5c6762a6d845583d00",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Coaches\\ListCoaches\\ListCoachesHandler.cs": {
+    "mtime": 1780325681.5815635,
+    "ast_hash": "07c7955e36f78ecd85a76ce4bdbf7192",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Coaches\\ListCoaches\\ListCoachesQuery.cs": {
+    "mtime": 1780325678.3078446,
+    "ast_hash": "ecd1e551cb579c3d28856f3160c5cea1",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Coaches\\ListCoaches\\ListCoachesResponse.cs": {
+    "mtime": 1780325679.4566245,
+    "ast_hash": "a0ee91b6723aee60faa9a60c4132b0ea",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\AcceptPurchase\\AcceptPurchaseCommand.cs": {
+    "mtime": 1780273144.532294,
+    "ast_hash": "5739c0eb3199fdf4dd24651ea2cf31c9",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\AcceptPurchase\\AcceptPurchaseEndpoint.cs": {
+    "mtime": 1780273158.3931735,
+    "ast_hash": "0cf3a4e82010b899b4ce8f11a63a28a0",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\AcceptPurchase\\AcceptPurchaseHandler.cs": {
+    "mtime": 1780314161.602226,
+    "ast_hash": "91e3ae6b98b742bcb9fa605c27315b37",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\AcceptPurchase\\AcceptPurchaseResponse.cs": {
+    "mtime": 1780273145.375888,
+    "ast_hash": "9d10968e519f4f325403c92d9bd3bf36",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\GetAvailablePrograms\\GetAvailableProgramsEndpoint.cs": {
+    "mtime": 1780221444.1093302,
+    "ast_hash": "19ceddb08d17a40e3254152b91b27f4b",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\GetAvailablePrograms\\GetAvailableProgramsHandler.cs": {
+    "mtime": 1780246349.2634327,
+    "ast_hash": "c9d7db938690c11c654fa7f7aefc0c61",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\GetAvailablePrograms\\GetAvailableProgramsResponse.cs": {
+    "mtime": 1780246346.873983,
+    "ast_hash": "8453437f8244bee8d019ca3bd2635d35",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\GetEnrolledPrograms\\GetEnrolledProgramsEndpoint.cs": {
+    "mtime": 1780221454.1315002,
+    "ast_hash": "99fed084681f52857e2bfee7dd250555",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\GetEnrolledPrograms\\GetEnrolledProgramsHandler.cs": {
+    "mtime": 1780246353.5574303,
+    "ast_hash": "f588ee7d404c9f422a638f9699a337d2",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\GetEnrolledPrograms\\GetEnrolledProgramsResponse.cs": {
+    "mtime": 1780246351.1082058,
+    "ast_hash": "42e5ab8aafca4e20cfb9407d8e61654b",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\GetProgramDetail\\GetProgramDetailEndpoint.cs": {
+    "mtime": 1780221465.6519094,
+    "ast_hash": "cef6444cee907d3abe672072cc90dfbb",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\GetProgramDetail\\GetProgramDetailHandler.cs": {
+    "mtime": 1780246359.5508554,
+    "ast_hash": "604d7624e2215eef649e94c191b49285",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\GetProgramDetail\\GetProgramDetailResponse.cs": {
+    "mtime": 1780246356.1433585,
+    "ast_hash": "0d25f93b7348e91f1429a767e5ffb9ad",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\ListPurchaseRequests\\ListPurchaseRequestsEndpoint.cs": {
+    "mtime": 1780273181.2277203,
+    "ast_hash": "17b6cbec7fb2d0d6006c755e58b7f289",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\ListPurchaseRequests\\ListPurchaseRequestsHandler.cs": {
+    "mtime": 1780273178.5558887,
+    "ast_hash": "2f20bc3abc17ec8dadd671745e1d579c",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\ListPurchaseRequests\\ListPurchaseRequestsQuery.cs": {
+    "mtime": 1780273175.2130384,
+    "ast_hash": "2c4e96fb0dfb85a6d93b8ba97211bd87",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\ListPurchaseRequests\\ListPurchaseRequestsResponse.cs": {
+    "mtime": 1780273174.3938134,
+    "ast_hash": "2eab8d032c5e22878c0e8e719531aecf",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\PurchaseCash\\PurchaseCashCommand.cs": {
+    "mtime": 1780273122.7791538,
+    "ast_hash": "4487e53827f73ec03a051ad54c331f52",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\PurchaseCash\\PurchaseCashEndpoint.cs": {
+    "mtime": 1780273128.2177546,
+    "ast_hash": "f2085ddd6a52aa8fc146dd74bbec69c9",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\PurchaseCash\\PurchaseCashHandler.cs": {
+    "mtime": 1780273136.4939063,
+    "ast_hash": "b1c16d155d1c65da23e822c274fa763f",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\PurchaseCash\\PurchaseCashRequest.cs": {
+    "mtime": 1780273121.930323,
+    "ast_hash": "6f57d9c1898f31c785f1e32de290ccca",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\PurchaseCash\\PurchaseCashResponse.cs": {
+    "mtime": 1780273123.8588085,
+    "ast_hash": "0cdf40f8030040a7bfa2165c32d44cd6",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\PurchaseOnline\\PurchaseOnlineCommand.cs": {
+    "mtime": 1780273189.2390966,
+    "ast_hash": "c8da0f79037209276e65a3a5c77277b3",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\PurchaseOnline\\PurchaseOnlineEndpoint.cs": {
+    "mtime": 1780273207.0009499,
+    "ast_hash": "4ba1bbb0de90096133443f98bf37f29f",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\PurchaseOnline\\PurchaseOnlineHandler.cs": {
+    "mtime": 1780314162.6232948,
+    "ast_hash": "7e16e50329c93af28afc983b6f4ad134",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\PurchaseOnline\\PurchaseOnlineRequest.cs": {
+    "mtime": 1780273188.4194582,
+    "ast_hash": "d19718c7edff5109711c77c79a0c9126",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\PurchaseOnline\\PurchaseOnlineResponse.cs": {
+    "mtime": 1780273190.376881,
+    "ast_hash": "0fdc729ef3862a60f0d0759b2b01e677",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\RejectPurchase\\RejectPurchaseCommand.cs": {
+    "mtime": 1780273164.8862667,
+    "ast_hash": "4f1666b815c6e609f026785985245a41",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\RejectPurchase\\RejectPurchaseEndpoint.cs": {
+    "mtime": 1780273173.0668156,
+    "ast_hash": "cacf1d0e04e1a0f098cb59eae29b9a53",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\RejectPurchase\\RejectPurchaseHandler.cs": {
+    "mtime": 1780273169.7693665,
+    "ast_hash": "8621b2db8dabbe890c55052ef259247e",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Programs\\RejectPurchase\\RejectPurchaseResponse.cs": {
+    "mtime": 1780273165.7351427,
+    "ast_hash": "32f59e030f5f3debeb3509e951940b0f",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Sessions\\GetSessionHistory\\GetSessionHistoryEndpoint.cs": {
+    "mtime": 1780246292.690112,
+    "ast_hash": "b3c6174652d3697b07ab83d661555687",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Sessions\\GetSessionHistory\\GetSessionHistoryHandler.cs": {
+    "mtime": 1780246310.7582836,
+    "ast_hash": "750c926dc024a67b8028cdb07ffe6ae4",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Sessions\\GetSessionHistory\\GetSessionHistoryQuery.cs": {
+    "mtime": 1780246278.951538,
+    "ast_hash": "af9a11bd8bb1af076e3b310a4c6dc37d",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Sessions\\GetSessionHistory\\GetSessionHistoryResponse.cs": {
+    "mtime": 1780246280.972219,
+    "ast_hash": "fd13e4c59215b5d6229aff7df9829f05",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Features\\Sessions\\GetSessionHistory\\GetSessionHistoryValidator.cs": {
+    "mtime": 1780246283.8096,
+    "ast_hash": "c47f8066e2be1634ad807c419a33ea49",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Infrastructure\\IPaymentServiceClient.cs": {
+    "mtime": 1780273089.556831,
+    "ast_hash": "dfc8befb36a0b5196b5de337d7449c00",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Migrations\\20260531165358_AddProfilePhotoUrlToCoach.cs": {
+    "mtime": 1780246438.98473,
+    "ast_hash": "cdd337b280dfa2fc183e30939ec943ad",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Migrations\\20260531165358_AddProfilePhotoUrlToCoach.Designer.cs": {
+    "mtime": 1780246438.9857337,
+    "ast_hash": "dfc475a7ffff4e17d4996899a538d396",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Migrations\\20260601001833_AddCoursePurchaseRequest.cs": {
+    "mtime": 1780273113.346955,
+    "ast_hash": "cc63ee8550dbff63ac90195a5a342cef",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Courses\\Migrations\\20260601001833_AddCoursePurchaseRequest.Designer.cs": {
+    "mtime": 1780273113.3475296,
+    "ast_hash": "cf4f300cd5c2e1105f2c3d324dbd092e",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Equipments\\mvnw": {
+    "mtime": 1780214981.1185205,
+    "ast_hash": "ab50dd89da7da2346b28003352eeeeeb",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Equipments\\src\\main\\java\\com\\fittech\\equipments\\EquipmentsApplication.java": {
+    "mtime": 1780214984.3278065,
+    "ast_hash": "460ff3e1899ac382c8fcfdacd062bae4",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Equipments\\src\\main\\java\\com\\fittech\\equipments\\config\\R2dbcConfig.java": {
+    "mtime": 1780328095.466194,
+    "ast_hash": "571035d850f07ad0ed91cb4d38c985b3",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Equipments\\src\\main\\java\\com\\fittech\\equipments\\model\\Equipment.java": {
+    "mtime": 1780328096.4172173,
+    "ast_hash": "3b12577ee19e7be6c18582e13d51940f",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Equipments\\src\\main\\java\\com\\fittech\\equipments\\model\\Issue.java": {
+    "mtime": 1780328097.266991,
+    "ast_hash": "e54c4495fe369753ba7400f638f96182",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Equipments\\src\\main\\java\\com\\fittech\\equipments\\repository\\EquipmentRepository.java": {
+    "mtime": 1780328097.9125524,
+    "ast_hash": "abfccbc0bb6da513d934313f96771f0b",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Equipments\\src\\main\\java\\com\\fittech\\equipments\\repository\\IssueRepository.java": {
+    "mtime": 1780328098.6187253,
+    "ast_hash": "36d2d4f518bcda8fe9905ea1473879fb",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Equipments\\src\\main\\resources\\schema.sql": {
+    "mtime": 1780328093.0714455,
+    "ast_hash": "9e9c4112a6c1946e02f7aacbcbb0f7de",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Equipments\\src\\test\\java\\com\\fittech\\equipments\\EquipmentsApplicationTests.java": {
+    "mtime": 1780214984.359366,
+    "ast_hash": "275735455a2c40d12121986d3725de39",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Domain\\Configurations\\PaymentApprovalRequestConfiguration.cs": {
+    "mtime": 1780162551.3190937,
+    "ast_hash": "ca8b59056f721cc411d12e80a5cb1bbc",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Domain\\Entities\\PaymentApprovalRequest.cs": {
+    "mtime": 1780273250.2290442,
+    "ast_hash": "a00a7f560b61a104eefafd930c32eff6",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Me\\Payments\\MePaymentResponse.cs": {
+    "mtime": 1780314081.3578196,
+    "ast_hash": "7246d015905dd4f555577c8dedf061e9",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Me\\Payments\\MePaymentsEndpoint.cs": {
+    "mtime": 1780314087.761986,
+    "ast_hash": "0041dca858a8c1e993761dd004c7e54a",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Me\\Payments\\MePaymentsHandler.cs": {
+    "mtime": 1780314084.763837,
+    "ast_hash": "2fab7844f685ec931274d6ba8820a285",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Me\\Sessions\\MeSessionResponse.cs": {
+    "mtime": 1780314088.881343,
+    "ast_hash": "ebd8630473ab5f57067709ace3559015",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Me\\Sessions\\MeSessionsEndpoint.cs": {
+    "mtime": 1780314096.6447718,
+    "ast_hash": "7f45ab7db35ec1dc8528e39a2b680a9a",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Me\\Sessions\\MeSessionsHandler.cs": {
+    "mtime": 1780314093.5817707,
+    "ast_hash": "7c53f971edb99670bf4f2810c8ebc388",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Me\\Subscriptions\\MeSubscriptionResponse.cs": {
+    "mtime": 1780314098.3376727,
+    "ast_hash": "48657a221ab55c70c895b964c926d83d",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Me\\Subscriptions\\MeSubscriptionsEndpoint.cs": {
+    "mtime": 1780314106.3089032,
+    "ast_hash": "2843dc51275a39ca6c6b9d20fe718f5e",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Me\\Subscriptions\\MeSubscriptionsHandler.cs": {
+    "mtime": 1780314102.9753509,
+    "ast_hash": "611d0bebe5e21776093003337a8f200e",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\GetMemberByCard\\GetMemberByCardEndpoint.cs": {
+    "mtime": 1780334154.515806,
+    "ast_hash": "b238fd8f486ebce49ff54cf5318674f0",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\GetMemberByCard\\GetMemberByCardHandler.cs": {
+    "mtime": 1780361211.4810596,
+    "ast_hash": "1a0a528709c4d5721c0706c8bb61dc3c",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\TrackMemberEntry\\TrackMemberEntryCommand.cs": {
+    "mtime": 1780361236.5700183,
+    "ast_hash": "b7ae6924758822ea9120adb4d4452598",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\TrackMemberEntry\\TrackMemberEntryEndpoint.cs": {
+    "mtime": 1780361126.1698892,
+    "ast_hash": "634548beb43c80a93d28a4d357f93d33",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\TrackMemberEntry\\TrackMemberEntryHandler.cs": {
+    "mtime": 1780361242.9142902,
+    "ast_hash": "e1521fa758d7123da991994d0dada5d8",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Members\\UpdateMyProfile\\UpdateMyProfileValidator.cs": {
+    "mtime": 1780337274.079064,
+    "ast_hash": "51e2ce698be55b51688d59022572d530",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Payments\\PaymentConfirmedConsumer.cs": {
+    "mtime": 1780162551.4068992,
+    "ast_hash": "28e2d0fc2130eb799154d0d8f5de2952",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Subscriptions\\AcceptRenewal\\AcceptRenewalCommand.cs": {
+    "mtime": 1780162551.4301343,
+    "ast_hash": "46a2ac696737d37c3350dcde1f62fddc",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Subscriptions\\AcceptRenewal\\AcceptRenewalEndpoint.cs": {
+    "mtime": 1780162551.431136,
+    "ast_hash": "d62e75d607aae942bb0000266370868a",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Subscriptions\\AcceptRenewal\\AcceptRenewalHandler.cs": {
+    "mtime": 1780269123.017185,
+    "ast_hash": "fbfd672d68fde7949861c269c7a4140b",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Subscriptions\\AcceptRenewal\\AcceptRenewalRequest.cs": {
+    "mtime": 1780162551.4341326,
+    "ast_hash": "253346b52a8251977e62aa59875a6ff5",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Subscriptions\\AcceptRenewal\\AcceptRenewalResponse.cs": {
+    "mtime": 1780162551.4351337,
+    "ast_hash": "04534a8d27d3ba5ca54681e63ae6f09b",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Subscriptions\\ListRenewalRequests\\ListRenewalRequestsEndpoint.cs": {
+    "mtime": 1780269141.010516,
+    "ast_hash": "99e1317db552b920bf2fbace48685144",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Subscriptions\\ListRenewalRequests\\ListRenewalRequestsHandler.cs": {
+    "mtime": 1780269137.8743622,
+    "ast_hash": "563f8db094679e6848f5c4816ddc89d6",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Subscriptions\\ListRenewalRequests\\ListRenewalRequestsQuery.cs": {
+    "mtime": 1780269132.1969106,
+    "ast_hash": "d270955fb1d1684ab65616c57933b077",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Subscriptions\\ListRenewalRequests\\ListRenewalRequestsResponse.cs": {
+    "mtime": 1780269131.3011763,
+    "ast_hash": "dd9cd127f69a38c909f814dd3a7784b6",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Subscriptions\\OnlineRenewal\\OnlineRenewalCommand.cs": {
+    "mtime": 1780269151.269301,
+    "ast_hash": "849bdd45b4b63373900470a2c83eecc9",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Subscriptions\\OnlineRenewal\\OnlineRenewalEndpoint.cs": {
+    "mtime": 1780269176.5568335,
+    "ast_hash": "47e9ad9272e5a8d9b105e33cab2f6dd2",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Subscriptions\\OnlineRenewal\\OnlineRenewalHandler.cs": {
+    "mtime": 1780269170.8420055,
+    "ast_hash": "b0e8f1b1edfec496860f7e6d58c78475",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Subscriptions\\OnlineRenewal\\OnlineRenewalRequest.cs": {
+    "mtime": 1780269150.1984656,
+    "ast_hash": "76cf87816ceb21ea8d828503dd267900",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Subscriptions\\OnlineRenewal\\OnlineRenewalResponse.cs": {
+    "mtime": 1780269153.1150787,
+    "ast_hash": "ce913fcf329416dc05cbc83640951362",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Subscriptions\\RejectRenewal\\RejectRenewalCommand.cs": {
+    "mtime": 1780162551.4502628,
+    "ast_hash": "08d672f981ff063f9ae65bf9c8db26ce",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Subscriptions\\RejectRenewal\\RejectRenewalEndpoint.cs": {
+    "mtime": 1780162551.451262,
+    "ast_hash": "6298bed6f5eb45f72f887efecfad3d82",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Subscriptions\\RejectRenewal\\RejectRenewalHandler.cs": {
+    "mtime": 1780162551.4522605,
+    "ast_hash": "1020ee9403133a1f716bdc0fe80f5ffc",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Subscriptions\\RejectRenewal\\RejectRenewalRequest.cs": {
+    "mtime": 1780162551.453262,
+    "ast_hash": "2e729326099ebd56d8e200ed8ed6a861",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Subscriptions\\RejectRenewal\\RejectRenewalResponse.cs": {
+    "mtime": 1780162551.4542642,
+    "ast_hash": "93a9ca37adeef75487e9045c4a4d1e0e",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Subscriptions\\RequestRenewal\\RequestRenewalCommand.cs": {
+    "mtime": 1780162551.4552643,
+    "ast_hash": "8fc7fb62410e044ba08bc09cfeed4beb",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Subscriptions\\RequestRenewal\\RequestRenewalEndpoint.cs": {
+    "mtime": 1780162551.4562635,
+    "ast_hash": "997ec3c4f7460344a90544f3262022ac",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Subscriptions\\RequestRenewal\\RequestRenewalHandler.cs": {
+    "mtime": 1780269072.5532217,
+    "ast_hash": "60fe13be8a6966cf622f278e3631a26d",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Subscriptions\\RequestRenewal\\RequestRenewalRequest.cs": {
+    "mtime": 1780162551.458261,
+    "ast_hash": "286bc22924fba4b6f595397865081d00",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Features\\Subscriptions\\RequestRenewal\\RequestRenewalResponse.cs": {
+    "mtime": 1780162551.4592679,
+    "ast_hash": "57e9471327b80ef4364c80b723b942e6",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Infrastructure\\IActivityServiceClient.cs": {
+    "mtime": 1780314058.2978578,
+    "ast_hash": "c86f17ca3247db988e8cf625622c43ea",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Migrations\\20260530150240_AddPaymentApprovalRequests.cs": {
+    "mtime": 1780162551.4778728,
+    "ast_hash": "9d72f6c8416c075c8eccad90e3ddad93",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Migrations\\20260530150240_AddPaymentApprovalRequests.Designer.cs": {
+    "mtime": 1780162551.4768524,
+    "ast_hash": "c03fa4b9d75e540ede3491bc0ac10dda",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Migrations\\20260601222301_AddMedicalFileToHealthProfile.cs": {
+    "mtime": 1780352582.0539422,
+    "ast_hash": "721ab3228187976821cab7d8c6f16fa7",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Membership\\Migrations\\20260601222301_AddMedicalFileToHealthProfile.Designer.cs": {
+    "mtime": 1780352582.05594,
+    "ast_hash": "8180b43694eeb7a4e985720f8b1231f4",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Payments\\ConfirmPayment\\ConfirmPaymentCommand.cs": {
+    "mtime": 1780269228.1241722,
+    "ast_hash": "4edba018e0a9ac0bca4586922a0ccf3d",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Payments\\ConfirmPayment\\ConfirmPaymentEndpoint.cs": {
+    "mtime": 1780269235.2396595,
+    "ast_hash": "5eedaae1bf0dd041218fdc1b0cb912bf",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Payments\\ConfirmPayment\\ConfirmPaymentHandler.cs": {
+    "mtime": 1780269358.480285,
+    "ast_hash": "54df1ff0d4b09fc116ff22c20a7806c7",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Payments\\ConfirmPayment\\ConfirmPaymentResponse.cs": {
+    "mtime": 1780269229.0551708,
+    "ast_hash": "4c4f3e3f61a50cb936ac5e0c8adcf914",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Payments\\CreatePaymentIntent\\CreatePaymentIntentCommand.cs": {
+    "mtime": 1780162551.5361402,
+    "ast_hash": "b8cfe16258f2c52a85948396d21f5fb3",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Payments\\CreatePaymentIntent\\CreatePaymentIntentEndpoint.cs": {
+    "mtime": 1780162551.537352,
+    "ast_hash": "3cb315ec1e91fad19a8582946bc871df",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Payments\\CreatePaymentIntent\\CreatePaymentIntentHandler.cs": {
+    "mtime": 1780162551.5390742,
+    "ast_hash": "cf71947998229535f2b6e890e564f7d9",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Payments\\CreatePaymentIntent\\CreatePaymentIntentRequest.cs": {
+    "mtime": 1780162551.5402114,
+    "ast_hash": "d495072b0185e7f83ab06302e818e430",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Payments\\CreatePaymentIntent\\CreatePaymentIntentResponse.cs": {
+    "mtime": 1780162551.5413382,
+    "ast_hash": "69f6b6d0a26417ad27eb010e717ffa8a",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Payments\\GetMemberPayments\\GetMemberPaymentsEndpoint.cs": {
+    "mtime": 1780314199.3843472,
+    "ast_hash": "4bba783602e087de7d4922e3ca5dfc6a",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Payments\\GetMemberPayments\\GetMemberPaymentsHandler.cs": {
+    "mtime": 1780314223.650705,
+    "ast_hash": "d2eda02258354d51fcb10d05504bcea1",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Payments\\GetMemberPayments\\GetMemberPaymentsQuery.cs": {
+    "mtime": 1780314028.7049274,
+    "ast_hash": "ca6cf89d37c8dd9000de26eb6c54d1c8",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Payments\\GetMyPayments\\GetMyPaymentsEndpoint.cs": {
+    "mtime": 1780314027.530007,
+    "ast_hash": "513eba52af6f138f2bfd2e79acd798a9",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Payments\\GetMyPayments\\GetMyPaymentsHandler.cs": {
+    "mtime": 1780314023.9402525,
+    "ast_hash": "2414782d798009f54685a403c161d594",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Payments\\GetMyPayments\\GetMyPaymentsQuery.cs": {
+    "mtime": 1780314019.463611,
+    "ast_hash": "a75b097d606dc25b1fb8f4edb9db38c7",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Payments\\GetMyPayments\\MemberPaymentResponse.cs": {
+    "mtime": 1780314018.4204516,
+    "ast_hash": "883e2f2a513a26cf671bab952d4079c3",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Payments\\Webhook\\WebhookCommand.cs": {
+    "mtime": 1780162551.5470648,
+    "ast_hash": "0168490bce664e2a79954ac72b9457b0",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Payments\\Webhook\\WebhookEndpoint.cs": {
+    "mtime": 1780162551.548066,
+    "ast_hash": "23954eea57f78b8143ccf8cccb5ca95b",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Payments\\Webhook\\WebhookHandler.cs": {
+    "mtime": 1780162551.5490668,
+    "ast_hash": "f55684f3374f29e664bcf6eaef5abe90",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Payments\\Webhook\\WebhookRequest.cs": {
+    "mtime": 1780162551.5500646,
+    "ast_hash": "1f1f79a8c67a3f0179aeb5e664c11702",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Features\\Payments\\Webhook\\WebhookResponse.cs": {
+    "mtime": 1780162551.5520594,
+    "ast_hash": "a26c56f0512e65626dedeeaec356c51f",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Infrastructure\\Gateways\\IPaymentGateway.cs": {
+    "mtime": 1780162551.5540593,
+    "ast_hash": "8e829c9d7181bdf2de9c05b1dcc3f793",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Infrastructure\\Gateways\\MockPaymentGateway.cs": {
+    "mtime": 1780162551.5560758,
+    "ast_hash": "de9fd475890d6ce306d2173b79b14dce",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Migrations\\20260530150240_AddGatewayTransactionId.cs": {
+    "mtime": 1780162551.5630763,
+    "ast_hash": "2ac51c075d0bb8abcbdae027d6bbfd86",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Migrations\\20260530150240_AddGatewayTransactionId.Designer.cs": {
+    "mtime": 1780162551.5620756,
+    "ast_hash": "bce1d8dea7ed1a8938c8c8de45798c88",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Payment\\Migrations\\PaymentDbContextModelSnapshot.cs": {
+    "mtime": 1780162551.565071,
+    "ast_hash": "ddc6aa52cf4aa1c716971550183bda99",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Shop\\mvnw": {
+    "mtime": 1780214906.7600102,
+    "ast_hash": "ab50dd89da7da2346b28003352eeeeeb",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Shop\\src\\main\\java\\com\\fittech\\shop\\ShopApplication.java": {
+    "mtime": 1780214911.9501538,
+    "ast_hash": "8ab56a206c5f241e64c1a3418f547b1f",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Shop\\src\\main\\java\\com\\fittech\\shop\\config\\R2dbcConfig.java": {
+    "mtime": 1780328083.5944452,
+    "ast_hash": "c7c783e035e01541f0c51ff8c42b6cca",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Shop\\src\\main\\java\\com\\fittech\\shop\\model\\Product.java": {
+    "mtime": 1780328084.6268258,
+    "ast_hash": "40fe29fd3a124576fae171112506908f",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Shop\\src\\main\\java\\com\\fittech\\shop\\model\\Purchase.java": {
+    "mtime": 1780328085.5558648,
+    "ast_hash": "6d1e0a17a0dd9ecdc0b12b8af5bbb87b",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Shop\\src\\main\\java\\com\\fittech\\shop\\repository\\ProductRepository.java": {
+    "mtime": 1780328086.1972039,
+    "ast_hash": "fd20ae0061b4c699b77ac7a1c572e171",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Shop\\src\\main\\java\\com\\fittech\\shop\\repository\\PurchaseRepository.java": {
+    "mtime": 1780328086.9725652,
+    "ast_hash": "0049d150bd03e4318665e7f455ed35c7",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Shop\\src\\main\\resources\\schema.sql": {
+    "mtime": 1780328081.216608,
+    "ast_hash": "12810802d4fedca5dc766334ebf0ad63",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Shop\\src\\test\\java\\com\\fittech\\shop\\ShopApplicationTests.java": {
+    "mtime": 1780214911.8344817,
+    "ast_hash": "8a838304f3a6a45dfbe1048ef694e896",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Workout-Logs\\mvnw": {
+    "mtime": 1780254451.7462268,
+    "ast_hash": "ab50dd89da7da2346b28003352eeeeeb",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Workout-Logs\\src\\main\\java\\com\\fittech\\workoutlogs\\WorkoutLogsApplication.java": {
+    "mtime": 1780254457.5723476,
+    "ast_hash": "d04b35b8fae923f202ee28bc2b3f1fff",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Workout-Logs\\src\\main\\java\\com\\fittech\\workoutlogs\\config\\R2dbcConfig.java": {
+    "mtime": 1780327175.9068007,
+    "ast_hash": "af4db073be1fabf93da5254f59d5fc84",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Workout-Logs\\src\\main\\java\\com\\fittech\\workoutlogs\\controller\\WorkoutLogController.java": {
+    "mtime": 1780324201.6980274,
+    "ast_hash": "c835f1691f0410676f76085fa03dc753",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Workout-Logs\\src\\main\\java\\com\\fittech\\workoutlogs\\dto\\CreateWorkoutLogRequest.java": {
+    "mtime": 1780324167.232015,
+    "ast_hash": "623dcf3cfdfa662a3b5107359e3cebf2",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Workout-Logs\\src\\main\\java\\com\\fittech\\workoutlogs\\dto\\ExerciseRequest.java": {
+    "mtime": 1780324171.5141237,
+    "ast_hash": "72544243b609d599b99d2c78b79fcd3e",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Workout-Logs\\src\\main\\java\\com\\fittech\\workoutlogs\\dto\\ExerciseResponse.java": {
+    "mtime": 1780324133.8043244,
+    "ast_hash": "364dcdb08c93d620ed44dc5dac4a4a5b",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Workout-Logs\\src\\main\\java\\com\\fittech\\workoutlogs\\dto\\UpdateWorkoutLogRequest.java": {
+    "mtime": 1780324169.4277947,
+    "ast_hash": "2d5e1d9c02b23db8bbb4557d23ad309c",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Workout-Logs\\src\\main\\java\\com\\fittech\\workoutlogs\\dto\\WorkoutLogResponse.java": {
+    "mtime": 1780324132.0252485,
+    "ast_hash": "cb370c0a6406afd0fdac20fe5a082119",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Workout-Logs\\src\\main\\java\\com\\fittech\\workoutlogs\\model\\Exercise.java": {
+    "mtime": 1780324118.5712605,
+    "ast_hash": "e808f427e548414323aab5528f6dd3b8",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Workout-Logs\\src\\main\\java\\com\\fittech\\workoutlogs\\model\\WorkoutLog.java": {
+    "mtime": 1780324116.3469124,
+    "ast_hash": "4b14871daaf22bb1362b6bd5cadbea16",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Workout-Logs\\src\\main\\java\\com\\fittech\\workoutlogs\\repository\\ExerciseRepository.java": {
+    "mtime": 1780324183.2402656,
+    "ast_hash": "e0f2fba35a1be56a40d9f9ae582323b2",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Workout-Logs\\src\\main\\java\\com\\fittech\\workoutlogs\\repository\\WorkoutLogRepository.java": {
+    "mtime": 1780324180.9103231,
+    "ast_hash": "2756feb22dce3c4d3bc8421b2a59af6f",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Workout-Logs\\src\\main\\java\\com\\fittech\\workoutlogs\\service\\WorkoutLogService.java": {
+    "mtime": 1780324194.9484422,
+    "ast_hash": "ce83e59080d0cfb9eba5f23dfa4e9378",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Workout-Logs\\src\\main\\resources\\schema.sql": {
+    "mtime": 1780324113.9260592,
+    "ast_hash": "c6cf6bb663d812f9524bdc6a58d0e4fa",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Workout-Logs\\src\\test\\java\\com\\fittech\\workoutlogs\\WorkoutLogsApplicationTests.java": {
+    "mtime": 1780254457.5497139,
+    "ast_hash": "bb3fca5c8b031df23aee4e57c3e2f283",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Shared\\Events\\SendEmailEvent.cs": {
+    "mtime": 1780162551.5907044,
+    "ast_hash": "beb4474779450bfba66e5dd05426da5c",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Equipments\\HELP.md": {
+    "mtime": 1780214984.343057,
+    "ast_hash": "8be55420f2b37abc971d142aa7ab9add",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Shop\\HELP.md": {
+    "mtime": 1780214911.9114802,
+    "ast_hash": "8be55420f2b37abc971d142aa7ab9add",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\Services\\Workout-Logs\\HELP.md": {
+    "mtime": 1780254457.5587566,
+    "ast_hash": "556c771c02d481a9e6e7181b99a8b7eb",
+    "semantic_hash": ""
+  },
+  "D:\\projects\\GYM\\FitTech.Backend\\graphify-out\\memory\\query_20260531_093851_add_fixed_member_seed_member_fitteck_com_with_pass.md": {
+    "mtime": 1780220331.4946477,
+    "ast_hash": "4715b5909118567621281fcbffd7cc09",
     "semantic_hash": ""
   }
 }

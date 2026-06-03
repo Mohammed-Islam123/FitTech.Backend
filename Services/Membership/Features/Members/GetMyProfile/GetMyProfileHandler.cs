@@ -10,6 +10,7 @@ namespace Membership.Features.Members.GetMyProfile;
 /// <description>
 /// Retrieves the authenticated member's personal details by combining data from
 /// the Membership database and the Identity service.
+/// Medical file info is now read from the local Membership database.
 /// </description>
 public class GetMyProfileHandler(
     MembershipDbContext context,
@@ -45,15 +46,11 @@ public class GetMyProfileHandler(
             ? identityProfileResponse.Content?.Data
             : null;
 
-        var medicalFileResponse = await identityClient.GetMedicalFileAsync(currentUserId.Value);
-        var medicalFile = medicalFileResponse.IsSuccessStatusCode
-            ? medicalFileResponse.Content?.Data
-            : null;
-
         var membershipDurationYears = (int)Math.Floor(
             (DateTime.UtcNow - member.JoinDate).TotalDays / 365.25);
 
         return new GetMyProfileResponse(
+            MemberId: member.Id,
             FirstName: member.FirstName,
             LastName: member.LastName,
             Gender: identityProfile?.Gender,
@@ -66,7 +63,7 @@ public class GetMyProfileHandler(
             IsActive: member.Status == MemberStatus.Active,
             ProfilePictureUrl: identityProfile?.ProfilePhotoUrl,
             Goals: member.HealthProfile?.Objectives,
-            MedicalFileId: medicalFile?.Id
+            MedicalFileUrl: member.HealthProfile?.MedicalFileUrl
         );
     }
 }

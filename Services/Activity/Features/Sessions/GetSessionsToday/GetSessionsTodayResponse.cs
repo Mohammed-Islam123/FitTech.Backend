@@ -5,7 +5,6 @@ public record GetSessionsTodayResponse(
     Guid MemberId,
     string MemberName,
     string? CardUid,
-    Guid? CourseId,
     DateTime CheckInTime,
     DateTime? CheckOutTime,
     bool IsActive

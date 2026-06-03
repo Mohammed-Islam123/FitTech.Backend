@@ -4,6 +4,5 @@ public record GetMemberActivityResponse(
     Guid SessionId,
     DateTime CheckInTime,
     DateTime? CheckOutTime,
-    Guid? CourseId,
     bool IsManual
 );

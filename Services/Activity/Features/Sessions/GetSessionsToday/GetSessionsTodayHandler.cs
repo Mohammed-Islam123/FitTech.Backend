@@ -21,8 +21,8 @@ public class GetSessionsTodayHandler(ActivityDbContext context, IUserAccessor us
             .Where(a => a.CheckInTime >= today && a.CheckInTime < tomorrow)
             .OrderByDescending(a => a.CheckInTime)
             .Select(a => new GetSessionsTodayResponse(
-                a.Id, a.MemberId, $"Member-{a.MemberId.ToString().Substring(0, 8)}",
-                a.CardUid, a.CourseId, a.CheckInTime, a.CheckOutTime,
+                a.Id, a.MemberId, a.MemberName,
+                a.CardUid, a.CheckInTime, a.CheckOutTime,
                 a.CheckOutTime == null))
             .ToListAsync(ct);
     }

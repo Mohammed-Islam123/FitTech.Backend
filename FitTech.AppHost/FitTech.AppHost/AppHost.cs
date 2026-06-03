@@ -160,6 +160,8 @@ var equipmentsApi = builder.AddJavaApp(
 .WithHttpEndpoint(port: 5106, name: "http")
 .WithHttpsEndpoint(port: 7106, name: "https")
 .WithReference(equipmentsDb)
+.WithReference(identityApi)
+.WithReference(rabbit)
 .WaitFor(equipmentsDb);
 
 

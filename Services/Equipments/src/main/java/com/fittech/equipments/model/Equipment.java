@@ -24,5 +24,15 @@ public class Equipment {
 
     private String description;
 
+    private String category;
+
+    private String status;
+
+    private String imageUrl;
+
+    private Boolean isActive;
+
     private LocalDateTime createdAt;
+
+    private LocalDateTime updatedAt;
 }

@@ -14,6 +14,7 @@ builder.Services.AddMassTransit(x =>
     x.SetKebabCaseEndpointNameFormatter();
     x.AddConsumer<EmailConfirmationRequestedConsumer>();
     x.AddConsumer<UserRegisteredConsumer>();
+    x.AddConsumer<SendEmailEventConsumer>();
 
     x.UsingRabbitMq((ctx, cfg) =>
     {

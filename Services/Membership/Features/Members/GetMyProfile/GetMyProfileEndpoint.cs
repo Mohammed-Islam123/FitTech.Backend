@@ -16,7 +16,7 @@ public class GetMyProfileEndpoint : ICarterModule
         app.MapGet("/api/me", Handle)
             .WithName("GetMyProfile")
             .WithTags("Members")
-            .WithDescription("Returns the authenticated member's personal details including goals and medical file ID.")
+            .WithDescription("Returns the authenticated member's personal details including goals and medical file URL.")
             .RequireAuthorization("MemberOnly")
             .Produces<GetMyProfileResponse>(StatusCodes.Status200OK)
             .ProducesProblem(StatusCodes.Status401Unauthorized)
@@ -37,7 +37,7 @@ public class GetMyProfileEndpoint : ICarterModule
                     ["isActive"] = true,
                     ["profilePictureUrl"] = "http://identity-api/profile-photos/abc.jpg",
                     ["goals"] = "Lose weight, build muscle",
-                    ["medicalFileId"] = Guid.NewGuid().ToString()
+                    ["medicalFileUrl"] = "/medical-files/00000000-0000-0000-0000-000000000001/report.pdf"
                 };
 
                 if (operation.Responses.TryGetValue("200", out var response) &&

@@ -25,11 +25,19 @@ builder.Services.AddScoped<IUserAccessor, UserAccessor>();
 
 builder.Host.UseWolverine(opts =>
 {
+    opts.Discovery.DisableConventionalDiscovery();
+
+    opts.Discovery
+        .IncludeAssembly(typeof(Shared.Events.AttendanceMarkedEvent).Assembly);
+
     opts.UseRabbitMqUsingNamedConnection("rabbitmq")
         .UseConventionalRouting()
         .AutoProvision();
+
     opts.Policies.DisableConventionalLocalRouting();
+
     opts.Policies.AddMiddleware<ValidationBehavior>();
+
 });
 
 var identityUrl = builder.Configuration["services:identity-api:http:0"]

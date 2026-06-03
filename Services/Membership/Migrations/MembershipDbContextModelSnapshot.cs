@@ -65,6 +65,12 @@ namespace Membership.Migrations
                     b.Property<DateTime>("LastUpdatedAt")
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<string>("MedicalFileName")
+                        .HasColumnType("text");
+
+                    b.Property<string>("MedicalFileUrl")
+                        .HasColumnType("text");
+
                     b.Property<string>("MedicalRestrictions")
                         .HasColumnType("text");
 

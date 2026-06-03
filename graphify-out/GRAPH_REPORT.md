@@ -1,16 +1,16 @@
-# Graph Report - FitTech.Backend  (2026-05-30)
+# Graph Report - FitTech.Backend  (2026-06-02)
 
 ## Corpus Check
-- 521 files · ~89,897 words
+- 637 files · ~103,768 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 3629 nodes · 3823 edges · 521 communities (362 shown, 159 thin omitted)
-- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 38 edges (avg confidence: 0.83)
+- 4080 nodes · 4218 edges · 656 communities (417 shown, 239 thin omitted)
+- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 51 edges (avg confidence: 0.82)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ecf2a3eb`
+- Built from commit: `0494ed88`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -393,6 +393,91 @@
 - [[_COMMUNITY_Community 511|Community 511]]
 - [[_COMMUNITY_Community 512|Community 512]]
 - [[_COMMUNITY_Community 513|Community 513]]
+- [[_COMMUNITY_Community 521|Community 521]]
+- [[_COMMUNITY_Community 522|Community 522]]
+- [[_COMMUNITY_Community 523|Community 523]]
+- [[_COMMUNITY_Community 524|Community 524]]
+- [[_COMMUNITY_Community 525|Community 525]]
+- [[_COMMUNITY_Community 526|Community 526]]
+- [[_COMMUNITY_Community 527|Community 527]]
+- [[_COMMUNITY_Community 528|Community 528]]
+- [[_COMMUNITY_Community 529|Community 529]]
+- [[_COMMUNITY_Community 530|Community 530]]
+- [[_COMMUNITY_Community 531|Community 531]]
+- [[_COMMUNITY_Community 532|Community 532]]
+- [[_COMMUNITY_Community 533|Community 533]]
+- [[_COMMUNITY_Community 534|Community 534]]
+- [[_COMMUNITY_Community 535|Community 535]]
+- [[_COMMUNITY_Community 536|Community 536]]
+- [[_COMMUNITY_Community 537|Community 537]]
+- [[_COMMUNITY_Community 538|Community 538]]
+- [[_COMMUNITY_Community 539|Community 539]]
+- [[_COMMUNITY_Community 540|Community 540]]
+- [[_COMMUNITY_Community 541|Community 541]]
+- [[_COMMUNITY_Community 542|Community 542]]
+- [[_COMMUNITY_Community 543|Community 543]]
+- [[_COMMUNITY_Community 544|Community 544]]
+- [[_COMMUNITY_Community 545|Community 545]]
+- [[_COMMUNITY_Community 546|Community 546]]
+- [[_COMMUNITY_Community 547|Community 547]]
+- [[_COMMUNITY_Community 548|Community 548]]
+- [[_COMMUNITY_Community 549|Community 549]]
+- [[_COMMUNITY_Community 550|Community 550]]
+- [[_COMMUNITY_Community 551|Community 551]]
+- [[_COMMUNITY_Community 552|Community 552]]
+- [[_COMMUNITY_Community 553|Community 553]]
+- [[_COMMUNITY_Community 554|Community 554]]
+- [[_COMMUNITY_Community 555|Community 555]]
+- [[_COMMUNITY_Community 556|Community 556]]
+- [[_COMMUNITY_Community 557|Community 557]]
+- [[_COMMUNITY_Community 558|Community 558]]
+- [[_COMMUNITY_Community 559|Community 559]]
+- [[_COMMUNITY_Community 560|Community 560]]
+- [[_COMMUNITY_Community 561|Community 561]]
+- [[_COMMUNITY_Community 562|Community 562]]
+- [[_COMMUNITY_Community 563|Community 563]]
+- [[_COMMUNITY_Community 564|Community 564]]
+- [[_COMMUNITY_Community 565|Community 565]]
+- [[_COMMUNITY_Community 566|Community 566]]
+- [[_COMMUNITY_Community 567|Community 567]]
+- [[_COMMUNITY_Community 568|Community 568]]
+- [[_COMMUNITY_Community 569|Community 569]]
+- [[_COMMUNITY_Community 570|Community 570]]
+- [[_COMMUNITY_Community 571|Community 571]]
+- [[_COMMUNITY_Community 572|Community 572]]
+- [[_COMMUNITY_Community 573|Community 573]]
+- [[_COMMUNITY_Community 574|Community 574]]
+- [[_COMMUNITY_Community 575|Community 575]]
+- [[_COMMUNITY_Community 576|Community 576]]
+- [[_COMMUNITY_Community 577|Community 577]]
+- [[_COMMUNITY_Community 578|Community 578]]
+- [[_COMMUNITY_Community 579|Community 579]]
+- [[_COMMUNITY_Community 580|Community 580]]
+- [[_COMMUNITY_Community 581|Community 581]]
+- [[_COMMUNITY_Community 582|Community 582]]
+- [[_COMMUNITY_Community 583|Community 583]]
+- [[_COMMUNITY_Community 584|Community 584]]
+- [[_COMMUNITY_Community 585|Community 585]]
+- [[_COMMUNITY_Community 586|Community 586]]
+- [[_COMMUNITY_Community 587|Community 587]]
+- [[_COMMUNITY_Community 588|Community 588]]
+- [[_COMMUNITY_Community 589|Community 589]]
+- [[_COMMUNITY_Community 590|Community 590]]
+- [[_COMMUNITY_Community 591|Community 591]]
+- [[_COMMUNITY_Community 592|Community 592]]
+- [[_COMMUNITY_Community 593|Community 593]]
+- [[_COMMUNITY_Community 594|Community 594]]
+- [[_COMMUNITY_Community 595|Community 595]]
+- [[_COMMUNITY_Community 596|Community 596]]
+- [[_COMMUNITY_Community 597|Community 597]]
+- [[_COMMUNITY_Community 598|Community 598]]
+- [[_COMMUNITY_Community 599|Community 599]]
+- [[_COMMUNITY_Community 600|Community 600]]
+- [[_COMMUNITY_Community 601|Community 601]]
+- [[_COMMUNITY_Community 602|Community 602]]
+- [[_COMMUNITY_Community 603|Community 603]]
+- [[_COMMUNITY_Community 604|Community 604]]
+- [[_COMMUNITY_Community 605|Community 605]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `UserRepository` - 36 edges
@@ -426,7 +511,7 @@
 - **JWT Bearer-Authenticated API Endpoints Under Test** — test_user_login_endpoint, test_members_endpoint, test_plans_endpoint, test_subscriptions_endpoint [INFERRED 0.85]
 - **Membership E2E Test Failure Cascade (Auth->Service->Test Interdependency)** — test_http_500_unauthenticated, test_http_502_gateway_failure, test_cascade_dependency [INFERRED 0.80]
 
-## Communities (521 total, 159 thin omitted)
+## Communities (656 total, 239 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.04
@@ -441,8 +526,8 @@ Cohesion: 0.04
 Nodes (48): Browser Automation with playwright-cli, Browser Sessions, code:bash (# open new browser), code:bash (playwright-cli console), code:bash (playwright-cli --raw eval "JSON.stringify(performance.timing), code:bash (playwright-cli list --json), code:bash (# Use specific browser when creating session), code:bash (> playwright-cli goto https://example.com) (+40 more)
 
 ### Community 3 - "Community 3"
-Cohesion: 0.05
-Nodes (17): AcceptCoursePurchaseHandler, AcceptMembershipRenewalHandler, AcceptProgramHandler, ActivateMemberHandler, CreatePaymentHandler, CreateProgramHandler, Cross-Service Events, ManualEnterHandler (+9 more)
+Cohesion: 0.03
+Nodes (22): AcceptCoursePurchaseHandler, AcceptMembershipRenewalHandler, AcceptPurchaseHandler, AcceptRenewalHandler, ActivateMemberHandler, CreatePaymentHandler, CreateProgramHandler, ErrorOr (+14 more)
 
 ### Community 4 - "Community 4"
 Cohesion: 0.05
@@ -453,20 +538,20 @@ Cohesion: 0.06
 Nodes (4): IUserService, IUserService, string, UserService
 
 ### Community 6 - "Community 6"
-Cohesion: 0.17
-Nodes (12): Browser Session Commands, Browser Session Configuration, Browser Session Isolation Properties, Browser Session Management, code:bash (# Browser 1: Authentication flow), code:bash (# These use the same default browser session), code:bash (# Open with config file), code:bash (# List all browser sessions) (+4 more)
-
-### Community 7 - "Community 7"
 Cohesion: 0.06
 Nodes (35): 1. Name Browser Sessions Semantically, 2. Always Clean Up, 3. Delete Stale Browser Data, A/B Testing Sessions, Attach by channel name, Attach via browser extension, Attach via CDP endpoint, Attaching to a Running Browser (+27 more)
+
+### Community 7 - "Community 7"
+Cohesion: 0.17
+Nodes (12): Browser Session Commands, Browser Session Configuration, Browser Session Isolation Properties, Browser Session Management, code:bash (# Browser 1: Authentication flow), code:bash (# These use the same default browser session), code:bash (# Open with config file), code:bash (# List all browser sessions) (+4 more)
 
 ### Community 8 - "Community 8"
 Cohesion: 0.06
 Nodes (35): 1. Name Browser Sessions Semantically, 2. Always Clean Up, 3. Delete Stale Browser Data, A/B Testing Sessions, Attach by channel name, Attach via browser extension, Attach via CDP endpoint, Attaching to a Running Browser (+27 more)
 
 ### Community 9 - "Community 9"
-Cohesion: 0.13
-Nodes (35): Browser Configuration, playwright-cli, Core Browser Commands, Debug Mode (--debug=cli), DevTools Commands, Element Attributes Reference, Element References, Heal Workflow (+27 more)
+Cohesion: 0.07
+Nodes (54): AppHost, aspire add, Aspire CLI, Aspire Code Change Workflow, Aspire Debug Workflow, aspire describe, Aspire Integration, Isolated Mode (+46 more)
 
 ### Community 10 - "Community 10"
 Cohesion: 0.11
@@ -477,8 +562,8 @@ Cohesion: 0.15
 Nodes (13): 1.1 Prerequisite: workspace, 1.2 Prerequisite: seed test, 1.3 Explore the app, 1.4 Write the spec file, 1. Planning, code:bash (# Either of these confirms a workspace:), code:bash (npm init playwright@latest), code:ts (// tests/seed.spec.ts) (+5 more)
 
 ### Community 12 - "Community 12"
-Cohesion: 0.06
-Nodes (12): AttendanceRecordConfiguration, CoachConfiguration, MemberActivityConfiguration, PaymentConfiguration, PaymentRequestConfiguration, ProgramConfiguration, ProgramEnrollmentConfiguration, ProgramTimeSlotConfiguration (+4 more)
+Cohesion: 0.05
+Nodes (14): AttendanceRecordConfiguration, CoachConfiguration, CoursePurchaseRequestConfiguration, MemberActivityConfiguration, PaymentApprovalRequestConfiguration, PaymentConfiguration, PaymentRequestConfiguration, ProgramConfiguration (+6 more)
 
 ### Community 13 - "Community 13"
 Cohesion: 0.15
@@ -497,8 +582,8 @@ Cohesion: 0.07
 Nodes (27): Agent Categories, Agent Features, AGENTS.md — FitTech.Backend, Architecture, Business Operations, code:powershell (# Run entire system via Aspire (Docker required)), code:powershell (dotnet ef migrations add <Name> --project Services/Membershi), code:block3 (/agent                    # Browse all agents) (+19 more)
 
 ### Community 18 - "Community 18"
-Cohesion: 0.08
-Nodes (23): Clipboard, code:bash (# Get page title), code:bash (# Execute JavaScript and return result), code:bash (# Try-catch in run-code), code:bash (# Login and save state), code:bash (# Grant geolocation permission and set location), code:bash (# Grant multiple permissions), code:bash (# Emulate dark color scheme) (+15 more)
+Cohesion: 0.07
+Nodes (26): Clipboard, code:bash (playwright-cli run-code "async page => {), code:bash (# Get page title), code:bash (# Execute JavaScript and return result), code:bash (# Try-catch in run-code), code:bash (# Login and save state), code:bash (playwright-cli run-code --filename=./my-script.js), code:bash (# Grant geolocation permission and set location) (+18 more)
 
 ### Community 19 - "Community 19"
 Cohesion: 0.07
@@ -509,8 +594,8 @@ Cohesion: 0.07
 Nodes (26): Clipboard, code:bash (playwright-cli run-code "async page => {), code:bash (# Get page title), code:bash (# Execute JavaScript and return result), code:bash (# Try-catch in run-code), code:bash (# Login and save state), code:bash (playwright-cli run-code --filename=./my-script.js), code:bash (# Grant geolocation permission and set location) (+18 more)
 
 ### Community 21 - "Community 21"
-Cohesion: 0.08
-Nodes (23): Clipboard, code:bash (# Get page title), code:bash (# Execute JavaScript and return result), code:bash (# Try-catch in run-code), code:bash (# Login and save state), code:bash (# Grant geolocation permission and set location), code:bash (# Grant multiple permissions), code:bash (# Emulate dark color scheme) (+15 more)
+Cohesion: 0.07
+Nodes (26): Clipboard, code:bash (playwright-cli run-code "async page => {), code:bash (# Get page title), code:bash (# Execute JavaScript and return result), code:bash (# Try-catch in run-code), code:bash (# Login and save state), code:bash (playwright-cli run-code --filename=./my-script.js), code:bash (# Grant geolocation permission and set location) (+18 more)
 
 ### Community 22 - "Community 22"
 Cohesion: 0.14
@@ -537,8 +622,8 @@ Cohesion: 0.10
 Nodes (3): ControllerBase, ServiceAuthController, UserController
 
 ### Community 28 - "Community 28"
-Cohesion: 0.10
-Nodes (20): author, bugs, url, dependencies, @playwright/test, description, directories, doc (+12 more)
+Cohesion: 0.07
+Nodes (23): author, bugs, url, dependencies, @playwright/test, description, directories, doc (+15 more)
 
 ### Community 29 - "Community 29"
 Cohesion: 0.18
@@ -565,16 +650,16 @@ Cohesion: 0.04
 Nodes (48): Browser Automation with playwright-cli, Browser Sessions, code:bash (# open new browser), code:bash (playwright-cli console), code:bash (playwright-cli --raw eval "JSON.stringify(performance.timing), code:bash (playwright-cli list --json), code:bash (# Use specific browser when creating session), code:bash (> playwright-cli goto https://example.com) (+40 more)
 
 ### Community 35 - "Community 35"
-Cohesion: 0.20
-Nodes (11): Aspire, Aspire AppHost, Aspire CLI Commands, Aspire Distributed Tracing, Aspire Integrations, Aspire Resource Management, Aspire CLI Skill, CI/CD Pipelines (+3 more)
+Cohesion: 0.16
+Nodes (13): Aspire, Aspire AppHost, Aspire CLI Commands, Aspire Distributed Tracing, Aspire Integrations, Aspire MCP Tools, Aspire Resource Management, Aspire CLI Skill (+5 more)
 
 ### Community 36 - "Community 36"
 Cohesion: 0.11
 Nodes (18): Caching Strategies, Chapter Markers, Overlay Annotations, Overlay API, Performance Analysis, playwright-cli run-code, playwright-cli video-chapter, playwright-cli video-start (+10 more)
 
 ### Community 37 - "Community 37"
-Cohesion: 0.05
-Nodes (25): FluentValidation, AbstractValidator, ValidationBehavior, ConfirmCashPaymentValidator, CreateCoachValidator, CreateMemberHandler, CreateMemberValidator, CreatePaymentValidator (+17 more)
+Cohesion: 0.04
+Nodes (29): FluentValidation, AbstractValidator, ValidationBehavior, ConfirmCashPaymentValidator, CreateCoachHandler, CreateCoachValidator, CreateMemberValidator, CreatePaymentValidator (+21 more)
 
 ### Community 38 - "Community 38"
 Cohesion: 0.12
@@ -588,33 +673,29 @@ Nodes (16): identity-cluster, identity-api, Address, Destinations, ClusterId, Ma
 Cohesion: 0.12
 Nodes (17): Advanced: Multiple Cookies or Custom Options, Clear All Cookies, code:bash (playwright-cli cookie-clear), code:bash (playwright-cli run-code "async page => {), code:bash (playwright-cli cookie-list), code:bash (playwright-cli cookie-list --domain=example.com), code:bash (playwright-cli cookie-list --path=/api), code:bash (playwright-cli cookie-get session_id) (+9 more)
 
-### Community 41 - "Community 41"
-Cohesion: 0.06
-Nodes (9): AcceptMembershipRenewalEndpoint, AcceptProgramEndpoint, DownloadExcelReportEndpoint, GetAdminDashboardEndpoint, GetFinanceDashboardEndpoint, GetSessionsTodayEndpoint, GetSubscriptionHistoryEndpoint, ICarterModule (+1 more)
-
 ### Community 42 - "Community 42"
 Cohesion: 0.12
 Nodes (17): Advanced: Multiple Cookies or Custom Options, Clear All Cookies, code:bash (playwright-cli cookie-clear), code:bash (playwright-cli run-code "async page => {), code:bash (playwright-cli cookie-list), code:bash (playwright-cli cookie-list --domain=example.com), code:bash (playwright-cli cookie-list --path=/api), code:bash (playwright-cli cookie-get session_id) (+9 more)
 
 ### Community 43 - "Community 43"
-Cohesion: 0.13
-Nodes (16): Admin Role, Delete/Deactivate Member, POST /api/plans, DELETE /api/plans/{id}, GET /api/plans/{id}, GET /api/members, GET /api/plans, GET /api/members/{id} (+8 more)
+Cohesion: 0.17
+Nodes (13): Cross-Service Events, Delete/Deactivate Member, DELETE /api/plans/{id}, GET /api/plans/{id}, GET /api/plans, PUT /api/plans/{id}, Feature: Manage Subscription Plans, Manage Subscription Plans (+5 more)
 
 ### Community 44 - "Community 44"
 Cohesion: 0.11
 Nodes (7): DbContext, ActivityDbContext, AggregationDbContext, CoursesDbContext, MembershipDbContext, ChatDbContext, PaymentDbContext
 
 ### Community 45 - "Community 45"
-Cohesion: 0.15
-Nodes (14): ASPNETCORE_ENVIRONMENT, applicationUrl, commandName, dotnetRunMessages, environmentVariables, launchBrowser, applicationUrl, commandName (+6 more)
+Cohesion: 0.13
+Nodes (15): ASPNETCORE_ENVIRONMENT, applicationUrl, commandName, dotnetRunMessages, environmentVariables, launchBrowser, applicationUrl, commandName (+7 more)
 
 ### Community 46 - "Community 46"
 Cohesion: 0.13
 Nodes (15): ASPNETCORE_ENVIRONMENT, applicationUrl, commandName, dotnetRunMessages, environmentVariables, launchBrowser, applicationUrl, commandName (+7 more)
 
 ### Community 47 - "Community 47"
-Cohesion: 0.06
-Nodes (13): Migration, InitialMembershipSchema, Membership.Migrations, Identity.Infrastructure.Migrations, InitialCreate, IReallyDontKnow, Membership.Migrations, Chat.Migrations (+5 more)
+Cohesion: 0.33
+Nodes (3): Migration, Identity.Infrastructure.Migrations, InitialCreate
 
 ### Community 48 - "Community 48"
 Cohesion: 0.13
@@ -693,8 +774,8 @@ Cohesion: 0.21
 Nodes (13): Clean Architecture, ErrorOr, Identity Service, MassTransit, Notification Service, RabbitMQ, Refit HTTP Clients, AppHost (+5 more)
 
 ### Community 67 - "Community 67"
-Cohesion: 0.36
-Nodes (9): Coach Role, GET /api/members/active-subscription, PUT /api/members/my-profile, Spec Planning Workflow, Member Role, Role-Based Access Control, FitTech Project Spec (chunk 1/2), FitTech Project Spec (chunk 2/2) (+1 more)
+Cohesion: 0.23
+Nodes (13): Coach Role, GET /api/members/active-subscription, PUT /api/members/my-profile, GET /api/members/{id}/subscriptions, Feature: Get Subscription History, Get Subscription History, Spec Planning Workflow, Member Role (+5 more)
 
 ### Community 68 - "Community 68"
 Cohesion: 0.15
@@ -725,12 +806,12 @@ Cohesion: 0.17
 Nodes (11): Architecture: Vertical Slice + Carter Modules, code:block1 (Services/Membership/), code:csharp (public class {Operation}Endpoint : ICarterModule), code:csharp (public class {Operation}Handler(MembershipDbContext context,), Endpoint (ICarterModule), Feature Roadmap (Ordered), Folder Structure, Handler (Wolverine) (+3 more)
 
 ### Community 75 - "Community 75"
-Cohesion: 0.09
-Nodes (23): Clipboard, code:bash (# Get page title), code:bash (# Execute JavaScript and return result), code:bash (# Try-catch in run-code), code:bash (# Login and save state), code:bash (# Grant geolocation permission and set location), code:bash (# Grant multiple permissions), code:bash (# Emulate dark color scheme) (+15 more)
+Cohesion: 0.08
+Nodes (26): Clipboard, code:bash (playwright-cli run-code "async page => {), code:bash (# Get page title), code:bash (# Execute JavaScript and return result), code:bash (# Try-catch in run-code), code:bash (# Login and save state), code:bash (playwright-cli run-code --filename=./my-script.js), code:bash (# Grant geolocation permission and set location) (+18 more)
 
 ### Community 76 - "Community 76"
-Cohesion: 0.14
-Nodes (19): AppHost, aspire add, Aspire CLI, Aspire Code Change Workflow, Aspire Debug Workflow, aspire describe, Aspire Integration, Isolated Mode (+11 more)
+Cohesion: 0.20
+Nodes (8): CoursePurchaseRequest, CoursePurchaseRequestStatus, PaymentApprovalRequest, PaymentApprovalRequestStatus, PaymentApprovalRequestType, PaymentErrors, string, string
 
 ### Community 77 - "Community 77"
 Cohesion: 0.12
@@ -765,8 +846,8 @@ Cohesion: 0.22
 Nodes (10): Access & Activity Tracking, Connected Machines, Course Booking, Equipment Maintenance, Health Profile, NFC Card System, Notifications System, Online Shop (+2 more)
 
 ### Community 85 - "Community 85"
-Cohesion: 0.13
-Nodes (15): ASPNETCORE_ENVIRONMENT, applicationUrl, commandName, dotnetRunMessages, environmentVariables, launchBrowser, applicationUrl, commandName (+7 more)
+Cohesion: 0.15
+Nodes (14): ASPNETCORE_ENVIRONMENT, applicationUrl, commandName, dotnetRunMessages, environmentVariables, launchBrowser, applicationUrl, commandName (+6 more)
 
 ### Community 86 - "Community 86"
 Cohesion: 0.20
@@ -777,20 +858,20 @@ Cohesion: 0.24
 Nodes (10): Authentication State Reuse, playwright-cli cookie commands, playwright-cli localstorage commands, playwright-cli run-code, playwright-cli sessionstorage commands, playwright-cli state-save / state-load, Complex Workflows, IndexedDB Management (+2 more)
 
 ### Community 89 - "Community 89"
-Cohesion: 0.29
-Nodes (7): applicationUrl, commandName, dotnetRunMessages, environmentVariables, launchBrowser, Activity, ASPNETCORE_ENVIRONMENT
+Cohesion: 0.25
+Nodes (8): applicationUrl, commandName, dotnetRunMessages, environmentVariables, launchBrowser, Activity, ASPNETCORE_ENVIRONMENT, profiles
 
 ### Community 90 - "Community 90"
-Cohesion: 0.25
-Nodes (8): applicationUrl, commandName, dotnetRunMessages, environmentVariables, launchBrowser, Courses, ASPNETCORE_ENVIRONMENT, profiles
+Cohesion: 0.29
+Nodes (7): applicationUrl, commandName, dotnetRunMessages, environmentVariables, launchBrowser, Courses, ASPNETCORE_ENVIRONMENT
 
 ### Community 91 - "Community 91"
 Cohesion: 0.29
 Nodes (7): applicationUrl, commandName, dotnetRunMessages, environmentVariables, launchBrowser, Aggregation, ASPNETCORE_ENVIRONMENT
 
 ### Community 92 - "Community 92"
-Cohesion: 0.24
-Nodes (13): EF Core Projections, Entity Framework Core, ErrorOr Result Pattern, Feature: Get Active Subscription, Feature: Get Member Detail, Get Active Subscription, Get Member Detail, Health Profile (+5 more)
+Cohesion: 0.27
+Nodes (12): EF Core Projections, ErrorOr Result Pattern, Feature: Get Active Subscription, Feature: Get Member Detail, Get Active Subscription, Get Member Detail, Health Profile, Member (+4 more)
 
 ### Community 93 - "Community 93"
 Cohesion: 0.22
@@ -801,8 +882,8 @@ Cohesion: 0.18
 Nodes (10): AllowedHosts, JwtSettings, Issuer, Logging, LogLevel, Default, Microsoft.AspNetCore, ServiceAuth (+2 more)
 
 ### Community 95 - "Community 95"
-Cohesion: 0.10
-Nodes (11): Aggregation.Migrations, AggregationDbContextModelSnapshot, Chat.Migrations, ChatDbContextModelSnapshot, Courses.Migrations, CoursesDbContextModelSnapshot, Membership.Migrations, MembershipDbContextModelSnapshot (+3 more)
+Cohesion: 0.07
+Nodes (15): Activity.Migrations, ActivityDbContextModelSnapshot, Aggregation.Migrations, AggregationDbContextModelSnapshot, Chat.Migrations, ChatDbContextModelSnapshot, Courses.Migrations, CoursesDbContextModelSnapshot (+7 more)
 
 ### Community 97 - "Community 97"
 Cohesion: 0.18
@@ -813,8 +894,8 @@ Cohesion: 0.25
 Nodes (7): Authentication State Reuse, code:bash (# Step 1: Login and save state), code:bash (# Set up authentication state), Common Patterns, Save and Restore Roundtrip, Security Notes, Storage Management
 
 ### Community 99 - "Community 99"
-Cohesion: 0.06
-Nodes (24): ServiceTokenHandler, DateTime, DelegatingHandler, PaymentErrors, string, Extensions, HttpClient, ILogger (+16 more)
+Cohesion: 0.22
+Nodes (7): DelegatingHandler, ServiceTokenHandler, DateTime, HttpClient, ILogger, SemaphoreSlim, string
 
 ### Community 100 - "Community 100"
 Cohesion: 0.25
@@ -829,8 +910,8 @@ Cohesion: 0.25
 Nodes (7): Authentication State Reuse, code:bash (# Step 1: Login and save state), code:bash (# Set up authentication state), Common Patterns, Save and Restore Roundtrip, Security Notes, Storage Management
 
 ### Community 103 - "Community 103"
-Cohesion: 0.13
-Nodes (15): commandName, dotnetRunMessages, environmentVariables, profiles, Notification.Api, $schema, profiles, $schema (+7 more)
+Cohesion: 0.14
+Nodes (13): commandName, dotnetRunMessages, profiles, Notification.Api, $schema, $schema, profiles, $schema (+5 more)
 
 ### Community 104 - "Community 104"
 Cohesion: 0.29
@@ -841,8 +922,8 @@ Cohesion: 0.67
 Nodes (3): API Versioning, OpenAPI Documentation, Serilog Structured Logging
 
 ### Community 106 - "Community 106"
-Cohesion: 0.19
-Nodes (13): Create Member, PUT /api/members/{id}, GET /api/members/{id}/subscriptions, Feature: Get Subscription History, Feature: Update Member, FluentValidation, Get Subscription History, Identity Service Integration (+5 more)
+Cohesion: 0.29
+Nodes (8): Create Member, PUT /api/members/{id}, Feature: Update Member, FluentValidation, Identity Service Integration, IIdentityServiceClient, Update Member, Validation Behavior
 
 ### Community 107 - "Community 107"
 Cohesion: 0.29
@@ -877,8 +958,8 @@ Cohesion: 0.33
 Nodes (6): playwright-cli eval, Element Attributes Reference, Semantic Locators, Element Targeting, Test Assertions, Test Generation Reference
 
 ### Community 116 - "Community 116"
-Cohesion: 0.36
-Nodes (11): ASPNETCORE_ENVIRONMENT, DOTNET_ENVIRONMENT, environmentVariables, environmentVariables, ASPIRE_DASHBOARD_MCP_ENDPOINT_URL, ASPIRE_DASHBOARD_OTLP_ENDPOINT_URL, ASPIRE_RESOURCE_SERVICE_ENDPOINT_URL, ASPNETCORE_ENVIRONMENT (+3 more)
+Cohesion: 0.16
+Nodes (19): ASPNETCORE_ENVIRONMENT, DOTNET_ENVIRONMENT, environmentVariables, environmentVariables, ASPIRE_ALLOW_UNSECURED_TRANSPORT, ASPIRE_DASHBOARD_MCP_ENDPOINT_URL, ASPIRE_DASHBOARD_OTLP_ENDPOINT_URL, ASPIRE_RESOURCE_SERVICE_ENDPOINT_URL (+11 more)
 
 ### Community 117 - "Community 117"
 Cohesion: 0.33
@@ -972,13 +1053,13 @@ Nodes (12): AllowedHosts, ConnectionStrings, ChatDb, Jwt, Authority, Issuer, Log
 Cohesion: 0.40
 Nodes (5): code:bash (playwright-cli run-code "async page => {), code:bash (playwright-cli run-code "async page => {), Delete Database, IndexedDB, List Databases
 
-### Community 145 - "Community 145"
+### Community 148 - "Community 148"
 Cohesion: 0.22
 Nodes (9): Attach by channel name, Attach via browser extension, Attach via CDP endpoint, Attaching to a Running Browser, code:bash (# Detach the default attached session), code:bash (# Attach to Chrome), code:bash (playwright-cli attach --cdp=http://localhost:9222), code:bash (playwright-cli attach --extension) (+1 more)
 
-### Community 148 - "Community 148"
-Cohesion: 0.29
-Nodes (7): 1. Name Browser Sessions Semantically, 2. Always Clean Up, 3. Delete Stale Browser Data, Best Practices, code:bash (# GOOD: Clear purpose), code:bash (# Stop browsers when done), code:bash (# Remove old browser data to free disk space)
+### Community 150 - "Community 150"
+Cohesion: 0.04
+Nodes (14): AcceptMembershipRenewalEndpoint, ActivateMemberEndpoint, ASP.NET Core, Carter, ConfirmPaymentEndpoint, GetCoachProfileEndpoint, GetEnrolledProgramsEndpoint, GetMyPaymentsEndpoint (+6 more)
 
 ### Community 151 - "Community 151"
 Cohesion: 0.40
@@ -1037,8 +1118,8 @@ Cohesion: 0.20
 Nodes (10): Basic Usage, code:bash (# Start trace recording), Limitations, `resources/`, Trace Output Files, `trace-{timestamp}.network`, `trace-{timestamp}.trace`, Trace vs Video vs Screenshot (+2 more)
 
 ### Community 166 - "Community 166"
-Cohesion: 0.29
-Nodes (7): A/B Testing Sessions, code:bash (#!/bin/bash), code:bash (# Test different user experiences), code:bash (# Use persistent profile (auto-generated location)), Common Patterns, Concurrent Scraping, Persistent Profile
+Cohesion: 0.25
+Nodes (8): Admin Role, POST /api/plans, GET /api/members, GET /api/members/{id}, Feature: List Members, List Members, Pagination Pattern, YARP
 
 ### Community 167 - "Community 167"
 Cohesion: 0.13
@@ -1048,17 +1129,21 @@ Nodes (12): code:bash (playwright-cli snapshot), Examples, Inspecting Element At
 Cohesion: 0.22
 Nodes (9): Adding integrations, Applying code changes, code:bash (aspire start --isolated), code:bash (aspire start --isolated), code:bash (aspire mcp tools                                            ), Debugging issues, Key workflows, Running in agent environments (+1 more)
 
+### Community 170 - "Community 170"
+Cohesion: 0.22
+Nodes (5): ActiveSubscriptionInfo, IMembershipServiceClient, MemberByCardResponse, MemberValidationResponse, TrackEntryResponse
+
 ### Community 172 - "Community 172"
-Cohesion: 0.07
-Nodes (10): ASP.NET Core, Carter, CreateCoachEndpoint, ErrorOr, ListCoursePurchaseRequestsEndpoint, ListMembershipRenewalRequestsEndpoint, ListProgramRequestsEndpoint, RejectCoursePurchaseHandler (+2 more)
+Cohesion: 0.04
+Nodes (13): AcceptPurchaseEndpoint, CreateCoachEndpoint, DeleteMemberEndpoint, GetAdminDashboardEndpoint, GetAvailableProgramsEndpoint, GetCoachClientProfileEndpoint, GetSessionHistoryEndpoint, ICarterModule (+5 more)
 
 ### Community 173 - "Community 173"
 Cohesion: 0.22
 Nodes (8): Aspire Skill, CLI command reference, Important rules, Playwright CLI, Aspire Skill, CLI command reference, Important rules, Playwright CLI
 
 ### Community 176 - "Community 176"
-Cohesion: 0.40
-Nodes (5): applicationUrl, commandName, dotnetRunMessages, launchBrowser, https
+Cohesion: 0.53
+Nodes (6): https, applicationUrl, commandName, dotnetRunMessages, launchBrowser, https
 
 ### Community 177 - "Community 177"
 Cohesion: 0.22
@@ -1068,13 +1153,25 @@ Nodes (9): 2.1 Inputs, 2.2 Generate one scenario, 2.3 Generate multiple scenario
 Cohesion: 0.22
 Nodes (9): 3.1 Find failing tests, 3.2 Debug one failure, 3.3 Apply the fix, 3.4 Reconcile with the spec, 3.5 Iteration and giving up, 3. Heal, code:bash (PLAYWRIGHT_HTML_OPEN=never npx playwright test), code:bash (PLAYWRIGHT_HTML_OPEN=never npx playwright test tests/<group>) (+1 more)
 
+### Community 179 - "Community 179"
+Cohesion: 0.29
+Nodes (5): ServiceTokenHandler, DateTime, HttpClient, IHttpContextAccessor, SemaphoreSlim
+
 ### Community 181 - "Community 181"
 Cohesion: 0.22
 Nodes (9): 2.1 Inputs, 2.2 Generate one scenario, 2.3 Generate multiple scenarios, 2.4 Run generated tests, 2. Generate, code:bash (playwright-cli snapshot                         # find refs), code:ts (// spec: specs/basic-operations.plan.md), code:bash (PLAYWRIGHT_HTML_OPEN=never npx playwright test tests/<group>) (+1 more)
 
+### Community 183 - "Community 183"
+Cohesion: 0.29
+Nodes (6): ServiceTokenHandler, DateTime, HttpClient, ILogger, SemaphoreSlim, string
+
 ### Community 187 - "Community 187"
 Cohesion: 0.22
 Nodes (9): 3.1 Find failing tests, 3.2 Debug one failure, 3.3 Apply the fix, 3.4 Reconcile with the spec, 3.5 Iteration and giving up, 3. Heal, code:bash (PLAYWRIGHT_HTML_OPEN=never npx playwright test), code:bash (PLAYWRIGHT_HTML_OPEN=never npx playwright test tests/<group>) (+1 more)
+
+### Community 189 - "Community 189"
+Cohesion: 0.29
+Nodes (7): 1. Name Browser Sessions Semantically, 2. Always Clean Up, 3. Delete Stale Browser Data, Best Practices, code:bash (# GOOD: Clear purpose), code:bash (# Stop browsers when done), code:bash (# Remove old browser data to free disk space)
 
 ### Community 192 - "Community 192"
 Cohesion: 0.22
@@ -1083,6 +1180,10 @@ Nodes (9): Advanced Mocking with run-code, code:bash (playwright-cli run-code "a
 ### Community 193 - "Community 193"
 Cohesion: 0.22
 Nodes (9): Attach by channel name, Attach via browser extension, Attach via CDP endpoint, Attaching to a Running Browser, code:bash (# Detach the default attached session), code:bash (# Attach to Chrome), code:bash (playwright-cli attach --cdp=http://localhost:9222), code:bash (playwright-cli attach --extension) (+1 more)
+
+### Community 194 - "Community 194"
+Cohesion: 0.29
+Nodes (7): A/B Testing Sessions, code:bash (#!/bin/bash), code:bash (# Test different user experiences), code:bash (# Use persistent profile (auto-generated location)), Common Patterns, Concurrent Scraping, Persistent Profile
 
 ### Community 195 - "Community 195"
 Cohesion: 0.22
@@ -1180,6 +1281,10 @@ Nodes (6): code:block1 (Error: expect(received).toBe(expected) // Object.is equa
 Cohesion: 0.29
 Nodes (6): code:block1 (Error: expect(received).toBeTruthy()), code:ts (1   | import { test, expect, GATEWAY, MEMBERSHIP, ADMIN } fr), Error details, Instructions, Test info, Test source
 
+### Community 272 - "Community 272"
+Cohesion: 0.20
+Nodes (3): WorkoutLogController, failedTests, status
+
 ### Community 312 - "Community 312"
 Cohesion: 0.40
 Nodes (3): User, User, User
@@ -1221,8 +1326,8 @@ Cohesion: 0.29
 Nodes (7): Analyzing Performance, Capturing Evidence, code:bash (playwright-cli tracing-start), code:bash (playwright-cli tracing-start), code:bash (# Record a complete user flow for documentation), Debugging Failed Actions, Use Cases
 
 ### Community 464 - "Community 464"
-Cohesion: 0.53
-Nodes (6): Aspire MCP Tools, Playwright CLI, Playwright CLI Commands, Playwright CLI Skill, Playwright Element Attributes Reference, Playwright Tests Reference
+Cohesion: 0.70
+Nodes (5): Playwright CLI, Playwright CLI Commands, Playwright CLI Skill, Playwright Element Attributes Reference, Playwright Tests Reference
 
 ### Community 465 - "Community 465"
 Cohesion: 0.33
@@ -1272,10 +1377,6 @@ Nodes (4): IUserAccessor, SeedUserAccessor, SeedUserAccessor, SeedUserAccessor
 Cohesion: 0.40
 Nodes (5): 1. Start Tracing Before the Problem, 2. Clean Up Old Traces, Best Practices, code:bash (# Trace the entire flow, not just the failing step), code:bash (# Remove traces older than 7 days)
 
-### Community 480 - "Community 480"
-Cohesion: 0.40
-Nodes (5): applicationUrl, commandName, dotnetRunMessages, launchBrowser, http
-
 ### Community 481 - "Community 481"
 Cohesion: 0.40
 Nodes (5): code:bash (playwright-cli run-code "async page => {), code:bash (playwright-cli run-code "async page => {), Delete Database, IndexedDB, List Databases
@@ -1292,38 +1393,42 @@ Nodes (3): IEmailService, IEmailService, EmailService
 Cohesion: 0.67
 Nodes (3): code:bash (aspire start --isolated), code:bash (aspire start --isolated), Running in agent environments
 
-### Community 503 - "Community 503"
-Cohesion: 0.67
-Nodes (3): code:bash (playwright-cli run-code "async page => {), code:bash (playwright-cli run-code --filename=./my-script.js), Syntax
+### Community 526 - "Community 526"
+Cohesion: 0.40
+Nodes (4): Getting Started, Guides, Maven Parent overrides, Reference Documentation
 
-### Community 504 - "Community 504"
-Cohesion: 0.67
-Nodes (3): code:bash (playwright-cli run-code "async page => {), code:bash (playwright-cli run-code --filename=./my-script.js), Syntax
+### Community 533 - "Community 533"
+Cohesion: 0.50
+Nodes (3): Getting Started, Maven Parent overrides, Reference Documentation
 
-### Community 513 - "Community 513"
-Cohesion: 0.67
-Nodes (3): code:bash (playwright-cli run-code "async page => {), code:bash (playwright-cli run-code --filename=./my-script.js), Syntax
+### Community 541 - "Community 541"
+Cohesion: 0.50
+Nodes (3): Answer, Q: Add fixed member seed Member@fitteck.com with password Member@12345 in DataSeeder.cs, Source Nodes
+
+### Community 564 - "Community 564"
+Cohesion: 0.50
+Nodes (3): Getting Started, Maven Parent overrides, Reference Documentation
 
 ## Ambiguous Edges - Review These
 - `Connected Gym Management Domain` → `salle de sport.pdf`  [AMBIGUOUS]
   docs/salle de sport.pdf · relation: conceptually_related_to
 
 ## Knowledge Gaps
-- **1131 isolated node(s):** `command`, `args`, `path`, `name`, `version` (+1126 more)
+- **1170 isolated node(s):** `command`, `args`, `path`, `version`, `main` (+1165 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **159 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **239 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **What is the exact relationship between `Connected Gym Management Domain` and `salle de sport.pdf`?**
   _Edge tagged AMBIGUOUS (relation: conceptually_related_to) - confidence is low._
-- **Why does `FluentValidation` connect `Community 37` to `Community 33`?**
-  _High betweenness centrality (0.009) - this node is a cross-community bridge._
-- **Why does `Membership Service` connect `Community 33` to `Community 37`?**
+- **Why does `ServiceTokenHandler` connect `Community 179` to `Community 99`, `Community 76`, `Community 37`, `Community 183`?**
+  _High betweenness centrality (0.007) - this node is a cross-community bridge._
+- **Why does `ILogger` connect `Community 37` to `Community 179`?**
   _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **What connects `command`, `args`, `path` to the rest of the system?**
-  _1194 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _1233 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**

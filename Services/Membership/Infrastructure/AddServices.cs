@@ -23,6 +23,7 @@ using Membership.Features.Subscriptions.RequestRenewal;
 using Membership.Features.Me.Payments;
 using Membership.Features.Me.Sessions;
 using Membership.Features.Me.Subscriptions;
+using Membership.Features.Members.TrackMemberEntry;
 
 namespace Membership.Infrastructure;
 
@@ -40,6 +41,7 @@ public static class AddServices
         services.AddScoped<GetSubscriptionHistoryHandler>();
         services.AddScoped<ListMembersHandler>();
         services.AddScoped<SuspendMemberHandler>();
+        services.AddScoped<TrackMemberEntryHandler>();
         services.AddScoped<UpdateMyProfileHandler>();
         services.AddScoped<CreatePlanHandler>();
         services.AddScoped<DeletePlanHandler>();

@@ -4,7 +4,9 @@ using Membership.Domain.Enums;
 using Membership.Features.Members.CreateMember;
 using Membership.Features.Members.UpdateMyProfile;
 using Membership.Features.Plans.CreatePlan;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Hosting;
 using Wolverine;
 
 namespace Membership.Infrastructure.Seed;
@@ -12,7 +14,8 @@ namespace Membership.Infrastructure.Seed;
 public sealed class MembershipSeeder(
     MembershipDbContext context,
     IIdentityServiceClient identityClient,
-    IMessageBus messageBus)
+    IMessageBus messageBus,
+    IWebHostEnvironment environment)
 {
     private const int MemberSeedCount = 50;
 
@@ -111,22 +114,12 @@ public sealed class MembershipSeeder(
             var profileHandler = new UpdateMyProfileHandler(
                 context,
                 identityClient,
-                new SeedUserAccessor(member.UserId, ["Member"]));
+                new SeedUserAccessor(member.UserId, ["Member"]),
+                environment);
 
             var goals = faker.Lorem.Sentence(6);
             var profileResult = await profileHandler.Handle(
-                new UpdateMyProfileCommand(new UpdateMyProfileRequest(
-                    FirstName: null,
-                    LastName: null,
-                    PhoneNumber: null,
-                    Gender: null,
-                    DateOfBirth: null,
-                    MedicalFile: null,
-                    Goals: goals,
-                    MedicalRestrictions: null,
-                    ProfilePicture: null,
-                    OldPassword: null,
-                    NewPassword: null)),
+                new UpdateMyProfileCommand(new UpdateMyProfileRequest(null, goals, null, null, null)),
                 ct);
 
             if (profileResult.IsError)

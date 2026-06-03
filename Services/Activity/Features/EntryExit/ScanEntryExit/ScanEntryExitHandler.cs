@@ -10,8 +10,8 @@ using Wolverine;
 namespace Activity.Features.EntryExit.ScanEntryExit;
 
 /// <description>
-/// Handles NFC card scan for member entry/exit. Validates membership, auto-logs if unambiguous,
-/// returns options if multiple active memberships/courses are found.
+/// Handles NFC card scan for member entry/exit. Validates member eligibility (active status,
+/// active subscription, remaining sessions), auto-logs entry or exit, and tracks session usage.
 /// </description>
 public class ScanEntryExitHandler(
     ActivityDbContext context,
@@ -36,9 +36,9 @@ public class ScanEntryExitHandler(
             await context.SaveChangesAsync(ct);
 
             await messageBus.PublishAsync(new MemberCheckedOutEvent(
-                activeSession.MemberId, cardUid, activeSession.CourseId, activeSession.CheckOutTime.Value));
+                activeSession.MemberId, cardUid, null, activeSession.CheckOutTime.Value));
 
-            return new ScanEntryExitResponse(true, "Exiting", $"Member-{activeSession.MemberId.ToString()[..8]}",
+            return new ScanEntryExitResponse(true, "Exiting", activeSession.MemberName,
                 null, null, []);
         }
 
@@ -50,10 +50,51 @@ public class ScanEntryExitHandler(
 
         var member = memberResponse.Content;
 
+        // Eligibility check: member status
+        if (member.Status != "Active")
+            return Error.Forbidden("Member.NotActive",
+                $"Member is {member.Status}. Only active members can enter.");
+
+        // Eligibility check: active subscription
+        if (member.ActiveSubscription is null)
+            return Error.Forbidden("Subscription.None",
+                "No active subscription found. The member must have an active subscription to enter.");
+
+        if (member.ActiveSubscription.Status != "Active")
+            return Error.Forbidden("Subscription.NotActive",
+                $"Subscription is {member.ActiveSubscription.Status}.");
+
+        // Eligibility check: remaining sessions
+        if (member.ActiveSubscription.RemainingSessions is not null && member.ActiveSubscription.RemainingSessions <= 0)
+            return Error.Forbidden("Subscription.NoSessions",
+                "All sessions have been used. The subscription has no remaining sessions.");
+
+        // Track entry in the Membership service (decrements sessions, auto-expires at 0)
+        var trackResponse = await membershipClient.TrackMemberEntryAsync(
+            new TrackEntryRequest(member.MemberId));
+
+        var remainingSessions = member.ActiveSubscription.RemainingSessions;
+        ActiveMembershipInfo? activeMembership = null;
+
+        if (trackResponse.IsSuccessStatusCode && trackResponse.Content is not null)
+        {
+            remainingSessions = trackResponse.Content.RemainingSessions;
+        if (trackResponse.Content.ActiveSubscription is not null)
+        {
+            activeMembership = new ActiveMembershipInfo(
+                trackResponse.Content.ActiveSubscription.SubscriptionId,
+                trackResponse.Content.ActiveSubscription.PlanName,
+                trackResponse.Content.ActiveSubscription.EndOnUTC);
+        }
+        }
+
+        var memberName = $"{member.FirstName} {member.LastName}";
+
         var session = new MemberActivity
         {
             Id = Guid.CreateVersion7(),
             MemberId = member.MemberId,
+            MemberName = memberName,
             CardUid = cardUid,
             CheckInTime = DateTime.UtcNow
         };
@@ -64,6 +105,7 @@ public class ScanEntryExitHandler(
         await messageBus.PublishAsync(new MemberCheckedInEvent(
             session.MemberId, cardUid, null, session.CheckInTime));
 
-        return new ScanEntryExitResponse(true, "Entering", $"{member.FirstName} {member.LastName}", null, null, []);
+        return new ScanEntryExitResponse(true, "Entering", memberName,
+            remainingSessions, activeMembership, []);
     }
 }

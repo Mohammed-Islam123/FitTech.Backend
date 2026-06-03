@@ -33,6 +33,8 @@ public class Product {
 
     private Integer stock;
 
+    private Boolean isActive;
+
     private LocalDateTime createdAt;
 
     private LocalDateTime updatedAt;

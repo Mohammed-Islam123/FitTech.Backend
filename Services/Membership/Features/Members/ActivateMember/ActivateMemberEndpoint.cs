@@ -4,6 +4,7 @@ using ErrorOr;
 using Membership.Shared;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OpenApi;
 using Microsoft.AspNetCore.Routing;
 
@@ -43,7 +44,7 @@ public class ActivateMemberEndpoint : ICarterModule
 
     private static async Task<IResult> Handle(
         Guid memberId,
-        ActivateMemberHandler handler,
+ ActivateMemberHandler handler,
         CancellationToken ct)
     {
         var result = await handler.Handle(

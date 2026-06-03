@@ -13,13 +13,14 @@ public class ManualEnterEndpoint : ICarterModule
         app.MapPost("/api/activity/entry-exit/manual/enter", Handle)
             .WithName("ManualEnter")
             .WithTags("EntryExit")
-            .WithDescription("Manually marks a member as entered. Takes member ID and optionally a course ID.")
+            .WithDescription("Manually marks a member as entered. Takes member ID, validates eligibility, and creates an entry session.")
             .RequireAuthorization("AdminOnly")
             .Produces<ManualEnterResponse>(StatusCodes.Status201Created)
+            .ProducesProblem(StatusCodes.Status409Conflict)
             .AddOpenApiOperationTransformer((operation, context, cancellationToken) =>
             {
                 if (operation.RequestBody?.Content?.TryGetValue("application/json", out var c) == true)
-                    c.Example = new JsonObject { ["memberId"] = Guid.NewGuid().ToString(), ["courseId"] = null };
+                    c.Example = new JsonObject { ["memberId"] = Guid.NewGuid().ToString() };
                 return Task.CompletedTask;
             });
     }

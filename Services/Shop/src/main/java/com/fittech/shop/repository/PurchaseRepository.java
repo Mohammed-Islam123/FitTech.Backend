@@ -8,5 +8,7 @@ import java.util.UUID;
 
 public interface PurchaseRepository extends ReactiveCrudRepository<Purchase, UUID> {
 
+    Flux<Purchase> findAllByOrderByPurchasedAtDesc();
+
     Flux<Purchase> findByMemberId(UUID memberId);
 }

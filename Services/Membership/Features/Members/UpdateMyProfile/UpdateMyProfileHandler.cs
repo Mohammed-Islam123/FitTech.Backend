@@ -8,15 +8,15 @@ using Refit;
 namespace Membership.Features.Members.UpdateMyProfile;
 
 /// <description>
-/// Updates the authenticated member's profile via PATCH semantics.
-/// Send only the fields you want to change — all fields are optional.
-/// Identity fields (name, phone, gender, DoB, profile picture) are forwarded to the Identity service.
-/// Password change is handled via the Identity service.
+/// Updates the authenticated member's profile: medical file, goals, and/or profile picture.
+/// Also supports password change via old/new password fields.
+/// Medical files are stored locally in the Membership service.
 /// </description>
 public class UpdateMyProfileHandler(
     MembershipDbContext context,
     IIdentityServiceClient identityClient,
-    IUserAccessor userAccessor)
+    IUserAccessor userAccessor,
+    IWebHostEnvironment environment)
 {
     public async Task<ErrorOr<UpdateMyProfileResponse>> Handle(
         UpdateMyProfileCommand command,
@@ -43,60 +43,95 @@ public class UpdateMyProfileHandler(
 
         var req = command.Request;
 
-        // --- 1. Update Identity Service Profile (if any identity field changed) ---
-        var needsIdentityUpdate =
-            req.FirstName is not null
-            || req.LastName is not null
-            || req.PhoneNumber is not null
-            || req.Gender.HasValue
-            || req.DateOfBirth.HasValue
-            || req.ProfilePicture is not null;
-
-        if (needsIdentityUpdate)
+        // --- 1. Upload Medical File locally ---
+        if (req.MedicalFile is not null)
         {
-            // Fetch current profile from Identity to fill required fields we aren't changing
-            var currentProfile = await GetCurrentIdentityProfile(currentUserId.Value);
+            var fileId = Guid.CreateVersion7();
+            var ext = Path.GetExtension(req.MedicalFile.FileName) ?? ".bin";
+            var fileName = $"{fileId}{ext}";
+            var memberDir = Path.Combine(
+                environment.WebRootPath ?? Path.Combine(environment.ContentRootPath, "wwwroot"),
+                "medical-files",
+                member.Id.ToString());
+            Directory.CreateDirectory(memberDir);
+            var filePath = Path.Combine(memberDir, fileName);
 
-            var firstName = req.FirstName ?? currentProfile.FirstName ?? member.FirstName;
-            var lastName = req.LastName ?? currentProfile.LastName ?? member.LastName;
-            var phoneNumber = req.PhoneNumber ?? currentProfile.PhoneNumber ?? string.Empty;
-            var gender = req.Gender?.ToString() ?? currentProfile.Gender;
-            var dateOfBirth = req.DateOfBirth?.ToString("yyyy-MM-dd") ?? currentProfile.DateOfBirth;
+            await using var stream = req.MedicalFile.OpenReadStream();
+            await using var fileStream = File.Create(filePath);
+            await stream.CopyToAsync(fileStream, ct);
 
-            StreamPart? profileStreamPart = null;
+            var fileUrl = $"/medical-files/{member.Id}/{fileName}";
+
+            if (member.HealthProfile is null)
+            {
+                member.HealthProfile = new Domain.Entities.MemberHealthProfile
+                {
+                    MemberId = member.Id,
+                    MedicalFileUrl = fileUrl,
+                    MedicalFileName = req.MedicalFile.FileName,
+                    LastUpdatedAt = DateTime.UtcNow
+                };
+            }
+            else
+            {
+                member.HealthProfile.MedicalFileUrl = fileUrl;
+                member.HealthProfile.MedicalFileName = req.MedicalFile.FileName;
+                member.HealthProfile.LastUpdatedAt = DateTime.UtcNow;
+            }
+        }
+
+        // --- 2. Upload Profile Picture to Identity ---
+        if (req.ProfilePicture is not null)
+        {
+            var profileStreamPart = new StreamPart(
+                req.ProfilePicture.OpenReadStream(),
+                req.ProfilePicture.FileName,
+                req.ProfilePicture.ContentType);
+
             try
             {
-                if (req.ProfilePicture is not null)
-                {
-                    profileStreamPart = new StreamPart(
-                        req.ProfilePicture.OpenReadStream(),
-                        req.ProfilePicture.FileName,
-                        req.ProfilePicture.ContentType);
-                }
-
-                var identityResponse = await identityClient.UpdateProfileAsync(
+                var profileResponse = await identityClient.UpdateProfileAsync(
                     userId: currentUserId.Value,
-                    firstName: firstName,
-                    lastName: lastName,
-                    phoneNumber: phoneNumber,
-                    gender: gender,
-                    dateOfBirth: dateOfBirth,
+                    firstName: member.FirstName,
+                    lastName: member.LastName,
+                    phoneNumber: null!,
+                    gender: null,
+                    dateOfBirth: null,
                     profilePicture: profileStreamPart);
 
-                if (!identityResponse.IsSuccessStatusCode || identityResponse.Content is null || !identityResponse.Content.Success)
+                if (!profileResponse.IsSuccessStatusCode || profileResponse.Content?.Data is null)
                 {
                     return Error.Failure(
-                        "Identity.UpdateFailed",
-                        identityResponse.Error?.Content ?? "Failed to update profile in Identity Service.");
+                        "ProfilePicture.UploadFailed",
+                        "Failed to upload profile picture to Identity service.");
                 }
             }
             finally
             {
-                profileStreamPart?.Value?.Dispose();
+                profileStreamPart.Value?.Dispose();
             }
         }
 
-        // --- 2. Change Password (if requested) ---
+        // --- 3. Update Goals ---
+        if (req.Goals is not null)
+        {
+            if (member.HealthProfile is null)
+            {
+                member.HealthProfile = new Domain.Entities.MemberHealthProfile
+                {
+                    MemberId = member.Id,
+                    Objectives = req.Goals,
+                    LastUpdatedAt = DateTime.UtcNow
+                };
+            }
+            else
+            {
+                member.HealthProfile.Objectives = req.Goals;
+                member.HealthProfile.LastUpdatedAt = DateTime.UtcNow;
+            }
+        }
+
+        // --- 4. Change Password ---
         if (!string.IsNullOrWhiteSpace(req.OldPassword) && !string.IsNullOrWhiteSpace(req.NewPassword))
         {
             var passwordResponse = await identityClient.ChangePasswordAsync(
@@ -110,110 +145,8 @@ public class UpdateMyProfileHandler(
             }
         }
 
-        // --- 3. Upload Medical File (if provided) ---
-        if (req.MedicalFile is not null)
-        {
-            var fileStreamPart = new StreamPart(
-                req.MedicalFile.OpenReadStream(),
-                req.MedicalFile.FileName,
-                req.MedicalFile.ContentType);
-
-            try
-            {
-                var uploadResponse = await identityClient.UploadMedicalFileAsync(
-                    userId: currentUserId.Value,
-                    file: fileStreamPart);
-
-                if (!uploadResponse.IsSuccessStatusCode || uploadResponse.Content?.Data is null)
-                {
-                    return Error.Failure(
-                        "MedicalFile.UploadFailed",
-                        "Failed to upload medical file to Identity service.");
-                }
-            }
-            finally
-            {
-                fileStreamPart.Value?.Dispose();
-            }
-        }
-
-        // --- 4. Update local Member entity ---
-        if (req.FirstName is not null)
-        {
-            member.FirstName = req.FirstName;
-        }
-
-        if (req.LastName is not null)
-        {
-            member.LastName = req.LastName;
-        }
-
-        // --- 5. Update Health Profile ---
-        if (req.Goals is not null || req.MedicalRestrictions is not null)
-        {
-            if (member.HealthProfile is null)
-            {
-                member.HealthProfile = new Domain.Entities.MemberHealthProfile
-                {
-                    MemberId = member.Id,
-                    Objectives = req.Goals,
-                    MedicalRestrictions = req.MedicalRestrictions,
-                    LastUpdatedAt = DateTime.UtcNow
-                };
-            }
-            else
-            {
-                if (req.Goals is not null)
-                {
-                    member.HealthProfile.Objectives = req.Goals;
-                }
-
-                if (req.MedicalRestrictions is not null)
-                {
-                    member.HealthProfile.MedicalRestrictions = req.MedicalRestrictions;
-                }
-
-                member.HealthProfile.LastUpdatedAt = DateTime.UtcNow;
-            }
-        }
-
         await context.SaveChangesAsync(ct);
 
         return new UpdateMyProfileResponse(member.Id);
     }
-
-    /// <summary>
-    /// Fetches the current Identity profile to use as fallback values for required fields
-    /// that the caller did not include in a partial update.
-    /// </summary>
-    private async Task<CurrentIdentityProfile> GetCurrentIdentityProfile(Guid userId)
-    {
-        try
-        {
-            var response = await identityClient.GetProfileAsync(userId);
-            if (response.IsSuccessStatusCode && response.Content?.Data is not null)
-            {
-                var p = response.Content.Data;
-                return new CurrentIdentityProfile(
-                    FirstName: p.FirstName,
-                    LastName: p.LastName,
-                    PhoneNumber: p.PhoneNumber,
-                    Gender: p.Gender,
-                    DateOfBirth: p.DateOfBirth?.ToString("yyyy-MM-dd"));
-            }
-        }
-        catch
-        {
-            // Swallow — fall back to Member entity values for name, empty for phone
-        }
-
-        return new CurrentIdentityProfile(null, null, null, null, null);
-    }
-
-    private sealed record CurrentIdentityProfile(
-        string? FirstName,
-        string? LastName,
-        string? PhoneNumber,
-        string? Gender,
-        string? DateOfBirth);
 }

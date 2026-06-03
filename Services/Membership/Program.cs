@@ -22,21 +22,31 @@ builder.AddServiceDefaults();
 builder.AddPermissiveCors();
 
 builder.AddNpgsqlDbContext<MembershipDbContext>(connectionName: "membershipDb");
-builder.Services.AddCarter();
 
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<IUserAccessor, UserAccessor>();
 
 builder.Host.UseWolverine(opts =>
 {
+    opts.Discovery.DisableConventionalDiscovery();
+
+    opts.Discovery
+        .IncludeAssembly(typeof(Shared.Events.AttendanceMarkedEvent).Assembly);
+
     opts.UseRabbitMqUsingNamedConnection("rabbitmq")
         .UseConventionalRouting()
         .AutoProvision();
-    opts.Policies.DisableConventionalLocalRouting();
-    opts.Policies.AddMiddleware<ValidationBehavior>();
-    opts.Discovery.IncludeType<PaymentConfirmedConsumer>();
 
+    opts.Policies.DisableConventionalLocalRouting();
+
+    opts.Policies.AddMiddleware<ValidationBehavior>();
+
+    opts.Discovery.IncludeType<PaymentConfirmedConsumer>();
 });
+
+
+
+
 
 var identityUrl = builder.Configuration["services:identity-api:http:0"]
     ?? builder.Configuration["JwtSettings:Issuer"]
@@ -86,11 +96,20 @@ builder.Services.AddOpenApi(options =>
 });
 builder.Services.AddScoped<MembershipSeeder>();
 builder.Services.AddMembershipServices();
+builder.Services.AddCarter();
+
 builder.Services.AddScoped<PaymentConfirmedConsumer>();
 var app = builder.Build();
 
+var medicalFilesDir = Path.Combine(builder.Environment.WebRootPath ?? Path.Combine(builder.Environment.ContentRootPath, "wwwroot"), "medical-files");
+if (!Directory.Exists(medicalFilesDir))
+{
+    Directory.CreateDirectory(medicalFilesDir);
+}
+
 app.MapDefaultEndpoints();
 app.UsePermissiveCors();
+app.UseStaticFiles();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapOpenApi().AllowAnonymous(); ;

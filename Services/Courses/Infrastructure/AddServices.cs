@@ -11,6 +11,7 @@ using Courses.Features.Programs.GetAvailablePrograms;
 using Courses.Features.Programs.GetEnrolledPrograms;
 using Courses.Features.Programs.GetProgramDetail;
 using Courses.Features.Programs.GetProgramMembers;
+using Courses.Features.Programs.GetProgramSessions;
 using Courses.Features.Programs.GetProgramRequest;
 using Courses.Features.Programs.ListProgramRequests;
 using Courses.Features.Programs.ListPurchaseRequests;
@@ -41,6 +42,7 @@ public static class AddServices
         services.AddScoped<GetProgramDetailHandler>();
         services.AddScoped<GetProgramMembersHandler>();
         services.AddScoped<GetProgramRequestHandler>();
+        services.AddScoped<GetProgramSessionsHandler>();
         services.AddScoped<ListProgramRequestsHandler>();
         services.AddScoped<ListPurchaseRequestsHandler>();
         services.AddScoped<PurchaseCashHandler>();

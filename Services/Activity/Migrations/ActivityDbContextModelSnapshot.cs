@@ -38,14 +38,15 @@ namespace Activity.Migrations
                     b.Property<DateTime?>("CheckOutTime")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<Guid?>("CourseId")
-                        .HasColumnType("uuid");
-
                     b.Property<bool>("IsManual")
                         .HasColumnType("boolean");
 
                     b.Property<Guid>("MemberId")
                         .HasColumnType("uuid");
+
+                    b.Property<string>("MemberName")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
