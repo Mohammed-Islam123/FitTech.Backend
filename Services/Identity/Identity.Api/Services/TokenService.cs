@@ -2,20 +2,13 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using Identity.Application.Interfaces;
 using Identity.Domain.Entities;
-using Microsoft.AspNetCore.Http;
 using Microsoft.IdentityModel.Tokens;
 
 namespace Identity.Api.Services;
 
-public sealed class TokenService(RsaKeyManager rsaKeyManager, IConfiguration configuration, IHttpContextAccessor httpContextAccessor) : ITokenService
+public sealed class TokenService(RsaKeyManager rsaKeyManager, IConfiguration configuration) : ITokenService
 {
-    private string ResolveIssuer()
-    {
-        var ctx = httpContextAccessor.HttpContext;
-        if (ctx is not null)
-            return $"{ctx.Request.Scheme}://{ctx.Request.Host}";
-        return configuration["JwtSettings:Issuer"]!;
-    }
+    private string ResolveIssuer() => configuration["JwtSettings:Issuer"]!;
 
     public string GenerateUserToken(User user, IList<string> roles, string clientId)
     {

@@ -11,10 +11,10 @@ public class GetCoachClientsEndpoint : ICarterModule
 {
     public void AddRoutes(IEndpointRouteBuilder app)
     {
-        app.MapGet("/api/coaches/{coachId:guid}/clients", Handle)
+        app.MapGet("/api/coaches/me/clients", Handle)
             .WithName("GetCoachClients")
             .WithTags("Coaches")
-            .WithDescription("Returns all members subscribed to any of the coach's programs.")
+            .WithDescription("Returns all members subscribed to any of the currently authenticated coach's programs. Coach is resolved from the JWT token.")
             .RequireAuthorization("AdminOrCoach")
             .Produces<List<GetCoachClientsResponse>>(StatusCodes.Status200OK)
             .ProducesProblem(StatusCodes.Status401Unauthorized)
@@ -22,11 +22,10 @@ public class GetCoachClientsEndpoint : ICarterModule
     }
 
     private static async Task<IResult> Handle(
-        Guid coachId,
         GetCoachClientsHandler handler,
         CancellationToken ct)
     {
-        var result = await handler.Handle(new GetCoachClientsQuery(coachId), ct);
+        var result = await handler.Handle(new GetCoachClientsQuery(), ct);
         return result.Match(
             response => Results.Ok(response),
             errors => ErrorOnExtensions.MapErrorsToResult(errors));

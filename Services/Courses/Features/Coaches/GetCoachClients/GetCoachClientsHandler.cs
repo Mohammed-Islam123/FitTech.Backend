@@ -18,9 +18,16 @@ public class GetCoachClientsHandler(CoursesDbContext context, IUserAccessor user
                 "Only Coaches and Administrators can view clients.");
         }
 
+        if (userAccessor.UserId is null)
+        {
+            return Error.Unauthorized(
+                "Coach.Unauthorized",
+                "User identity not found in token.");
+        }
+
         var coach = await context.Coaches
             .AsNoTracking()
-            .FirstOrDefaultAsync(c => c.Id == query.CoachId, ct);
+            .FirstOrDefaultAsync(c => c.UserId == userAccessor.UserId.Value, ct);
 
         if (coach is null)
         {
@@ -30,7 +37,7 @@ public class GetCoachClientsHandler(CoursesDbContext context, IUserAccessor user
         var enrollments = await context.ProgramEnrollments
             .AsNoTracking()
             .Include(e => e.Program)
-            .Where(e => e.Program.CoachId == query.CoachId)
+            .Where(e => e.Program.CoachId == coach.Id)
             .ToListAsync(ct);
 
         var grouped = enrollments

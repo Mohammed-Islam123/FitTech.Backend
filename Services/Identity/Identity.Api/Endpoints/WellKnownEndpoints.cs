@@ -6,16 +6,15 @@ public static class WellKnownEndpoints
 {
     public static void MapWellKnownEndpoints(this IEndpointRouteBuilder app)
     {
-        app.MapGet("/.well-known/openid-configuration", (HttpRequest request) =>
+        app.MapGet("/.well-known/openid-configuration", (IConfiguration config) =>
         {
-            // Derive issuer from the request URL so it always matches how this service is reached
-            var baseUrl = $"{request.Scheme}://{request.Host}";
+            var issuer = config["JwtSettings:Issuer"]!;
 
             return Results.Json(new
             {
-                issuer = baseUrl,
-                jwks_uri = $"{baseUrl}/.well-known/jwks",
-                token_endpoint = $"{baseUrl}/auth/service-token",
+                issuer,
+                jwks_uri = $"{issuer}/.well-known/jwks",
+                token_endpoint = $"{issuer}/auth/service-token",
                 token_endpoint_auth_methods_supported = new[] { "client_secret_post" },
                 id_token_signing_alg_values_supported = new[] { "RS256" }
             });
