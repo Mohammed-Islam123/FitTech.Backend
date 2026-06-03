@@ -46,7 +46,7 @@ public class RabbitConnectionConfig {
     }
 
     @Bean
-    public ConnectionFactory connectionFactory() {
+    public ConnectionFactory rabbitConnectionFactory() {
         var factory = new CachingConnectionFactory(host, port);
         factory.setUsername(username);
         factory.setPassword(password);

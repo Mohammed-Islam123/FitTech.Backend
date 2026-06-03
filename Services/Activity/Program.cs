@@ -5,6 +5,7 @@ using Activity.Infrastructure;
 using Activity.Infrastructure.Seed;
 using Carter;
 using FluentValidation;
+using JasperFx.Core.Reflection;
 using MicroElements.AspNetCore.OpenApi.FluentValidation;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -25,20 +26,24 @@ builder.Services.AddScoped<IUserAccessor, UserAccessor>();
 
 builder.Host.UseWolverine(opts =>
 {
-    opts.Discovery.DisableConventionalDiscovery();
-
     opts.Discovery
         .IncludeAssembly(typeof(Shared.Events.AttendanceMarkedEvent).Assembly);
 
     opts.UseRabbitMqUsingNamedConnection("rabbitmq")
-        .UseConventionalRouting()
+        .UseConventionalRouting(conventions =>
+        {
+            conventions.IncludeTypes(type => type.IsInNamespace("Shared.Events"));
+
+            conventions.IncludeTypes(type => type.Name.EndsWith("Event"));
+            var serviceName = System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
+            conventions.QueueNameForListener(type => $"{serviceName}-{type.FullName}");
+
+        })
         .AutoProvision();
 
     opts.Policies.DisableConventionalLocalRouting();
-
-    opts.Policies.AddMiddleware<ValidationBehavior>();
-
 });
+
 
 var identityUrl = builder.Configuration["services:identity-api:http:0"]
     ?? builder.Configuration["JwtSettings:Issuer"]

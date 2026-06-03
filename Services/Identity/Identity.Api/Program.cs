@@ -22,6 +22,7 @@ builder.Services.AddOpenApi(options =>
 {
     options.AddDocumentTransformer<BearerSecuritySchemeTransformer>();
 });
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
@@ -51,7 +52,6 @@ builder.Services.Configure<DataProtectionTokenProviderOptions>(opt =>
     opt.TokenLifespan = TimeSpan.FromHours(3);
 });
 
-var issuer = builder.Configuration["JwtSettings:Issuer"]!;
 var keyManager = new RsaKeyManager(builder.Configuration);
 builder.Services.AddSingleton(keyManager);
 
@@ -61,9 +61,9 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         options.TokenValidationParameters = new TokenValidationParameters
         {
             ValidateIssuer = true,
+            IssuerValidator = (iss, _, _) => iss,
             ValidateAudience = false,
             ValidateLifetime = true,
-            ValidIssuer = issuer,
             IssuerSigningKey = keyManager.PrivateKey
         };
     });
@@ -116,7 +116,7 @@ app.MapScalarApiReference(opt =>
        .WithTheme(ScalarTheme.Mars);
 });
 
-app.MapWellKnownEndpoints(app.Configuration);
+app.MapWellKnownEndpoints();
 app.MapControllers();
 
 app.Run();

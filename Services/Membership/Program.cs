@@ -15,6 +15,7 @@ using Refit;
 using Scalar.AspNetCore;
 using Wolverine;
 using Wolverine.RabbitMQ;
+using JasperFx.Core.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,21 +29,24 @@ builder.Services.AddScoped<IUserAccessor, UserAccessor>();
 
 builder.Host.UseWolverine(opts =>
 {
-    opts.Discovery.DisableConventionalDiscovery();
-
     opts.Discovery
         .IncludeAssembly(typeof(Shared.Events.AttendanceMarkedEvent).Assembly);
 
     opts.UseRabbitMqUsingNamedConnection("rabbitmq")
-        .UseConventionalRouting()
+        .UseConventionalRouting(conventions =>
+        {
+            conventions.IncludeTypes(type => type.IsInNamespace("Shared.Events"));
+
+            conventions.IncludeTypes(type => type.Name.EndsWith("Event"));
+            var serviceName = System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
+            conventions.QueueNameForListener(type => $"{serviceName}-{type.FullName}");
+
+        })
         .AutoProvision();
 
     opts.Policies.DisableConventionalLocalRouting();
-
-    opts.Policies.AddMiddleware<ValidationBehavior>();
-
-    opts.Discovery.IncludeType<PaymentConfirmedConsumer>();
 });
+
 
 
 

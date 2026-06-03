@@ -4,18 +4,16 @@ namespace Identity.Api.Endpoints;
 
 public static class WellKnownEndpoints
 {
-    public static void MapWellKnownEndpoints(this IEndpointRouteBuilder app, IConfiguration configuration)
+    public static void MapWellKnownEndpoints(this IEndpointRouteBuilder app)
     {
-        var issuer = configuration["JwtSettings:Issuer"]!;
-
         app.MapGet("/.well-known/openid-configuration", (HttpRequest request) =>
         {
-            // Use the request's base URL so the jwks_uri works from any caller
+            // Derive issuer from the request URL so it always matches how this service is reached
             var baseUrl = $"{request.Scheme}://{request.Host}";
 
             return Results.Json(new
             {
-                issuer,
+                issuer = baseUrl,
                 jwks_uri = $"{baseUrl}/.well-known/jwks",
                 token_endpoint = $"{baseUrl}/auth/service-token",
                 token_endpoint_auth_methods_supported = new[] { "client_secret_post" },

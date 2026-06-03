@@ -60,7 +60,8 @@ var activityApi = builder.AddProject<Projects.Activity>("activity-api")
     .WithReference(rabbit)
     .WithReference(identityApi)
     .WaitFor(activityDb)
-    .WaitFor(rabbit);
+    .WaitFor(rabbit)
+    .WaitFor(identityApi);
 
 var membershipApi = builder.AddProject<Projects.Membership>("membership-api")
                           .WithEndpoint("http", endpoint => endpoint.Port = 5121)
@@ -70,7 +71,9 @@ var membershipApi = builder.AddProject<Projects.Membership>("membership-api")
                           .WithReference(identityApi)
                           .WithReference(activityApi)
                           .WaitFor(membershipDb)
-                          .WaitFor(rabbit);
+                          .WaitFor(rabbit)
+                          .WaitFor(identityApi)
+                          .WaitFor(activityApi);
 
 
 
@@ -81,7 +84,8 @@ var paymentApi = builder.AddProject<Projects.Payment>("payment-api")
     .WithReference(rabbit)
     .WithReference(identityApi)
     .WaitFor(paymentDb)
-    .WaitFor(rabbit);
+    .WaitFor(rabbit)
+    .WaitFor(identityApi);
 
 var coursesApi = builder.AddProject<Projects.Courses>("courses-api")
     .WithEndpoint("http", endpoint => endpoint.Port = 5101)
@@ -90,7 +94,8 @@ var coursesApi = builder.AddProject<Projects.Courses>("courses-api")
     .WithReference(rabbit)
     .WithReference(identityApi)
     .WaitFor(coursesDb)
-    .WaitFor(rabbit);
+    .WaitFor(rabbit)
+    .WaitFor(identityApi);
 
 var aggregationApi = builder.AddProject<Projects.Aggregation>("aggregation-api")
     .WithEndpoint("http", endpoint => endpoint.Port = 5103)
@@ -114,7 +119,8 @@ var chatApi = builder.AddProject<Projects.Chat>("chat-api")
                      .WithReference(rabbit)
                      .WithReference(identityApi)
                      .WaitFor(chatDb)
-                     .WaitFor(rabbit);
+                     .WaitFor(rabbit)
+                     .WaitFor(identityApi);
 
 var shopApi = builder.AddJavaApp(
     name: "shop-api",
@@ -129,6 +135,8 @@ var shopApi = builder.AddJavaApp(
 .WithHttpEndpoint(port: 5104, name: "http")
 .WithHttpsEndpoint(port: 7104, name: "https")
 .WithReference(shopDb)
+.WithReference(identityApi)
+.WaitFor(identityApi)
 .WaitFor(shopDb);
 
 
@@ -146,6 +154,8 @@ var workoutLogsApi = builder.AddJavaApp(
 .WithEnvironment("LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_WEB", "DEBUG")
 .WithHttpsEndpoint(port: 7105, name: "https")
 .WithReference(workoutLogsDb)
+.WithReference(identityApi)
+.WaitFor(identityApi)
 .WaitFor(workoutLogsDb);
 
 var equipmentsApi = builder.AddJavaApp(
@@ -162,7 +172,9 @@ var equipmentsApi = builder.AddJavaApp(
 .WithReference(equipmentsDb)
 .WithReference(identityApi)
 .WithReference(rabbit)
-.WaitFor(equipmentsDb);
+.WaitFor(identityApi)
+.WaitFor(equipmentsDb)
+.WaitFor(rabbit);
 
 
 
@@ -220,6 +232,10 @@ builder.AddProject<Projects.Gateway>("gateway")
        .WaitFor(chatApi)
        .WaitFor(equipmentsApi)
        .WaitFor(shopApi)
-       .WaitFor(workoutLogsApi);
+       .WaitFor(workoutLogsApi)
+       .WaitFor(paymentApi)
+       .WaitFor(coursesApi)
+       .WaitFor(activityApi)
+       .WaitFor(aggregationApi);
 
 builder.Build().Run();

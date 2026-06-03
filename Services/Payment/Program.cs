@@ -1,5 +1,6 @@
 using Carter;
 using FluentValidation;
+using JasperFx.Core.Reflection;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Payment.Common.Security;
@@ -26,11 +27,24 @@ builder.Services.AddPaymentGateway();
 
 builder.Host.UseWolverine(opts =>
 {
+    opts.Discovery
+        .IncludeAssembly(typeof(Shared.Events.AttendanceMarkedEvent).Assembly);
+
     opts.UseRabbitMqUsingNamedConnection("rabbitmq")
-        .UseConventionalRouting()
+        .UseConventionalRouting(conventions =>
+        {
+            conventions.IncludeTypes(type => type.IsInNamespace("Shared.Events"));
+
+            conventions.IncludeTypes(type => type.Name.EndsWith("Event"));
+            var serviceName = System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
+            conventions.QueueNameForListener(type => $"{serviceName}-{type.FullName}");
+
+        })
         .AutoProvision();
+
     opts.Policies.DisableConventionalLocalRouting();
 });
+
 
 var identityUrl = builder.Configuration["services:identity-api:http:0"]
     ?? builder.Configuration["JwtSettings:Issuer"]

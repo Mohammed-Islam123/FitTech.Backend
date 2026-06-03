@@ -2,12 +2,21 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using Identity.Application.Interfaces;
 using Identity.Domain.Entities;
+using Microsoft.AspNetCore.Http;
 using Microsoft.IdentityModel.Tokens;
 
 namespace Identity.Api.Services;
 
-public sealed class TokenService(RsaKeyManager rsaKeyManager, IConfiguration configuration) : ITokenService
+public sealed class TokenService(RsaKeyManager rsaKeyManager, IConfiguration configuration, IHttpContextAccessor httpContextAccessor) : ITokenService
 {
+    private string ResolveIssuer()
+    {
+        var ctx = httpContextAccessor.HttpContext;
+        if (ctx is not null)
+            return $"{ctx.Request.Scheme}://{ctx.Request.Host}";
+        return configuration["JwtSettings:Issuer"]!;
+    }
+
     public string GenerateUserToken(User user, IList<string> roles, string clientId)
     {
         var claims = new List<Claim>
@@ -25,7 +34,7 @@ public sealed class TokenService(RsaKeyManager rsaKeyManager, IConfiguration con
         var creds = new SigningCredentials(rsaKeyManager.PrivateKey, SecurityAlgorithms.RsaSha256);
 
         var token = new JwtSecurityToken(
-            issuer: configuration["JwtSettings:Issuer"],
+            issuer: ResolveIssuer(),
             expires: DateTime.UtcNow.AddMinutes(
                 int.Parse(configuration["JwtSettings:AccessTokenExpirationMinutes"]!)),
             claims: claims,
@@ -51,7 +60,7 @@ public sealed class TokenService(RsaKeyManager rsaKeyManager, IConfiguration con
         var creds = new SigningCredentials(rsaKeyManager.PrivateKey, SecurityAlgorithms.RsaSha256);
 
         var token = new JwtSecurityToken(
-            issuer: configuration["JwtSettings:Issuer"],
+            issuer: ResolveIssuer(),
             expires: DateTime.UtcNow.AddMinutes(5),
             claims: claims,
             signingCredentials: creds

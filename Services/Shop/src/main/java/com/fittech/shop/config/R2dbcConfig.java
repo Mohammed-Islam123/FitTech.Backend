@@ -13,7 +13,7 @@ import java.util.Map;
 public class R2dbcConfig {
 
     @Bean
-    public ConnectionFactory connectionFactory() {
+    public ConnectionFactory r2dbcConnectionFactory() {
         String connectionString = System.getenv("ConnectionStrings__shopDb");
 
         if (connectionString == null || connectionString.isBlank()) {

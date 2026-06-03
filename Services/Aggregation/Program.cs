@@ -6,6 +6,7 @@ using Aggregation.Features.Dashboard.GetFinanceDashboard;
 using Aggregation.Features.Reports.DownloadExcelReport;
 using Aggregation.Infrastructure.Seed;
 using Carter;
+using JasperFx.Core.Reflection;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
@@ -24,15 +25,24 @@ builder.Services.AddScoped<IUserAccessor, UserAccessor>();
 
 builder.Host.UseWolverine(opts =>
 {
+    opts.Discovery
+        .IncludeAssembly(typeof(Shared.Events.AttendanceMarkedEvent).Assembly);
+
     opts.UseRabbitMqUsingNamedConnection("rabbitmq")
-        .UseConventionalRouting()
+        .UseConventionalRouting(conventions =>
+        {
+            conventions.IncludeTypes(type => type.IsInNamespace("Shared.Events"));
+
+            conventions.IncludeTypes(type => type.Name.EndsWith("Event"));
+            var serviceName = System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
+            conventions.QueueNameForListener(type => $"{serviceName}-{type.FullName}");
+
+        })
         .AutoProvision();
 
-    opts.Discovery.IncludeType<MemberEventConsumer>();
-    opts.Discovery.IncludeType<PaymentEventConsumer>();
-    opts.Discovery.IncludeType<ActivityEventConsumer>();
-    opts.Discovery.IncludeType<ProgramEventConsumer>();
+    opts.Policies.DisableConventionalLocalRouting();
 });
+
 
 var identityUrl = builder.Configuration["services:identity-api:http:0"]
     ?? builder.Configuration["JwtSettings:Issuer"]
