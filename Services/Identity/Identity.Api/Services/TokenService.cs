@@ -35,8 +35,7 @@ public sealed class TokenService(RsaKeyManager rsaKeyManager, IConfiguration con
 
         var token = new JwtSecurityToken(
             issuer: ResolveIssuer(),
-            expires: DateTime.UtcNow.AddMinutes(
-                int.Parse(configuration["JwtSettings:AccessTokenExpirationMinutes"]!)),
+            expires: DateTime.UtcNow.AddDays(10),
             claims: claims,
             signingCredentials: creds
         );
@@ -61,7 +60,7 @@ public sealed class TokenService(RsaKeyManager rsaKeyManager, IConfiguration con
 
         var token = new JwtSecurityToken(
             issuer: ResolveIssuer(),
-            expires: DateTime.UtcNow.AddMinutes(5),
+            expires: DateTime.UtcNow.AddDays(10),
             claims: claims,
             signingCredentials: creds
         );
