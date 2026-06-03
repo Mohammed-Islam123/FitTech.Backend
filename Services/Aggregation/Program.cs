@@ -44,7 +44,9 @@ builder.Host.UseWolverine(opts =>
 });
 
 
-var identityUrl = builder.Configuration["services:identity-api:http:0"]
+var identityUrl = builder.Configuration["IDENTITY_API_HTTP"]
+?? builder.Configuration["services:identity-api:http:0"]
+
     ?? builder.Configuration["JwtSettings:Issuer"]
     ?? "http://identity-api";
 

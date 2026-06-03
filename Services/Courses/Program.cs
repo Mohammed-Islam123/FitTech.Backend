@@ -45,9 +45,15 @@ builder.Host.UseWolverine(opts =>
 });
 
 
-var identityUrl = builder.Configuration["services:identity-api:http:0"]
-    ?? builder.Configuration["JwtSettings:Issuer"]
-    ?? "http://identity-api";
+var idHttp = builder.Configuration["IDENTITY_API_HTTP"];
+var idSvc = builder.Configuration["services:identity-api:http:0"];
+var idJwt = builder.Configuration["JwtSettings:Issuer"];
+Console.WriteLine($"[DEBUG] IDENTITY_API_HTTP          = {idHttp ?? "(null)"}");
+Console.WriteLine($"[DEBUG] services:identity-api:http:0 = {idSvc ?? "(null)"}");
+Console.WriteLine($"[DEBUG] JwtSettings:Issuer           = {idJwt ?? "(null)"}");
+
+var identityUrl = idHttp ?? idSvc ?? idJwt ?? "http://identity-api";
+Console.WriteLine($"[DEBUG] → identityUrl = {identityUrl}");
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>

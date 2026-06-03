@@ -1,14 +1,16 @@
 package com.fittech.equipments.config;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.oauth2.jose.jws.SignatureAlgorithm;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
 import org.springframework.security.config.web.server.ServerHttpSecurity;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.oauth2.jwt.JwtValidators;
+import org.springframework.security.oauth2.jwt.NimbusReactiveJwtDecoder;
 import org.springframework.security.oauth2.jwt.ReactiveJwtDecoder;
-import org.springframework.security.oauth2.jwt.ReactiveJwtDecoders;
 import org.springframework.security.oauth2.server.resource.authentication.ReactiveJwtAuthenticationConverter;
 import org.springframework.security.web.server.SecurityWebFilterChain;
 import reactor.core.publisher.Flux;
@@ -26,6 +28,9 @@ public class SecurityConfig {
 
     @Value("${app.jwt.authority}")
     private String jwtAuthority;
+
+    @Value("${app.jwt.issuer}")
+    private String jwtIssuer;
 
     @Bean
     public SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity http) {
@@ -58,7 +63,14 @@ public class SecurityConfig {
 
     @Bean
     public ReactiveJwtDecoder reactiveJwtDecoder() {
-        return ReactiveJwtDecoders.fromIssuerLocation(jwtAuthority);
+        var decoder = NimbusReactiveJwtDecoder
+                .withJwkSetUri(jwtAuthority + "/.well-known/jwks")
+                .jwsAlgorithm(SignatureAlgorithm.RS256)
+                .build();
+
+        decoder.setJwtValidator(JwtValidators.createDefaultWithIssuer(jwtIssuer));
+
+        return decoder;
     }
 
     /**

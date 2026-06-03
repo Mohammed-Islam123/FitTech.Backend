@@ -1,8 +1,8 @@
 package com.fittech.workoutlogs.config;
 
-import io.r2dbc.spi.ConnectionFactories;
 import io.r2dbc.spi.ConnectionFactory;
 import io.r2dbc.spi.ConnectionFactoryOptions;
+import org.springframework.boot.r2dbc.ConnectionFactoryBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -41,10 +41,9 @@ public class R2dbcConfig {
                 .option(ConnectionFactoryOptions.PORT, port)
                 .option(ConnectionFactoryOptions.DATABASE, database)
                 .option(ConnectionFactoryOptions.USER, username)
-                .option(ConnectionFactoryOptions.PASSWORD, password)
-                .build();
+                .option(ConnectionFactoryOptions.PASSWORD, password);
 
-        return ConnectionFactories.get(options);
+        return ConnectionFactoryBuilder.withOptions(options).build();
     }
 
     private String require(Map<String, String> parts, String key) {

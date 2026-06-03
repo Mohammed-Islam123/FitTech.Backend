@@ -18,7 +18,9 @@ builder.AddServiceDefaults();
 
 builder.AddNpgsqlDbContext<ChatDbContext>("chatDb");
 
-var identityUrl = builder.Configuration["services:identity-api:http:0"]
+var identityUrl = builder.Configuration["IDENTITY_API_HTTP"]
+?? builder.Configuration["services:identity-api:http:0"]
+
     ?? "http://identity-api";
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
