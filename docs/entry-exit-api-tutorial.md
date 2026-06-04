@@ -52,7 +52,7 @@ The system auto-detects whether this is an **entry** or **exit**:
 
 ---
 
-### ✅ Entry Response (201)
+### ✅ Entry Response (200)
 
 ```json
 {

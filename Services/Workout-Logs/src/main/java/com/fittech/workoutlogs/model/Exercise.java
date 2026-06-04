@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
+import org.springframework.data.domain.Persistable;
 import org.springframework.data.relational.core.mapping.Table;
 
 import java.util.UUID;
@@ -14,7 +16,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table("exercises")
-public class Exercise {
+public class Exercise implements Persistable<UUID> {
 
     @Id
     private UUID id;
@@ -28,4 +30,13 @@ public class Exercise {
     private Double caloriesBurned;
 
     private Integer durationMinutes;
+
+    @Transient
+    @Builder.Default
+    private boolean isNew = false;
+
+    @Override
+    public boolean isNew() {
+        return isNew;
+    }
 }

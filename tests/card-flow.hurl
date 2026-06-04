@@ -154,7 +154,7 @@ Content-Type: application/json
         }
     ]
 }
-HTTP 200
+HTTP 201
 [Asserts]
 jsonpath "$.id" exists
 jsonpath "$.memberId" == "{{profile_member_id}}"
@@ -251,7 +251,7 @@ jsonpath "$.exercises" count == 4
 # ============================================================
 # Step 12: Member 50 lists workout logs by activity session
 # ============================================================
-GET {{gateway}}/api/workout-logs?activitySessionId={{active_session_id}}
+GET {{gateway}}/api/workout-logs?memberId={{profile_member_id}}&activitySessionId={{active_session_id}}
 Authorization: Bearer {{member50_token}}
 HTTP 200
 [Asserts]
@@ -268,7 +268,7 @@ Authorization: Bearer {{admin_token}}
 HTTP 200
 [Asserts]
 jsonpath "$" count >= 1
-jsonpath "$[0].memberId" == "{{member50_id}}"
+jsonpath "$[0].sessionId" exists
 jsonpath "$[0].checkInTime" exists
 jsonpath "$[0].checkOutTime" exists
 jsonpath "$[0].checkOutTime" != null

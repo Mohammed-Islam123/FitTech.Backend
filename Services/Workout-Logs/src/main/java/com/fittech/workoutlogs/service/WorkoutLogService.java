@@ -32,6 +32,7 @@ public class WorkoutLogService {
                 .notes(request.getNotes())
                 .createdAt(now)
                 .updatedAt(now)
+                .isNew(true)
                 .build();
 
         var exercises = request.getExercises().stream()
@@ -42,6 +43,7 @@ public class WorkoutLogService {
                         .description(e.getDescription())
                         .caloriesBurned(e.getCaloriesBurned())
                         .durationMinutes(e.getDurationMinutes())
+                        .isNew(true)
                         .build())
                 .toList();
 
@@ -94,6 +96,7 @@ public class WorkoutLogService {
                                     .description(e.getDescription())
                                     .caloriesBurned(e.getCaloriesBurned())
                                     .durationMinutes(e.getDurationMinutes())
+                                    .isNew(true)
                                     .build())
                             .toList();
 
