@@ -326,6 +326,25 @@ public class UserService(IUserRepository _userRepository, ITokenService _tokenSe
         };
     }
 
+    public async Task<List<ProfileDTO>> GetProfilesBatchAsync(List<Guid> userIds)
+    {
+        var users = await _userRepository.FindByUserIdsAsync(userIds);
+        return users.Select(user => new ProfileDTO
+        {
+            UserId = user.Id,
+            FirstName = user.FirstName,
+            LastName = user.LastName,
+            PhoneNumber = user.PhoneNumber,
+            ProfilePhotoUrl = user.ProfilePhotoUrl,
+            Email = user.Email,
+            LastLoginAt = user.LastLoginAt,
+            UserName = user.UserName,
+            Gender = user.Gender?.ToString(),
+            DateOfBirth = user.DateOfBirth,
+            EmailConfirmed = user.IsEmailConfirmed
+        }).ToList();
+    }
+
     public async Task<bool> UpdateProfileAsync(UpdateProfileDTO dto)
     {
         var user = await _userRepository.FindByIdAsync(dto.UserId);

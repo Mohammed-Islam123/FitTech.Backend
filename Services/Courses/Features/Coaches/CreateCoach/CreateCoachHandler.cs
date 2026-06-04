@@ -56,7 +56,7 @@ public class CreateCoachHandler(
         if (!identityResponse.IsSuccessStatusCode || identityResponse.Content is null || !identityResponse.Content.Success)
         {
             return Error.Failure("Identity.CreateFailed",
-                identityResponse.Error?.Content ?? "Failed to create coach account in Identity Service.");
+                (identityResponse.Error as ApiException)?.Content ?? "Failed to create coach account in Identity Service.");
         }
 
         if (!Guid.TryParse(identityResponse.Content.Data, out var userId))

@@ -2,13 +2,15 @@ using ErrorOr;
 using Membership.Common.Security;
 using Membership.Domain;
 using Membership.Domain.Enums;
+using Membership.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 
 namespace Membership.Features.Members.ListMembers;
 
 public class ListMembersHandler(
     MembershipDbContext context,
-    IUserAccessor userAccessor)
+    IUserAccessor userAccessor,
+    IdentityProfileCacheService identityCache)
 {
     public async Task<ErrorOr<ListMembersResponse>> Handle(
         ListMembersQuery query,
@@ -42,14 +44,25 @@ public class ListMembersHandler(
         var totalCount = await baseQuery.CountAsync(ct);
 
         // Sorting & Pagination
-        var items = await baseQuery
+        var members = await baseQuery
             .OrderByDescending(m => m.JoinDate)
             .Skip((req.Page - 1) * req.PageSize)
             .Take(req.PageSize)
-            .Select(m => new MemberSummaryDto(
+            .ToListAsync(ct);
+
+        var userIds = members.Select(m => m.UserId).ToList();
+        var profiles = await identityCache.GetProfilesAsync(userIds);
+
+        var items = members.Select(m =>
+        {
+            profiles.TryGetValue(m.UserId, out var profile);
+            return new MemberSummaryDto(
                 m.Id,
                 m.FirstName,
                 m.LastName,
+                profile?.Email,
+                profile?.PhoneNumber,
+                profile?.ProfilePhotoUrl,
                 m.Status,
                 m.JoinDate,
                 m.Subscriptions
@@ -57,8 +70,8 @@ public class ListMembersHandler(
                     .OrderByDescending(s => s.StartOnUTC)
                     .Select(s => s.Plan.Name)
                     .FirstOrDefault()
-            ))
-            .ToListAsync(ct);
+            );
+        }).ToList();
 
         var totalPages = (int)Math.Ceiling(totalCount / (double)req.PageSize);
 

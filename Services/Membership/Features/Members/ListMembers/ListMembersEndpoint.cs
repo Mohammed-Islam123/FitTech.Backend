@@ -23,6 +23,9 @@ public class ListMembersEndpoint : ICarterModule
                     ["memberId"] = Guid.NewGuid().ToString(),
                     ["firstName"] = "Jane",
                     ["lastName"] = "Smith",
+                    ["email"] = "jane.smith@example.com",
+                    ["phoneNumber"] = "+1-555-123-4567",
+                    ["profilePhotoUrl"] = "/profile-photos/abc/photo.jpg",
                     ["status"] = "Active",
                     ["joinDate"] = DateTime.UtcNow.AddMonths(-3).ToString("O"),
                     ["activePlanName"] = "Standard Monthly"

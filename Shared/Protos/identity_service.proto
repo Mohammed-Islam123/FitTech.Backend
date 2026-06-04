@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option csharp_namespace = "Shared.Protos";
+
+service IdentityProfileService {
+  rpc GetMemberProfiles (ProfileBatchRequest) returns (ProfileBatchResponse);
+}
+
+message ProfileBatchRequest {
+  repeated string user_ids = 1;
+}
+
+message ProfileBatchResponse {
+  repeated ProfileMessage profiles = 1;
+}
+
+message ProfileMessage {
+  string user_id = 1;
+  string email = 2;
+  string phone_number = 3;
+  string profile_photo_url = 4;
+}

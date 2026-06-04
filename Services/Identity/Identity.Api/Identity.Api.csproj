@@ -20,6 +20,11 @@
     <PackageReference Include="Swashbuckle.AspNetCore" />
     <PackageReference Include="UAParser" />
     <PackageReference Include="Scalar.AspNetCore" />
+    <PackageReference Include="Grpc.AspNetCore" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="..\..\..\Shared\Protos\identity_service.proto" GrpcServices="Server" />
   </ItemGroup>
 
   <ItemGroup>

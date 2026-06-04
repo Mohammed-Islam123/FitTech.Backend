@@ -4,6 +4,7 @@ using Membership.Domain;
 using Membership.Domain.Enums;
 using Membership.Infrastructure;
 using Microsoft.EntityFrameworkCore;
+using Refit;
 
 namespace Membership.Features.Members.DeleteMember;
 
@@ -34,7 +35,7 @@ public class DeleteMemberHandler(
         if (!identityResponse.IsSuccessStatusCode || identityResponse.Content is null || !identityResponse.Content.Success)
         {
             return Error.Failure("Identity.DeactivationFailed", 
-                identityResponse.Error?.Content ?? "Failed to deactivate user in Identity Service.");
+                (identityResponse.Error as ApiException)?.Content ?? "Failed to deactivate user in Identity Service.");
         }
 
         // 4. Soft Delete in Membership Service

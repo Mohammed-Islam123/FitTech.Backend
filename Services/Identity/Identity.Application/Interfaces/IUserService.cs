@@ -14,6 +14,7 @@ public interface IUserService
     Task<bool> ChangePasswordAsync(Guid userId, string currentPassword, string newPassword);
     Task<bool> ResetPasswordAsync(Guid userId, string token, string newPassword);
     Task<ProfileDTO?> GetProfileAsync(Guid userId);
+    Task<List<ProfileDTO>> GetProfilesBatchAsync(List<Guid> userIds);
     Task<bool> UpdateProfileAsync(UpdateProfileDTO dto);
     Task<bool> IsUserExistsAsync(Guid userId);
     Task<MedicalFileDTO?> UploadMedicalFileAsync(UploadMedicalFileDTO dto);

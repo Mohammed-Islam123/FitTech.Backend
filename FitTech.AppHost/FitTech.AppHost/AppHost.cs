@@ -44,9 +44,14 @@ var smtpServer = builder.AddContainer("smtp4dev", "rnwood/smtp4dev")
     .WithEnvironment("ServerOptions__NumberOfSessionsToKeep", "500")
     .WithEndpoint(port: 2525, targetPort: 25);
 
+var redis = builder.AddRedis("membership-cache")
+    .WithLifetime(ContainerLifetime.Persistent)
+    .WithRedisInsight();
+
 var identityApi = builder.AddProject<Projects.Identity_Api>("identity-api")
                          .WithEndpoint("http", endpoint => endpoint.Port = 5051)
                          .WithEndpoint("https", endpoint => endpoint.Port = 7259)
+                         .WithEndpoint("grpc", endpoint => endpoint.Port = 8082)
                          .WithReference(identityDb)
                          .WithReference(rabbit)
                          .WaitFor(identityDb)
@@ -70,9 +75,11 @@ var membershipApi = builder.AddProject<Projects.Membership>("membership-api")
                           .WithReference(rabbit)
                           .WithReference(identityApi)
                           .WithReference(activityApi)
+                          .WithReference(redis)
                           .WaitFor(membershipDb)
                           .WaitFor(rabbit)
                           .WaitFor(identityApi)
+                          .WaitFor(redis)
                           .WaitFor(activityApi);
 
 

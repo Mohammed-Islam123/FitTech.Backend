@@ -28,6 +28,7 @@ builder.Services.AddControllers()
     {
         options.JsonSerializerOptions.PropertyNamingPolicy = null;
     });
+builder.Services.AddGrpc();
 
 builder.Services.AddDbContext<UserDbContext>(opt =>
     opt.UseNpgsql(builder.Configuration.GetConnectionString("identity-db")));
@@ -118,5 +119,6 @@ app.MapScalarApiReference(opt =>
 
 app.MapWellKnownEndpoints();
 app.MapControllers();
+app.MapGrpcService<IdentityProfileGrpcService>();
 
 app.Run();

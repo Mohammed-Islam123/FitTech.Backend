@@ -31,6 +31,7 @@
       <PackageReference Include="Aspire.Hosting.AppHost" />
       <PackageReference Include="Aspire.Hosting.PostgreSQL" />
       <PackageReference Include="Aspire.Hosting.RabbitMQ" />
+      <PackageReference Include="Aspire.Hosting.Redis" />
       <PackageReference Include="Scalar.Aspire" />
       <PackageReference Include="CommunityToolkit.Aspire.Hosting.Java" />
     </ItemGroup>

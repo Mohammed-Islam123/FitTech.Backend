@@ -78,6 +78,15 @@ public class UserRepository : IUserRepository
         return appUser is null ? null : MapToDomain(appUser);
     }
 
+    public async Task<List<User>> FindByUserIdsAsync(List<Guid> ids)
+    {
+        var appUsers = await _dbContext.Users
+            .AsNoTracking()
+            .Where(u => ids.Contains(u.Id))
+            .ToListAsync();
+        return appUsers.Select(MapToDomain).ToList();
+    }
+
     public async Task<bool> CreateUserAsync(User user, string password)
     {
         var appUser = MapToApplicationUser(user);

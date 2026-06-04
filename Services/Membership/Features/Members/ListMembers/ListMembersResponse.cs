@@ -13,6 +13,9 @@ public record MemberSummaryDto(
     Guid MemberId,
     string FirstName,
     string LastName,
+    string? Email,
+    string? PhoneNumber,
+    string? ProfilePhotoUrl,
     MemberStatus Status,
     DateTime JoinDate,
     string? ActivePlanName);

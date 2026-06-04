@@ -16,6 +16,7 @@ using Scalar.AspNetCore;
 using Wolverine;
 using Wolverine.RabbitMQ;
 using JasperFx.Core.Reflection;
+using Shared.Protos;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -94,6 +95,16 @@ builder.Services.AddRefitClient<IActivityServiceClient>()
     .ConfigureHttpClient(c => c.BaseAddress = new Uri("http://activity-api"))
     .AddHttpMessageHandler<ServiceTokenHandler>();
 
+builder.AddRedisClient("membership-cache");
+
+builder.Services.AddGrpcClient<IdentityProfileService.IdentityProfileServiceClient>(
+    o => o.Address = new Uri("http://_grpc.identity-api"))
+    .AddServiceDiscovery()
+    .ConfigurePrimaryHttpMessageHandler(() => new SocketsHttpHandler
+    {
+        EnableMultipleHttp2Connections = true
+    });
+
 builder.Services.AddFluentValidationRulesToOpenApi();
 
 builder.Services.AddOpenApi(options =>
@@ -102,6 +113,7 @@ builder.Services.AddOpenApi(options =>
 });
 builder.Services.AddScoped<MembershipSeeder>();
 builder.Services.AddMembershipServices();
+builder.Services.AddScoped<IdentityProfileCacheService>();
 builder.Services.AddCarter();
 
 builder.Services.AddScoped<PaymentConfirmedConsumer>();

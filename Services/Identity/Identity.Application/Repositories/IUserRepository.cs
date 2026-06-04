@@ -7,6 +7,7 @@ public interface IUserRepository
     Task<User?> FindByEmailAsync(string email);
     Task<User?> FindByUserNameAsync(string userName);
     Task<User?> FindByIdAsync(Guid id);
+    Task<List<User>> FindByUserIdsAsync(List<Guid> ids);
     Task<bool> CreateUserAsync(User user, string password);
     Task<bool> UpdateUserAsync(User user);
     Task<bool> IsUserExistsAsync(Guid userId);
